@@ -212,6 +212,35 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         }
         #peptopia-klimek-guide .card-nav-btn:hover { background: #4338ca; }
         #peptopia-klimek-guide .card-nav-btn:disabled { opacity: 0.35; cursor: default; }
+        #peptopia-klimek-guide .card-fs-btn {
+            background: none; border: 2px solid #4f46e5; color: #4f46e5; width: 34px; height: 34px;
+            border-radius: 50%; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; transition: all 0.15s; -webkit-tap-highlight-color: transparent; flex-shrink: 0;
+        }
+        #peptopia-klimek-guide .card-fs-btn:hover { background: #4f46e5; color: white; }
+        html.dark #peptopia-klimek-guide .card-fs-btn { border-color: #818cf8; color: #818cf8; }
+        html.dark #peptopia-klimek-guide .card-fs-btn:hover { background: #818cf8; color: #1e293b; }
+        /* Fullscreen card modal styles */
+        #card-modal:fullscreen, #card-modal:-webkit-full-screen {
+            background: rgba(15, 23, 42, 0.96); display: flex !important;
+        }
+        #card-modal:fullscreen .card-modal, #card-modal:-webkit-full-screen .card-modal {
+            max-width: 720px; border-radius: 1rem; min-height: auto;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); margin: auto;
+            max-height: 92vh; overflow-y: auto;
+        }
+        #card-modal:fullscreen .card-modal-header, #card-modal:-webkit-full-screen .card-modal-header {
+            border-radius: 1rem 1rem 0 0;
+        }
+        #peptopia-klimek-guide .fs-exit-btn {
+            position: fixed; top: 0.75rem; left: 0.75rem; z-index: 2100;
+            background: rgba(15, 23, 42, 0.85); color: white; border: 2px solid rgba(255,255,255,0.4);
+            width: 40px; height: 40px; border-radius: 0.5rem; cursor: pointer;
+            display: none; align-items: center; justify-content: center;
+            font-size: 1.2rem; transition: all 0.15s; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+        }
+        #peptopia-klimek-guide .fs-exit-btn:hover { background: rgba(79, 70, 229, 0.9); border-color: white; }
+        #peptopia-klimek-guide .fs-exit-btn.visible { display: flex; }
         #peptopia-klimek-guide .card-counter { font-size: 0.85rem; font-weight: 700; color: #64748b; white-space: nowrap; }
         html.dark #peptopia-klimek-guide .card-counter { color: #94a3b8; }
         #peptopia-klimek-guide .table-container {
@@ -915,6 +944,24 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             color: #6366f1; font-size: 1.1rem; font-weight: 600; text-align: center; padding: 2rem;
         }
         #peptopia-klimek-guide .pdf-loading { color: #818cf8; font-size: 0.95rem; text-align: center; padding: 2rem; }
+        #peptopia-klimek-guide .pdf-tb.fs { background: #4f46e5; font-size: 1rem; padding: 0.45rem 0.65rem; }
+        #peptopia-klimek-guide .pdf-tb.fs:hover { background: #6366f1; }
+        #peptopia-klimek-guide .pdf-fs-exit {
+            position: fixed; top: 0.75rem; left: 0.75rem; z-index: 2100;
+            background: rgba(15, 23, 42, 0.85); color: white; border: 2px solid rgba(255,255,255,0.4);
+            width: 40px; height: 40px; border-radius: 0.5rem; cursor: pointer;
+            display: none; align-items: center; justify-content: center;
+            font-size: 1.2rem; transition: all 0.15s; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+        }
+        #peptopia-klimek-guide .pdf-fs-exit:hover { background: rgba(79, 70, 229, 0.9); border-color: white; }
+        #peptopia-klimek-guide .pdf-fs-exit.visible { display: flex; }
+        /* Fullscreen PDF viewer */
+        #pdf-view:fullscreen, #pdf-view:-webkit-full-screen {
+            height: 100vh !important; border-radius: 0 !important; border: none !important;
+        }
+        #pdf-view:fullscreen .pdf-viewer-pane, #pdf-view:-webkit-full-screen .pdf-viewer-pane {
+            height: 100vh;
+        }
         @media (max-width: 768px) {
             #peptopia-klimek-guide .pdf-layout { flex-direction: column; }
             #peptopia-klimek-guide .pdf-sidebar { width: 100%; min-width: unset; max-height: 180px; border-right: none; border-bottom: 1px solid rgba(59,130,246,0.25); transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease; }
@@ -1049,6 +1096,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     </div>
 
     <div id="card-modal" class="card-overlay">
+        <button class="fs-exit-btn" id="fs-exit-btn" onclick="toggleCardFullscreen()" title="Exit fullscreen">&#x2716;</button>
         <div class="card-modal">
             <div class="card-modal-header" id="card-modal-header">
                 <span id="card-modal-title">Cards</span>
@@ -1059,6 +1107,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
                 <button class="card-nav-btn" id="card-prev-btn" onclick="prevCard()">&#8592; Prev</button>
                 <span class="card-counter" id="card-counter">1 / ?</span>
                 <button class="card-nav-btn" id="card-next-btn" onclick="nextCard()">Next &#8594;</button>
+                <button class="card-fs-btn" id="card-fs-btn" onclick="toggleCardFullscreen()" title="Toggle fullscreen">&#x26F6;</button>
             </div>
             <div style="text-align:center; padding: 0 0 0.5rem;">
                 <button class="card-nav-btn" id="card-shuffle-btn" onclick="shuffleCards()" style="font-size:0.85rem; opacity:0.8;">&#x1F500; Shuffle</button>
@@ -1067,6 +1116,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     </div>
 
     <div id="pdf-view" class="pdf-view">
+        <button class="pdf-fs-exit" id="pdf-fs-exit" onclick="togglePdfFullscreen()" title="Exit fullscreen">&#x2716;</button>
         <div class="lecture-bar" id="lecture-bar">
             <span class="lecture-bar-label">&#127925; Klimek Audio</span>
             <div class="lecture-bar-embed" id="lecture-bar-embed"></div>
@@ -1089,6 +1139,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
                     <button class="pdf-tb" onclick="pdfZoomOut()">&minus;</button>
                     <span class="pdf-info" id="pdf-zoom-info">100%</span>
                     <button class="pdf-tb" onclick="pdfZoomIn()">+</button>
+                    <button class="pdf-tb fs" id="pdf-fs-btn" onclick="togglePdfFullscreen()" title="Toggle fullscreen">&#x26F6;</button>
                     <button class="pdf-tb dl" onclick="pdfDownload()">&#11015; Download</button>
                     <button class="pdf-tb cl" onclick="closePdf()">&#10005; Close</button>
                 </div>
@@ -1591,7 +1642,38 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             cardIndex = 0;
             renderCardInModal(arr[0], data, 0, arr.length);
         };
-        window.closeCards = function() { document.getElementById('card-modal').style.display = 'none'; shuffledDeck = null; };
+        window.closeCards = function() {
+            /* Exit fullscreen if active before closing */
+            if (document.fullscreenElement || document.webkitFullscreenElement) {
+                (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+            }
+            document.getElementById('card-modal').style.display = 'none';
+            shuffledDeck = null;
+        };
+
+        /* ── Fullscreen toggle for card slideshow ── */
+        window.toggleCardFullscreen = function() {
+            var el = document.getElementById('card-modal');
+            var isFS = document.fullscreenElement || document.webkitFullscreenElement;
+            if (!isFS) {
+                if (el.requestFullscreen) { el.requestFullscreen(); }
+                else if (el.webkitRequestFullscreen) { el.webkitRequestFullscreen(); }
+            } else {
+                if (document.exitFullscreen) { document.exitFullscreen(); }
+                else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
+            }
+        };
+
+        /* Update UI when fullscreen state changes */
+        function onFSChange() {
+            var isFS = !!(document.fullscreenElement || document.webkitFullscreenElement);
+            var exitBtn = document.getElementById('fs-exit-btn');
+            var fsBtn = document.getElementById('card-fs-btn');
+            if (exitBtn) { exitBtn.classList.toggle('visible', isFS); }
+            if (fsBtn) { fsBtn.innerHTML = isFS ? '&#x2716;' : '&#x26F6;'; fsBtn.title = isFS ? 'Exit fullscreen' : 'Enter fullscreen'; }
+        }
+        document.addEventListener('fullscreenchange', onFSChange);
+        document.addEventListener('webkitfullscreenchange', onFSChange);
 
         window.switchTab = function(tabName) {
             stopLectureAudio();
@@ -2394,6 +2476,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         }
 
         window.closePdf = function() {
+            /* Exit fullscreen if active before closing */
+            if (document.fullscreenElement === document.getElementById('pdf-view') || document.webkitFullscreenElement === document.getElementById('pdf-view')) {
+                (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+            }
             pdfDoc = null;
             pdfCurrentUrl = '';
             pdfPageNum = 1;
@@ -2421,6 +2507,30 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             a.download = decodeURIComponent(pdfCurrentUrl.split('/').pop());
             a.click();
         };
+
+        /* ── Fullscreen toggle for PDF/Guides viewer ── */
+        window.togglePdfFullscreen = function() {
+            var el = document.getElementById('pdf-view');
+            var isFS = document.fullscreenElement || document.webkitFullscreenElement;
+            if (!isFS) {
+                if (el.requestFullscreen) { el.requestFullscreen(); }
+                else if (el.webkitRequestFullscreen) { el.webkitRequestFullscreen(); }
+            } else {
+                if (document.exitFullscreen) { document.exitFullscreen(); }
+                else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
+            }
+        };
+
+        /* Update PDF fullscreen UI on state change (shared listener with cards) */
+        function onPdfFSChange() {
+            var isFS = !!(document.fullscreenElement || document.webkitFullscreenElement);
+            var exitBtn = document.getElementById('pdf-fs-exit');
+            var fsBtn = document.getElementById('pdf-fs-btn');
+            if (exitBtn) { exitBtn.classList.toggle('visible', isFS && document.fullscreenElement === document.getElementById('pdf-view')); }
+            if (fsBtn) { fsBtn.innerHTML = (isFS && document.fullscreenElement === document.getElementById('pdf-view')) ? '&#x2716;' : '&#x26F6;'; }
+        }
+        document.addEventListener('fullscreenchange', onPdfFSChange);
+        document.addEventListener('webkitfullscreenchange', onPdfFSChange);
 
         window.showPDFs = function() {
             document.getElementById('home-dashboard').style.display = 'none';
@@ -2518,6 +2628,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             var cardModal = document.getElementById('card-modal');
             var quizModal = document.getElementById('quiz-modal');
             if (e.key === 'Escape') {
+                /* If fullscreen is active, browser handles exit — don't also close the modal */
+                var isFS = !!(document.fullscreenElement || document.webkitFullscreenElement);
+                if (isFS) { return; }
                 if (quizModal.style.display === 'block') { closeQuiz(); e.preventDefault(); }
                 else if (cardModal.style.display === 'flex') { closeCards(); e.preventDefault(); }
             }
