@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 Klimek 6: Tox & Electrolytes</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; min-height: 100vh; min-height: 100dvh; background: #b8aad0; }
+        html.dark, html.dark body { background: #0f172a; }
+    </style>
+</head>
+<body>
+<script>
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark');
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(event) {
+    if (event.matches) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+});
+</script>
+
+<!-- Peptopia Klimek Guide Widget -->
+<div id="peptopia-klimek-guide">
+    <style>
+        /* --- Scoped Styles --- */
+        #peptopia-klimek-guide {
+            --slate-50: #f8fafc; --slate-100: #f1f5f9; --slate-200: #e2e8f0;
+            --slate-700: #334155; --slate-800: #1e293b; --slate-900: #0f172a; --white: #ffffff;
+            --rose-500: #fb7185; --blue-500: #06b6d4; --purple-500: #8b5cf6;
+            --emerald-500: #10b981; --amber-500: #d97706; --pink-500: #ec4899; 
+            --indigo-500: #6366f1; --orange-500: #f97316;
+            
+            /* Backgrounds (Pale versions for selection) */
+            --rose-50: #fff1f2; --blue-50: #ecfeff; --purple-50: #f5f3ff;
+            --emerald-50: #ecfdf5; --amber-50: #fffbeb; --pink-50: #fdf2f8; 
+            --indigo-50: #eef2ff; --orange-50: #fff7ed;
+
+            /* Alert Colors */
+            --alert-bg: #fff7ed;
+            --alert-border: #fdba74;
+            --alert-text: #1e293b;
+            
+            /* UI Accents */
+            --accent-gold: #f59e0b; 
+            
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: transparent; color: var(--slate-900); line-height: 1.6;
+            font-size: 16px; max-width: 76rem; margin: 0 auto; padding: 0.75rem;
+            box-sizing: border-box; -webkit-text-size-adjust: 100%;
+        }
+        html.dark #peptopia-klimek-guide {
+            --slate-50: #0f172a; --slate-100: #1e293b; --slate-200: #334155;
+            --slate-700: #cbd5e1; --slate-800: #0f172a; --slate-900: #f1f5f9; --white: #1e293b;
+            --rose-50: #1a0a0d; --blue-50: #0a1a1f; --purple-50: #0f0a1f;
+            --emerald-50: #0a1a12; --amber-50: #1a150a; --pink-50: #1a0a14; 
+            --indigo-50: #0a0e1f; --orange-50: #1a110a;
+            --alert-bg: #1a150a; --alert-border: #92400e; --alert-text: #f1f5f9;
+            background-color: transparent; color: #f1f5f9;
+        }
+        #peptopia-klimek-guide * { box-sizing: border-box; }
+        
+        #peptopia-klimek-guide .highlight-term {
+            background-color: #fef08a; color: #000; padding: 0.1rem 0.4rem;
+            border-radius: 0.25rem; font-weight: 800; display: inline-block; margin-bottom: 2px;
+        }
+        html.dark #peptopia-klimek-guide .highlight-term { background-color: #fde68a; color: #1e1b4b; }
+        
+        /* Navbar */
+        #peptopia-klimek-guide .navbar {
+            background: linear-gradient(135deg, #0a1628 0%, #0c2461 50%, #0a1628 100%);
+            color: #fff; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;
+            display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 4px 16px -2px rgba(10, 22, 40, 0.5), 0 0 20px rgba(30, 100, 255, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+        }
+        html.dark #peptopia-klimek-guide .navbar { background: linear-gradient(135deg, #020617 0%, #0c2461 50%, #020617 100%); border: 1px solid rgba(59, 130, 246, 0.3); }
+        #peptopia-klimek-guide .nav-title { font-weight: 800; font-size: 1.5rem; display: flex; align-items: center; gap: 0.5rem; text-align: center; }
+        
+        /* Tabs */
+        #peptopia-klimek-guide .tabs-container {
+            display: flex; flex-wrap: nowrap; gap: 0.5rem; margin-bottom: 0.5rem;
+            overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 0.5rem; scrollbar-width: thin;
+            justify-content: flex-start;
+        }
+        @media (min-width: 768px) { #peptopia-klimek-guide .tabs-container { justify-content: center; } }
+        #peptopia-klimek-guide .tabs-container::-webkit-scrollbar { height: 4px; }
+        #peptopia-klimek-guide .tabs-container::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+        #peptopia-klimek-guide .tab-btn {
+            padding: 0.6rem 1rem; border-radius: 0.5rem; font-weight: 700;
+            border: none; cursor: pointer; transition: all 0.15s; font-size: 0.95rem;
+            filter: grayscale(40%) opacity(0.9); text-align: center;
+            white-space: nowrap; flex-shrink: 0; color: #fff;
+        }
+        #peptopia-klimek-guide .tab-btn:hover { filter: grayscale(0%) opacity(1); transform: translateY(-1px); }
+        #peptopia-klimek-guide .tab-btn.active {
+            filter: grayscale(0%) opacity(1);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2), 0 0 0 2px rgba(255,255,255,0.3);
+            transform: translateY(1px);
+        }
+
+        /* Tab Colors */
+        #peptopia-klimek-guide #tab-tox { background-color: var(--rose-500); }
+        #peptopia-klimek-guide #tab-bili { background-color: var(--blue-500); }
+        #peptopia-klimek-guide #tab-dumping { background-color: var(--purple-500); }
+        #peptopia-klimek-guide #tab-lytes { background-color: var(--emerald-500); }
+        #peptopia-klimek-guide #tab-hypertx { background-color: var(--amber-500); }
+
+        /* Section Header Bar */
+        #peptopia-klimek-guide .section-header-bar {
+            padding: 0.35rem 1.5rem; color: white;
+            display: flex; justify-content: space-between; align-items: center;
+            border-radius: 0.5rem; font-size: 1.25rem; font-weight: 800;
+            margin-bottom: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); gap: 0.5rem;
+        }
+        @media (max-width: 600px) {
+            #peptopia-klimek-guide .section-header-bar { font-size: 1.1rem; padding: 0.35rem 1rem; flex-wrap: wrap; }
+        }
+        
+        #peptopia-klimek-guide .header-btn {
+            background-color: #312e81; color: white; border: 2px solid rgba(255,255,255,0.5);
+            padding: 0.3rem 1rem; border-radius: 0.4rem; font-size: 0.9rem; font-weight: 700;
+            cursor: pointer; transition: all 0.2s; white-space: nowrap; -webkit-tap-highlight-color: transparent;
+        }
+        #peptopia-klimek-guide .header-btn:hover { background-color: white; color: #312e81; transform: scale(1.02); }
+        
+        #peptopia-klimek-guide .header-quiz-btn {
+            background-color: #312e81; color: white; border: 2px solid rgba(255,255,255,0.5);
+            padding: 0.3rem 1rem; border-radius: 0.4rem;
+            font-size: 0.9rem; font-weight: 700; cursor: pointer;
+            transition: all 0.2s; white-space: nowrap;
+        }
+        #peptopia-klimek-guide .header-quiz-btn:hover {
+            background-color: white; color: #312e81; transform: scale(1.02);
+        }
+        
+        #peptopia-klimek-guide .header-btns { display: flex; gap: 0.5rem; flex-shrink: 0; }
+
+        /* Card Overlay & Modal */
+        #peptopia-klimek-guide .card-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.92); z-index: 1999;
+            align-items: flex-start; justify-content: center; padding: 0;
+            overflow-y: auto; -webkit-overflow-scrolling: touch;
+        }
+        #peptopia-klimek-guide .card-modal {
+            background: var(--white); width: 100%; max-width: 560px; border-radius: 0;
+            min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column;
+        }
+        @media (min-width: 640px) {
+            #peptopia-klimek-guide .card-overlay { align-items: center; padding: 1.5rem; }
+            #peptopia-klimek-guide .card-modal { border-radius: 1rem; min-height: auto; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+        }
+        html.dark #peptopia-klimek-guide .card-modal { background: #1e293b; }
+        #peptopia-klimek-guide .card-modal-header {
+            padding: 0.75rem 1rem; color: white; font-weight: 800; font-size: 1rem;
+            display: flex; justify-content: space-between; align-items: center; border-radius: 0;
+        }
+        @media (min-width: 640px) { #peptopia-klimek-guide .card-modal-header { border-radius: 1rem 1rem 0 0; } }
+        #peptopia-klimek-guide .card-modal-header .card-close-btn {
+            background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 0 0.25rem; line-height: 1;
+        }
+        #peptopia-klimek-guide .card-modal-body { padding: 1.25rem; flex-grow: 1; }
+        #peptopia-klimek-guide .card-modal-body .card-topic { font-size: 1.35rem; font-weight: 800; margin-bottom: 1rem; color: var(--slate-900); }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-topic { color: #f1f5f9; }
+        #peptopia-klimek-guide .card-modal-body .card-section { margin-bottom: 1rem; }
+        #peptopia-klimek-guide .card-modal-body .card-label {
+            font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px;
+            color: #64748b; font-weight: 800; margin-bottom: 0.3rem; display: block;
+        }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-label { color: #94a3b8; }
+        #peptopia-klimek-guide .card-modal-body .card-fact { font-size: 1.05rem; line-height: 1.5; color: var(--slate-900); }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-fact { color: #e2e8f0; }
+        #peptopia-klimek-guide .card-modal-body .card-alert-box {
+            background: #fff1f2; border-left: 5px solid #e11d48; padding: 0.75rem; border-radius: 0.25rem;
+        }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-alert-box { background: #1c1012; border-left-color: #be123c; }
+        #peptopia-klimek-guide .card-modal-body .card-alert-box .card-fact { font-size: 0.95rem; }
+        #peptopia-klimek-guide .card-nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.75rem 1rem; border-top: 1px solid var(--slate-200); gap: 0.5rem;
+        }
+        html.dark #peptopia-klimek-guide .card-nav { border-top-color: #334155; }
+        #peptopia-klimek-guide .card-nav-btn {
+            background: #4f46e5; color: white; border: none; padding: 0.55rem 1.25rem;
+            border-radius: 2rem; font-weight: 700; cursor: pointer; font-size: 0.9rem;
+            transition: background 0.15s; -webkit-tap-highlight-color: transparent;
+        }
+        #peptopia-klimek-guide .card-nav-btn:hover { background: #4338ca; }
+        #peptopia-klimek-guide .card-nav-btn:disabled { opacity: 0.35; cursor: default; }
+        #peptopia-klimek-guide .card-counter { font-size: 0.85rem; font-weight: 700; color: #64748b; white-space: nowrap; }
+        html.dark #peptopia-klimek-guide .card-counter { color: #94a3b8; }
+
+        /* Main Grid */
+        #peptopia-klimek-guide .grid-layout { display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start; } 
+        @media (min-width: 850px) {
+            #peptopia-klimek-guide .grid-layout { flex-direction: row; }
+            #peptopia-klimek-guide .grid-layout > div:first-child { flex: 2; width: 100%; } /* Left Col */
+            #peptopia-klimek-guide .grid-layout > div:last-child { flex: 1; width: 100%; position: sticky; top: 1rem; }  /* Right Col */
+        }
+
+        /* Description Box */
+        #peptopia-klimek-guide .description-box {
+            padding: 1rem; background: #ffffff; 
+            border: 2px solid #e2e8f0; border-radius: 0.5rem;
+            border-left: 6px solid var(--slate-700);
+            font-size: 1.05rem; color: #000000; font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Data Table */
+        #peptopia-klimek-guide .table-container { 
+            overflow-x: auto; -webkit-overflow-scrolling: touch; 
+            border: 2px solid #334155; border-radius: 0.75rem; 
+            background: white; max-height: 600px; overflow-y: auto; 
+        }
+        html.dark #peptopia-klimek-guide .table-container { background: #1e293b; border-color: #475569; }
+        #peptopia-klimek-guide table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; }
+        #peptopia-klimek-guide th { 
+            padding: 0.75rem; background-color: #f1f5f9; color: #0f172a; 
+            border-bottom: 2px solid #e2e8f0; position: sticky; top: 0; z-index: 5; 
+            font-weight: 800; font-size: 0.9rem;
+        }
+        html.dark #peptopia-klimek-guide th { background-color: #334155; color: #f1f5f9; border-bottom-color: #475569; }
+        #peptopia-klimek-guide td { padding: 0.75rem; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        html.dark #peptopia-klimek-guide td { border-bottom-color: #334155; color: #e2e8f0; }
+        #peptopia-klimek-guide tr:hover td { cursor: pointer; background-color: #f8fafc; filter: brightness(98%); }
+        html.dark #peptopia-klimek-guide tr:hover td { background-color: #1e293b; }
+        #peptopia-klimek-guide tr.selected td { border-left: 5px solid var(--accent-gold); background-color: #fffbeb; }
+        html.dark #peptopia-klimek-guide tr.selected td { background-color: #1c1917; }
+
+        /* Cell Specifics */
+        #peptopia-klimek-guide .topic-cell { font-weight: 800; width: 1%; white-space: nowrap; color: #000; vertical-align: top; }
+        html.dark #peptopia-klimek-guide .topic-cell { color: #f1f5f9; }
+        #peptopia-klimek-guide .topic-cell.tox { background-color: var(--rose-50); }
+        #peptopia-klimek-guide .topic-cell.bili { background-color: var(--blue-50); }
+        #peptopia-klimek-guide .topic-cell.dumping { background-color: var(--purple-50); }
+        #peptopia-klimek-guide .topic-cell.lytes { background-color: var(--emerald-50); }
+        #peptopia-klimek-guide .topic-cell.hypertx { background-color: var(--amber-50); }
+
+        #peptopia-klimek-guide .key-point-cell { color: #334155; font-style: normal; font-weight: 500; }
+        html.dark #peptopia-klimek-guide .key-point-cell { color: #cbd5e1; }
+        #peptopia-klimek-guide .alert-cell { color: #991b1b; background-color: #fef2f2; border-left: 3px solid #f87171; font-weight: 600; }
+        html.dark #peptopia-klimek-guide .alert-cell { background-color: #1c1012; color: #fca5a5; border-left-color: #dc2626; }
+
+        @media (max-width: 600px) {
+            #peptopia-klimek-guide .table-container { max-height: none; }
+            #peptopia-klimek-guide table, #peptopia-klimek-guide thead, #peptopia-klimek-guide tbody,
+            #peptopia-klimek-guide th, #peptopia-klimek-guide td, #peptopia-klimek-guide tr { display: block; width: 100%; }
+            #peptopia-klimek-guide thead { display: none; }
+            #peptopia-klimek-guide tr { border-bottom: 2px solid #e2e8f0; padding: 0.6rem 0; margin-bottom: 0.35rem; }
+            html.dark #peptopia-klimek-guide tr { border-bottom-color: #334155; }
+            #peptopia-klimek-guide td { padding: 0.3rem 0.65rem; border-bottom: none; position: relative; padding-left: 0.65rem; }
+            #peptopia-klimek-guide .topic-cell { font-size: 1.05rem; padding-bottom: 0.15rem; white-space: normal; }
+            #peptopia-klimek-guide .key-point-cell::before { content: '📌 '; }
+            #peptopia-klimek-guide .alert-cell {
+                border-left: 3px solid #f87171; margin: 0.2rem 0.3rem;
+                border-radius: 0.25rem; padding: 0.4rem 0.6rem; font-size: 0.85rem;
+            }
+            #peptopia-klimek-guide tr.selected td { border-left: none; }
+            #peptopia-klimek-guide tr.selected { border-left: 4px solid var(--accent-gold); background: #fffbeb; border-radius: 0.5rem; }
+            html.dark #peptopia-klimek-guide tr.selected { background: #1c1917; }
+        }
+
+        /* Focus Card */
+        #peptopia-klimek-guide .focus-card {
+            background-color: white; border: 2px solid; 
+            border-radius: 0.75rem; min-height: 250px;
+            display: flex; flex-direction: column; 
+            padding: 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        html.dark #peptopia-klimek-guide .focus-card { background: #1e293b; }
+        #peptopia-klimek-guide .focus-card-header {
+            padding: 0.75rem 1rem; border-radius: 0.55rem 0.55rem 0 0; color: white; font-weight: 800; font-size: 1.1rem; text-align: center;
+        }
+        #peptopia-klimek-guide .focus-card-body { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; gap: 1.5rem; }
+        #peptopia-klimek-guide .focus-label {
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #64748b; font-weight: 800; margin-bottom: 0.25rem; display: block;
+        }
+        html.dark #peptopia-klimek-guide .focus-label { color: #94a3b8; }
+        #peptopia-klimek-guide .focus-content { font-size: 1.15rem; color: #000; line-height: 1.4; }
+        html.dark #peptopia-klimek-guide .focus-content { color: #f1f5f9; }
+        #peptopia-klimek-guide .focus-alert-box {
+            background-color: #fff1f2; border-left: 5px solid #e11d48; padding: 1rem; border-radius: 0.25rem;
+        }
+        html.dark #peptopia-klimek-guide .focus-alert-box { background: #1c1012; border-left-color: #be123c; }
+
+        /* Quiz Styles */
+        #peptopia-klimek-guide .quiz-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.96); z-index: 2000; 
+            align-items: flex-start; justify-content: center; padding: 0;
+            overflow-y: auto; -webkit-overflow-scrolling: touch;
+        }
+        #peptopia-klimek-guide .quiz-box {
+            background: #1e1b4b; /* Dark Blue/Slate */
+            width: 100%; max-width: 800px; padding: 2rem; border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid #4338ca;
+            color: white; display: flex; flex-direction: column;
+            max-height: 90vh; overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+        #peptopia-klimek-guide .quiz-question-number {
+            background: #4338ca; width: 40px; height: 40px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; margin-right: 1rem; flex-shrink: 0; font-size: 1rem;
+        }
+        #peptopia-klimek-guide .quiz-header-row { display: flex; align-items: flex-start; margin-bottom: 1.5rem; }
+        #peptopia-klimek-guide .quiz-question-text { font-size: 1.2rem; line-height: 1.5; font-weight: 500; }
+        
+        #peptopia-klimek-guide .quiz-option {
+            background: #312e81; border: 2px solid #4338ca; padding: 1rem; margin-bottom: 0.75rem;
+            border-radius: 0.5rem; cursor: pointer; transition: all 0.15s;
+            display: flex; align-items: center; font-size: 1.05rem; color: #e0e7ff;
+            width: 100%; text-align: left; -webkit-tap-highlight-color: transparent; user-select: none;
+        }
+        #peptopia-klimek-guide .quiz-option:hover { background: #3730a3; border-color: #6366f1; }
+        @media (hover: none) {
+            #peptopia-klimek-guide .quiz-option:hover { background: #312e81; border-color: #4338ca; }
+            #peptopia-klimek-guide .quiz-option:active { background: #3730a3; border-color: #6366f1; }
+        }
+        #peptopia-klimek-guide .quiz-option.correct-choice { background: #064e3b; border-color: #10b981; color: white; }
+        #peptopia-klimek-guide .quiz-option.wrong-choice { background: #7f1d1d; border-color: #ef4444; color: white; opacity: 0.85; }
+        
+        #peptopia-klimek-guide .quiz-option-letter {
+            background: rgba(255,255,255,0.1); width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin-right: 1rem; font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
+        }
+
+        #peptopia-klimek-guide .feedback-container {
+            margin-top: 1.5rem; background: #312e81; border-radius: 0.5rem; border: 1px solid #4338ca; overflow: hidden; display: none;
+        }
+        #peptopia-klimek-guide .feedback-header {
+            padding: 0.75rem 1rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem;
+        }
+        #peptopia-klimek-guide .feedback-header.correct { background: #065f46; color: #34d399; }
+        #peptopia-klimek-guide .feedback-header.incorrect { background: #7f1d1d; color: #fca5a5; }
+        #peptopia-klimek-guide .feedback-content { padding: 1.25rem; font-size: 1.05rem; line-height: 1.6; color: #e0e7ff; }
+        #peptopia-klimek-guide .rationale-label { color: #a5b4fc; font-weight: 800; display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+        
+        #peptopia-klimek-guide .quiz-footer {
+            margin-top: 2rem; display: flex; justify-content: center; align-items: center;
+            padding-bottom: env(safe-area-inset-bottom, 1.5rem);
+        }
+        #peptopia-klimek-guide .next-q-btn {
+            background: #4f46e5; color: white; border: none; padding: 0.85rem 2.5rem;
+            border-radius: 2rem; font-weight: 800; cursor: pointer;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4); font-size: 1.1rem;
+            -webkit-tap-highlight-color: transparent; width: 100%; max-width: 320px;
+        }
+        #peptopia-klimek-guide .next-q-btn:hover { background: #4338ca; }
+        @media (hover: none) { #peptopia-klimek-guide .next-q-btn:active { background: #4338ca; transform: scale(0.98); } }
+        
+        @media (max-width: 600px) {
+             #peptopia-klimek-guide .quiz-box { padding: 1.25rem; max-height: 80vh; width: 95%; margin: 1rem auto; border-radius: 1rem; min-height: auto;}
+        }
+
+        /* Color Classes */
+        #peptopia-klimek-guide .bg-rose { background-color: var(--rose-500) !important; border-color: var(--rose-500) !important; }
+        #peptopia-klimek-guide .bg-blue { background-color: var(--blue-500) !important; border-color: var(--blue-500) !important; }
+        #peptopia-klimek-guide .bg-purple { background-color: var(--purple-500) !important; border-color: var(--purple-500) !important; }
+        #peptopia-klimek-guide .bg-emerald { background-color: var(--emerald-500) !important; border-color: var(--emerald-500) !important; }
+        #peptopia-klimek-guide .bg-amber { background-color: var(--amber-500) !important; border-color: var(--amber-500) !important; }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-title">📘 Klimek 6: Tox & Electrolytes</div>
+    </nav>
+
+    <!-- Tabs -->
+    <div class="tabs-container">
+        <button class="tab-btn active bg-rose" id="tab-tox" onclick="switchTab('tox')">Toxicities</button>
+        <button class="tab-btn bg-blue" id="tab-bili" onclick="switchTab('bili')">Bilirubin</button>
+        <button class="tab-btn bg-purple" id="tab-dumping" onclick="switchTab('dumping')">Dumping/Hernia</button>
+        <button class="tab-btn bg-emerald" id="tab-lytes" onclick="switchTab('lytes')">Electrolytes</button>
+        <button class="tab-btn bg-amber" id="tab-hypertx" onclick="switchTab('hypertx')">Hyperkalemia Tx</button>
+    </div>
+
+    <!-- Description (High Contrast) -->
+    <div id="desc-area" class="description-box" style="display:none;"></div>
+
+    <!-- Content Area -->
+    <div id="content-area"></div>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="quiz-overlay">
+        <div class="quiz-box" id="quiz-box-inner">
+            <div style="display:flex; justify-content:space-between; margin-bottom:1.5rem; align-items:center;">
+                <span style="color:#818cf8; font-weight:700; font-size:1.1rem;" id="quiz-progress">Question 1 of ?</span>
+                <button onclick="closeQuiz()" style="background:none; border:none; color:#818cf8; font-size:2rem; cursor:pointer; padding:0; line-height:1;">&times;</button>
+            </div>
+            <div class="quiz-header-row">
+                <div class="quiz-question-number" id="q-num-display">1</div>
+                <div class="quiz-question-text" id="q-text"></div>
+            </div>
+            <div id="q-options"></div>
+            <div id="feedback-area" class="feedback-container">
+                <div class="feedback-header" id="feedback-header"></div>
+                <div class="feedback-content">
+                    <span class="rationale-label">Rationale:</span>
+                    <span id="rationale-text"></span>
+                </div>
+            </div>
+            <div class="quiz-footer">
+                <button class="next-q-btn" id="next-btn" style="display:none;" onclick="nextQuestion()">Next Question</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Study Card Modal (Mobile only) -->
+    <div id="card-modal" class="card-overlay">
+        <div class="card-modal">
+            <div class="card-modal-header" id="card-modal-header">
+                <span id="card-modal-title">Study Cards</span>
+                <button class="card-close-btn" onclick="closeCards()">&times;</button>
+            </div>
+            <div class="card-modal-body" id="card-modal-body"></div>
+            <div class="card-nav">
+                <button class="card-nav-btn" id="card-prev-btn" onclick="prevCard()">&#8592; Prev</button>
+                <span class="card-counter" id="card-counter">1 / ?</span>
+                <button class="card-nav-btn" id="card-next-btn" onclick="nextCard()">Next &#8594;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        // --- DATA FOR KLIMEK 6 ---
+        const contentData = {
+            tox: {
+                title: 'Drug Toxicities',
+                color: 'bg-rose',
+                type: 'tox',
+                description: 'Klimek 6: The 5 most tested drugs with narrow therapeutic windows.',
+                data: [
+                    { topic: 'Lithium', fact: 'Antimania drug for Bipolar. Therapeutic: <span class="highlight-term">0.6 - 1.2</span>.', alert: 'Toxic level: > 2.0. Watch for tremors/metallic taste/diarrhea.', q: 'What is the therapeutic level for Lithium?', a: ['0.6 to 1.2', '1 to 2', '10 to 20', 'Over 20'], correct: 0, rationale: 'Lithium has a very narrow therapeutic window. Anything over 2.0 is highly toxic.' },
+                    { topic: 'Digoxin (Lanoxin)', fact: 'Treats A-Fib and CHF. Therapeutic: <span class="highlight-term">1 - 2</span>.', alert: 'Toxic level: > 2.0. (Or 2 and above).', q: 'A patient\'s Digoxin level is 2.5. What is the nurse\'s interpretation?', a: ['The level is toxic (>2.0)', 'The level is therapeutic', 'The level is too low', 'The level is borderline normal'], correct: 0, rationale: 'Digoxin therapeutic range is 1-2. Levels greater than 2 are toxic.' },
+                    { topic: 'Aminophylline', fact: 'Airway antispasmodic. Therapeutic: <span class="highlight-term">10 - 20</span>.', alert: 'Toxic level: > 20. Under 10 means need to increase dose.', q: 'What is the toxic level for Aminophylline?', a: ['Greater than 20', 'Greater than 10', 'Greater than 2.0', 'Greater than 50'], correct: 0, rationale: 'Like Dilantin and Bilirubin, Aminophylline has a "20s" pattern for toxicity. >20 is toxic.' },
+                    { topic: 'Dilantin (Phenytoin)', fact: 'Seizure medication. Therapeutic: <span class="highlight-term">10 - 20</span>.', alert: 'Toxic level: > 20.', q: 'What is the normal therapeutic range for Dilantin?', a: ['10 to 20', '1 to 2', '0.6 to 1.2', '20 to 30'], correct: 0, rationale: 'Dilantin\'s therapeutic range is exactly the same as Aminophylline: 10 to 20.' },
+                    { topic: 'Toxicity Patterns', fact: 'Rule of 2s and 20s.', alert: 'Low numbers (2s): Lithium & Lanoxin. High numbers (20s): Aminophylline, Dilantin, Bilirubin.', q: 'Which two drugs have a toxic level of greater than 2.0?', a: ['Lithium and Digoxin (Lanoxin)', 'Dilantin and Aminophylline', 'Lithium and Dilantin', 'Digoxin and Bilirubin'], correct: 0, rationale: 'The "L" drugs (Lithium and Lanoxin) share the low toxicity threshold of 2.0.' }
+                ]
+            },
+            bili: {
+                title: 'Bilirubin & Jaundice',
+                color: 'bg-blue',
+                type: 'bili',
+                description: 'Klimek 6: Newborn Hyperbilirubinemia and Kernicterus.',
+                data: [
+                    { topic: 'Newborn Bilirubin', fact: 'Elevated range for newborns: <span class="highlight-term">10 - 20</span>.', alert: 'Toxicity: > 20. MD will hospitalize around 14 or 15.', q: 'At what bilirubin level will a pediatrician typically hospitalize a newborn?', a: ['14 to 15', '9 to 10', '5 to 8', '2 to 5'], correct: 0, rationale: 'While 10-20 is elevated, 14-15 represents the halfway mark to toxicity (>20) where hospital-grade phototherapy is required.' },
+                    { topic: 'Kernicterus', fact: 'Bilirubin in the <span class="highlight-term">brain</span> (crosses blood-brain barrier).', alert: 'Occurs when level gets around 20. Deadly!', q: 'What is the definition of Kernicterus?', a: ['Excess bilirubin in the brain/CSF', 'Excess bilirubin in the blood', 'Yellowing of the skin and eyes', 'Liver failure'], correct: 0, rationale: 'Jaundice is bilirubin in the skin/blood. Kernicterus is bilirubin in the brain, causing aseptic meningitis or encephalopathy.' },
+                    { topic: 'Opisthotonos', fact: 'Position newborns assume due to irritation of the meninges from kernicterus.', alert: 'Hyperextended posture. Medical Emergency!', q: 'What posture does a newborn assume when experiencing Opisthotonos?', a: ['Hyperextended (arched back)', 'Fetal position (flexed)', 'Flaccid and limp', 'Rigid with arms crossed'], correct: 0, rationale: 'The severe meningeal irritation causes the baby to arch their back and hyperextend their neck.' },
+                    { topic: 'Opisthotonos Positioning', fact: 'If baby is opisthotonic, place them on their <span class="highlight-term">side</span>.', alert: 'Do not lay them flat on their back.', q: 'In what position should you place a newborn exhibiting opisthotonos?', a: ['On their side', 'Flat on their back', 'Prone', 'High Fowlers'], correct: 0, rationale: 'Because they are hyperextending their neck and spine, placing them on their side is the safest supportive position.' },
+                    { topic: 'Pathologic Jaundice', fact: 'Baby is yellow <span class="highlight-term">at birth</span> (first 24 hours).', alert: 'Something is wrong (e.g., blood incompatibility).', q: 'A newborn is visibly jaundiced 12 hours after birth. What type of jaundice is this?', a: ['Pathologic Jaundice', 'Physiologic Jaundice', 'Normal Jaundice', 'Breast milk Jaundice'], correct: 0, rationale: 'Yellowing in the first 24 hours indicates a pathological process destroying red blood cells prematurely.' },
+                    { topic: 'Physiologic Jaundice', fact: 'Baby turns yellow <span class="highlight-term">2 to 3 days</span> postpartum.', alert: 'Normal, expected transition as baby clears RBCs.', q: 'A newborn turns slightly yellow on day 3 of life. How is this interpreted?', a: ['Physiologic jaundice (Normal)', 'Pathologic jaundice (Abnormal)', 'Kernicterus (Emergency)', 'Liver failure'], correct: 0, rationale: 'It takes a few days for the immature liver to process the normal breakdown of fetal red blood cells, causing a temporary yellowing.' }
+                ]
+            },
+            dumping: {
+                title: 'Dumping vs. Hernia',
+                color: 'bg-purple',
+                type: 'dumping',
+                description: 'Klimek 6: Gastric emptying problems. They are opposites!',
+                data: [
+                    { topic: 'Hiatal Hernia', fact: 'Regurgitation upward into esophagus. Like a cow with 2 stomachs.', alert: 'Wrong direction, correct rate.', q: 'How does Mark Klimek describe the physiology of a Hiatal Hernia?', a: ['Gastric contents go in the wrong direction at the correct rate', 'Gastric contents go in the right direction at the wrong rate', 'The stomach empties too slowly', 'The stomach empties too quickly'], correct: 0, rationale: 'In a hiatal hernia, the stomach protrudes through the diaphragm, causing acid to back up (wrong direction) but digestion happens at a normal speed (correct rate).' },
+                    { topic: 'Hiatal Hernia: Symptoms', fact: 'S/S are similar to <span class="highlight-term">GERD</span> (Heartburn/indigestion).', alert: 'Crucial: Only occurs when lying down AFTER eating.', q: 'What must occur for GERD symptoms to be classified as a Hiatal Hernia on the NCLEX?', a: ['Symptoms occur when lying down after a meal', 'Symptoms occur randomly throughout the day', 'Symptoms occur only in the morning', 'Symptoms occur during exercise'], correct: 0, rationale: 'If you have indigestion while standing, it\'s GERD. If you eat and lie down and get indigestion, it is a Hiatal Hernia.' },
+                    { topic: 'Hiatal Hernia: Treatment', fact: 'You want the stomach to empty faster so it doesn\'t back up.', alert: 'HIGH HOB, HIGH fluids, HIGH carbs.', q: 'What is the dietary and positioning treatment for a Hiatal Hernia?', a: ['High HOB, High fluids, High carbs', 'Low HOB, Low fluids, Low carbs', 'Flat bed, High protein, Low fluids', 'High HOB, Low fluids, High protein'], correct: 0, rationale: '"High-atal Hernia = Everything High". Raising the HOB, giving fluids, and giving carbs makes the stomach empty faster, preventing reflux.' },
+                    { topic: 'Dumping Syndrome', fact: 'Gastric contents dump too quickly into duodenum.', alert: 'Right direction, wrong rate (too fast).', q: 'What is the physiological problem in Dumping Syndrome?', a: ['Gastric contents dump too quickly into the duodenum', 'Gastric contents back up into the esophagus', 'The bowel becomes paralyzed', 'Acid production is severely low'], correct: 0, rationale: 'Typically following gastric surgery, the stomach loses its holding capacity and dumps un-digested food rapidly into the intestine.' },
+                    { topic: 'Dumping Syndrome: Signs', fact: 'Think: <span class="highlight-term">Drunk + Shock + Acute Abd Distress</span>.', alert: 'Staggering, cold/clammy, tachycardia, cramping, diarrhea.', q: 'Which combination of symptoms accurately describes Dumping Syndrome?', a: ['Drunk signs, Shock signs, and Acute Abdominal distress', 'Fever, Bradycardia, and Constipation', 'Headache, Hypertension, and Vomiting', 'Lethargy, Bradypnea, and Ileus'], correct: 0, rationale: 'Blood rushes to the gut to handle the massive food dump, causing cerebral impairment (Drunk), vasomotor collapse (Shock), and cramping/diarrhea (Abd distress).' },
+                    { topic: 'Dumping Syndrome: Tx', fact: 'You want to slow the stomach down.', alert: 'LOW HOB (flat/side), LOW fluids, LOW carbs. (High protein).', q: 'What is the correct dietary protocol to prevent Dumping Syndrome?', a: ['Low HOB, Low fluids with meals, Low carbs, High protein', 'High HOB, High fluids with meals, High carbs', 'Sit up for 1 hour after eating', 'Liquid diet only'], correct: 0, rationale: 'Dumping syndrome = Everything Low (except protein). Eating flat, avoiding fluids with meals, and avoiding fast carbs slows gastric emptying.' }
+                ]
+            },
+            lytes: {
+                title: 'Electrolyte Rules',
+                color: 'bg-emerald',
+                type: 'lytes',
+                description: 'Klimek 6: The master rules for Kalemias, Calcemias, Magnesemias, and Natremias.',
+                data: [
+                    { topic: 'Kalemias (Potassium)', fact: 'Do the <span class="highlight-term">SAME</span> as the prefix, EXCEPT for HR and Urine Output.', alert: 'Hyper = High (except HR/UO). Hypo = Low (except HR/UO).', q: 'Your patient has Hyperkalemia. Based on the rule, which symptom would you expect?', a: ['Peaked T waves, irritability, bradycardia', 'Lethargy, polyuria, tachycardia', 'Constipation, tachycardia, hyperreflexia', 'Bradypnea, flaccidity, bradycardia'], correct: 0, rationale: 'Kalemia goes the SAME as the prefix (Hyper = irritability, peaked T-waves, spasticity, diarrhea) EXCEPT heart rate and urine output go opposite (bradycardia, oliguria).' },
+                    { topic: 'Calcemias (Calcium)', fact: 'Do the <span class="highlight-term">OPPOSITE</span> of the prefix.', alert: 'Hyper = Sedative (Low). Hypo = Irritable (High).', q: 'What symptoms would you expect to see in Hypocalcemia?', a: ['Agitation, spasms, Chvostek\'s sign, Trousseau\'s sign', 'Lethargy, bradycardia, bradypnea', 'Constipation and flaccid muscles', 'Coma and hyporeflexia'], correct: 0, rationale: 'Calcemias do the opposite. Hypo means symptoms go HIGH (neuromuscular irritability, tetany, spasms).' },
+                    { topic: 'Magnesemias', fact: 'Do the <span class="highlight-term">OPPOSITE</span> of the prefix.', alert: 'Just like Calcium, Magnesium acts as a sedative.', q: 'Your patient has Hypermagnesemia. What findings do you expect?', a: ['Bradycardia, bradypnea, hyporeflexia', 'Tachycardia, tachypnea, hyperreflexia', 'Seizures and clonus', 'Irritability and diarrhea'], correct: 0, rationale: 'Magnesemias do the opposite. Hyper means symptoms go LOW (it sedates the body, leading to depressed reflexes and vitals).' },
+                    { topic: 'Tie Breaker Rule', fact: 'If symptoms involve nerve or skeletal muscle, pick <span class="highlight-term">Calcium</span>.', alert: 'For any other symptom (BP, Heart), pick Potassium.', q: 'A patient presents with severe diarrhea. Which electrolyte imbalance is the most likely cause?', a: ['Hyperkalemia', 'Hypocalcemia', 'Hypomagnesemia', 'Hypernatremia'], correct: 0, rationale: 'Hyperkalemia causes diarrhea (same as prefix). While Hypocalcemia/Hypomagnesemia also cause "up" symptoms, the rule says pick Potassium for anything that isn\'t strictly nerve/skeletal muscle.' },
+                    { topic: 'Natremias (Sodium)', fact: 'Hyp<span class="highlight-term">E</span>rnatremia = d<span class="highlight-term">E</span>hydration.<br>Hyp<span class="highlight-term">O</span>natremia = <span class="highlight-term">O</span>verload.', alert: 'Na+ goes with fluid balance.', q: 'Which assessment finding is consistent with Hypernatremia?', a: ['Hot, flushed, dry skin and thready pulse', 'Crackles in the lungs and distended neck veins', 'Fluid volume excess', 'Weight gain'], correct: 0, rationale: 'HypErnatremia corresponds to dEhydration (fluid volume deficit). HypOnatremia corresponds to Overload (fluid volume excess).' },
+                    { topic: 'Universal Signs', fact: 'Earliest sign of ANY imbalance = <span class="highlight-term">Paresthesia</span> (numbness/tingling).', alert: 'Universal sign of ANY imbalance = <span class="highlight-term">Paresis</span> (muscle weakness).', q: 'What is the universal sign of all electrolyte imbalances?', a: ['Paresis (Muscle weakness)', 'Paresthesia (Numbness)', 'Tachycardia', 'Diarrhea'], correct: 0, rationale: 'While paresthesia is the *earliest* sign, paresis (muscle weakness) is the *universal* sign present in almost every severe electrolyte imbalance.' }
+                ]
+            },
+            hypertx: {
+                title: 'Hyperkalemia Tx',
+                color: 'bg-amber',
+                type: 'hypertx',
+                description: 'Klimek 6: Protocols for lowering dangerously high Potassium.',
+                data: [
+                    { topic: 'The Absolute Rule', fact: '<span class="highlight-term">NEVER</span> push Potassium IV.', alert: 'Max dose: 40 mEq/L of IV fluid. Clarify if higher.', q: 'A physician orders 60 mEq of Potassium to be given IV push. What is the nurse\'s action?', a: ['Hold the order and clarify with the physician', 'Give it over 5 minutes', 'Dilute it in 10mL of saline and push', 'Administer as ordered'], correct: 0, rationale: 'You NEVER push potassium IV (it causes instant lethal cardiac arrest), and the max safe dilution is 40 mEq per Liter.' },
+                    { topic: 'High K+ Danger', fact: 'High potassium is the most dangerous imbalance.', alert: 'It can stop the heart.', q: 'Of all electrolyte imbalances, which is the most problematic and life-threatening?', a: ['Hyperkalemia', 'Hypokalemia', 'Hypercalcemia', 'Hyponatremia'], correct: 0, rationale: 'Hyperkalemia affects cardiac conduction and can quickly lead to fatal arrhythmias and cardiac arrest.' },
+                    { topic: 'Fast Treatment', fact: 'Give <span class="highlight-term">D5W with Regular Insulin</span>.', alert: 'Drives K+ into the cell. Fast, but temporary.', q: 'What is the fastest way to lower a dangerously high potassium level?', a: ['Administer D5W and Regular Insulin IV', 'Give Kayexalate', 'Start hemodialysis', 'Give IV Calcium Gluconate'], correct: 0, rationale: 'Insulin acts like a key, pushing glucose and potassium out of the blood and into the cells. This lowers serum K+ instantly, saving the heart, but it will leak back out later.' },
+                    { topic: 'Long-Term Treatment', fact: '<span class="highlight-term">Kayexalate</span> (Polystyrene sulfonate).', alert: 'Trades Na for K in the gut. Poop it out.', q: 'How does Kayexalate treat hyperkalemia?', a: ['It exchanges sodium for potassium in the gut', 'It pushes potassium into the cells', 'It forces the kidneys to excrete potassium', 'It binds to potassium in the blood'], correct: 0, rationale: 'Kayexalate is full of sodium. In the bowel, it trades its sodium for potassium. The patient then defecates the potassium.' },
+                    { topic: 'K-Exits-Late', fact: 'Kayexalate takes hours to work.', alert: 'Results in Hypernatremia (Dehydration) -> give IV fluids.', q: 'Because Kayexalate takes hours to work, how is severe hyperkalemia managed?', a: ['Give D5W + Insulin AND Kayexalate at the same time', 'Just give Kayexalate and wait', 'Give only D5W + Insulin', 'Perform surgery'], correct: 0, rationale: 'D5W + Insulin works instantly to protect the heart (temporary fix). Kayexalate works slowly to permanently remove the potassium from the body ("K-Exits-Late"). Give both.' }
+                ]
+            }
+        };
+
+        // --- Logic ---
+        let currentTab = 'tox';
+        let currentQuizData = []; 
+        let quizIndex = 0;
+        let quizScore = 0;
+
+        // Audio Context for Beeps
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        function playSound(type) {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            if (type === 'correct') {
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(880, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(440, audioCtx.currentTime + 0.1);
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.1);
+            } else {
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.2);
+            }
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // --- Study Card Modal Logic ---
+        let cardIndex = 0;
+
+        window.openCards = function(startIdx) {
+            var data = contentData[currentTab];
+            cardIndex = (typeof startIdx === 'number') ? startIdx : 0;
+            renderCardInModal(data.data[cardIndex], data, cardIndex, data.data.length);
+            document.getElementById('card-modal').style.display = 'flex';
+        };
+
+        function renderCardInModal(item, data, idx, total) {
+            document.getElementById('card-modal-header').className = 'card-modal-header ' + data.color;
+            document.getElementById('card-modal-title').textContent = data.title + ' \u2014 Study Cards';
+            document.getElementById('card-counter').textContent = (idx + 1) + ' / ' + total;
+            document.getElementById('card-prev-btn').disabled = (idx === 0);
+            document.getElementById('card-next-btn').disabled = (idx >= total - 1);
+            document.getElementById('card-modal-body').innerHTML =
+                '<div class="card-topic">' + item.topic + '</div>' +
+                '<div class="card-section">' +
+                    '<span class="card-label">Key Fact</span>' +
+                    '<div class="card-fact">' + item.fact + '</div>' +
+                '</div>' +
+                '<div class="card-section">' +
+                    '<div class="card-alert-box">' +
+                        '<span class="card-label" style="color:#b91c1c;">\u26a0\ufe0f Clinical Alert</span>' +
+                        '<div class="card-fact">' + item.alert + '</div>' +
+                    '</div>' +
+                '</div>';
+        }
+
+        window.prevCard = function() {
+            var data = contentData[currentTab];
+            if (cardIndex > 0) { cardIndex--; renderCardInModal(data.data[cardIndex], data, cardIndex, data.data.length); }
+        };
+        window.nextCard = function() {
+            var data = contentData[currentTab];
+            if (cardIndex < data.data.length - 1) { cardIndex++; renderCardInModal(data.data[cardIndex], data, cardIndex, data.data.length); }
+        };
+        window.closeCards = function() {
+            document.getElementById('card-modal').style.display = 'none';
+        };
+
+        window.switchTab = function(tabName) {
+            currentTab = tabName;
+            document.querySelectorAll('.tab-btn').forEach(function(btn) {
+                btn.className = 'tab-btn';
+                if(btn.id === 'tab-' + tabName) {
+                    btn.classList.add('active', contentData[tabName].color);
+                } else {
+                    var bKey = btn.id.replace('tab-','');
+                    if(contentData[bKey]) btn.classList.add(contentData[bKey].color);
+                }
+            });
+            renderContent();
+        };
+
+        function renderContent() {
+            var data = contentData[currentTab];
+            var contentArea = document.getElementById('content-area');
+            var descArea = document.getElementById('desc-area');
+
+            if (descArea && data) {
+                if(data.description) {
+                    descArea.innerHTML = data.description;
+                    descArea.style.display = 'block';
+                } else {
+                    descArea.style.display = 'none';
+                }
+            }
+
+            var tableRows = data.data.map(function(item, i) {
+                return '<tr onclick="selectRow(this, ' + i + ')">' +
+                    '<td class="topic-cell ' + data.type + '">' + item.topic + '</td>' +
+                    '<td class="key-point-cell">' + item.fact + '</td>' +
+                    '<td class="alert-cell">' + item.alert + '</td>' +
+                '</tr>';
+            }).join('');
+
+            contentArea.innerHTML =
+                '<div class="section-header-bar ' + data.color + '">' +
+                    '<span>' + data.title + '</span>' +
+                    '<div class="header-btns">' +
+                        '<button class="header-btn" style="display:none;" id="mobile-card-btn" onclick="openCards(0)">📄 Cards</button>' +
+                        '<button class="header-quiz-btn" onclick="startQuiz()">Take Quiz</button>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="grid-layout">' +
+                    '<div>' +
+                        '<div class="table-container">' +
+                            '<table>' +
+                                '<thead><tr><th>Topic</th><th>Clinical Fact</th><th>Nursing Priority / Alerts</th></tr></thead>' +
+                                '<tbody id="table-body">' + tableRows + '</tbody>' +
+                            '</table>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="visual-container" id="desktop-focus-card" style="background:none; border:none; padding-top:0;">' +
+                        renderFocusCard(data.data[0], data) +
+                    '</div>' +
+                '</div>';
+
+            if (window.innerWidth <= 600) {
+                document.getElementById('mobile-card-btn').style.display = 'inline-block';
+                document.getElementById('desktop-focus-card').style.display = 'none';
+            }
+            
+            // pre-select first row
+            const firstRow = document.querySelector('#table-body tr');
+            if(firstRow) firstRow.classList.add('selected');
+        }
+        
+        function renderFocusCard(item, data) {
+            if (!item || !data) return '';
+            return `
+                <div class="focus-card" style="border-color:${getComputedStyle(document.documentElement).getPropertyValue('--' + data.color.split('-')[1])};">
+                    <div class="focus-card-header ${data.color}">
+                        Study Card
+                    </div>
+                    <div class="focus-card-body">
+                        <div>
+                            <span class="focus-label">Topic</span>
+                            <div class="focus-content" style="font-weight:800; font-size:1.3rem;">${item.topic}</div>
+                        </div>
+                        <div>
+                            <span class="focus-label">Key Fact</span>
+                            <div class="focus-content">${item.fact}</div>
+                        </div>
+                        <div class="focus-alert-box">
+                            <span class="focus-label" style="color:#b91c1c;">⚠️ Clinical Alert</span>
+                            <div class="focus-content" style="font-size:1rem;">${item.alert}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        window.selectRow = function(rowEl, index) {
+            document.querySelectorAll('#table-body tr').forEach(function(r) { r.classList.remove('selected'); });
+            rowEl.classList.add('selected');
+            
+            var data = contentData[currentTab];
+            var item = data.data[index];
+
+            if (window.innerWidth <= 600) {
+                openCards(index);
+            } else {
+                document.getElementById('desktop-focus-card').innerHTML = renderFocusCard(item, data);
+            }
+        };
+
+        // --- Quiz Logic ---
+        window.startQuiz = function() {
+            var data = contentData[currentTab];
+            currentQuizData = data.data.slice(); // Copy array
+            quizIndex = 0;
+            quizScore = 0;
+            showQuestion();
+            document.getElementById('quiz-modal').style.display = 'flex';
+        };
+
+        function showQuestion() {
+            var item = currentQuizData[quizIndex];
+            var total = currentQuizData.length;
+            document.getElementById('quiz-progress').textContent = 'Question ' + (quizIndex + 1) + ' of ' + total;
+            document.getElementById('q-num-display').textContent = quizIndex + 1;
+            document.getElementById('q-text').textContent = item.q;
+            var fb = document.getElementById('feedback-area');
+            fb.style.display = 'none';
+            document.getElementById('next-btn').style.display = 'none';
+
+            let answerObjects = item.a.map((ans, index) => ({ text: ans, originalIndex: index }));
+            answerObjects = shuffleArray(answerObjects);
+
+            var letters = ['A', 'B', 'C', 'D'];
+            var optionsHTML = answerObjects.map(function(ansObj, i) {
+                return '<div class="quiz-option" data-original-index="' + ansObj.originalIndex + '" onclick="checkAnswer(' + ansObj.originalIndex + ', this)">' +
+                    '<div class="quiz-option-letter">' + letters[i] + '</div>' +
+                    '<span style="flex-grow:1;">' + ansObj.text + '</span>' +
+                    '<div class="correct-check" style="display:none; color:#10b981; font-weight:bold; font-size:1.2rem; margin-left:0.5rem;">✔</div>' +
+                '</div>';
+            }).join('');
+            document.getElementById('q-options').innerHTML = optionsHTML;
+        }
+
+        window.checkAnswer = function(selectedOriginalIndex, btnElement) {
+            var item = currentQuizData[quizIndex];
+            var correct = item.correct;
+            var options = document.querySelectorAll('.quiz-option');
+            
+            options.forEach(function(btn) {
+                btn.style.pointerEvents = 'none';
+            });
+
+            var feedbackArea = document.getElementById('feedback-area');
+            var feedbackHeader = document.getElementById('feedback-header');
+            var rationaleText = document.getElementById('rationale-text');
+
+            if (rationaleText) rationaleText.innerHTML = item.rationale || "No rationale provided.";
+            if (feedbackArea) feedbackArea.style.display = 'block';
+            
+            var nextBtn = document.getElementById('next-btn');
+            if (nextBtn) nextBtn.style.display = 'block';
+
+            let isCorrect = (selectedOriginalIndex === correct);
+
+            if (isCorrect) {
+                quizScore++;
+                btnElement.classList.add('correct-choice');
+                btnElement.querySelector('.correct-check').style.display = 'block';
+                if (feedbackHeader) {
+                    feedbackHeader.className = 'feedback-header correct';
+                    feedbackHeader.innerHTML = '✔ Correct!';
+                }
+                try { playSound('correct'); } catch(e){}
+            } else {
+                btnElement.classList.add('wrong-choice');
+                const correctOption = Array.from(options).find(opt => parseInt(opt.dataset.originalIndex) === correct);
+                if(correctOption) {
+                    correctOption.classList.add('correct-choice');
+                    correctOption.querySelector('.correct-check').style.display = 'block';
+                }
+                if (feedbackHeader) {
+                    feedbackHeader.className = 'feedback-header incorrect';
+                    feedbackHeader.innerHTML = '✖ Incorrect';
+                }
+                try { playSound('wrong'); } catch(e){}
+            }
+
+            if (quizIndex >= currentQuizData.length - 1) {
+                nextBtn.textContent = 'Finish (' + quizScore + '/' + currentQuizData.length + ')';
+            } else {
+                nextBtn.textContent = 'Next Question';
+            }
+
+            setTimeout(function() {
+                var quizBox = document.querySelector('.quiz-box');
+                if (quizBox) {
+                    quizBox.scrollTo({ top: quizBox.scrollHeight, behavior: 'smooth' });
+                }
+            }, 100);
+        };
+
+        window.nextQuestion = function() {
+            quizIndex++;
+            if (quizIndex < currentQuizData.length) {
+                showQuestion();
+                var overlay = document.querySelector('.quiz-box');
+                overlay.scrollTop = 0;
+            } else {
+                var optionsContainer = document.getElementById('q-options');
+                var qText = document.getElementById('q-text');
+                if (qText) qText.innerText = "Quiz Complete!";
+                if (optionsContainer) {
+                    optionsContainer.innerHTML = `
+                        <div style="text-align:center; padding:2rem; background: rgba(255,255,255,0.05); border-radius: 1rem;">
+                            <h2 style="font-size: 2rem; margin-bottom: 1rem; color: white;">You scored ${quizScore} / ${currentQuizData.length}</h2>
+                            <button class="action-btn" style="width:100%; max-width: 300px; background-color: var(--accent-gold); color: white; padding: 1rem; border: none; border-radius: 2rem; font-weight: bold; cursor: pointer; font-size: 1.1rem;" onclick="closeQuiz()">Return to Guide</button>
+                        </div>
+                    `;
+                }
+                document.getElementById('feedback-area').style.display = 'none';
+                document.getElementById('next-btn').style.display = 'none';
+                document.getElementById('q-num-display').style.display = 'none';
+            }
+        };
+
+        window.closeQuiz = function() {
+            document.getElementById('quiz-modal').style.display = 'none';
+            document.getElementById('q-num-display').style.display = 'flex'; // reset for next time
+        };
+
+        window.addEventListener('resize', function() {
+            if(document.getElementById('content-area').innerHTML !== "") {
+                if (window.innerWidth <= 600) {
+                    document.getElementById('mobile-card-btn').style.display = 'inline-block';
+                    document.getElementById('desktop-focus-card').style.display = 'none';
+                } else {
+                    document.getElementById('mobile-card-btn').style.display = 'none';
+                    document.getElementById('desktop-focus-card').style.display = 'flex';
+                }
+            }
+        });
+
+        // Initial Render
+        switchTab('tox');
+
+    })();
+    </script>
+</div>
+
+</body>
+</html>

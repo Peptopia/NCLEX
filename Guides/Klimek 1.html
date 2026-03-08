@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 Klimek 1: Acid-Base & Vents</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; min-height: 100vh; min-height: 100dvh; background: #b8aad0; }
+        html.dark, html.dark body { background: #0f172a; }
+    </style>
+</head>
+<body>
+<script>
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark');
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(event) {
+    if (event.matches) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+});
+</script>
+
+<!-- Peptopia Klimek Guide Widget -->
+<div id="peptopia-klimek-guide">
+    <style>
+        /* --- Scoped Styles --- */
+        #peptopia-klimek-guide {
+            --slate-50: #f8fafc; --slate-100: #f1f5f9; --slate-200: #e2e8f0;
+            --slate-700: #334155; --slate-800: #1e293b; --slate-900: #0f172a; --white: #ffffff;
+            --rose-500: #fb7185; --blue-500: #06b6d4; --purple-500: #8b5cf6;
+            --emerald-500: #10b981; --amber-500: #d97706; --pink-500: #ec4899; 
+            --indigo-500: #6366f1; --orange-500: #f97316;
+            
+            /* Backgrounds (Pale versions for selection) */
+            --rose-50: #fff1f2; --blue-50: #ecfeff; --purple-50: #f5f3ff;
+            --emerald-50: #ecfdf5; --amber-50: #fffbeb; --pink-50: #fdf2f8; 
+            --indigo-50: #eef2ff; --orange-50: #fff7ed;
+
+            /* Alert Colors */
+            --alert-bg: #fff7ed;
+            --alert-border: #fdba74;
+            --alert-text: #1e293b;
+            
+            /* UI Accents */
+            --accent-gold: #f59e0b; 
+            
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: transparent; color: var(--slate-900); line-height: 1.6;
+            font-size: 16px; max-width: 76rem; margin: 0 auto; padding: 0.75rem;
+            box-sizing: border-box; -webkit-text-size-adjust: 100%;
+        }
+        html.dark #peptopia-klimek-guide {
+            --slate-50: #0f172a; --slate-100: #1e293b; --slate-200: #334155;
+            --slate-700: #cbd5e1; --slate-800: #0f172a; --slate-900: #f1f5f9; --white: #1e293b;
+            --rose-50: #1a0a0d; --blue-50: #0a1a1f; --purple-50: #0f0a1f;
+            --emerald-50: #0a1a12; --amber-50: #1a150a; --pink-50: #1a0a14; 
+            --indigo-50: #0a0e1f; --orange-50: #1a110a;
+            --alert-bg: #1a150a; --alert-border: #92400e; --alert-text: #f1f5f9;
+            background-color: transparent; color: #f1f5f9;
+        }
+        #peptopia-klimek-guide * { box-sizing: border-box; }
+        
+        #peptopia-klimek-guide .highlight-term {
+            background-color: #fef08a; color: #000; padding: 0.1rem 0.4rem;
+            border-radius: 0.25rem; font-weight: 800; display: inline-block; margin-bottom: 2px;
+        }
+        html.dark #peptopia-klimek-guide .highlight-term { background-color: #fde68a; color: #1e1b4b; }
+        
+        /* Navbar */
+        #peptopia-klimek-guide .navbar {
+            background: linear-gradient(135deg, #0a1628 0%, #0c2461 50%, #0a1628 100%);
+            color: #fff; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;
+            display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 4px 16px -2px rgba(10, 22, 40, 0.5), 0 0 20px rgba(30, 100, 255, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+        }
+        html.dark #peptopia-klimek-guide .navbar { background: linear-gradient(135deg, #020617 0%, #0c2461 50%, #020617 100%); border: 1px solid rgba(59, 130, 246, 0.3); }
+        #peptopia-klimek-guide .nav-title { font-weight: 800; font-size: 1.5rem; display: flex; align-items: center; gap: 0.5rem; text-align: center; }
+        
+        /* Tabs */
+        #peptopia-klimek-guide .tabs-container {
+            display: flex; flex-wrap: nowrap; gap: 0.5rem; margin-bottom: 0.5rem;
+            overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 0.5rem; scrollbar-width: thin;
+            justify-content: flex-start;
+        }
+        @media (min-width: 768px) { #peptopia-klimek-guide .tabs-container { justify-content: center; } }
+        #peptopia-klimek-guide .tabs-container::-webkit-scrollbar { height: 4px; }
+        #peptopia-klimek-guide .tabs-container::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+        #peptopia-klimek-guide .tab-btn {
+            padding: 0.6rem 1rem; border-radius: 0.5rem; font-weight: 700;
+            border: none; cursor: pointer; transition: all 0.15s; font-size: 0.95rem;
+            filter: grayscale(40%) opacity(0.9); text-align: center;
+            white-space: nowrap; flex-shrink: 0; color: #fff;
+        }
+        #peptopia-klimek-guide .tab-btn:hover { filter: grayscale(0%) opacity(1); transform: translateY(-1px); }
+        #peptopia-klimek-guide .tab-btn.active {
+            filter: grayscale(0%) opacity(1);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2), 0 0 0 2px rgba(255,255,255,0.3);
+            transform: translateY(1px);
+        }
+
+        /* Tab Colors */
+        #peptopia-klimek-guide #tab-basics { background-color: var(--rose-500); }
+        #peptopia-klimek-guide #tab-signs { background-color: var(--blue-500); }
+        #peptopia-klimek-guide #tab-causes { background-color: var(--purple-500); }
+        #peptopia-klimek-guide #tab-alarms { background-color: var(--emerald-500); }
+        #peptopia-klimek-guide #tab-vents { background-color: var(--amber-500); }
+
+        /* Section Header Bar */
+        #peptopia-klimek-guide .section-header-bar {
+            padding: 0.35rem 1.5rem; color: white;
+            display: flex; justify-content: space-between; align-items: center;
+            border-radius: 0.5rem; font-size: 1.25rem; font-weight: 800;
+            margin-bottom: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); gap: 0.5rem;
+        }
+        @media (max-width: 600px) {
+            #peptopia-klimek-guide .section-header-bar { font-size: 1.1rem; padding: 0.35rem 1rem; flex-wrap: wrap; }
+        }
+        
+        #peptopia-klimek-guide .header-btn {
+            background-color: #312e81; color: white; border: 2px solid rgba(255,255,255,0.5);
+            padding: 0.3rem 1rem; border-radius: 0.4rem; font-size: 0.9rem; font-weight: 700;
+            cursor: pointer; transition: all 0.2s; white-space: nowrap; -webkit-tap-highlight-color: transparent;
+        }
+        #peptopia-klimek-guide .header-btn:hover { background-color: white; color: #312e81; transform: scale(1.02); }
+        
+        #peptopia-klimek-guide .header-quiz-btn {
+            background-color: #312e81; color: white; border: 2px solid rgba(255,255,255,0.5);
+            padding: 0.3rem 1rem; border-radius: 0.4rem;
+            font-size: 0.9rem; font-weight: 700; cursor: pointer;
+            transition: all 0.2s; white-space: nowrap;
+        }
+        #peptopia-klimek-guide .header-quiz-btn:hover {
+            background-color: white; color: #312e81; transform: scale(1.02);
+        }
+        
+        #peptopia-klimek-guide .header-btns { display: flex; gap: 0.5rem; flex-shrink: 0; }
+
+        /* Card Overlay & Modal */
+        #peptopia-klimek-guide .card-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.92); z-index: 1999;
+            align-items: flex-start; justify-content: center; padding: 0;
+            overflow-y: auto; -webkit-overflow-scrolling: touch;
+        }
+        #peptopia-klimek-guide .card-modal {
+            background: var(--white); width: 100%; max-width: 560px; border-radius: 0;
+            min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column;
+        }
+        @media (min-width: 640px) {
+            #peptopia-klimek-guide .card-overlay { align-items: center; padding: 1.5rem; }
+            #peptopia-klimek-guide .card-modal { border-radius: 1rem; min-height: auto; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+        }
+        html.dark #peptopia-klimek-guide .card-modal { background: #1e293b; }
+        #peptopia-klimek-guide .card-modal-header {
+            padding: 0.75rem 1rem; color: white; font-weight: 800; font-size: 1rem;
+            display: flex; justify-content: space-between; align-items: center; border-radius: 0;
+        }
+        @media (min-width: 640px) { #peptopia-klimek-guide .card-modal-header { border-radius: 1rem 1rem 0 0; } }
+        #peptopia-klimek-guide .card-modal-header .card-close-btn {
+            background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 0 0.25rem; line-height: 1;
+        }
+        #peptopia-klimek-guide .card-modal-body { padding: 1.25rem; flex-grow: 1; }
+        #peptopia-klimek-guide .card-modal-body .card-topic { font-size: 1.35rem; font-weight: 800; margin-bottom: 1rem; color: var(--slate-900); }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-topic { color: #f1f5f9; }
+        #peptopia-klimek-guide .card-modal-body .card-section { margin-bottom: 1rem; }
+        #peptopia-klimek-guide .card-modal-body .card-label {
+            font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px;
+            color: #64748b; font-weight: 800; margin-bottom: 0.3rem; display: block;
+        }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-label { color: #94a3b8; }
+        #peptopia-klimek-guide .card-modal-body .card-fact { font-size: 1.05rem; line-height: 1.5; color: var(--slate-900); }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-fact { color: #e2e8f0; }
+        #peptopia-klimek-guide .card-modal-body .card-alert-box {
+            background: #fff1f2; border-left: 5px solid #e11d48; padding: 0.75rem; border-radius: 0.25rem;
+        }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-alert-box { background: #1c1012; border-left-color: #be123c; }
+        #peptopia-klimek-guide .card-modal-body .card-alert-box .card-fact { font-size: 0.95rem; }
+        #peptopia-klimek-guide .card-nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.75rem 1rem; border-top: 1px solid var(--slate-200); gap: 0.5rem;
+        }
+        html.dark #peptopia-klimek-guide .card-nav { border-top-color: #334155; }
+        #peptopia-klimek-guide .card-nav-btn {
+            background: #4f46e5; color: white; border: none; padding: 0.55rem 1.25rem;
+            border-radius: 2rem; font-weight: 700; cursor: pointer; font-size: 0.9rem;
+            transition: background 0.15s; -webkit-tap-highlight-color: transparent;
+        }
+        #peptopia-klimek-guide .card-nav-btn:hover { background: #4338ca; }
+        #peptopia-klimek-guide .card-nav-btn:disabled { opacity: 0.35; cursor: default; }
+        #peptopia-klimek-guide .card-counter { font-size: 0.85rem; font-weight: 700; color: #64748b; white-space: nowrap; }
+        html.dark #peptopia-klimek-guide .card-counter { color: #94a3b8; }
+
+        /* Main Grid */
+        #peptopia-klimek-guide .grid-layout { display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start; } 
+        @media (min-width: 850px) {
+            #peptopia-klimek-guide .grid-layout { flex-direction: row; }
+            #peptopia-klimek-guide .grid-layout > div:first-child { flex: 2; width: 100%; } /* Left Col */
+            #peptopia-klimek-guide .grid-layout > div:last-child { flex: 1; width: 100%; position: sticky; top: 1rem; }  /* Right Col */
+        }
+
+        /* Description Box */
+        #peptopia-klimek-guide .description-box {
+            padding: 1rem; background: #ffffff; 
+            border: 2px solid #e2e8f0; border-radius: 0.5rem;
+            border-left: 6px solid var(--slate-700);
+            font-size: 1.05rem; color: #000000; font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Data Table */
+        #peptopia-klimek-guide .table-container { 
+            overflow-x: auto; -webkit-overflow-scrolling: touch; 
+            border: 2px solid #334155; border-radius: 0.75rem; 
+            background: white; max-height: 600px; overflow-y: auto; 
+        }
+        html.dark #peptopia-klimek-guide .table-container { background: #1e293b; border-color: #475569; }
+        #peptopia-klimek-guide table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; }
+        #peptopia-klimek-guide th { 
+            padding: 0.75rem; background-color: #f1f5f9; color: #0f172a; 
+            border-bottom: 2px solid #e2e8f0; position: sticky; top: 0; z-index: 5; 
+            font-weight: 800; font-size: 0.9rem;
+        }
+        html.dark #peptopia-klimek-guide th { background-color: #334155; color: #f1f5f9; border-bottom-color: #475569; }
+        #peptopia-klimek-guide td { padding: 0.75rem; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        html.dark #peptopia-klimek-guide td { border-bottom-color: #334155; color: #e2e8f0; }
+        #peptopia-klimek-guide tr:hover td { cursor: pointer; background-color: #f8fafc; filter: brightness(98%); }
+        html.dark #peptopia-klimek-guide tr:hover td { background-color: #1e293b; }
+        #peptopia-klimek-guide tr.selected td { border-left: 5px solid var(--accent-gold); background-color: #fffbeb; }
+        html.dark #peptopia-klimek-guide tr.selected td { background-color: #1c1917; }
+
+        /* Cell Specifics */
+        #peptopia-klimek-guide .topic-cell { font-weight: 800; width: 1%; white-space: nowrap; color: #000; vertical-align: top; }
+        html.dark #peptopia-klimek-guide .topic-cell { color: #f1f5f9; }
+        #peptopia-klimek-guide .topic-cell.basics { background-color: var(--rose-50); }
+        #peptopia-klimek-guide .topic-cell.signs { background-color: var(--blue-50); }
+        #peptopia-klimek-guide .topic-cell.causes { background-color: var(--purple-50); }
+        #peptopia-klimek-guide .topic-cell.alarms { background-color: var(--emerald-50); }
+        #peptopia-klimek-guide .topic-cell.vents { background-color: var(--amber-50); }
+
+        #peptopia-klimek-guide .key-point-cell { color: #334155; font-style: normal; font-weight: 500; }
+        html.dark #peptopia-klimek-guide .key-point-cell { color: #cbd5e1; }
+        #peptopia-klimek-guide .alert-cell { color: #991b1b; background-color: #fef2f2; border-left: 3px solid #f87171; font-weight: 600; }
+        html.dark #peptopia-klimek-guide .alert-cell { background-color: #1c1012; color: #fca5a5; border-left-color: #dc2626; }
+
+        @media (max-width: 600px) {
+            #peptopia-klimek-guide .table-container { max-height: none; }
+            #peptopia-klimek-guide table, #peptopia-klimek-guide thead, #peptopia-klimek-guide tbody,
+            #peptopia-klimek-guide th, #peptopia-klimek-guide td, #peptopia-klimek-guide tr { display: block; width: 100%; }
+            #peptopia-klimek-guide thead { display: none; }
+            #peptopia-klimek-guide tr { border-bottom: 2px solid #e2e8f0; padding: 0.6rem 0; margin-bottom: 0.35rem; }
+            html.dark #peptopia-klimek-guide tr { border-bottom-color: #334155; }
+            #peptopia-klimek-guide td { padding: 0.3rem 0.65rem; border-bottom: none; position: relative; padding-left: 0.65rem; }
+            #peptopia-klimek-guide .topic-cell { font-size: 1.05rem; padding-bottom: 0.15rem; white-space: normal; }
+            #peptopia-klimek-guide .key-point-cell::before { content: '📌 '; }
+            #peptopia-klimek-guide .alert-cell {
+                border-left: 3px solid #f87171; margin: 0.2rem 0.3rem;
+                border-radius: 0.25rem; padding: 0.4rem 0.6rem; font-size: 0.85rem;
+            }
+            #peptopia-klimek-guide tr.selected td { border-left: none; }
+            #peptopia-klimek-guide tr.selected { border-left: 4px solid var(--accent-gold); background: #fffbeb; border-radius: 0.5rem; }
+            html.dark #peptopia-klimek-guide tr.selected { background: #1c1917; }
+        }
+
+        /* Focus Card */
+        #peptopia-klimek-guide .focus-card {
+            background-color: white; border: 2px solid; 
+            border-radius: 0.75rem; min-height: 250px;
+            display: flex; flex-direction: column; 
+            padding: 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        html.dark #peptopia-klimek-guide .focus-card { background: #1e293b; }
+        #peptopia-klimek-guide .focus-card-header {
+            padding: 0.75rem 1rem; border-radius: 0.55rem 0.55rem 0 0; color: white; font-weight: 800; font-size: 1.1rem; text-align: center;
+        }
+        #peptopia-klimek-guide .focus-card-body { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; gap: 1.5rem; }
+        #peptopia-klimek-guide .focus-label {
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #64748b; font-weight: 800; margin-bottom: 0.25rem; display: block;
+        }
+        html.dark #peptopia-klimek-guide .focus-label { color: #94a3b8; }
+        #peptopia-klimek-guide .focus-content { font-size: 1.15rem; color: #000; line-height: 1.4; }
+        html.dark #peptopia-klimek-guide .focus-content { color: #f1f5f9; }
+        #peptopia-klimek-guide .focus-alert-box {
+            background-color: #fff1f2; border-left: 5px solid #e11d48; padding: 1rem; border-radius: 0.25rem;
+        }
+        html.dark #peptopia-klimek-guide .focus-alert-box { background: #1c1012; border-left-color: #be123c; }
+
+        /* --- UPDATED QUIZ STYLES --- */
+        #peptopia-klimek-guide .quiz-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.96); z-index: 2000; 
+            align-items: flex-start; justify-content: center; padding: 0;
+            overflow-y: auto; -webkit-overflow-scrolling: touch;
+        }
+        #peptopia-klimek-guide .quiz-box {
+            background: #171527; 
+            width: 100%; max-width: 800px; padding: 2rem; border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+            border: 1px solid #4338ca;
+            color: white; display: flex; flex-direction: column;
+            max-height: 90vh; overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+        #peptopia-klimek-guide .quiz-question-number {
+            background: #6366f1; 
+            width: 40px; height: 40px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; margin-right: 1rem; flex-shrink: 0; font-size: 1.1rem; color: white;
+        }
+        #peptopia-klimek-guide .quiz-header-row { display: flex; align-items: flex-start; margin-bottom: 1.5rem; }
+        #peptopia-klimek-guide .quiz-question-text { font-size: 1.15rem; line-height: 1.5; font-weight: 500; color: white; margin-top: 0.3rem;}
+        
+        #peptopia-klimek-guide .quiz-option {
+            background: #1e1b4b; 
+            border: 1px solid rgba(255,255,255,0.05); 
+            padding: 0.65rem 1rem; 
+            margin-bottom: 0.5rem; 
+            border-radius: 0.5rem; cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: flex-start; 
+            font-size: 0.95rem; color: #e2e8f0;
+            width: 100%; text-align: left; -webkit-tap-highlight-color: transparent; user-select: none;
+            line-height: 1.4;
+        }
+        #peptopia-klimek-guide .quiz-option:hover { background: #2e2a5d; border-color: #6366f1; }
+        @media (hover: none) {
+            #peptopia-klimek-guide .quiz-option:hover { background: #1e1b4b; border-color: rgba(255,255,255,0.05); }
+            #peptopia-klimek-guide .quiz-option:active { background: #2e2a5d; border-color: #6366f1; }
+        }
+        #peptopia-klimek-guide .quiz-option.correct-choice { border-color: #10b981; background: rgba(16, 185, 129, 0.1); color: white; }
+        #peptopia-klimek-guide .quiz-option.wrong-choice { border-color: #ef4444; opacity: 0.6; }
+        
+        #peptopia-klimek-guide .quiz-option-letter {
+            width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin-right: 1rem; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; color: white;
+            margin-top: 0.1rem; 
+        }
+        #peptopia-klimek-guide .quiz-option-letter.A { background: #ec4899; } 
+        #peptopia-klimek-guide .quiz-option-letter.B { background: #3b82f6; } 
+        #peptopia-klimek-guide .quiz-option-letter.C { background: #10b981; } 
+        #peptopia-klimek-guide .quiz-option-letter.D { background: #eab308; color: #000; } 
+
+        #peptopia-klimek-guide .feedback-container {
+            margin-top: 1.5rem; background: #171527; border-radius: 0.5rem; 
+            border: 1px solid #4338ca; overflow: hidden; display: none; padding: 1rem;
+        }
+        #peptopia-klimek-guide .feedback-header {
+            display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap;
+        }
+        #peptopia-klimek-guide .feedback-badge {
+            padding: 0.25rem 0.85rem; border-radius: 1rem; font-weight: 700; font-size: 0.85rem; color: white; display: inline-block;
+        }
+        #peptopia-klimek-guide .badge-correct { background: #10b981; }
+        #peptopia-klimek-guide .badge-incorrect { background: #ef4444; }
+        #peptopia-klimek-guide .badge-answer { background: #3b82f6; }
+        
+        #peptopia-klimek-guide .feedback-content { font-size: 0.95rem; line-height: 1.5; color: #e2e8f0; }
+        #peptopia-klimek-guide .rationale-pill {
+            background: #6d28d9; color: white; padding: 0.2rem 0.6rem; border-radius: 1rem;
+            font-size: 0.8rem; font-weight: 700; display: inline-block; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 1px;
+        }
+        
+        #peptopia-klimek-guide .quiz-footer {
+            margin-top: 2rem; display: flex; justify-content: center; align-items: center;
+            padding-bottom: env(safe-area-inset-bottom, 1.5rem);
+        }
+        #peptopia-klimek-guide .next-q-btn {
+            background: #4f46e5; color: white; border: none; padding: 0.85rem 2.5rem;
+            border-radius: 2rem; font-weight: 800; cursor: pointer;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4); font-size: 1.1rem;
+            -webkit-tap-highlight-color: transparent; width: 100%; max-width: 320px;
+        }
+        #peptopia-klimek-guide .next-q-btn:hover { background: #4338ca; }
+        @media (hover: none) { #peptopia-klimek-guide .next-q-btn:active { background: #4338ca; transform: scale(0.98); } }
+        
+        @media (max-width: 600px) {
+             #peptopia-klimek-guide .quiz-box { padding: 1.25rem; max-height: 80vh; width: 95%; margin: 1rem auto; border-radius: 1rem; min-height: auto;}
+        }
+
+        /* Color Classes */
+        #peptopia-klimek-guide .bg-rose { background-color: var(--rose-500) !important; border-color: var(--rose-500) !important; }
+        #peptopia-klimek-guide .bg-blue { background-color: var(--blue-500) !important; border-color: var(--blue-500) !important; }
+        #peptopia-klimek-guide .bg-purple { background-color: var(--purple-500) !important; border-color: var(--purple-500) !important; }
+        #peptopia-klimek-guide .bg-emerald { background-color: var(--emerald-500) !important; border-color: var(--emerald-500) !important; }
+        #peptopia-klimek-guide .bg-amber { background-color: var(--amber-500) !important; border-color: var(--amber-500) !important; }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-title">📘 Klimek 1: Acid-Base & Vents</div>
+    </nav>
+
+    <!-- Tabs -->
+    <div class="tabs-container">
+        <button class="tab-btn active bg-rose" id="tab-basics" onclick="switchTab('basics')">ABG Basics</button>
+        <button class="tab-btn bg-blue" id="tab-signs" onclick="switchTab('signs')">Symptoms</button>
+        <button class="tab-btn bg-purple" id="tab-causes" onclick="switchTab('causes')">Causes</button>
+        <button class="tab-btn bg-emerald" id="tab-alarms" onclick="switchTab('alarms')">Alarms</button>
+        <button class="tab-btn bg-amber" id="tab-vents" onclick="switchTab('vents')">Vents</button>
+    </div>
+
+    <!-- Description (High Contrast) -->
+    <div id="desc-area" class="description-box" style="display:none;"></div>
+
+    <!-- Content Area -->
+    <div id="content-area"></div>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="quiz-overlay">
+        <div class="quiz-box" id="quiz-box-inner">
+            <div style="display:flex; justify-content:space-between; margin-bottom:1.5rem; align-items:center;">
+                <span style="color:#818cf8; font-weight:700; font-size:1.1rem;" id="quiz-progress">Question 1 of ?</span>
+                <button onclick="closeQuiz()" style="background:none; border:none; color:#818cf8; font-size:2rem; cursor:pointer; padding:0; line-height:1;">&times;</button>
+            </div>
+            <div class="quiz-header-row">
+                <div class="quiz-question-number" id="q-num-display">1</div>
+                <div class="quiz-question-text" id="q-text"></div>
+            </div>
+            <div id="q-options"></div>
+            <div id="feedback-area" class="feedback-container">
+                <div class="feedback-header" id="feedback-header"></div>
+                <div class="feedback-content" id="rationale-text"></div>
+            </div>
+            <div class="quiz-footer">
+                <button class="next-q-btn" id="next-btn" style="display:none;" onclick="nextQuestion()">Next Question</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Study Card Modal (Mobile only) -->
+    <div id="card-modal" class="card-overlay">
+        <div class="card-modal">
+            <div class="card-modal-header" id="card-modal-header">
+                <span id="card-modal-title">Study Cards</span>
+                <button class="card-close-btn" onclick="closeCards()">&times;</button>
+            </div>
+            <div class="card-modal-body" id="card-modal-body"></div>
+            <div class="card-nav">
+                <button class="card-nav-btn" id="card-prev-btn" onclick="prevCard()">&#8592; Prev</button>
+                <span class="card-counter" id="card-counter">1 / ?</span>
+                <button class="card-nav-btn" id="card-next-btn" onclick="nextCard()">Next &#8594;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        // --- DATA FOR KLIMEK 1 ---
+        const contentData = {
+            basics: {
+                title: 'ABG Basics',
+                color: 'bg-rose',
+                type: 'basics',
+                description: 'Klimek 1: Core rules for reading Arterial Blood Gases.',
+                data: [
+                    { topic: 'Normal ABG Values', fact: 'pH: <span class="highlight-term">7.35 - 7.45</span> | HCO3: <span class="highlight-term">22 - 26</span> | PaCO2: <span class="highlight-term">35 - 45</span>.', alert: 'Memorize these baselines before interpreting any gas.', q: 'What is the normal range for serum bicarbonate (HCO3)?', a: ['22 to 26 mEq/L', '35 to 45 mEq/L', '7.35 to 7.45', '80 to 100 mmHg'], correct: 0, rationale: 'Normal Bicarb (HCO3) is 22-26. Remember the years you are in your early twenties: 22 to 26.' },
+                    { topic: 'Rule of the B\'s', fact: 'If the pH and the Bicarb are <span class="highlight-term">B</span>oth in the same direction, it is Meta<span class="highlight-term">b</span>olic.', alert: 'If they go in opposite directions, it is Respiratory.', q: 'The patient\'s ABG shows a pH of 7.30 and an HCO3 of 20. What is the interpretation?', a: ['Metabolic Acidosis', 'Metabolic Alkalosis', 'Respiratory Acidosis', 'Respiratory Alkalosis'], correct: 0, rationale: 'The pH is DOWN (acidosis) and the Bicarb is DOWN. Since Both are in the same direction, it is Metabolic. Acidosis + Metabolic = Metabolic Acidosis.' },
+                    { topic: 'Identifying Alkalosis', fact: 'pH greater than <span class="highlight-term">7.45</span>.', alert: 'Bicarb will also be > 26 if it is Metabolic Alkalosis.', q: 'A patient has a pH of 7.50 and an HCO3 of 30. What is the interpretation?', a: ['Metabolic Alkalosis', 'Respiratory Alkalosis', 'Metabolic Acidosis', 'Respiratory Acidosis'], correct: 0, rationale: 'The pH is UP (alkalosis) and the Bicarb is UP. Both are in the same direction, so it is Metabolic Alkalosis.' },
+                    { topic: 'Identifying Acidosis', fact: 'pH less than <span class="highlight-term">7.35</span>.', alert: 'If it is Respiratory Acidosis, the pH is DOWN but the CO2 is UP.', q: 'A patient has a pH of 7.25 and a PaCO2 of 55. What is the interpretation?', a: ['Respiratory Acidosis', 'Metabolic Acidosis', 'Respiratory Alkalosis', 'Metabolic Alkalosis'], correct: 0, rationale: 'The pH is DOWN (acidosis). Normal CO2 is 35-45, so 55 is UP. Since they are opposite, it is Respiratory. Therefore, Respiratory Acidosis.' }
+                ]
+            },
+            signs: {
+                title: 'Signs & Symptoms',
+                color: 'bg-blue',
+                type: 'signs',
+                description: 'Klimek 1: The principle of UP vs DOWN in Acid-Base imbalances.',
+                data: [
+                    { topic: 'The Golden Rule', fact: 'As the pH goes, so goes my patient... <span class="highlight-term">except for Potassium</span>.', alert: 'If pH goes UP, patient goes UP. If pH goes DOWN, patient goes DOWN.', q: 'What happens to the patient\'s body systems when their blood pH increases (Alkalosis)?', a: ['Every system gets irritable and hyper-excitable', 'Every system shuts down and becomes lethargic', 'Only the respiratory rate increases', 'There are no systemic changes'], correct: 0, rationale: 'As the pH goes UP (Alkalosis), the patient goes UP: tachycardia, tachypnea, seizures, irritability, hyperreflexia.' },
+                    { topic: 'Alkalosis Symptoms', fact: 'Everything goes <span class="highlight-term">UP</span> (Irritability).', alert: 'Tachycardia, tachypnea, seizures, hyperreflexia (3+/4+), borborygmi.', q: 'A patient is in Metabolic Alkalosis. Which assessment finding should the nurse expect?', a: ['+4 reflexes and tachycardia', 'Lethargy and bradycardia', 'Paralytic ileus', 'Coma'], correct: 0, rationale: 'Alkalosis = UP. Hyperreflexia (+4) and tachycardia are signs of an irritable, hyper-excitable nervous system.' },
+                    { topic: 'Acidosis Symptoms', fact: 'Everything goes <span class="highlight-term">DOWN</span> (Lethargy).', alert: 'Bradycardia, lethargy, coma, respiratory arrest, hyporeflexia (0/1+), paralytic ileus.', q: 'Which symptom is characteristic of a patient in Respiratory Acidosis?', a: ['Lethargy and hyporeflexia', 'Seizures and irritability', 'Borborygmi and diarrhea', 'Tachycardia and tachypnea'], correct: 0, rationale: 'Acidosis = DOWN. The central nervous system is depressed, leading to lethargy, weakness, hyporeflexia, and potentially coma or respiratory arrest.' },
+                    { topic: 'Potassium Exception', fact: 'Potassium does the <span class="highlight-term">opposite</span> of the pH.', alert: 'Alkalosis (pH UP) = Hypokalemia (K+ DOWN). Acidosis (pH DOWN) = Hyperkalemia (K+ UP).', q: 'A patient is admitted with severe Diabetic Ketoacidosis (DKA). What electrolyte imbalance should the nurse anticipate?', a: ['Hyperkalemia', 'Hypokalemia', 'Hypernatremia', 'Hyponatremia'], correct: 0, rationale: 'DKA causes Metabolic Acidosis. Acidosis means the pH is DOWN. Potassium does the opposite of the pH, so Potassium goes UP (Hyperkalemia).' },
+                    { topic: 'MAC Kussmaul', fact: '<span class="highlight-term">Kussmaul</span> respirations are only seen in ONE imbalance.', alert: 'MAC = Metabolic ACidosis. You will not see Kussmaul in any other state.', q: 'A patient presents with deep, rapid, regular respirations (Kussmaul breathing). Which acid-base imbalance is the patient experiencing?', a: ['Metabolic Acidosis', 'Respiratory Acidosis', 'Metabolic Alkalosis', 'Respiratory Alkalosis'], correct: 0, rationale: 'Remember the mnemonic "MAC Kussmaul." Kussmaul respirations are a compensatory mechanism seen ONLY with Metabolic Acidosis.' },
+                    { topic: 'Seizure Priority', fact: 'Because Alkalosis makes everything go UP, the priority is <span class="highlight-term">Seizures</span>.', alert: 'Keep suction at the bedside.', q: 'What is the highest priority nursing intervention for a patient in severe Metabolic Alkalosis?', a: ['Implement seizure precautions and have suction ready', 'Prepare an Ambu bag for respiratory arrest', 'Administer IV potassium immediately', 'Place the patient in a prone position'], correct: 0, rationale: 'Alkalosis causes profound CNS irritability, making seizures the most immediate life-threatening risk.' },
+                    { topic: 'Acidosis Priority', fact: 'Because Acidosis makes everything go DOWN, the priority is <span class="highlight-term">Respiratory Arrest</span>.', alert: 'Keep an Ambu bag and intubation equipment at the bedside.', q: 'A patient is in severe Respiratory Acidosis. Which equipment is the highest priority to have at the bedside?', a: ['Ambu bag and intubation equipment', 'Suction equipment', 'Defibrillator', 'Tracheostomy kit'], correct: 0, rationale: 'Acidosis causes severe CNS and respiratory depression. The greatest risk is respiratory arrest, requiring manual ventilation with an Ambu bag.' }
+                ]
+            },
+            causes: {
+                title: 'Causes of Imbalances',
+                color: 'bg-purple',
+                type: 'causes',
+                description: 'Klimek 1: Deducing the ABG imbalance based on the underlying disease.',
+                data: [
+                    { topic: 'Is it the Lung?', fact: 'If the cause of the issue is a lung scenario, it is <span class="highlight-term">Respiratory</span>.', alert: 'If it is NOT a lung scenario, it is Metabolic.', q: 'A patient is admitted with a severe asthma exacerbation. What type of acid-base imbalance will they most likely develop?', a: ['Respiratory', 'Metabolic', 'Mixed', 'None'], correct: 0, rationale: 'Asthma is a lung issue, so the imbalance will always be Respiratory. (Specifically Respiratory Acidosis due to underventilation/air trapping).' },
+                    { topic: 'Modifying Phrase Rule', fact: 'Always pay attention to the <span class="highlight-term">modifying phrase</span> rather than the original noun.', alert: 'The modifying phrase dictates the acid-base imbalance.', q: 'A patient with severe OCD is hyperventilating into a paper bag. Which acid-base imbalance is expected?', a: ['Respiratory Alkalosis', 'Metabolic Alkalosis', 'Metabolic Acidosis', 'Respiratory Acidosis'], correct: 0, rationale: 'Do not focus on the original noun (OCD). Focus on the modifying phrase (hyperventilating). Over-ventilating always equals Respiratory Alkalosis.' },
+                    { topic: 'Classic Scenarios', fact: 'Labor = Respiratory <span class="highlight-term">Alkalosis</span> (panting). Drowning = Respiratory <span class="highlight-term">Acidosis</span>.', alert: 'PCA Pump Overdose = Respiratory Acidosis (under-ventilating).', q: 'A woman in active labor is panting rapidly through her contractions. What imbalance is she at risk for?', a: ['Respiratory Alkalosis', 'Respiratory Acidosis', 'Metabolic Alkalosis', 'Metabolic Acidosis'], correct: 0, rationale: 'Panting is a form of over-ventilating. Over-ventilating blows off too much CO2, leading to Respiratory Alkalosis.' },
+                    { topic: 'Over-ventilating', fact: 'Over-ventilating = Respiratory <span class="highlight-term">Alkalosis</span>.', alert: 'Examples: Hyperventilation, panic attacks, mechanical ventilation set too fast.', q: 'A patient is hyperventilating due to a severe panic attack. Which acid-base imbalance is occurring?', a: ['Respiratory Alkalosis', 'Respiratory Acidosis', 'Metabolic Alkalosis', 'Metabolic Acidosis'], correct: 0, rationale: 'Over-ventilating blows off too much CO2 (acid), causing the blood pH to rise (Alkalosis). Since it is a lung issue, it is Respiratory Alkalosis.' },
+                    { topic: 'Under-ventilating', fact: 'Under-ventilating = Respiratory <span class="highlight-term">Acidosis</span>.', alert: 'Examples: Emphysema, drowning, pneumonia, PCA pump overdose.', q: 'A patient is admitted with PCA pump overdose and a respiratory rate of 6 breaths per minute. What imbalance is occurring?', a: ['Respiratory Acidosis', 'Respiratory Alkalosis', 'Metabolic Acidosis', 'Metabolic Alkalosis'], correct: 0, rationale: 'The patient is under-ventilating, which retains CO2 (acid). Since it is a lung issue, it is Respiratory Acidosis.' },
+                    { topic: 'Gastric Vomiting/Suction', fact: 'Prolonged vomiting or gastric suctioning = Metabolic <span class="highlight-term">Alkalosis</span>.', alert: 'You are losing stomach ACID, making the blood basic.', q: 'A patient has been vomiting continuously for 3 days due to hyperemesis gravidarum. Which acid-base imbalance is expected?', a: ['Metabolic Alkalosis', 'Metabolic Acidosis', 'Respiratory Alkalosis', 'Respiratory Acidosis'], correct: 0, rationale: 'It is not a lung issue, so it is Metabolic. Vomiting loses stomach acid. Losing acid makes the body basic (Alkalosis).' },
+                    { topic: 'Default Rule', fact: 'For everything else that isn\'t lung or vomiting/suctioning, pick <span class="highlight-term">Metabolic Acidosis</span>.', alert: 'Examples: Diarrhea, acute renal failure, burns, DKA.', q: 'A patient presents with severe, prolonged diarrhea. Which acid-base imbalance will they develop?', a: ['Metabolic Acidosis', 'Metabolic Alkalosis', 'Respiratory Acidosis', 'Respiratory Alkalosis'], correct: 0, rationale: 'Diarrhea is not a lung issue (so it\'s Metabolic). It is not vomiting/suctioning. Therefore, apply the default rule: Metabolic Acidosis (losing base from the bowel).' },
+                    { topic: 'Ventilation vs Rate', fact: 'Ventilation is about gas exchange, not just respiratory rate.', alert: 'A patient breathing fast but shallowly (e.g., pneumonia) is UNDER-ventilating.', q: 'A patient with pneumonia is breathing 30 times a minute but their SpO2 is 88%. Are they over-ventilating or under-ventilating?', a: ['Under-ventilating (Respiratory Acidosis)', 'Over-ventilating (Respiratory Alkalosis)', 'Normal ventilating', 'Hyperventilating'], correct: 0, rationale: 'Even though the rate is high, they are not exchanging gas properly (low SpO2). Therefore, they are under-ventilating and retaining CO2 (Respiratory Acidosis).' }
+                ]
+            },
+            alarms: {
+                title: 'Ventilator Alarms',
+                color: 'bg-emerald',
+                type: 'alarms',
+                description: 'Klimek 1: Responding to High and Low pressure ventilator alarms.',
+                data: [
+                    { topic: 'High Pressure Alarm', fact: 'Triggered by <span class="highlight-term">INCREASED</span> resistance to airflow.', alert: 'The machine is having to push too hard to get air into the lungs.', q: 'What does a high-pressure ventilator alarm indicate?', a: ['An obstruction in the airway or tubing', 'A disconnection of the tubing', 'A leak in the endotracheal cuff', 'The patient is extubated'], correct: 0, rationale: 'High pressure means the ventilator is meeting resistance. This is always caused by some form of obstruction.' },
+                    { topic: 'High Pressure: Action Order', fact: '1. Unkink. 2. Empty Water. 3. Turn/Cough/Breathe. 4. <span class="highlight-term">Suction</span>.', alert: 'Suctioning is always the LAST resort.', q: 'A high pressure alarm sounds on a ventilator. Order the nursing actions from first to last:', a: ['Unkink tubing, empty water, have patient cough, suction', 'Suction, unkink tubing, have patient cough, empty water', 'Empty water, unkink tubing, suction, have patient cough', 'Have patient cough, suction, empty water, unkink tubing'], correct: 0, rationale: 'Always work from least invasive to most invasive. First unkink the tube, then empty condensed water, then ask the patient to clear their own airway (cough), and suction only if those fail.' },
+                    { topic: 'Obstruction 1: Kinks', fact: 'First thing to check: Are there <span class="highlight-term">kinks</span> in the tubing?', alert: 'Action: Unkink the tubing.', q: 'The high-pressure alarm goes off on a patient\'s ventilator. What is the very first action the nurse should take?', a: ['Examine the tubing for kinks', 'Empty water from the tubing', 'Suction the patient', 'Turn the patient'], correct: 0, rationale: 'Always check from the machine to the patient. The easiest and most common obstruction is a kinked tube. Unkink it before doing anything invasive.' },
+                    { topic: 'Obstruction 2: Water', fact: 'Second thing to check: Is there <span class="highlight-term">water condensation</span> in the tubing?', alert: 'Action: Empty the water out of the dependent loops.', q: 'After unkinking a ventilator tube, the high-pressure alarm continues to sound. What is the next step?', a: ['Check for and empty water condensation in the dependent loops', 'Immediately suction the airway', 'Call the respiratory therapist', 'Increase the oxygen percentage'], correct: 0, rationale: 'Water pooling in the tubing blocks airflow and triggers a high-pressure alarm. Emptying it solves the problem non-invasively.' },
+                    { topic: 'Obstruction 3: Mucus', fact: 'Third thing to check: Is there <span class="highlight-term">mucus</span> in the patient\'s airway?', alert: 'Action: Turn, cough, and deep breathe FIRST. Suction only as a last resort.', q: 'The tubing is clear of kinks and water, but the high-pressure alarm is still sounding. The nurse suspects mucus. What is the correct order of action?', a: ['Have the patient turn, cough, and deep breathe, then suction if needed', 'Suction immediately', 'Instill normal saline then suction', 'Increase the PEEP'], correct: 0, rationale: 'Suctioning is invasive and carries risks. Always encourage the patient to clear their own secretions (turn/cough) before applying suction.' },
+                    { topic: 'Low Pressure Alarm', fact: 'Triggered by <span class="highlight-term">DECREASED</span> resistance to airflow.', alert: 'The machine is meeting no resistance. Think: Disconnection or Leak.', q: 'What does a low-pressure ventilator alarm indicate?', a: ['A disconnection in the system or a cuff leak', 'Mucus plugging the airway', 'The patient is biting the tube', 'Water in the tubing'], correct: 0, rationale: 'Low pressure means the air is escaping freely without inflating the lungs, usually due to disconnected tubing or a deflated endotracheal cuff.' },
+                    { topic: 'Low Pressure Actions', fact: '1. Reconnect main tubing. 2. Reconnect oxygen sensor tubing.', alert: 'Always check the patient first. If tubing is on the floor, bag the patient and call respiratory.', q: 'A low-pressure alarm sounds, and the nurse finds the main ventilator tubing has disconnected and fallen on the dirty floor. What is the priority action?', a: ['Manually ventilate the patient with an Ambu bag and call for a new setup', 'Wipe the tube with alcohol and plug it back in', 'Wash it with soap and water and plug it back in', 'Turn off the ventilator alarm'], correct: 0, rationale: 'If the tube hits the floor, it is contaminated. You cannot plug it back into the patient\'s lungs. Bag the patient manually while waiting for sterile tubing.' }
+                ]
+            },
+            vents: {
+                title: 'Vents & ABGs',
+                color: 'bg-amber',
+                type: 'vents',
+                description: 'Klimek 1: Correlating ventilator settings with patient ABG results.',
+                data: [
+                    { topic: 'Over-ventilating on a Vent', fact: 'If the patient\'s ABG shows Respiratory Alkalosis, the vent settings may be too <span class="highlight-term">HIGH</span>.', alert: 'The machine is over-ventilating the patient.', q: 'A patient on a mechanical ventilator has an ABG showing a pH of 7.52 and a PaCO2 of 28. What does this indicate about the ventilator?', a: ['The settings may be too high (over-ventilating)', 'The settings may be too low (under-ventilating)', 'The endotracheal cuff is deflated', 'The patient needs to be suctioned'], correct: 0, rationale: 'Respiratory Alkalosis means the patient is over-ventilating (blowing off too much CO2). The vent rate or tidal volume is likely set too high.' },
+                    { topic: 'Under-ventilating on a Vent', fact: 'If the patient\'s ABG shows Respiratory Acidosis, the vent settings may be too <span class="highlight-term">LOW</span>.', alert: 'The machine is under-ventilating the patient.', q: 'A patient on a mechanical ventilator has an ABG showing a pH of 7.28 and a PaCO2 of 58. What does this indicate about the ventilator?', a: ['The settings may be too low (under-ventilating)', 'The settings may be too high (over-ventilating)', 'The patient is ready to be weaned', 'The oxygen sensor is disconnected'], correct: 0, rationale: 'Respiratory Acidosis means the patient is under-ventilating (retaining CO2). The vent is not breathing fast or deep enough for the patient.' },
+                    { topic: 'Weaning Readiness', fact: 'The goal of weaning is for the patient to maintain normal ABGs on their own.', alert: 'If they are in Respiratory Acidosis, they are NOT ready to be weaned.', q: 'The physician orders a patient to be weaned from the ventilator in the morning. The 6:00 AM ABG shows Respiratory Acidosis. What should the nurse do?', a: ['Hold the weaning process and notify the physician', 'Proceed with weaning as ordered', 'Administer Sodium Bicarbonate and proceed', 'Extubate immediately'], correct: 0, rationale: 'Respiratory Acidosis means the patient is already under-ventilating while ON the machine. If you take them off, they will fail completely. Hold the weaning.' },
+                    { topic: 'Weaning Terminology', fact: 'Weaning is the gradual process of decreasing ventilator support.', alert: 'Do not confuse SIMV (a weaning mode) with Assist Control (full support).', q: 'Which ventilator mode is commonly used to help wean a patient by allowing them to take their own spontaneous breaths between mandatory ones?', a: ['SIMV (Synchronized Intermittent Mandatory Ventilation)', 'Assist Control (AC)', 'High-Frequency Jet Ventilation', 'Volume Control'], correct: 0, rationale: 'SIMV allows the patient to exercise their respiratory muscles by taking spontaneous unassisted breaths between the machine\'s guaranteed breaths.' }
+                ]
+            }
+        };
+
+        // --- Logic ---
+        let currentTab = 'basics';
+        let currentItem = contentData.basics.data[0];
+        let quizIndex = 0;
+        let quizScore = 0;
+        let currentQuizData = []; 
+
+        // Audio Context for Beeps
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        function playSound(type) {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            if (type === 'correct') {
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(880, audioCtx.currentTime); // A5
+                osc.frequency.exponentialRampToValueAtTime(440, audioCtx.currentTime + 0.1);
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.1);
+            } else {
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.2);
+            }
+        }
+
+        // Shuffle function (Fisher-Yates)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // --- Study Card Modal Logic ---
+        let cardIndex = 0;
+
+        function renderCardInModal(item, data, idx, total) {
+            document.getElementById('card-modal-header').className = 'card-modal-header ' + data.color;
+            document.getElementById('card-modal-title').textContent = data.title + ' \u2014 Study Cards';
+            document.getElementById('card-counter').textContent = (idx + 1) + ' / ' + total;
+            document.getElementById('card-prev-btn').disabled = (idx === 0);
+            document.getElementById('card-next-btn').disabled = (idx >= total - 1);
+            document.getElementById('card-modal-body').innerHTML =
+                '<div class="card-topic">' + item.topic + '</div>' +
+                '<div class="card-section">' +
+                    '<span class="card-label">Key Fact</span>' +
+                    '<div class="card-fact">' + item.fact + '</div>' +
+                '</div>' +
+                '<div class="card-section">' +
+                    '<div class="card-alert-box">' +
+                        '<span class="card-label" style="color:#b91c1c;">\u26a0\ufe0f Clinical Alert</span>' +
+                        '<div class="card-fact">' + item.alert + '</div>' +
+                    '</div>' +
+                '</div>';
+        }
+
+        window.openCards = function(startIdx) {
+            var data = contentData[currentTab];
+            cardIndex = (typeof startIdx === 'number') ? startIdx : 0;
+            renderCardInModal(data.data[cardIndex], data, cardIndex, data.data.length);
+            document.getElementById('card-modal').style.display = 'flex';
+        };
+        window.prevCard = function() {
+            var data = contentData[currentTab];
+            if (cardIndex > 0) { cardIndex--; renderCardInModal(data.data[cardIndex], data, cardIndex, data.data.length); }
+        };
+        window.nextCard = function() {
+            var data = contentData[currentTab];
+            if (cardIndex < data.data.length - 1) { cardIndex++; renderCardInModal(data.data[cardIndex], data, cardIndex, data.data.length); }
+        };
+        window.closeCards = function() {
+            document.getElementById('card-modal').style.display = 'none';
+        };
+
+        function renderFocusCard(item, data) {
+            if (!item || !data) return '';
+            return `
+                <div class="focus-card" style="border-color:${getComputedStyle(document.documentElement).getPropertyValue('--' + data.color.split('-')[1])};">
+                    <div class="focus-card-header ${data.color}">
+                        Study Card
+                    </div>
+                    <div class="focus-card-body">
+                        <div>
+                            <span class="focus-label">Topic</span>
+                            <div class="focus-content" style="font-weight:800; font-size:1.3rem;">${item.topic}</div>
+                        </div>
+                        <div>
+                            <span class="focus-label">Key Fact</span>
+                            <div class="focus-content">${item.fact}</div>
+                        </div>
+                        <div class="focus-alert-box">
+                            <span class="focus-label" style="color:#b91c1c;">⚠️ Clinical Alert</span>
+                            <div class="focus-content" style="font-size:1rem;">${item.alert}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        window.switchTab = function(tabName) {
+            currentTab = tabName;
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = 'tab-btn'; // Reset
+                if(btn.id === `tab-${tabName}`) {
+                    btn.classList.add('active');
+                    if(contentData[tabName]) btn.classList.add(contentData[tabName].color);
+                } else {
+                    var bKey = btn.id.replace('tab-','');
+                    if(contentData[bKey]) btn.classList.add(contentData[bKey].color);
+                }
+            });
+            if (contentData[currentTab] && contentData[currentTab].data && contentData[currentTab].data.length > 0) {
+                currentItem = contentData[currentTab].data[0];
+                renderGuide();
+            }
+        }
+
+        function renderGuide() {
+            const container = document.getElementById('content-area');
+            const data = contentData[currentTab];
+            const descArea = document.getElementById('desc-area');
+
+            if (descArea && data) {
+                if(data.description) {
+                    descArea.innerHTML = data.description;
+                    descArea.style.display = 'block';
+                } else {
+                    descArea.style.display = 'none';
+                }
+            }
+            
+            if (!data || !data.data) return;
+
+            const rows = data.data.map((item, idx) => `
+                <tr onclick="selectRow(this, ${idx})" class="${currentItem === item ? 'selected' : ''}">
+                    <td class="topic-cell ${data.type}">${item.topic}</td>
+                    <td class="key-point-cell">${item.fact}</td>
+                    <td class="alert-cell">${item.alert}</td>
+                </tr>
+            `).join('');
+
+            const content = `
+                <div class="section-header-bar ${data.color}">
+                    <span>${data.title}</span>
+                    <div class="header-btns">
+                        <button class="header-btn" style="display:none;" id="mobile-card-btn" onclick="openCards(0)">📄 Cards</button>
+                        <button class="header-quiz-btn" onclick="startQuiz()">Take Quiz</button>
+                    </div>
+                </div>
+                <div class="grid-layout">
+                    <div>
+                        <div class="table-container">
+                            <table>
+                                <thead><tr><th>Topic</th><th>Clinical Fact</th><th>Nursing Priority / Alerts</th></tr></thead>
+                                <tbody id="table-body">${rows}</tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="visual-container" id="desktop-focus-card" style="background:none; border:none; padding-top:0;">
+                            ${renderFocusCard(currentItem, data)}
+                        </div>
+                    </div>
+                </div>
+            `;
+            if (container) {
+                container.innerHTML = content;
+            }
+
+            if (window.innerWidth <= 600) {
+                document.getElementById('mobile-card-btn').style.display = 'inline-block';
+                document.getElementById('desktop-focus-card').style.display = 'none';
+            }
+        }
+
+        window.selectRow = function(rowEl, index) {
+            document.querySelectorAll('#table-body tr').forEach(function(r) { r.classList.remove('selected'); });
+            rowEl.classList.add('selected');
+            
+            if (window.innerWidth <= 600) {
+                openCards(index);
+            } else {
+                currentItem = contentData[currentTab].data[index];
+                document.getElementById('desktop-focus-card').innerHTML = renderFocusCard(currentItem, contentData[currentTab]);
+            }
+        };
+
+        window.startQuiz = function() {
+            document.getElementById('quiz-modal').style.display = 'flex';
+            currentQuizData = contentData[currentTab].data; 
+            quizIndex = 0;
+            quizScore = 0;
+            loadQuestion();
+        }
+
+        window.closeQuiz = function() {
+            document.getElementById('quiz-modal').style.display = 'none';
+        }
+
+        function loadQuestion() {
+            if (!currentQuizData || currentQuizData.length === 0) return;
+            const qData = currentQuizData[quizIndex];
+            document.getElementById('q-num-display').innerText = quizIndex + 1;
+            document.getElementById('quiz-progress').innerText = `Question ${quizIndex + 1} of ${currentQuizData.length}`;
+            document.getElementById('q-text').innerText = qData.q;
+            
+            document.getElementById('feedback-area').style.display = 'none';
+            document.getElementById('next-btn').style.display = 'none';
+            
+            const optionsContainer = document.getElementById('q-options');
+            if (optionsContainer) {
+                optionsContainer.innerHTML = '';
+
+                let answerObjects = qData.a.map((ans, index) => ({ text: ans, originalIndex: index }));
+                answerObjects = shuffleArray(answerObjects);
+
+                const letters = ['A', 'B', 'C', 'D'];
+                
+                answerObjects.forEach((ansObj, idx) => {
+                    const btn = document.createElement('div');
+                    btn.className = 'quiz-option';
+                    btn.dataset.originalIndex = ansObj.originalIndex;
+                    
+                    btn.innerHTML = `
+                        <div class="quiz-option-letter ${letters[idx]}">${letters[idx]}</div> 
+                        <div style="flex-grow:1;">${ansObj.text}</div>
+                        <div class="correct-check" style="display:none; color:#10b981; font-weight:bold; font-size:1.2rem; margin-left:0.5rem;">✔</div>
+                    `;
+                    
+                    btn.onclick = () => checkAnswer(ansObj.originalIndex, btn, optionsContainer);
+                    optionsContainer.appendChild(btn);
+                });
+            }
+        }
+
+        window.checkAnswer = function(selectedOriginalIndex, btnElement, optionsContainer) {
+            const qData = currentQuizData[quizIndex];
+            const options = optionsContainer.querySelectorAll('.quiz-option');
+            const feedbackArea = document.getElementById('feedback-area');
+            const feedbackHeader = document.getElementById('feedback-header');
+            const rationaleText = document.getElementById('rationale-text');
+            const nextBtn = document.getElementById('next-btn');
+
+            options.forEach(opt => opt.style.pointerEvents = 'none');
+
+            let visualCorrectLetter = 'A';
+            let correctOptionDom = null;
+            Array.from(options).forEach((opt, idx) => {
+                if (parseInt(opt.dataset.originalIndex) === qData.correct) {
+                    visualCorrectLetter = ['A', 'B', 'C', 'D'][idx];
+                    correctOptionDom = opt;
+                }
+            });
+
+            if (rationaleText) rationaleText.innerHTML = `<div class="rationale-pill">Rationale:</div><div style="color: #e2e8f0; font-size: 0.95rem;">${qData.rationale || "No rationale provided."}</div>`;
+            if (feedbackArea) feedbackArea.style.display = 'block';
+            if (nextBtn) nextBtn.style.display = 'block';
+
+            let isCorrect = (selectedOriginalIndex === qData.correct);
+
+            if (feedbackArea) feedbackArea.style.borderColor = isCorrect ? '#10b981' : '#ef4444';
+            
+            const statusBadge = isCorrect 
+                ? '<span class="feedback-badge badge-correct">✔ Correct</span>' 
+                : '<span class="feedback-badge badge-incorrect">✖ Incorrect</span>';
+            const answerBadge = `<span class="feedback-badge badge-answer">Answer: ${visualCorrectLetter}</span>`;
+
+            if (feedbackHeader) {
+                feedbackHeader.innerHTML = `${statusBadge} ${answerBadge}`;
+            }
+
+            if(isCorrect) {
+                btnElement.classList.add('correct-choice');
+                btnElement.querySelector('.correct-check').style.display = 'block';
+                try { playSound('correct'); } catch(e){}
+                quizScore++;
+            } else {
+                btnElement.classList.add('wrong-choice');
+                if(correctOptionDom) {
+                    correctOptionDom.classList.add('correct-choice');
+                    correctOptionDom.querySelector('.correct-check').style.display = 'block';
+                }
+                try { playSound('wrong'); } catch(e){}
+            }
+            
+            if (nextBtn) {
+                if (quizIndex >= currentQuizData.length - 1) {
+                    nextBtn.textContent = 'Finish (' + quizScore + '/' + currentQuizData.length + ')';
+                } else {
+                    nextBtn.textContent = 'Next Question';
+                }
+            }
+
+            setTimeout(() => {
+                const quizBox = document.querySelector('.quiz-box');
+                if (quizBox) {
+                    quizBox.scrollTo({
+                        top: quizBox.scrollHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100);
+        }
+
+        window.nextQuestion = function() {
+            quizIndex++;
+            if(quizIndex < currentQuizData.length) {
+                loadQuestion();
+                const quizBox = document.querySelector('.quiz-box');
+                if (quizBox) quizBox.scrollTop = 0;
+            } else {
+                const optionsContainer = document.getElementById('q-options');
+                const qText = document.getElementById('q-text');
+                if (qText) qText.innerText = "Quiz Complete!";
+                if (optionsContainer) {
+                    optionsContainer.innerHTML = `
+                        <div style="text-align:center; padding:2rem; background: rgba(255,255,255,0.05); border-radius: 1rem;">
+                            <h2 style="font-size: 2rem; margin-bottom: 1rem; color: white;">You scored ${quizScore} / ${currentQuizData.length}</h2>
+                            <button class="action-btn print-btn" style="width:100%; max-width: 300px; background-color: var(--accent-gold); color: white;" onclick="closeQuiz()">Return to Guide</button>
+                        </div>
+                    `;
+                }
+                const feedbackArea = document.getElementById('feedback-area');
+                const nextBtn = document.getElementById('next-btn');
+                const qNumDisplay = document.getElementById('q-num-display');
+                if (feedbackArea) feedbackArea.style.display = 'none';
+                if (nextBtn) nextBtn.style.display = 'none';
+                if (qNumDisplay) qNumDisplay.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('resize', function() {
+            if(document.getElementById('content-area').innerHTML !== "") {
+                if (window.innerWidth <= 600) {
+                    document.getElementById('mobile-card-btn').style.display = 'inline-block';
+                    document.getElementById('desktop-focus-card').style.display = 'none';
+                } else {
+                    document.getElementById('mobile-card-btn').style.display = 'none';
+                    document.getElementById('desktop-focus-card').style.display = 'flex';
+                }
+            }
+        });
+
+        // Init
+        switchTab('basics'); 
+    })();
+    </script>
+</div>
+
+</body>
+</html>

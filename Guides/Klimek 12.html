@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 Klimek 12: Master Prioritization</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; min-height: 100vh; min-height: 100dvh; background: #b8aad0; }
+        html.dark, html.dark body { background: #0f172a; }
+    </style>
+</head>
+<body>
+<script>
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark');
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(event) {
+    if (event.matches) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+});
+</script>
+
+<!-- Peptopia Klimek Guide Widget -->
+<div id="peptopia-klimek-guide">
+    <style>
+        /* --- Scoped Styles --- */
+        #peptopia-klimek-guide {
+            --slate-50: #f8fafc; --slate-100: #f1f5f9; --slate-200: #e2e8f0;
+            --slate-700: #334155; --slate-800: #1e293b; --slate-900: #0f172a; --white: #ffffff;
+            --rose-500: #fb7185; --blue-500: #06b6d4; --purple-500: #8b5cf6;
+            --emerald-500: #10b981; --amber-500: #d97706; --pink-500: #ec4899; 
+            --indigo-500: #6366f1; --orange-500: #f97316;
+            
+            /* Backgrounds (Pale versions for selection) */
+            --rose-50: #fff1f2; --blue-50: #ecfeff; --purple-50: #f5f3ff;
+            --emerald-50: #ecfdf5; --amber-50: #fffbeb; --pink-50: #fdf2f8; 
+            --indigo-50: #eef2ff; --orange-50: #fff7ed;
+
+            /* Alert Colors */
+            --alert-bg: #fff7ed;
+            --alert-border: #fdba74;
+            --alert-text: #1e293b;
+            
+            /* UI Accents */
+            --accent-gold: #f59e0b; 
+            
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: transparent; color: var(--slate-900); line-height: 1.6;
+            font-size: 16px; max-width: 76rem; margin: 0 auto; padding: 0.75rem;
+            box-sizing: border-box; -webkit-text-size-adjust: 100%;
+        }
+        html.dark #peptopia-klimek-guide {
+            --slate-50: #0f172a; --slate-100: #1e293b; --slate-200: #334155;
+            --slate-700: #cbd5e1; --slate-800: #0f172a; --slate-900: #f1f5f9; --white: #1e293b;
+            --rose-50: #1a0a0d; --blue-50: #0a1a1f; --purple-50: #0f0a1f;
+            --emerald-50: #0a1a12; --amber-50: #1a150a; --pink-50: #1a0a14; 
+            --indigo-50: #0a0e1f; --orange-50: #1a110a;
+            --alert-bg: #1a150a; --alert-border: #92400e; --alert-text: #f1f5f9;
+            background-color: transparent; color: #f1f5f9;
+        }
+        #peptopia-klimek-guide * { box-sizing: border-box; }
+        
+        #peptopia-klimek-guide .highlight-term {
+            background-color: #fef08a; color: #000; padding: 0.1rem 0.4rem;
+            border-radius: 0.25rem; font-weight: 800; display: inline-block; margin-bottom: 2px;
+        }
+        html.dark #peptopia-klimek-guide .highlight-term { background-color: #fde68a; color: #1e1b4b; }
+        
+        /* Navbar */
+        #peptopia-klimek-guide .navbar {
+            background: linear-gradient(135deg, #0a1628 0%, #0c2461 50%, #0a1628 100%);
+            color: #fff; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;
+            display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 4px 16px -2px rgba(10, 22, 40, 0.5), 0 0 20px rgba(30, 100, 255, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+        }
+        html.dark #peptopia-klimek-guide .navbar { background: linear-gradient(135deg, #020617 0%, #0c2461 50%, #020617 100%); border: 1px solid rgba(59, 130, 246, 0.3); }
+        #peptopia-klimek-guide .nav-title { font-weight: 800; font-size: 1.5rem; display: flex; align-items: center; gap: 0.5rem; text-align: center; }
+        
+        /* Tabs */
+        #peptopia-klimek-guide .tabs-container {
+            display: flex; flex-wrap: nowrap; gap: 0.5rem; margin-bottom: 0.5rem;
+            overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 0.5rem; scrollbar-width: thin;
+            justify-content: flex-start;
+        }
+        @media (min-width: 768px) { #peptopia-klimek-guide .tabs-container { justify-content: center; } }
+        #peptopia-klimek-guide .tabs-container::-webkit-scrollbar { height: 4px; }
+        #peptopia-klimek-guide .tabs-container::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+        #peptopia-klimek-guide .tab-btn {
+            padding: 0.6rem 1rem; border-radius: 0.5rem; font-weight: 700;
+            border: none; cursor: pointer; transition: all 0.15s; font-size: 0.95rem;
+            filter: grayscale(40%) opacity(0.9); text-align: center;
+            white-space: nowrap; flex-shrink: 0; color: #fff;
+        }
+        #peptopia-klimek-guide .tab-btn:hover { filter: grayscale(0%) opacity(1); transform: translateY(-1px); }
+        #peptopia-klimek-guide .tab-btn.active {
+            filter: grayscale(0%) opacity(1);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2), 0 0 0 2px rgba(255,255,255,0.3);
+            transform: translateY(1px);
+        }
+
+        /* Tab Colors */
+        #peptopia-klimek-guide #tab-rules { background-color: var(--rose-500); }
+        #peptopia-klimek-guide #tab-stable { background-color: var(--blue-500); }
+        #peptopia-klimek-guide #tab-delegation { background-color: var(--purple-500); }
+        #peptopia-klimek-guide #tab-staff { background-color: var(--emerald-500); }
+        #peptopia-klimek-guide #tab-guessing { background-color: var(--amber-500); }
+
+        /* Section Header Bar */
+        #peptopia-klimek-guide .section-header-bar {
+            padding: 0.35rem 1.5rem; color: white;
+            display: flex; justify-content: space-between; align-items: center;
+            border-radius: 0.5rem; font-size: 1.25rem; font-weight: 800;
+            margin-bottom: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); gap: 0.5rem;
+        }
+        @media (max-width: 600px) {
+            #peptopia-klimek-guide .section-header-bar { font-size: 1.1rem; padding: 0.35rem 1rem; flex-wrap: wrap; }
+        }
+        
+        #peptopia-klimek-guide .header-btn {
+            background-color: #312e81; color: white; border: 2px solid rgba(255,255,255,0.5);
+            padding: 0.3rem 1rem; border-radius: 0.4rem; font-size: 0.9rem; font-weight: 700;
+            cursor: pointer; transition: all 0.2s; white-space: nowrap; -webkit-tap-highlight-color: transparent;
+        }
+        #peptopia-klimek-guide .header-btn:hover { background-color: white; color: #312e81; transform: scale(1.02); }
+        
+        #peptopia-klimek-guide .header-quiz-btn {
+            background-color: #312e81; color: white; border: 2px solid rgba(255,255,255,0.5);
+            padding: 0.3rem 1rem; border-radius: 0.4rem;
+            font-size: 0.9rem; font-weight: 700; cursor: pointer;
+            transition: all 0.2s; white-space: nowrap;
+        }
+        #peptopia-klimek-guide .header-quiz-btn:hover {
+            background-color: white; color: #312e81; transform: scale(1.02);
+        }
+        
+        #peptopia-klimek-guide .header-btns { display: flex; gap: 0.5rem; flex-shrink: 0; }
+
+        /* Card Overlay & Modal */
+        #peptopia-klimek-guide .card-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.92); z-index: 1999;
+            align-items: flex-start; justify-content: center; padding: 0;
+            overflow-y: auto; -webkit-overflow-scrolling: touch;
+        }
+        #peptopia-klimek-guide .card-modal {
+            background: var(--white); width: 100%; max-width: 560px; border-radius: 0;
+            min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column;
+        }
+        @media (min-width: 640px) {
+            #peptopia-klimek-guide .card-overlay { align-items: center; padding: 1.5rem; }
+            #peptopia-klimek-guide .card-modal { border-radius: 1rem; min-height: auto; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+        }
+        html.dark #peptopia-klimek-guide .card-modal { background: #1e293b; }
+        #peptopia-klimek-guide .card-modal-header {
+            padding: 0.75rem 1rem; color: white; font-weight: 800; font-size: 1rem;
+            display: flex; justify-content: space-between; align-items: center; border-radius: 0;
+        }
+        @media (min-width: 640px) { #peptopia-klimek-guide .card-modal-header { border-radius: 1rem 1rem 0 0; } }
+        #peptopia-klimek-guide .card-modal-header .card-close-btn {
+            background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 0 0.25rem; line-height: 1;
+        }
+        #peptopia-klimek-guide .card-modal-body { padding: 1.25rem; flex-grow: 1; }
+        #peptopia-klimek-guide .card-modal-body .card-topic { font-size: 1.35rem; font-weight: 800; margin-bottom: 1rem; color: var(--slate-900); }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-topic { color: #f1f5f9; }
+        #peptopia-klimek-guide .card-modal-body .card-section { margin-bottom: 1rem; }
+        #peptopia-klimek-guide .card-modal-body .card-label {
+            font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px;
+            color: #64748b; font-weight: 800; margin-bottom: 0.3rem; display: block;
+        }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-label { color: #94a3b8; }
+        #peptopia-klimek-guide .card-modal-body .card-fact { font-size: 1.05rem; line-height: 1.5; color: var(--slate-900); }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-fact { color: #e2e8f0; }
+        #peptopia-klimek-guide .card-modal-body .card-alert-box {
+            background: #fff1f2; border-left: 5px solid #e11d48; padding: 0.75rem; border-radius: 0.25rem;
+        }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-alert-box { background: #1c1012; border-left-color: #be123c; }
+        #peptopia-klimek-guide .card-modal-body .card-alert-box .card-fact { font-size: 0.95rem; }
+        #peptopia-klimek-guide .card-nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.75rem 1rem; border-top: 1px solid var(--slate-200); gap: 0.5rem;
+        }
+        html.dark #peptopia-klimek-guide .card-nav { border-top-color: #334155; }
+        #peptopia-klimek-guide .card-nav-btn {
+            background: #4f46e5; color: white; border: none; padding: 0.55rem 1.25rem;
+            border-radius: 2rem; font-weight: 700; cursor: pointer; font-size: 0.9rem;
+            transition: background 0.15s; -webkit-tap-highlight-color: transparent;
+        }
+        #peptopia-klimek-guide .card-nav-btn:hover { background: #4338ca; }
+        #peptopia-klimek-guide .card-nav-btn:disabled { opacity: 0.35; cursor: default; }
+        #peptopia-klimek-guide .card-counter { font-size: 0.85rem; font-weight: 700; color: #64748b; white-space: nowrap; }
+        html.dark #peptopia-klimek-guide .card-counter { color: #94a3b8; }
+
+        /* Main Grid */
+        #peptopia-klimek-guide .grid-layout { display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start; } 
+        @media (min-width: 850px) {
+            #peptopia-klimek-guide .grid-layout { flex-direction: row; }
+            #peptopia-klimek-guide .grid-layout > div:first-child { flex: 2; width: 100%; } /* Left Col */
+            #peptopia-klimek-guide .grid-layout > div:last-child { flex: 1; width: 100%; position: sticky; top: 1rem; }  /* Right Col */
+        }
+
+        /* Description Box */
+        #peptopia-klimek-guide .description-box {
+            padding: 1rem; background: #ffffff; 
+            border: 2px solid #e2e8f0; border-radius: 0.5rem;
+            border-left: 6px solid var(--slate-700);
+            font-size: 1.05rem; color: #000000; font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Data Table */
+        #peptopia-klimek-guide .table-container { 
+            overflow-x: auto; -webkit-overflow-scrolling: touch; 
+            border: 2px solid #334155; border-radius: 0.75rem; 
+            background: white; max-height: 600px; overflow-y: auto; 
+        }
+        html.dark #peptopia-klimek-guide .table-container { background: #1e293b; border-color: #475569; }
+        #peptopia-klimek-guide table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; }
+        #peptopia-klimek-guide th { 
+            padding: 0.75rem; background-color: #f1f5f9; color: #0f172a; 
+            border-bottom: 2px solid #e2e8f0; position: sticky; top: 0; z-index: 5; 
+            font-weight: 800; font-size: 0.9rem;
+        }
+        html.dark #peptopia-klimek-guide th { background-color: #334155; color: #f1f5f9; border-bottom-color: #475569; }
+        #peptopia-klimek-guide td { padding: 0.75rem; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        html.dark #peptopia-klimek-guide td { border-bottom-color: #334155; color: #e2e8f0; }
+        #peptopia-klimek-guide tr:hover td { cursor: pointer; background-color: #f8fafc; filter: brightness(98%); }
+        html.dark #peptopia-klimek-guide tr:hover td { background-color: #1e293b; }
+        #peptopia-klimek-guide tr.selected td { border-left: 5px solid var(--accent-gold); background-color: #fffbeb; }
+        html.dark #peptopia-klimek-guide tr.selected td { background-color: #1c1917; }
+
+        /* Cell Specifics */
+        #peptopia-klimek-guide .topic-cell { font-weight: 800; width: 1%; white-space: nowrap; color: #000; vertical-align: top; }
+        html.dark #peptopia-klimek-guide .topic-cell { color: #f1f5f9; }
+        #peptopia-klimek-guide .topic-cell.rules { background-color: var(--rose-50); }
+        #peptopia-klimek-guide .topic-cell.stable { background-color: var(--blue-50); }
+        #peptopia-klimek-guide .topic-cell.delegation { background-color: var(--purple-50); }
+        #peptopia-klimek-guide .topic-cell.staff { background-color: var(--emerald-50); }
+        #peptopia-klimek-guide .topic-cell.guessing { background-color: var(--amber-50); }
+
+        #peptopia-klimek-guide .key-point-cell { color: #334155; font-style: normal; font-weight: 500; }
+        html.dark #peptopia-klimek-guide .key-point-cell { color: #cbd5e1; }
+        #peptopia-klimek-guide .alert-cell { color: #991b1b; background-color: #fef2f2; border-left: 3px solid #f87171; font-weight: 600; }
+        html.dark #peptopia-klimek-guide .alert-cell { background-color: #1c1012; color: #fca5a5; border-left-color: #dc2626; }
+
+        @media (max-width: 600px) {
+            #peptopia-klimek-guide .table-container { max-height: none; }
+            #peptopia-klimek-guide table, #peptopia-klimek-guide thead, #peptopia-klimek-guide tbody,
+            #peptopia-klimek-guide th, #peptopia-klimek-guide td, #peptopia-klimek-guide tr { display: block; width: 100%; }
+            #peptopia-klimek-guide thead { display: none; }
+            #peptopia-klimek-guide tr { border-bottom: 2px solid #e2e8f0; padding: 0.6rem 0; margin-bottom: 0.35rem; }
+            html.dark #peptopia-klimek-guide tr { border-bottom-color: #334155; }
+            #peptopia-klimek-guide td { padding: 0.3rem 0.65rem; border-bottom: none; position: relative; padding-left: 0.65rem; }
+            #peptopia-klimek-guide .topic-cell { font-size: 1.05rem; padding-bottom: 0.15rem; white-space: normal; }
+            #peptopia-klimek-guide .key-point-cell::before { content: '📌 '; }
+            #peptopia-klimek-guide .alert-cell {
+                border-left: 3px solid #f87171; margin: 0.2rem 0.3rem;
+                border-radius: 0.25rem; padding: 0.4rem 0.6rem; font-size: 0.85rem;
+            }
+            #peptopia-klimek-guide tr.selected td { border-left: none; }
+            #peptopia-klimek-guide tr.selected { border-left: 4px solid var(--accent-gold); background: #fffbeb; border-radius: 0.5rem; }
+            html.dark #peptopia-klimek-guide tr.selected { background: #1c1917; }
+        }
+
+        /* Focus Card */
+        #peptopia-klimek-guide .focus-card {
+            background-color: white; border: 2px solid; 
+            border-radius: 0.75rem; min-height: 250px;
+            display: flex; flex-direction: column; 
+            padding: 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        html.dark #peptopia-klimek-guide .focus-card { background: #1e293b; }
+        #peptopia-klimek-guide .focus-card-header {
+            padding: 0.75rem 1rem; border-radius: 0.55rem 0.55rem 0 0; color: white; font-weight: 800; font-size: 1.1rem; text-align: center;
+        }
+        #peptopia-klimek-guide .focus-card-body { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; gap: 1.5rem; }
+        #peptopia-klimek-guide .focus-label {
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #64748b; font-weight: 800; margin-bottom: 0.25rem; display: block;
+        }
+        html.dark #peptopia-klimek-guide .focus-label { color: #94a3b8; }
+        #peptopia-klimek-guide .focus-content { font-size: 1.15rem; color: #000; line-height: 1.4; }
+        html.dark #peptopia-klimek-guide .focus-content { color: #f1f5f9; }
+        #peptopia-klimek-guide .focus-alert-box {
+            background-color: #fff1f2; border-left: 5px solid #e11d48; padding: 1rem; border-radius: 0.25rem;
+        }
+        html.dark #peptopia-klimek-guide .focus-alert-box { background: #1c1012; border-left-color: #be123c; }
+
+        /* Quiz Styles */
+        #peptopia-klimek-guide .quiz-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.96); z-index: 2000; 
+            align-items: flex-start; justify-content: center; padding: 0;
+            overflow-y: auto; -webkit-overflow-scrolling: touch;
+        }
+        #peptopia-klimek-guide .quiz-box {
+            background: #1e1b4b; /* Dark Blue/Slate */
+            width: 100%; max-width: 800px; padding: 2rem; border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid #4338ca;
+            color: white; display: flex; flex-direction: column;
+            max-height: 90vh; overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+        #peptopia-klimek-guide .quiz-question-number {
+            background: #4338ca; width: 40px; height: 40px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; margin-right: 1rem; flex-shrink: 0; font-size: 1rem;
+        }
+        #peptopia-klimek-guide .quiz-header-row { display: flex; align-items: flex-start; margin-bottom: 1.5rem; }
+        #peptopia-klimek-guide .quiz-question-text { font-size: 1.2rem; line-height: 1.5; font-weight: 500; }
+        
+        #peptopia-klimek-guide .quiz-option {
+            background: #312e81; border: 2px solid #4338ca; padding: 1rem; margin-bottom: 0.75rem;
+            border-radius: 0.5rem; cursor: pointer; transition: all 0.15s;
+            display: flex; align-items: center; font-size: 1.05rem; color: #e0e7ff;
+            width: 100%; text-align: left; -webkit-tap-highlight-color: transparent; user-select: none;
+        }
+        #peptopia-klimek-guide .quiz-option:hover { background: #3730a3; border-color: #6366f1; }
+        @media (hover: none) {
+            #peptopia-klimek-guide .quiz-option:hover { background: #312e81; border-color: #4338ca; }
+            #peptopia-klimek-guide .quiz-option:active { background: #3730a3; border-color: #6366f1; }
+        }
+        #peptopia-klimek-guide .quiz-option.correct-choice { background: #064e3b; border-color: #10b981; color: white; }
+        #peptopia-klimek-guide .quiz-option.wrong-choice { background: #7f1d1d; border-color: #ef4444; color: white; opacity: 0.85; }
+        
+        #peptopia-klimek-guide .quiz-option-letter {
+            background: rgba(255,255,255,0.1); width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin-right: 1rem; font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
+        }
+
+        #peptopia-klimek-guide .feedback-container {
+            margin-top: 1.5rem; background: #312e81; border-radius: 0.5rem; border: 1px solid #4338ca; overflow: hidden; display: none;
+        }
+        #peptopia-klimek-guide .feedback-header {
+            padding: 0.75rem 1rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem;
+        }
+        #peptopia-klimek-guide .feedback-header.correct { background: #065f46; color: #34d399; }
+        #peptopia-klimek-guide .feedback-header.incorrect { background: #7f1d1d; color: #fca5a5; }
+        #peptopia-klimek-guide .feedback-content { padding: 1.25rem; font-size: 1.05rem; line-height: 1.6; color: #e0e7ff; }
+        #peptopia-klimek-guide .rationale-label { color: #a5b4fc; font-weight: 800; display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+        
+        #peptopia-klimek-guide .quiz-footer {
+            margin-top: 2rem; display: flex; justify-content: center; align-items: center;
+            padding-bottom: env(safe-area-inset-bottom, 1.5rem);
+        }
+        #peptopia-klimek-guide .next-q-btn {
+            background: #4f46e5; color: white; border: none; padding: 0.85rem 2.5rem;
+            border-radius: 2rem; font-weight: 800; cursor: pointer;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4); font-size: 1.1rem;
+            -webkit-tap-highlight-color: transparent; width: 100%; max-width: 320px;
+        }
+        #peptopia-klimek-guide .next-q-btn:hover { background: #4338ca; }
+        @media (hover: none) { #peptopia-klimek-guide .next-q-btn:active { background: #4338ca; transform: scale(0.98); } }
+        
+        @media (max-width: 600px) {
+             #peptopia-klimek-guide .quiz-box { padding: 1.25rem; max-height: 80vh; width: 95%; margin: 1rem auto; border-radius: 1rem; min-height: auto;}
+        }
+
+        /* Color Classes */
+        #peptopia-klimek-guide .bg-rose { background-color: var(--rose-500) !important; border-color: var(--rose-500) !important; }
+        #peptopia-klimek-guide .bg-blue { background-color: var(--blue-500) !important; border-color: var(--blue-500) !important; }
+        #peptopia-klimek-guide .bg-purple { background-color: var(--purple-500) !important; border-color: var(--purple-500) !important; }
+        #peptopia-klimek-guide .bg-emerald { background-color: var(--emerald-500) !important; border-color: var(--emerald-500) !important; }
+        #peptopia-klimek-guide .bg-amber { background-color: var(--amber-500) !important; border-color: var(--amber-500) !important; }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-title">📘 Klimek 12: Master Prioritization</div>
+    </nav>
+
+    <!-- Tabs -->
+    <div class="tabs-container">
+        <button class="tab-btn active bg-rose" id="tab-rules" onclick="switchTab('rules')">Priority Rules</button>
+        <button class="tab-btn bg-blue" id="tab-stable" onclick="switchTab('stable')">Stable vs Unstable</button>
+        <button class="tab-btn bg-purple" id="tab-delegation" onclick="switchTab('delegation')">Delegation</button>
+        <button class="tab-btn bg-emerald" id="tab-staff" onclick="switchTab('staff')">Staff Mgmt</button>
+        <button class="tab-btn bg-amber" id="tab-guessing" onclick="switchTab('guessing')">Guessing Tricks</button>
+    </div>
+
+    <!-- Description (High Contrast) -->
+    <div id="desc-area" class="description-box" style="display:none;"></div>
+
+    <!-- Content Area -->
+    <div id="content-area"></div>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="quiz-overlay">
+        <div class="quiz-box">
+            <div style="display:flex; justify-content:space-between; margin-bottom:1rem;">
+                <span style="color:#818cf8; font-weight:700;" id="quiz-progress">Question 1 of ?</span>
+                <button onclick="closeQuiz()" style="background:none; border:none; color:#818cf8; font-size:1.5rem; cursor:pointer;">&times;</button>
+            </div>
+            <div class="quiz-header-row">
+                <div class="quiz-question-number" id="q-num-display">1</div>
+                <div class="quiz-question-text" id="q-text"></div>
+            </div>
+            <div id="q-options"></div>
+            <div id="feedback-area" class="feedback-container">
+                <div class="feedback-header" id="feedback-header"></div>
+                <div class="feedback-content">
+                    <span class="rationale-label">Rationale:</span>
+                    <span id="rationale-text"></span>
+                </div>
+            </div>
+            <div class="quiz-footer">
+                <button class="next-q-btn" id="next-btn" style="display:none;" onclick="nextQuestion()">Next Question</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Study Card Modal (Mobile only) -->
+    <div id="card-modal" class="card-overlay">
+        <div class="card-modal">
+            <div class="card-modal-header" id="card-modal-header">
+                <span id="card-modal-title">Study Cards</span>
+                <button class="card-close-btn" onclick="closeCards()">&times;</button>
+            </div>
+            <div class="card-modal-body" id="card-modal-body"></div>
+            <div class="card-nav">
+                <button class="card-nav-btn" id="card-prev-btn" onclick="prevCard()">&#8592; Prev</button>
+                <span class="card-counter" id="card-counter">1 / ?</span>
+                <button class="card-nav-btn" id="card-next-btn" onclick="nextCard()">Next &#8594;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        // --- DATA FOR KLIMEK 12 ---
+        const contentData = {
+            rules: {
+                title: 'The 4 Rules of Prioritization',
+                color: 'bg-rose',
+                type: 'rules',
+                description: 'Klimek 12: The absolute master rules for deciding who to see first.',
+                data: [
+                    { topic: 'Rule #1: Acute vs Chronic', fact: '<span class="highlight-term">Acute</span> always beats Chronic.', alert: 'A patient with a new or acute problem is always a higher priority than a patient with a chronic illness.', q: 'Which patient is the highest priority to see first?', a: ['A patient with acute appendicitis', 'A patient with COPD', 'A patient with chronic renal failure', 'A patient with stable angina'], correct: 0, rationale: 'Acute conditions are unpredictable and take priority over chronic, predictable conditions, regardless of the severity of the chronic illness.' },
+                    { topic: 'Rule #2: Fresh Post-Op', fact: '<span class="highlight-term">Fresh post-op (within 12 hours)</span> beats medical or other surgical patients.', alert: 'A patient is only considered "fresh" if they are in the FIRST 12 hours after surgery.', q: 'Between a patient 2 days post-op from open heart surgery and a patient 4 hours post-op from a routine appendectomy, who is the priority?', a: ['The patient 4 hours post-op from appendectomy', 'The patient 2 days post-op from heart surgery', 'They are equal priority', 'The patient with the most pain'], correct: 0, rationale: 'Any patient within the first 12 hours of surgery (fresh post-op) is considered highly unstable and is the priority over older surgical cases, regardless of how complex the surgery was.' },
+                    { topic: 'Rule #3: Unstable vs Stable', fact: '<span class="highlight-term">Unstable</span> beats Stable.', alert: 'The modifying phrase (adjective) is more important than the diagnosis (noun).', q: 'Which phrase indicates an UNSTABLE patient?', a: ['"Newly diagnosed"', '"Ready for discharge"', '"Admitted 4 days ago"', '"Experiencing typical signs of the disease"'], correct: 0, rationale: '"Newly diagnosed", "newly admitted", or experiencing unexpected/changing symptoms indicates instability. "Ready for discharge" indicates a stable patient.' },
+                    { topic: 'Rule #4: The Tie Breaker', fact: 'If two patients are perfectly tied in priority, use the <span class="highlight-term">Vital Organ</span> rule.', alert: 'Brain > Lungs > Heart > Liver > Kidney > Pancreas.', q: 'You have two highly unstable patients. One has a changing LOC (Brain) and one has sudden arrhythmias (Heart). Who is the priority?', a: ['The patient with a changing LOC', 'The patient with arrhythmias', 'The patient who arrived first', 'The patient with the most abnormal vitals'], correct: 0, rationale: 'According to the vital organ rule, the Brain is the #1 most vital organ, followed by the Lungs, then the Heart. Therefore, the brain issue wins the tie.' },
+                    { topic: 'The Noun vs Adjective Rule', fact: 'Do NOT prioritize based on the severity of the disease (noun).', alert: 'Prioritize based on the modifying phrase (adjective).', q: 'Which patient is a higher priority?', a: ['A patient with a mild paper cut who is "experiencing a changing level of consciousness"', 'A patient with severe crushing chest pain who is "stable and ready for discharge"', 'A patient with end-stage Ebola who is "experiencing expected symptoms"', 'A patient with COPD who "was admitted 3 days ago"'], correct: 0, rationale: 'Do not let the scary disease (chest pain, Ebola) trick you. The modifying phrase ("changing LOC") makes the paper-cut patient unstable and the highest priority.' }
+                ]
+            },
+            stable: {
+                title: 'Stable vs. Unstable Words',
+                color: 'bg-blue',
+                type: 'stable',
+                description: 'Klimek 12: Memorize the exact words the NCLEX uses to trick you.',
+                data: [
+                    { topic: 'Stable Indicators', fact: 'Words meaning STABLE: "Local/Regional Anesthesia", "To be discharged", "Admitted longer than 24 hours ago".', alert: 'Stable patients experience typical, EXPECTED signs of their disease.', q: 'A patient has COPD and presents with a pulse oximetry of 89%. Are they stable or unstable?', a: ['Stable, because this is a typical and expected finding for COPD', 'Unstable, because the oxygen is below 90%', 'Unstable, because they need immediate intubation', 'Stable, because they do not have a fever'], correct: 0, rationale: 'For a COPD patient, an SpO2 of 89% is a typical, expected finding. Because it is expected for their disease, this patient is considered stable.' },
+                    { topic: 'Unstable Indicators', fact: 'Words meaning UNSTABLE: "General Anesthesia", "Changing condition", "Newly admitted".', alert: 'Experiencing UNEXPECTED signs of a disease makes them unstable.', q: 'Which patient is the highest priority?', a: ['A diabetic patient complaining of sudden chest pain', 'A diabetic patient with a blood sugar of 200', 'A fresh post-op patient requiring a routine dressing change', 'A patient ready for discharge with a mild headache'], correct: 0, rationale: 'Sudden chest pain is an UNEXPECTED, acute change in condition for a diabetic. This makes the patient highly unstable.' },
+                    { topic: 'The "Always Unstable" List', fact: 'Four things make a patient ALWAYS unstable, even if expected.', alert: '1. Hemorrhage. 2. High fever >105. 3. Hypoglycemia. 4. Pulselessness/Breathlessness.', q: 'A patient is in the PACU and is hemorrhaging from their surgical site. Is this patient stable or unstable?', a: ['Unstable, because hemorrhage is a life-threatening emergency', 'Stable, because bleeding is expected after surgery', 'Stable, because they are in the PACU', 'Unstable, but only if they lose consciousness'], correct: 0, rationale: 'There are 4 absolute exceptions to the "expected = stable" rule. Hemorrhage is ALWAYS unstable and a top priority, regardless of whether it is "expected" after surgery.' },
+                    { topic: 'High Fever Risk', fact: 'A fever over <span class="highlight-term">105 F</span> is always unstable.', alert: 'Why? High risk for seizures.', q: 'Why is a patient with a fever of 105.2 F considered an absolute top priority?', a: ['They are at immediate risk for a seizure', 'They are at risk for hypothermia', 'They are at risk for vomiting', 'They are at risk for hypertension'], correct: 0, rationale: 'Temperatures over 105 F fry the brain and drastically lower the seizure threshold, making it an immediate, unstable emergency.' },
+                    { topic: 'Symptom Expectation', fact: 'A severe symptom is low priority if it is <span class="highlight-term">expected</span> for that disease.', alert: 'A mild symptom is high priority if it is UNEXPECTED for that disease.', q: 'Which patient is a higher priority?', a: ['A casted patient complaining of pain unrelieved by medication', 'A kidney stone patient complaining of 10/10 severe flank pain', 'A COPD patient with a pCO2 of 50', 'A post-op patient with mild incisional pain'], correct: 0, rationale: '10/10 pain is EXPECTED with a kidney stone (Stable). Pain unrelieved by meds is UNEXPECTED for a cast (Compartment Syndrome = Unstable).' }
+                ]
+            },
+            delegation: {
+                title: 'Delegation Masterclass',
+                color: 'bg-purple',
+                type: 'delegation',
+                description: 'Klimek 12: The absolute limits of LPNs and UAPs.',
+                data: [
+                    { topic: 'LPN: What they CANNOT do', fact: 'LPNs CANNOT do the <span class="highlight-term">FIRST</span> of anything.', alert: 'No first assessments, no first vitals, no first feeding, no first teaching.', q: 'Can an LPN perform the initial admission assessment on a newly transferred patient?', a: ['No, the RN must perform all initial and admission assessments', 'Yes, if the patient is stable', 'Yes, if the RN signs off on it later', 'Yes, if the LPN has more than 5 years of experience'], correct: 0, rationale: 'Admission, discharge, and transfer assessments (the "first" or "last" assessments) require RN-level judgment and planning.' },
+                    { topic: 'LPN: IV Rules', fact: 'LPNs CANNOT start an IV or hang/mix IV medications.', alert: 'They CANNOT push IV meds or deal with central lines.', q: 'Which task CANNOT be delegated to an LPN?', a: ['Administering an IV push medication', 'Administering oral medications', 'Changing a sterile dressing', 'Performing a urinary catheterization'], correct: 0, rationale: 'LPNs are strictly prohibited from administering IV push medications, hanging initial IV bags, or administering blood products.' },
+                    { topic: 'LPN: Care Planning', fact: 'LPNs CANNOT plan care or take verbal orders from an MD.', alert: 'The RN creates the care plan; the LPN implements it.', q: 'A doctor calls the unit to give a verbal order for a patient. Who can take this order?', a: ['The RN only', 'The RN or the LPN', 'The LPN, if the RN is busy', 'The Unit Secretary'], correct: 0, rationale: 'Only Registered Nurses can legally take and transcribe verbal or telephone orders from a physician.' },
+                    { topic: 'UAP Scope', fact: 'UAPs (Aides) CANNOT delegate, chart about the patient, give meds, assess, or treat.', alert: 'They CAN do ADLs (baths, beds) and take vitals on STABLE patients.', q: 'Which task is appropriate to delegate to a UAP (Unlicensed Assistive Personnel)?', a: ['Taking routine vital signs on a stable patient', 'Applying a prescription hydrocortisone cream', 'Assessing a patient\'s pain level', 'Teaching a patient how to use a walker'], correct: 0, rationale: 'UAPs handle standard, unchanging, routine tasks like ADLs and vital signs on stable patients. They cannot assess or teach.' },
+                    { topic: 'UAP Exceptions', fact: 'UAPs CAN apply OTC topical barrier creams (like A&D ointment).', alert: 'They CAN perform enemas or catheterize IF they have been specially trained/certified.', q: 'Can a UAP apply a prescription antibiotic ointment to a patient\'s rash?', a: ['No, UAPs cannot administer prescription medications', 'Yes, if the RN watches', 'Yes, because it is topical', 'Yes, if it is on intact skin'], correct: 0, rationale: 'UAPs can apply over-the-counter barrier creams to protect skin, but they cannot administer ANY prescription medication.' },
+                    { topic: 'UAP Charting', fact: 'UAPs can only chart <span class="highlight-term">what they did</span>.', alert: 'They cannot chart about the patient\'s condition or response to a treatment.', q: 'What is the correct scope of charting for a UAP?', a: ['They can chart that they gave a bath, but not how the patient tolerated it', 'They can chart the patient\'s pain level', 'They can chart the appearance of a wound', 'They cannot chart anything at all'], correct: 0, rationale: 'A UAP can document tasks performed (e.g., "Ambulated down hall"), but they cannot document assessments or evaluations of the patient\'s clinical condition.' },
+                    { topic: 'Family Delegation', fact: 'Never delegate <span class="highlight-term">safety responsibilities</span> to the family.', alert: 'If a patient is confused/pulling tubes, you cannot ask the family to "watch them".', q: 'A confused patient is attempting to pull out their IV. The daughter says, "I will sit here and watch him so he doesn\'t do it." What is the nurse\'s response?', a: ['"I appreciate your help, but I must assign a hospital sitter or use restraints for safety."', '"Thank you, just press the call light if he tries."', '"Okay, I will check back in an hour."', '"You will need to hold his hands down."'], correct: 0, rationale: 'Safety is a legal, non-delegable nursing responsibility. You cannot delegate the safety of a patient to a family member or friend.' }
+                ]
+            },
+            staff: {
+                title: 'Staff Management',
+                color: 'bg-emerald',
+                type: 'staff',
+                description: 'Klimek 12: How to intervene when staff members act inappropriately.',
+                data: [
+                    { topic: 'The 3 Management Questions', fact: '1. Is it illegal? 2. Is there immediate physical/psychological danger? 3. Is it just inappropriate?', alert: 'These three sequential questions determine your action.', q: 'When evaluating inappropriate staff behavior, what is the FIRST question the nurse manager must ask?', a: ['Is what they are doing illegal?', 'Is the patient in danger?', 'Is it just a mistake?', 'Are they a new employee?'], correct: 0, rationale: 'You must first determine if the action is illegal. If it is, the response is always to tell the supervisor.' },
+                    { topic: 'Handling Illegal Behavior', fact: 'If the behavior is illegal, ALWAYS <span class="highlight-term">tell the supervisor</span>.', alert: 'Do not confront the staff member first if it is a crime.', q: 'You observe a nurse putting a patient\'s narcotic medication in her own pocket. What is your action?', a: ['Tell the nursing supervisor immediately', 'Confront the nurse and ask for the medication', 'Document the incident and wait', 'Call the police'], correct: 0, rationale: 'Stealing narcotics is illegal. The absolute first step for any illegal activity by staff is to notify the supervisor.' },
+                    { topic: 'Handling Immediate Danger', fact: 'If the behavior is NOT illegal, but places the patient in immediate physical or psychological danger, you must <span class="highlight-term">confront them immediately and take over</span>.', alert: 'Safety first.', q: 'You observe a UAP about to give a patient a tray of solid food, but the patient is strictly NPO for surgery. What do you do?', a: ['Confront the UAP immediately and stop them from giving the tray', 'Tell the supervisor', 'Pull the UAP aside later to talk about it', 'Let the patient eat, then cancel the surgery'], correct: 0, rationale: 'While not illegal, giving food to an NPO patient poses an immediate physical danger (aspiration/surgery cancellation). You must intervene instantly.' },
+                    { topic: 'Handling Inappropriate Behavior', fact: 'If it is NOT illegal and NO ONE is in danger, but it is simply inappropriate, <span class="highlight-term">approach them later</span> and talk to them.', alert: 'Do not embarrass them in front of others.', q: 'You hear a nurse complaining loudly about the hospital administration at the nurses\' station. No patients are around. What do you do?', a: ['Approach the nurse later in private to discuss the inappropriate behavior', 'Tell the supervisor immediately', 'Confront them loudly in front of the other staff', 'Ignore it entirely'], correct: 0, rationale: 'The behavior is not illegal and places no one in physical danger. It is just unprofessional. Address it privately at a later time.' },
+                    { topic: 'Illegal AND Dangerous', fact: 'If a staff member is doing something illegal AND dangerous (e.g., giving meds while drunk).', alert: 'Intervene immediately to stop the harm, THEN tell the supervisor.', q: 'You notice a fellow RN is heavily intoxicated and is about to administer an IV push medication to a patient. What is the sequence of action?', a: ['Intervene immediately to stop the administration, then notify the supervisor', 'Notify the supervisor immediately', 'Wait until they finish, then report them', 'Call security'], correct: 0, rationale: 'While it is illegal (report to supervisor), it is also immediately dangerous to the patient. You must prioritize patient safety by stopping the action first, then report.' }
+                ]
+            },
+            guessing: {
+                title: 'The 12 Guessing Rules',
+                color: 'bg-amber',
+                type: 'guessing',
+                description: 'Klimek 12: Golden strategies for when you absolutely do not know the answer.',
+                data: [
+                    { topic: 'Psychiatry Guessing', fact: 'If you have to guess, pick the answer that focuses on <span class="highlight-term">feelings</span> or establishes <span class="highlight-term">trust</span>.', alert: 'Never pick "Why" or answers that argue/punish.', q: 'If you are completely stumped on a Psych question, which answer choice is the best guess?', a: ['"Examine your own feelings" or "Establish a trust relationship."', '"Call the doctor immediately."', '"Place the patient in seclusion."', '"Ask the patient why they did that."'], correct: 0, rationale: 'In psych, the right answer almost always revolves around therapeutic communication, exploring feelings, or building a trusting relationship.' },
+                    { topic: 'Nutrition Guessing', fact: 'In a tie, pick <span class="highlight-term">Chicken</span>. If no chicken, pick <span class="highlight-term">Fish</span> (but not shellfish).', alert: 'Never pick casseroles for children. Toddlers get finger foods.', q: 'You are guessing on a nutrition question for a toddler. What is the golden rule?', a: ['Pick the finger food (e.g., hot dogs, chicken nuggets)', 'Pick the casserole', 'Pick the soup', 'Pick the steak'], correct: 0, rationale: 'Toddlers are on the run and will not sit still. The correct diet answer for a toddler is always a finger food.' },
+                    { topic: 'Pharmacology Guessing', fact: 'If you do not know the drug or the side effects, pick a <span class="highlight-term">GI side effect</span>.', alert: 'Nausea, vomiting, diarrhea.', q: 'You are asked about the side effects of a drug you have never heard of. What should you guess?', a: ['Nausea, vomiting, or diarrhea', 'Cardiac arrest', 'Pulmonary edema', 'Renal failure'], correct: 0, rationale: 'Almost every medication in the world causes some form of GI upset. It is the statistically safest guess.' },
+                    { topic: 'OB Guessing', fact: 'If it is an OB question and you don\'t know the answer, check the <span class="highlight-term">Fetal Heart Rate</span>.', alert: 'Fetal monitoring is the answer to almost every OB crisis.', q: 'In an OB emergency where you are unsure of the specific protocol, what is the best generalized guess?', a: ['Check the fetal heart rate', 'Push IV Pitocin', 'Perform a vaginal exam', 'Prepare for a C-section'], correct: 0, rationale: 'The status of the fetus dictates the entire response in OB. Checking the FHR is almost always the right first step.' },
+                    { topic: 'Med-Surg Guessing', fact: 'The first thing you <span class="highlight-term">ASSESS</span> is LOC. The first thing you <span class="highlight-term">DO</span> is establish an Airway.', alert: 'Read carefully: is the question asking what to assess or what to do?', q: 'A patient is found on the floor. If the question asks "What is the first thing you ASSESS?", what is the answer?', a: ['Level of Consciousness (LOC)', 'Airway', 'Breathing', 'Pulse'], correct: 0, rationale: 'Before you touch the patient or start CPR, you must assess if they are conscious (e.g., "Hey, are you okay?"). If the question asks what you DO, you establish an airway.' },
+                    { topic: 'The Umbrella Strategy', fact: 'If one answer covers all the others, it is the right answer.', alert: 'Look for the broad, encompassing statement.', q: 'Which answer choice represents an "Umbrella" answer?', a: ['"Implement safety precautions"', '"Lower the bed to the lowest position"', '"Put up the side rails"', '"Place the call light in reach"'], correct: 0, rationale: 'Lowering the bed, putting up side rails, and placing the call light are all specific examples of "implementing safety precautions". The broad answer covers them all.' },
+                    { topic: 'Sesame Street Rule', fact: 'Right answers tend to look different from the wrong answers.', alert: 'If three answers are very similar in tone/action, pick the outlier.', q: 'Three answer choices suggest restricting the patient, while one suggests offering them a choice. What rule applies?', a: ['The Sesame Street Rule (One of these things is not like the other)', 'The Umbrella Strategy', 'The Acute vs Chronic Rule', 'The Vital Organ Rule'], correct: 0, rationale: 'If three options share the same theme (restriction), they cancel each other out. The unique option is highly likely to be the correct answer.' },
+                    { topic: 'Ignorance Rule', fact: 'Do not answer based on ignorance. Pull the unknown word out of the question.', alert: 'Use common sense on the rest of the sentence.', q: 'A question asks about an "Amikacin piggyback". You don\'t know what Amikacin is. How should you approach this?', a: ['Ignore the word "Amikacin" and answer based on rules for IV piggybacks (e.g., needs a pump)', 'Guess randomly', 'Assume it is a lethal poison', 'Skip the question'], correct: 0, rationale: 'Don\'t let one unknown drug name derail you. You know that all IV piggybacks require a pump/controller. Use the knowledge you DO have.' }
+                ]
+            }
+        };
+
+
+        // --- Logic ---
+        let currentTab = 'priorities';
+        let quizIndex = 0;
+        let quizScore = 0;
+        let currentQuizData = [];
+
+        // Audio Context for Beeps
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        function playSound(type) {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            if (type === 'correct') {
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(880, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(440, audioCtx.currentTime + 0.1);
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.1);
+            } else {
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.2);
+            }
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // --- Study Card Modal Logic ---
+        let cardIndex = 0;
+
+        function renderCardInModal(item, data, idx, total) {
+            document.getElementById('card-modal-header').className = 'card-modal-header ' + data.color;
+            document.getElementById('card-modal-title').textContent = data.title + ' \u2014 Study Cards';
+            document.getElementById('card-counter').textContent = (idx + 1) + ' / ' + total;
+            document.getElementById('card-prev-btn').disabled = (idx === 0);
+            document.getElementById('card-next-btn').disabled = (idx >= total - 1);
+            document.getElementById('card-modal-body').innerHTML =
+                '<div class="card-topic">' + item.topic + '</div>' +
+                '<div class="card-section">' +
+                    '<span class="card-label">Key Fact</span>' +
+                    '<div class="card-fact">' + item.fact + '</div>' +
+                '</div>' +
+                '<div class="card-section">' +
+                    '<div class="card-alert-box">' +
+                        '<span class="card-label" style="color:#b91c1c;">\u26a0\ufe0f Clinical Alert</span>' +
+                        '<div class="card-fact">' + item.alert + '</div>' +
+                    '</div>' +
+                '</div>';
+        }
+
+        window.openCards = function(startIdx) {
+            var data = contentData[currentTab];
+            cardIndex = (typeof startIdx === 'number') ? startIdx : 0;
+            renderCardInModal(data.data[cardIndex], data, cardIndex, data.data.length);
+            document.getElementById('card-modal').style.display = 'flex';
+        };
+        window.prevCard = function() {
+            var data = contentData[currentTab];
+            if (cardIndex > 0) { cardIndex--; renderCardInModal(data.data[cardIndex], data, cardIndex, data.data.length); }
+        };
+        window.nextCard = function() {
+            var data = contentData[currentTab];
+            if (cardIndex < data.data.length - 1) { cardIndex++; renderCardInModal(data.data[cardIndex], data, cardIndex, data.data.length); }
+        };
+        window.closeCards = function() {
+            document.getElementById('card-modal').style.display = 'none';
+        };
+
+        window.switchTab = function(tabName) {
+            currentTab = tabName;
+            document.querySelectorAll('.tab-btn').forEach(function(btn) {
+                btn.className = 'tab-btn';
+                if(btn.id === 'tab-' + tabName) {
+                    btn.classList.add('active', contentData[tabName].color);
+                } else {
+                    var bKey = btn.id.replace('tab-','');
+                    if(contentData[bKey]) btn.classList.add(contentData[bKey].color);
+                }
+            });
+            renderContent();
+        };
+
+        function renderContent() {
+            var data = contentData[currentTab];
+            var contentArea = document.getElementById('content-area');
+            var descArea = document.getElementById('desc-area');
+
+            if (descArea && data) {
+                if(data.description) {
+                    descArea.innerHTML = data.description;
+                    descArea.style.display = 'block';
+                } else {
+                    descArea.style.display = 'none';
+                }
+            }
+
+            var tableRows = data.data.map(function(item, i) {
+                return '<tr onclick="selectRow(this, ' + i + ')">' +
+                    '<td class="topic-cell ' + data.type + '">' + item.topic + '</td>' +
+                    '<td class="key-point-cell">' + item.fact + '</td>' +
+                    '<td class="alert-cell">' + item.alert + '</td>' +
+                '</tr>';
+            }).join('');
+
+            contentArea.innerHTML =
+                '<div class="section-header-bar ' + data.color + '">' +
+                    '<span>' + data.title + '</span>' +
+                    '<div class="header-btns">' +
+                        '<button class="header-btn" style="display:none;" id="mobile-card-btn" onclick="openCards(0)">📄 Cards</button>' +
+                        '<button class="header-quiz-btn" onclick="startQuiz()">Take Quiz</button>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="grid-layout">' +
+                    '<div>' +
+                        '<div class="table-container">' +
+                            '<table>' +
+                                '<thead><tr><th>Topic</th><th>Clinical Fact</th><th>Nursing Priority / Alerts</th></tr></thead>' +
+                                '<tbody id="table-body">' + tableRows + '</tbody>' +
+                            '</table>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="visual-container" id="desktop-focus-card" style="background:none; border:none; padding-top:0;">' +
+                        renderFocusCard(data.data[0], data) +
+                    '</div>' +
+                '</div>';
+
+            if (window.innerWidth <= 600) {
+                document.getElementById('mobile-card-btn').style.display = 'inline-block';
+                document.getElementById('desktop-focus-card').style.display = 'none';
+            }
+            
+            // pre-select first row
+            const firstRow = document.querySelector('#table-body tr');
+            if(firstRow) firstRow.classList.add('selected');
+        }
+        
+        function renderFocusCard(item, data) {
+            if (!item || !data) return '';
+            return `
+                <div class="focus-card" style="border-color:${getComputedStyle(document.documentElement).getPropertyValue('--' + data.color.split('-')[1])};">
+                    <div class="focus-card-header ${data.color}">
+                        Study Card
+                    </div>
+                    <div class="focus-card-body">
+                        <div>
+                            <span class="focus-label">Topic</span>
+                            <div class="focus-content" style="font-weight:800; font-size:1.3rem;">${item.topic}</div>
+                        </div>
+                        <div>
+                            <span class="focus-label">Key Fact</span>
+                            <div class="focus-content">${item.fact}</div>
+                        </div>
+                        <div class="focus-alert-box">
+                            <span class="focus-label" style="color:#b91c1c;">⚠️ Clinical Alert</span>
+                            <div class="focus-content" style="font-size:1rem;">${item.alert}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        window.selectRow = function(rowEl, index) {
+            document.querySelectorAll('#table-body tr').forEach(function(r) { r.classList.remove('selected'); });
+            rowEl.classList.add('selected');
+            
+            var data = contentData[currentTab];
+            var item = data.data[index];
+
+            if (window.innerWidth <= 600) {
+                openCards(index);
+            } else {
+                document.getElementById('desktop-focus-card').innerHTML = renderFocusCard(item, data);
+            }
+        };
+
+        // --- Quiz Logic ---
+        window.startQuiz = function() {
+            var data = contentData[currentTab];
+            currentQuizData = data.data.slice(); // Copy array
+            quizIndex = 0;
+            quizScore = 0;
+            showQuestion();
+            document.getElementById('quiz-modal').style.display = 'flex';
+        };
+
+        function showQuestion() {
+            var item = currentQuizData[quizIndex];
+            var total = currentQuizData.length;
+            document.getElementById('quiz-progress').textContent = 'Question ' + (quizIndex + 1) + ' of ' + total;
+            document.getElementById('q-num-display').textContent = quizIndex + 1;
+            document.getElementById('q-text').textContent = item.q;
+            var fb = document.getElementById('feedback-area');
+            fb.style.display = 'none';
+            fb.classList.remove('is-visible');
+            document.getElementById('next-btn').style.display = 'none';
+
+            let answerObjects = item.a.map((ans, index) => ({ text: ans, originalIndex: index }));
+            answerObjects = shuffleArray(answerObjects);
+
+            var letters = ['A', 'B', 'C', 'D'];
+            var optionsHTML = answerObjects.map(function(ansObj, i) {
+                return '<div class="quiz-option" data-original-index="' + ansObj.originalIndex + '" onclick="checkAnswer(' + ansObj.originalIndex + ', this)">' +
+                    '<div class="quiz-option-letter">' + letters[i] + '</div>' +
+                    '<span style="flex-grow:1;">' + ansObj.text + '</span>' +
+                    '<div class="correct-check" style="display:none; color:#10b981; font-weight:bold; font-size:1.2rem; margin-left:0.5rem;">✔</div>' +
+                '</div>';
+            }).join('');
+            document.getElementById('q-options').innerHTML = optionsHTML;
+        }
+
+        window.checkAnswer = function(selectedOriginalIndex, btnElement) {
+            var item = currentQuizData[quizIndex];
+            var correct = item.correct;
+            var options = document.querySelectorAll('.quiz-option');
+            
+            options.forEach(function(btn) {
+                btn.style.pointerEvents = 'none';
+            });
+
+            var feedbackArea = document.getElementById('feedback-area');
+            var feedbackHeader = document.getElementById('feedback-header');
+            var rationaleText = document.getElementById('rationale-text');
+            var nextBtn = document.getElementById('next-btn');
+
+            if (rationaleText) rationaleText.innerHTML = item.rationale || "No rationale provided.";
+            if (feedbackArea) feedbackArea.style.display = 'block';
+            if (nextBtn) nextBtn.style.display = 'block';
+
+            let isCorrect = (selectedOriginalIndex === correct);
+
+            if (isCorrect) {
+                quizScore++;
+                btnElement.classList.add('correct-choice');
+                btnElement.querySelector('.correct-check').style.display = 'block';
+                if (feedbackHeader) {
+                    feedbackHeader.className = 'feedback-header correct';
+                    feedbackHeader.innerHTML = '✔ Correct!';
+                }
+                try { playSound('correct'); } catch(e){}
+            } else {
+                btnElement.classList.add('wrong-choice');
+                const correctOption = Array.from(options).find(opt => parseInt(opt.dataset.originalIndex) === correct);
+                if(correctOption) {
+                    correctOption.classList.add('correct-choice');
+                    correctOption.querySelector('.correct-check').style.display = 'block';
+                }
+                if (feedbackHeader) {
+                    feedbackHeader.className = 'feedback-header incorrect';
+                    feedbackHeader.innerHTML = '✖ Incorrect';
+                }
+                try { playSound('wrong'); } catch(e){}
+            }
+
+            if (quizIndex >= currentQuizData.length - 1) {
+                nextBtn.textContent = 'Finish (' + quizScore + '/' + currentQuizData.length + ')';
+            } else {
+                nextBtn.textContent = 'Next Question';
+            }
+
+            setTimeout(function() {
+                var quizBox = document.querySelector('.quiz-box');
+                if (quizBox) {
+                    quizBox.scrollTo({ top: quizBox.scrollHeight, behavior: 'smooth' });
+                }
+            }, 100);
+        };
+
+        window.nextQuestion = function() {
+            quizIndex++;
+            if (quizIndex < currentQuizData.length) {
+                showQuestion();
+                var overlay = document.querySelector('.quiz-box');
+                overlay.scrollTop = 0;
+            } else {
+                var optionsContainer = document.getElementById('q-options');
+                var qText = document.getElementById('q-text');
+                if (qText) qText.innerText = "Quiz Complete!";
+                if (optionsContainer) {
+                    optionsContainer.innerHTML = `
+                        <div style="text-align:center; padding:2rem; background: rgba(255,255,255,0.05); border-radius: 1rem;">
+                            <h2 style="font-size: 2rem; margin-bottom: 1rem; color: white;">You scored ${quizScore} / ${currentQuizData.length}</h2>
+                            <button class="action-btn" style="width:100%; max-width: 300px; background-color: var(--accent-gold); color: white; padding: 1rem; border: none; border-radius: 2rem; font-weight: bold; cursor: pointer; font-size: 1.1rem;" onclick="closeQuiz()">Return to Guide</button>
+                        </div>
+                    `;
+                }
+                document.getElementById('feedback-area').style.display = 'none';
+                document.getElementById('next-btn').style.display = 'none';
+                document.getElementById('q-num-display').style.display = 'none';
+            }
+        };
+
+        window.closeQuiz = function() {
+            document.getElementById('quiz-modal').style.display = 'none';
+            document.getElementById('q-num-display').style.display = 'flex'; // reset for next time
+        };
+
+        window.addEventListener('resize', function() {
+            if(document.getElementById('content-area').innerHTML !== "") {
+                if (window.innerWidth <= 600) {
+                    document.getElementById('mobile-card-btn').style.display = 'inline-block';
+                    document.getElementById('desktop-focus-card').style.display = 'none';
+                } else {
+                    document.getElementById('mobile-card-btn').style.display = 'none';
+                    document.getElementById('desktop-focus-card').style.display = 'flex';
+                }
+            }
+        });
+
+        // Initial Render
+        switchTab('rules');
+
+    })();
+    </script>
+</div>
+
+</body>
+</html>
