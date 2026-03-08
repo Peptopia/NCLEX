@@ -1380,13 +1380,12 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         <div id="content-area"></div>
     </div>
 
-    <div id="lecture-view" style="display:none;">
+    <div id="lecture-view" style="display:none; flex-direction:column; flex:1 1 0; min-height:0;">
         <div class="lecture-header-bar">
             <span class="lecture-header-title" id="lecture-title"></span>
             <button class="lecture-close-btn" onclick="closeLecture()">&times;</button>
         </div>
-        <div id="lecture-status" style="padding:0.4rem 0.8rem;font-size:0.75rem;font-family:monospace;background:#111827;color:#94a3b8;border-bottom:1px solid #1e293b;word-break:break-all;"></div>
-        <iframe id="lecture-iframe" class="lecture-iframe"></iframe>
+        <div id="lecture-content" style="flex:1 1 0; overflow-y:auto; background:#fff; padding:0; min-height:0; border:2px solid var(--slate-200);">Loading...</div>
     </div>
 
     <div id="quiz-modal" class="quiz-overlay">
@@ -2574,8 +2573,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             document.getElementById('section-view').style.display = 'flex';
             document.getElementById('pdf-view').style.display = 'none';
             document.getElementById('lecture-view').style.display = 'none';
-            var lecIframe = document.getElementById('lecture-iframe');
-            if (lecIframe) lecIframe.src = 'about:blank';
+            var lc = document.getElementById('lecture-content');
+            if (lc) lc.innerHTML = '';
             document.getElementById('back-to-index').classList.add('visible');
             document.getElementById('nav-filters').style.display = 'none';
             document.getElementById('nav-main-btns').style.display = 'none';
@@ -2590,8 +2589,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             document.getElementById('section-view').style.display = 'none';
             document.getElementById('pdf-view').style.display = 'none';
             document.getElementById('lecture-view').style.display = 'none';
-            var lecIframe = document.getElementById('lecture-iframe');
-            if (lecIframe) lecIframe.src = 'about:blank';
+            var lc = document.getElementById('lecture-content');
+            if (lc) lc.innerHTML = '';
             document.getElementById('back-to-index').classList.remove('visible');
             document.getElementById('nav-filters').style.display = '';
             document.getElementById('nav-main-btns').style.display = '';
@@ -2781,44 +2780,28 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             var lv = document.getElementById('lecture-view');
             lv.style.display = 'flex';
             document.getElementById('lecture-title').textContent = lec.emoji + ' ' + lec.title;
-            var iframe = document.getElementById('lecture-iframe');
-            var status = document.getElementById('lecture-status');
-            var url1 = GH_PAGES + lec.file;
-            var url2 = GH_PAGES + lec.file.replace(/-/g, ' ').replace(/ /g, '%20');
-            status.innerHTML = '\u23F3 Testing: <a href="' + url1 + '" target="_blank" style="color:#818cf8">' + url1 + '</a>';
-            fetch(url1, { method: 'HEAD' }).then(function(r) {
-                if (r.ok) {
-                    status.innerHTML = '\u2705 ' + r.status + ' OK \u2014 <a href="' + url1 + '" target="_blank" style="color:#818cf8">' + url1 + '</a>';
-                    iframe.src = url1;
-                    return;
+            var content = document.getElementById('lecture-content');
+            content.innerHTML = '<div style="padding:2rem;text-align:center;color:#666;">Loading lecture...</div>';
+            var url = GH_PAGES + lec.file;
+            fetch(url).then(function(r) {
+                if (!r.ok) throw new Error(r.status + ' ' + r.statusText);
+                return r.text();
+            }).then(function(html) {
+                var s = '<style>' + KLIMEK_QUIZ_CSS + '</style>';
+                var fullHtml = html.replace('</head>', s + '</head>').replace('</HEAD>', s + '</HEAD>');
+                if (!fullHtml.includes('</head') && !fullHtml.includes('</HEAD')) {
+                    fullHtml = s + fullHtml;
                 }
-                throw new Error(r.status + ' ' + r.statusText);
-            }).catch(function(e1) {
-                status.innerHTML = '\u26A0 ' + url1 + ' \u2192 ' + e1.message + '. Trying with space\u2026';
-                return fetch(url2, { method: 'HEAD' }).then(function(r2) {
-                    if (r2.ok) {
-                        status.innerHTML = '\u2705 ' + r2.status + ' OK \u2014 <a href="' + url2 + '" target="_blank" style="color:#818cf8">' + url2 + '</a>';
-                        iframe.src = url2;
-                        return;
-                    }
-                    throw new Error(r2.status + ' ' + r2.statusText);
+                content.innerHTML = fullHtml;
+                var scripts = content.querySelectorAll('script');
+                scripts.forEach(function(old) {
+                    var neu = document.createElement('script');
+                    neu.textContent = old.textContent;
+                    old.parentNode.replaceChild(neu, old);
                 });
-            }).catch(function(e2) {
-                status.innerHTML = '\u274C Both URLs failed. Last error: ' + e2.message +
-                    '<br>URL 1: <a href="' + url1 + '" target="_blank" style="color:#818cf8">' + url1 + '</a>' +
-                    '<br>URL 2: <a href="' + url2 + '" target="_blank" style="color:#818cf8">' + url2 + '</a>' +
-                    '<br><b style="color:#fbbf24">Click a link above to test in a new tab.</b>';
+            }).catch(function(err) {
+                content.innerHTML = '<div style="padding:2rem;color:#c00;"><h2>Failed to load lecture</h2><p>' + err.message + '</p><p style="font-size:0.9rem;color:#666;">URL: ' + url + '</p></div>';
             });
-            iframe.onload = function() {
-                try {
-                    var doc = iframe.contentDocument;
-                    if (doc && doc.head) {
-                        var s = doc.createElement('style');
-                        s.textContent = KLIMEK_QUIZ_CSS;
-                        doc.head.appendChild(s);
-                    }
-                } catch(e) { /* cross-origin */ }
-            };
             document.getElementById('back-to-index').classList.add('visible');
             document.getElementById('nav-filters').style.display = 'none';
             document.getElementById('nav-main-btns').style.display = 'none';
@@ -2826,10 +2809,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         };
 
         window.closeLecture = function() {
-            var iframe = document.getElementById('lecture-iframe');
-            if (iframe) iframe.src = 'about:blank';
-            var st = document.getElementById('lecture-status');
-            if (st) st.innerHTML = '';
+            var content = document.getElementById('lecture-content');
+            if (content) content.innerHTML = '';
             document.getElementById('lecture-view').style.display = 'none';
             showHome();
         };
