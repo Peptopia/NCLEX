@@ -2324,7 +2324,7 @@ recent: (sec3 && sec3.recent) ? sec3.recent : []
 });
 }
 if (totalSeen > 0) {
-var sorted = pdSections.slice().sort(function(a, b) { return a.pctMastered - b.pctMastered; });
+var sorted = pdSections.filter(function(s) { return !EXCLUDED_FROM_PCT[s.key]; }).sort(function(a, b) { return a.pctMastered - b.pctMastered; });
 var weak3 = sorted.slice(0, 3);
 html += '<div style="font-size:0.72rem; font-weight:700; color:#fca5a5; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:0.35rem;">\uD83D\uDEA8 Needs Attention</div>';
 html += '<div class="pd-weak-banner">';
@@ -2350,8 +2350,11 @@ sparkHtml += '<div class="pd-spark-dot" style="height:' + h + 'px; background:' 
 }
 sparkHtml += '</div>';
 }
-html += '<div class="pd-card" onclick="closeProgress(); launchSection(\'' + ps.key + '\')">' +
-'<div class="pd-card-hdr">' + ps.emoji + ' ' + ps.label + '</div>' +
+var isOptional = !!EXCLUDED_FROM_PCT[ps.key];
+var optStyle = isOptional ? ' style="background:rgba(22,101,52,0.25); border-color:rgba(74,222,128,0.3);"' : '';
+var optBadge = isOptional ? ' <span style="font-size:0.55rem; background:rgba(74,222,128,0.25); color:#86efac; padding:0.1rem 0.4rem; border-radius:0.75rem; font-weight:700; letter-spacing:0.5px; vertical-align:middle; margin-left:0.3rem;">OPTIONAL</span>' : '';
+html += '<div class="pd-card"' + optStyle + ' onclick="closeProgress(); launchSection(\'' + ps.key + '\')">' +
+'<div class="pd-card-hdr">' + ps.emoji + ' ' + ps.label + optBadge + '</div>' +
 '<div class="pd-card-body">' +
 '<div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:0.25rem; color:#e0e7ff;">' +
 '<span>' + ps.seen + '/' + ps.total + ' seen</span>' +
@@ -2492,6 +2495,8 @@ recent: (sec && sec.recent) ? sec.recent : []
 });
 }
 sections.sort(function(a, b) { return b.priority - a.priority; });
+var requiredSections = sections.filter(function(s) { return !EXCLUDED_SP[s.key]; });
+var optionalSections = sections.filter(function(s) { return !!EXCLUDED_SP[s.key]; });
 var totalSeen = 0, totalMastered = 0;
 for (var s = 0; s < sections.length; s++) {
 if (!EXCLUDED_SP[sections[s].key]) {
@@ -2533,7 +2538,7 @@ html += '<div class="sp-readiness-bar">' +
 '<div class="sp-readiness-sub">' + estSub +
 '</div></div></div>';
 html += '<div style="text-align:center; font-size:0.72rem; color:#8b8fa8; margin-bottom:0.75rem; font-style:italic;">' +
-totalQ + ' questions across ' + (studyKeys.length - 1) + ' specialties + Full Exam</div>';
+totalQ + ' required questions across ' + requiredSections.length + ' sections (+ ' + optionalSections.length + ' optional)</div>';
 if (totalSeen === 0) {
 html += '<div class="sp-empty">' +
 '<div class="sp-empty-icon">\uD83C\uDFAF</div>' +
@@ -2545,7 +2550,7 @@ document.getElementById('studyplan-content').innerHTML = html;
 return;
 }
 html += '<div class="sp-section-label">\uD83C\uDFAF Today\u2019s Focus</div>';
-var todaySections = sections.slice(0, SECTIONS_PER_DAY);
+var todaySections = requiredSections.slice(0, SECTIONS_PER_DAY);
 var todayISO = today.toISOString().slice(0, 10);
 var ctaTarget = null;
 for (var ct = 0; ct < todaySections.length; ct++) {
@@ -2590,7 +2595,7 @@ var dayDate = new Date(today.getTime() + day * 86400000);
 var dayLabel = day === 0 ? 'Today' : day === 1 ? 'Tomorrow' : formatWeekday(dayDate);
 var daySecs = [];
 for (var ds = 0; ds < SECTIONS_PER_DAY; ds++) {
-daySecs.push(sections[sectionIdx % sections.length]);
+daySecs.push(requiredSections[sectionIdx % requiredSections.length]);
 sectionIdx++;
 }
 html += '<div class="sp-day"><div class="sp-day-hdr">' +
@@ -2608,14 +2613,27 @@ html += '<div class="sp-task' + (done7 ? ' sp-task-done' : '') + '" onclick="clo
 html += '</div></div>';
 }
 html += '<div class="sp-section-label">\uD83D\uDCCA Section Priority Ranking</div>';
-for (var r = 0; r < sections.length; r++) {
-var rs = sections[r];
+for (var r = 0; r < requiredSections.length; r++) {
+var rs = requiredSections[r];
 var urgency = rs.pctMastered >= 80 ? '\u2705' : rs.pctMastered >= 40 ? '\uD83D\uDFE1' : rs.pctSeen > 0 ? '\uD83D\uDFE0' : '\uD83D\uDD34';
 html += '<div class="sp-day" style="padding:0.5rem 0.75rem; margin-bottom:0.3rem; cursor:pointer;" onclick="closeStudyPlan(); launchSection(\'' + rs.key + '\')">' +
 '<div style="display:flex; justify-content:space-between; align-items:center;">' +
 '<span style="font-weight:700; color:#e0e7ff; font-size:0.85rem;">' + urgency + ' ' + rs.emoji + ' ' + rs.label + '</span>' +
 '<span style="font-size:0.75rem; color:#b4bcd8;">' + rs.pctSeen + '% seen \u2022 ' + rs.pctMastered + '% mastered \u25B6</span>' +
 '</div></div>';
+}
+if (optionalSections.length > 0) {
+html += '<div class="sp-section-label" style="color:#86efac;">\uD83D\uDCDA Optional / Supplemental</div>';
+html += '<div style="font-size:0.75rem; color:#8b8fa8; margin-bottom:0.5rem; font-style:italic;">These sections are not required for plan completion — study at your own pace.</div>';
+for (var op = 0; op < optionalSections.length; op++) {
+var os = optionalSections[op];
+var oUrgency = os.pctMastered >= 80 ? '\u2705' : os.pctMastered >= 40 ? '\uD83D\uDFE1' : os.pctSeen > 0 ? '\uD83D\uDFE0' : '\u2B55';
+html += '<div class="sp-day" style="padding:0.5rem 0.75rem; margin-bottom:0.3rem; cursor:pointer; background:rgba(22,101,52,0.2); border-color:rgba(74,222,128,0.25);" onclick="closeStudyPlan(); launchSection(\'' + os.key + '\')">' +
+'<div style="display:flex; justify-content:space-between; align-items:center;">' +
+'<span style="font-weight:700; color:#86efac; font-size:0.85rem;">' + oUrgency + ' ' + os.emoji + ' ' + os.label + '</span>' +
+'<span style="font-size:0.75rem; color:#b4bcd8;">' + os.pctSeen + '% seen \u2022 ' + os.pctMastered + '% mastered \u25B6</span>' +
+'</div></div>';
+}
 }
 document.getElementById('studyplan-content').innerHTML = html;
 }
