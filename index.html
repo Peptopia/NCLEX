@@ -1520,18 +1520,122 @@ svg.push('<ellipse cx="206" cy="502" rx="8" ry="10" fill="none" stroke-width="0.
 svg.push('<ellipse cx="274" cy="502" rx="8" ry="10" fill="none" stroke-width="0.8"/>');
 svg.push('</g>');
 
-// Organ highlights with realistic shapes
+// Organ highlights — detailed anatomical shapes
 var organs = [
-{cat:"Nervous System",el:'<path d="M225,28 C218,25 215,30 218,35 C215,38 212,35 214,42 C210,45 215,50 220,48 C222,52 228,55 232,52 C236,56 240,54 240,50 L240,30 C238,26 230,24 225,28Z" fill="url(#brainG)" opacity="0.9" clip-path="url(#brL)"/><rect x="210" y="22" width="35" height="40" rx="4" fill="transparent" class="bm-touch" clip-path="url(#brL)"/>'},
-{cat:"Psychiatric / Mental Health",el:'<path d="M255,28 C262,25 265,30 262,35 C265,38 268,35 266,42 C270,45 265,50 260,48 C258,52 252,55 248,52 C244,56 240,54 240,50 L240,30 C242,26 250,24 255,28Z" fill="url(#brainG2)" opacity="0.9" clip-path="url(#brR)"/><rect x="240" y="22" width="35" height="40" rx="4" fill="transparent" class="bm-touch" clip-path="url(#brR)"/>'},
-{cat:"Sensory / Ophthalmic",el:'<ellipse cx="229" cy="46" rx="6" ry="5" fill="url(#eyeG)" opacity="0.95"/><circle cx="229" cy="46" r="2.5" fill="#064e3b" opacity="0.8"/><ellipse cx="251" cy="46" rx="6" ry="5" fill="url(#eyeG)" opacity="0.95"/><circle cx="251" cy="46" r="2.5" fill="#064e3b" opacity="0.8"/><rect x="220" y="38" width="38" height="18" rx="6" fill="transparent" class="bm-touch"/>'},
-{cat:"Endocrine",el:'<path d="M233,86 C228,83 224,86 225,91 C224,96 228,100 233,97 L237,94 L240,93 L243,94 L247,97 C252,100 256,96 255,91 C256,86 252,83 247,86 L243,89 L240,90 L237,89 Z" fill="url(#thyroidG)" opacity="0.95"/><rect x="222" y="82" width="36" height="20" rx="4" fill="transparent" class="bm-touch"/>'},
-{cat:"Cardiovascular",el:'<path d="M225,140 C225,132 216,130 213,136 C210,142 213,152 220,160 L230,170 L233,168 L228,158 C224,150 222,143 225,140Z" fill="url(#heartG)" opacity="0.95"/><path d="M225,140 C225,132 234,130 237,136 C240,142 237,152 230,160 L228,158" fill="url(#heartG)" opacity="0.85"/><path d="M220,135 C218,128 225,125 232,128 L237,132" fill="none" stroke="#fca5a5" stroke-width="1.5" opacity="0.7"/><circle cx="228" cy="152" r="22" fill="transparent" class="bm-touch"/>'},
-{cat:"Respiratory",el:'<path d="M213,130 C205,135 198,145 196,158 C194,170 196,182 200,190 C204,196 210,198 214,192 L216,180 C218,175 215,165 213,155 C212,148 213,140 213,130Z" fill="url(#lungG)" opacity="0.6"/><path d="M213,158 C210,162 209,170 210,176" fill="none" stroke="#164e63" stroke-width="0.8" opacity="0.5"/><path d="M267,130 C275,135 282,145 284,158 C286,170 284,182 280,190 C276,196 270,198 266,192 L264,180 C262,175 265,165 267,155 C268,148 267,140 267,130Z" fill="url(#lungG)" opacity="0.6"/><path d="M267,158 C270,162 271,170 270,176" fill="none" stroke="#164e63" stroke-width="0.8" opacity="0.5"/><path d="M240,120 L240,145 M240,130 L220,140 M240,130 L260,140" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.4"/><rect x="192" y="125" width="96" height="78" rx="8" fill="transparent" class="bm-touch"/>'},
-{cat:"Digestive / GI",el:'<path d="M248,218 C260,220 268,230 266,245 C264,260 255,270 245,272 C235,274 228,268 230,258 C232,250 240,248 245,252 C250,258 246,265 240,264" fill="none" stroke="url(#stomachG)" stroke-width="5" stroke-linecap="round" opacity="0.85"/><path d="M248,218 C242,216 235,220 234,228" fill="none" stroke="url(#stomachG)" stroke-width="4" stroke-linecap="round" opacity="0.7"/><path d="M232,240 Q238,236 244,240 Q250,244 256,240" fill="none" stroke="#92400e" stroke-width="0.8" opacity="0.3"/><rect x="226" y="212" width="48" height="66" rx="6" fill="transparent" class="bm-touch"/>'},
-{cat:"Renal / Urinary",el:'<path d="M208,218 C202,215 196,220 196,228 C196,232 198,236 196,240 C194,244 196,252 202,254 C208,256 214,250 214,242 C214,238 212,234 214,230 C216,226 214,220 208,218Z" fill="url(#kidneyG)" opacity="0.9"/><path d="M272,218 C278,215 284,220 284,228 C284,232 282,236 284,240 C286,244 284,252 278,254 C272,256 266,250 266,242 C266,238 268,234 266,230 C264,226 266,220 272,218Z" fill="url(#kidneyG)" opacity="0.9"/><circle cx="205" cy="236" r="18" fill="transparent" class="bm-touch"/><circle cx="275" cy="236" r="18" fill="transparent" class="bm-touch"/>'},
-{cat:"Musculoskeletal / Pain",extra:"opacity:0.5",el:'<line x1="240" y1="96" x2="240" y2="310" stroke="#facc15" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/><circle cx="240" cy="120" r="2" fill="#facc15" opacity="0.5"/><circle cx="240" cy="140" r="2" fill="#facc15" opacity="0.5"/><circle cx="240" cy="160" r="2" fill="#facc15" opacity="0.5"/><circle cx="240" cy="180" r="2" fill="#facc15" opacity="0.5"/><circle cx="240" cy="200" r="2" fill="#facc15" opacity="0.5"/><line x1="206" y1="360" x2="204" y2="490" stroke="#facc15" stroke-width="2.5" stroke-linecap="round"/><line x1="274" y1="360" x2="276" y2="490" stroke="#facc15" stroke-width="2.5" stroke-linecap="round"/><line x1="155" y1="130" x2="130" y2="220" stroke="#facc15" stroke-width="2" stroke-linecap="round" opacity="0.45"/><line x1="325" y1="130" x2="350" y2="220" stroke="#facc15" stroke-width="2" stroke-linecap="round" opacity="0.45"/><rect x="125" y="95" width="230" height="410" rx="8" fill="transparent" class="bm-touch"/>'},
-{cat:"Integumentary",extra:"opacity:0.4",el:'<ellipse cx="240" cy="42" rx="32" ry="38" fill="none" stroke="#fb923c" stroke-width="2.2" stroke-dasharray="5,3"/><path d="M180,105 Q195,96 240,96 Q285,96 300,105 L308,130 Q310,160 300,200 Q280,295 240,300 Q200,295 180,200 Q170,160 172,130Z" fill="none" stroke="#fb923c" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.65"/>'}
+// ── BRAIN LEFT (Nervous System) — cerebral hemisphere with gyri folds ──
+{cat:"Nervous System",el:
+'<path d="M222,26 C216,24 213,28 215,33 C212,31 210,34 212,38 C209,37 208,41 211,44 C209,46 210,50 214,50 C216,53 220,55 225,54 C229,56 234,55 237,52 C239,53 240,51 240,48 L240,28 C238,24 228,22 222,26Z" fill="url(#brainG)" opacity="0.92" clip-path="url(#brL)"/>' +
+'<path d="M217,30 C220,34 218,38 215,36" fill="none" stroke="#a855f6" stroke-width="0.8" opacity="0.5" clip-path="url(#brL)"/>' +
+'<path d="M220,38 C224,42 222,46 218,44" fill="none" stroke="#a855f6" stroke-width="0.7" opacity="0.4" clip-path="url(#brL)"/>' +
+'<path d="M225,32 C228,36 226,40 223,39" fill="none" stroke="#a855f6" stroke-width="0.7" opacity="0.4" clip-path="url(#brL)"/>' +
+'<path d="M228,42 C232,46 230,50 226,48" fill="none" stroke="#a855f6" stroke-width="0.6" opacity="0.35" clip-path="url(#brL)"/>' +
+'<path d="M214,44 C218,48 216,52 213,50" fill="none" stroke="#a855f6" stroke-width="0.6" opacity="0.35" clip-path="url(#brL)"/>' +
+'<line x1="240" y1="28" x2="240" y2="52" stroke="#7c3aed" stroke-width="1" opacity="0.3" clip-path="url(#brL)"/>' +
+'<rect x="206" y="20" width="38" height="40" rx="4" fill="transparent" class="bm-touch" clip-path="url(#brL)"/>'},
+// ── BRAIN RIGHT (Psychiatric) — mirror hemisphere ──
+{cat:"Psychiatric / Mental Health",el:
+'<path d="M258,26 C264,24 267,28 265,33 C268,31 270,34 268,38 C271,37 272,41 269,44 C271,46 270,50 266,50 C264,53 260,55 255,54 C251,56 246,55 243,52 C241,53 240,51 240,48 L240,28 C242,24 252,22 258,26Z" fill="url(#brainG2)" opacity="0.92" clip-path="url(#brR)"/>' +
+'<path d="M263,30 C260,34 262,38 265,36" fill="none" stroke="#818cf8" stroke-width="0.8" opacity="0.5" clip-path="url(#brR)"/>' +
+'<path d="M260,38 C256,42 258,46 262,44" fill="none" stroke="#818cf8" stroke-width="0.7" opacity="0.4" clip-path="url(#brR)"/>' +
+'<path d="M255,32 C252,36 254,40 257,39" fill="none" stroke="#818cf8" stroke-width="0.7" opacity="0.4" clip-path="url(#brR)"/>' +
+'<path d="M252,42 C248,46 250,50 254,48" fill="none" stroke="#818cf8" stroke-width="0.6" opacity="0.35" clip-path="url(#brR)"/>' +
+'<line x1="240" y1="28" x2="240" y2="52" stroke="#6366f1" stroke-width="1" opacity="0.3" clip-path="url(#brR)"/>' +
+'<rect x="236" y="20" width="38" height="40" rx="4" fill="transparent" class="bm-touch" clip-path="url(#brR)"/>'},
+// ── EYES (Sensory) — eyeball with iris, pupil, reflection ──
+{cat:"Sensory / Ophthalmic",el:
+'<ellipse cx="229" cy="46" rx="7" ry="5.5" fill="#e0f2e9" opacity="0.9"/>' +
+'<ellipse cx="229" cy="46" rx="7" ry="5.5" fill="none" stroke="#166534" stroke-width="0.6" opacity="0.5"/>' +
+'<circle cx="229" cy="46" r="3.5" fill="url(#eyeG)" opacity="0.95"/>' +
+'<circle cx="229" cy="46" r="1.8" fill="#052e16"/>' +
+'<circle cx="228" cy="44.5" r="0.7" fill="#fff" opacity="0.7"/>' +
+'<ellipse cx="251" cy="46" rx="7" ry="5.5" fill="#e0f2e9" opacity="0.9"/>' +
+'<ellipse cx="251" cy="46" rx="7" ry="5.5" fill="none" stroke="#166534" stroke-width="0.6" opacity="0.5"/>' +
+'<circle cx="251" cy="46" r="3.5" fill="url(#eyeG)" opacity="0.95"/>' +
+'<circle cx="251" cy="46" r="1.8" fill="#052e16"/>' +
+'<circle cx="250" cy="44.5" r="0.7" fill="#fff" opacity="0.7"/>' +
+'<rect x="218" y="37" width="42" height="20" rx="6" fill="transparent" class="bm-touch"/>'},
+// ── THYROID (Endocrine) — butterfly shape with isthmus, lobes, vessels ──
+{cat:"Endocrine",el:
+'<path d="M230,87 C225,82 220,83 219,87 C218,91 220,96 224,98 C228,100 232,98 234,95 L236,93 L240,92 L244,93 L246,95 C248,98 252,100 256,98 C260,96 262,91 261,87 C260,83 255,82 250,87 L247,90 L243,91.5 L240,92 L237,91.5 L233,90 Z" fill="url(#thyroidG)" opacity="0.95"/>' +
+'<path d="M224,89 C226,87 228,89 226,91" fill="none" stroke="#be185d" stroke-width="0.5" opacity="0.4"/>' +
+'<path d="M256,89 C254,87 252,89 254,91" fill="none" stroke="#be185d" stroke-width="0.5" opacity="0.4"/>' +
+'<line x1="240" y1="86" x2="240" y2="82" stroke="#f472b6" stroke-width="0.8" opacity="0.3"/>' +
+'<rect x="216" y="80" width="48" height="22" rx="4" fill="transparent" class="bm-touch"/>'},
+// ── HEART (Cardiovascular) — anatomical with ventricles, aorta, pulmonary artery ──
+{cat:"Cardiovascular",el:
+'<path d="M226,138 C226,130 216,128 212,134 C208,140 210,150 218,160 L228,172 L230,170 Z" fill="url(#heartG)" opacity="0.95"/>' +
+'<path d="M226,138 C226,130 236,128 240,134 C244,140 242,150 234,160 L228,172 L230,170 Z" fill="url(#heartG)" opacity="0.88"/>' +
+'<path d="M226,148 L226,165" fill="none" stroke="#991b1b" stroke-width="0.8" opacity="0.35"/>' +
+'<path d="M218,140 L234,140" fill="none" stroke="#991b1b" stroke-width="0.6" opacity="0.25"/>' +
+'<path d="M222,132 C219,126 222,122 228,123 C232,124 236,126 238,130" fill="none" stroke="#fca5a5" stroke-width="2" stroke-linecap="round" opacity="0.75"/>' +
+'<path d="M228,123 C228,118 232,116 235,118 L238,122" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>' +
+'<path d="M222,132 C218,128 215,130 214,134" fill="none" stroke="#fca5a5" stroke-width="1" opacity="0.5"/>' +
+'<circle cx="228" cy="150" r="24" fill="transparent" class="bm-touch"/>'},
+// ── LUNGS (Respiratory) — 3-lobe right, 2-lobe left, trachea, bronchi ──
+{cat:"Respiratory",el:
+'<path d="M240,118 L240,138" stroke="#67e8f9" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>' +
+'<path d="M240,128 C236,132 228,138 220,142" stroke="#67e8f9" stroke-width="2" stroke-linecap="round" opacity="0.4"/>' +
+'<path d="M240,128 C244,132 252,138 260,142" stroke="#67e8f9" stroke-width="2" stroke-linecap="round" opacity="0.4"/>' +
+'<path d="M220,132 C210,136 202,144 198,156 C195,168 197,180 202,188 C206,194 212,196 216,190 L218,178 C213,170 210,160 212,150 C214,144 218,138 220,132Z" fill="url(#lungG)" opacity="0.55"/>' +
+'<path d="M200,160 C208,158 214,162 212,168" fill="none" stroke="#0e7490" stroke-width="0.7" opacity="0.4"/>' +
+'<path d="M202,174 C208,172 214,176 210,180" fill="none" stroke="#0e7490" stroke-width="0.6" opacity="0.3"/>' +
+'<path d="M260,132 C270,136 278,144 282,156 C285,168 283,180 278,188 C274,194 268,196 264,190 L262,178 C267,170 270,160 268,150 C266,144 262,138 260,132Z" fill="url(#lungG)" opacity="0.55"/>' +
+'<path d="M280,160 C272,158 266,162 268,168" fill="none" stroke="#0e7490" stroke-width="0.7" opacity="0.4"/>' +
+'<path d="M278,174 C272,172 266,176 270,180" fill="none" stroke="#0e7490" stroke-width="0.6" opacity="0.3"/>' +
+'<path d="M268,155 C270,160 268,166 264,164" fill="none" stroke="#0e7490" stroke-width="0.5" opacity="0.3"/>' +
+'<rect x="194" y="116" width="92" height="84" rx="8" fill="transparent" class="bm-touch"/>'},
+// ── STOMACH (Digestive) — J-shape with cardia, fundus, body, pylorus, rugae ──
+{cat:"Digestive / GI",el:
+'<path d="M244,216 C240,214 236,216 234,220 C232,224 232,230 234,236 L236,242 C238,248 242,256 248,262 C254,268 260,268 264,264 C268,258 268,250 264,242 C260,236 254,232 252,228 C250,224 248,218 244,216Z" fill="url(#stomachG)" opacity="0.85"/>' +
+'<path d="M248,216 C252,214 256,216 258,222 C260,228 258,232 254,230" fill="none" stroke="#b45309" stroke-width="0.8" opacity="0.35"/>' +
+'<path d="M236,228 C240,226 244,228 242,232" fill="none" stroke="#92400e" stroke-width="0.6" opacity="0.3"/>' +
+'<path d="M240,238 C244,236 248,238 246,242" fill="none" stroke="#92400e" stroke-width="0.6" opacity="0.25"/>' +
+'<path d="M246,250 C250,248 254,250 252,254" fill="none" stroke="#92400e" stroke-width="0.5" opacity="0.2"/>' +
+'<path d="M244,216 L244,210 C244,208 242,206 240,208" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" opacity="0.5"/>' +
+'<path d="M264,264 L268,266 C270,267 272,266 272,264" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>' +
+'<rect x="228" y="206" width="48" height="66" rx="6" fill="transparent" class="bm-touch"/>'},
+// ── KIDNEYS (Renal) — bean shape with hilum, renal pelvis, ureter ──
+{cat:"Renal / Urinary",el:
+'<path d="M210,220 C204,216 197,219 196,226 C195,230 196,234 195,238 C194,242 195,250 200,254 C205,258 212,254 214,248 C215,244 214,240 215,236 C216,232 216,224 210,220Z" fill="url(#kidneyG)" opacity="0.92"/>' +
+'<path d="M207,228 C204,232 204,238 206,242 C208,246 210,244 210,240 C210,236 208,232 207,228Z" fill="#134e4a" opacity="0.3"/>' +
+'<path d="M206,248 L204,260 L203,270" fill="none" stroke="#14b8a6" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>' +
+'<path d="M270,220 C276,216 283,219 284,226 C285,230 284,234 285,238 C286,242 285,250 280,254 C275,258 268,254 266,248 C265,244 266,240 265,236 C264,232 264,224 270,220Z" fill="url(#kidneyG)" opacity="0.92"/>' +
+'<path d="M273,228 C276,232 276,238 274,242 C272,246 270,244 270,240 C270,236 272,232 273,228Z" fill="#134e4a" opacity="0.3"/>' +
+'<path d="M274,248 L276,260 L277,270" fill="none" stroke="#14b8a6" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>' +
+'<circle cx="205" cy="238" r="20" fill="transparent" class="bm-touch"/><circle cx="275" cy="238" r="20" fill="transparent" class="bm-touch"/>'},
+// ── SKELETON (Musculoskeletal) — vertebral column with discs, ribs, pelvis outline, femurs ──
+{cat:"Musculoskeletal / Pain",extra:"opacity:0.5",el:
+'<rect x="237" y="98" width="6" height="8" rx="1" fill="#facc15" opacity="0.55"/>' +
+'<rect x="237" y="108" width="6" height="8" rx="1" fill="#facc15" opacity="0.55"/>' +
+'<rect x="237" y="118" width="6" height="8" rx="1" fill="#facc15" opacity="0.55"/>' +
+'<rect x="237" y="128" width="6" height="8" rx="1" fill="#facc15" opacity="0.55"/>' +
+'<rect x="237" y="138" width="6" height="8" rx="1" fill="#facc15" opacity="0.55"/>' +
+'<rect x="237" y="148" width="6" height="8" rx="1" fill="#facc15" opacity="0.5"/>' +
+'<rect x="237" y="158" width="6" height="8" rx="1" fill="#facc15" opacity="0.5"/>' +
+'<rect x="237" y="168" width="6" height="8" rx="1" fill="#facc15" opacity="0.5"/>' +
+'<rect x="237" y="178" width="6" height="8" rx="1" fill="#facc15" opacity="0.5"/>' +
+'<rect x="237" y="188" width="6" height="8" rx="1" fill="#facc15" opacity="0.5"/>' +
+'<rect x="237" y="200" width="6" height="7" rx="1" fill="#facc15" opacity="0.45"/>' +
+'<rect x="237" y="209" width="6" height="7" rx="1" fill="#facc15" opacity="0.45"/>' +
+'<rect x="237" y="218" width="6" height="7" rx="1" fill="#facc15" opacity="0.45"/>' +
+'<rect x="237" y="227" width="6" height="7" rx="1" fill="#facc15" opacity="0.45"/>' +
+'<rect x="237" y="236" width="6" height="7" rx="1" fill="#facc15" opacity="0.45"/>' +
+'<path d="M236,246 L230,260 C226,268 224,278 228,286 L240,296 L252,286 C256,278 254,268 250,260 L244,246" fill="none" stroke="#facc15" stroke-width="1.8" opacity="0.4"/>' +
+'<path d="M228,286 L214,300 L206,340" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" opacity="0.4"/>' +
+'<path d="M252,286 L266,300 L274,340" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" opacity="0.4"/>' +
+'<line x1="206" y1="360" x2="204" y2="490" stroke="#facc15" stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>' +
+'<line x1="274" y1="360" x2="276" y2="490" stroke="#facc15" stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>' +
+'<path d="M198,145 C208,148 220,150 230,149" fill="none" stroke="#facc15" stroke-width="1" opacity="0.3"/>' +
+'<path d="M282,145 C272,148 260,150 250,149" fill="none" stroke="#facc15" stroke-width="1" opacity="0.3"/>' +
+'<path d="M196,158 C208,162 222,164 232,162" fill="none" stroke="#facc15" stroke-width="1" opacity="0.25"/>' +
+'<path d="M284,158 C272,162 258,164 248,162" fill="none" stroke="#facc15" stroke-width="1" opacity="0.25"/>' +
+'<rect x="125" y="95" width="230" height="410" rx="8" fill="transparent" class="bm-touch"/>'},
+// ── SKIN (Integumentary) — dashed body outline with cross-section hint ──
+{cat:"Integumentary",extra:"opacity:0.4",el:
+'<ellipse cx="240" cy="42" rx="32" ry="38" fill="none" stroke="#fb923c" stroke-width="2.2" stroke-dasharray="5,3"/>' +
+'<path d="M180,105 Q195,96 240,96 Q285,96 300,105 L308,130 Q310,160 300,200 Q280,295 240,300 Q200,295 180,200 Q170,160 172,130Z" fill="none" stroke="#fb923c" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.65"/>' +
+'<path d="M160,150 L148,200 Q138,240 130,260" fill="none" stroke="#fb923c" stroke-width="1.2" stroke-dasharray="4,4" opacity="0.35"/>' +
+'<path d="M320,150 L332,200 Q342,240 350,260" fill="none" stroke="#fb923c" stroke-width="1.2" stroke-dasharray="4,4" opacity="0.35"/>'}
 ];
 for (var oi = 0; oi < organs.length; oi++) {
 var o = organs[oi];
@@ -1541,16 +1645,16 @@ svg.push('<g class="bm-organ" data-cat="' + o.cat + '" style="animation:organPul
 
 // Labels
 var labels = [
-{cat:"Nervous System",s:"L",cx:52,cy:30,lx:56,ly:34,tx:215,ty:38,color:"#a78bfa",text:"Nervous System"},
-{cat:"Psychiatric / Mental Health",s:"R",cx:428,cy:30,lx:424,ly:34,tx:265,ty:38,color:"#818cf8",text:"Psychiatric"},
-{cat:"Sensory / Ophthalmic",s:"R",cx:428,cy:58,lx:424,ly:60,tx:257,ty:46,color:"#4ade80",text:"Sensory / Eyes"},
-{cat:"Endocrine",s:"R",cx:428,cy:90,lx:424,ly:92,tx:258,ty:90,color:"#f472b6",text:"Endocrine"},
-{cat:"Integumentary",s:"L",cx:52,cy:115,lx:56,ly:118,tx:175,ty:145,color:"#fb923c",text:"Integumentary"},
-{cat:"Respiratory",s:"L",cx:52,cy:160,lx:56,ly:162,tx:196,ty:158,color:"#22d3ee",text:"Respiratory"},
-{cat:"Cardiovascular",s:"R",cx:428,cy:152,lx:424,ly:155,tx:250,ty:152,color:"#f87171",text:"Cardiovascular"},
-{cat:"Digestive / GI",s:"R",cx:428,cy:240,lx:424,ly:243,tx:268,ty:240,color:"#fbbf24",text:"Digestive / GI"},
-{cat:"Renal / Urinary",s:"L",cx:52,cy:236,lx:56,ly:238,tx:196,ty:236,color:"#2dd4bf",text:"Renal / Urinary"},
-{cat:"Musculoskeletal / Pain",s:"L",cx:52,cy:410,lx:56,ly:414,tx:195,ty:430,color:"#facc15",text:"Musculoskeletal"}
+{cat:"Nervous System",s:"L",cx:108,cy:28,lx:112,ly:32,tx:215,ty:38,color:"#a78bfa",text:"Nervous System"},
+{cat:"Psychiatric / Mental Health",s:"R",cx:372,cy:28,lx:368,ly:32,tx:265,ty:38,color:"#818cf8",text:"Psychiatric"},
+{cat:"Sensory / Ophthalmic",s:"R",cx:372,cy:56,lx:368,ly:58,tx:257,ty:46,color:"#4ade80",text:"Sensory / Eyes"},
+{cat:"Endocrine",s:"R",cx:372,cy:86,lx:368,ly:88,tx:258,ty:90,color:"#f472b6",text:"Endocrine"},
+{cat:"Integumentary",s:"L",cx:108,cy:115,lx:112,ly:118,tx:175,ty:145,color:"#fb923c",text:"Integumentary"},
+{cat:"Respiratory",s:"L",cx:108,cy:158,lx:112,ly:160,tx:196,ty:158,color:"#22d3ee",text:"Respiratory"},
+{cat:"Cardiovascular",s:"R",cx:372,cy:150,lx:368,ly:153,tx:250,ty:152,color:"#f87171",text:"Cardiovascular"},
+{cat:"Digestive / GI",s:"R",cx:372,cy:238,lx:368,ly:241,tx:268,ty:240,color:"#fbbf24",text:"Digestive / GI"},
+{cat:"Renal / Urinary",s:"L",cx:108,cy:234,lx:112,ly:236,tx:196,ty:236,color:"#2dd4bf",text:"Renal / Urinary"},
+{cat:"Musculoskeletal / Pain",s:"L",cx:108,cy:408,lx:112,ly:412,tx:195,ty:430,color:"#facc15",text:"Musculoskeletal"}
 ];
 for (var li = 0; li < labels.length; li++) {
 var lb = labels[li];
@@ -1695,10 +1799,10 @@ return;
 if (clearBtn) clearBtn.style.display = 'inline-flex';
 query = query.toLowerCase().trim();
 var totalMatches = 0;
-for (var i = 0; i < items.length; i++) {
-var rows = items[i].querySelectorAll('.wp-acc-body tbody tr');
+for (i = 0; i < items.length; i++) {
+rows = items[i].querySelectorAll('.wp-acc-body tbody tr');
 var matchCount = 0;
-for (var r = 0; r < rows.length; r++) {
+for (r = 0; r < rows.length; r++) {
 var cellText = rows[r].textContent.toLowerCase();
 if (wpFuzzyMatch(query, cellText)) {
 rows[r].style.display = '';
@@ -1710,7 +1814,7 @@ rows[r].style.display = 'none';
 if (matchCount > 0) {
 items[i].style.display = '';
 items[i].classList.add('wp-acc-open');
-var countEl = items[i].querySelector('.wp-acc-count');
+countEl = items[i].querySelector('.wp-acc-count');
 if (countEl) countEl.textContent = matchCount;
 totalMatches += matchCount;
 } else {
