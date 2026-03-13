@@ -1,0 +1,110 @@
+{
+  "title": "Work Pharm Categories",
+  "totalDrugs": 341,
+  "categories": [
+    {
+      "name": "Anti-Infective",
+      "emoji": "🦠",
+      "color": "emerald",
+      "description": "Antibiotics, antivirals, antifungals, and antimicrobial agents.",
+      "drugCount": 46,
+      "file": "anti_infective.json"
+    },
+    {
+      "name": "Cardiovascular",
+      "emoji": "❤️",
+      "color": "red",
+      "description": "Cardiac drugs, antihypertensives, anticoagulants, and lipid-lowering agents.",
+      "drugCount": 56,
+      "file": "cardiovascular.json"
+    },
+    {
+      "name": "Digestive / GI",
+      "emoji": "🍽️",
+      "color": "lime",
+      "description": "GI agents, antacids, laxatives, and anti-emetics.",
+      "drugCount": 35,
+      "file": "digestive_gi.json"
+    },
+    {
+      "name": "Endocrine",
+      "emoji": "⚗️",
+      "color": "amber",
+      "description": "Hormones, insulin, thyroid agents, and diabetes medications.",
+      "drugCount": 31,
+      "file": "endocrine.json"
+    },
+    {
+      "name": "Immune / Lymphatic",
+      "emoji": "🛡️",
+      "color": "indigo",
+      "description": "Immunosuppressants, biologics, and immune-modulating agents.",
+      "drugCount": 11,
+      "file": "immune_lymphatic.json"
+    },
+    {
+      "name": "Integumentary",
+      "emoji": "🩹",
+      "color": "orange",
+      "description": "Topical agents, wound care, and dermatological treatments.",
+      "drugCount": 22,
+      "file": "integumentary.json"
+    },
+    {
+      "name": "Musculoskeletal / Pain",
+      "emoji": "🦴",
+      "color": "rose",
+      "description": "Pain management, anti-inflammatory drugs, and musculoskeletal agents.",
+      "drugCount": 18,
+      "file": "musculoskeletal_pain.json"
+    },
+    {
+      "name": "Nervous System",
+      "emoji": "🧠",
+      "color": "pink",
+      "description": "Anticonvulsants, muscle relaxants, and neurological agents.",
+      "drugCount": 33,
+      "file": "nervous_system.json"
+    },
+    {
+      "name": "Nutritional Support",
+      "emoji": "🥗",
+      "color": "green",
+      "description": "Vitamins, minerals, and nutritional supplements.",
+      "drugCount": 8,
+      "file": "nutritional_support.json"
+    },
+    {
+      "name": "Psychiatric / Mental Health",
+      "emoji": "🧘",
+      "color": "purple",
+      "description": "Antidepressants, antipsychotics, anxiolytics, and mood stabilizers.",
+      "drugCount": 28,
+      "file": "psychiatric_mental_health.json"
+    },
+    {
+      "name": "Renal / Urinary",
+      "emoji": "🫀",
+      "color": "teal",
+      "description": "Diuretics, urinary antispasmodics, and kidney-related medications.",
+      "drugCount": 8,
+      "file": "renal_urinary.json"
+    },
+    {
+      "name": "Respiratory",
+      "emoji": "💨",
+      "color": "blue",
+      "description": "Bronchodilators, corticosteroids, and mucolytics for airway management.",
+      "drugCount": 29,
+      "file": "respiratory.json"
+    },
+    {
+      "name": "Sensory / Ophthalmic",
+      "emoji": "👁️",
+      "color": "cyan",
+      "description": "Eye drops, ophthalmic preparations, and sensory medications.",
+      "drugCount": 16,
+      "file": "sensory_ophthalmic.json"
+    }
+  ]
+}
