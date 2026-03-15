@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluid &amp; Electrolytes — NCLEX Crib Notes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --fe-bg-from:#060d1a;
+  --fe-bg-mid:#0b1a2e;
+  --fe-bg-to:#122640;
+  --fe-accent:#06b6d4;
+  --fe-accent-light:#67e8f9;
+  --fe-text:#dbeafe;
+  --fe-text-muted:#7dd3fc;
+  --fe-gold:#fbbf24;
+  --fe-border:#0891b2;
+  --fe-card-bg:rgba(255,255,255,0.04);
+  --fe-warn:#f59e0b;
+  --fe-danger:#ef4444;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'Outfit',system-ui,-apple-system,sans-serif;
+  background:linear-gradient(160deg,var(--fe-bg-from) 0%,var(--fe-bg-mid) 45%,var(--fe-bg-to) 100%);
+  color:var(--fe-text);
+  min-height:100vh;
+  padding:0;
+  line-height:1.65;
+  font-size:1.02rem;
+}
+
+.guide-container{max-width:52rem;margin:0 auto;padding:1.5rem 1rem 3rem}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  background:linear-gradient(135deg,#031225 0%,#0a2540 40%,#134e6e 100%);
+  border-radius:1.25rem;
+  padding:2rem 1.75rem 1.75rem;
+  margin-bottom:2rem;
+  border:2px solid var(--fe-accent);
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-60%;right:-30%;width:70%;height:200%;
+  background:radial-gradient(ellipse,rgba(6,182,212,0.12) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero h1{font-size:2rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:0.3rem;position:relative}
+.hero .subtitle{font-size:0.95rem;color:#7dd3fc;line-height:1.5;position:relative}
+
+.hero .badge-row{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.85rem}
+.hero .badge{
+  display:inline-flex;align-items:center;gap:0.3rem;
+  padding:0.25rem 0.65rem;border-radius:2rem;
+  font-size:0.78rem;font-weight:700;
+  letter-spacing:0.03em;text-transform:uppercase;
+  backdrop-filter:blur(4px);
+}
+.hero .badge-row .badge{
+  cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;text-decoration:none;
+}
+.hero .badge-row .badge:hover{
+  transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Badge color classes */
+.badge-fluid  {background:rgba(6,182,212,0.2);color:#67e8f9;border:1px solid rgba(6,182,212,0.4)}
+.badge-na     {background:rgba(251,191,36,0.2);color:#fde68a;border:1px solid rgba(251,191,36,0.4)}
+.badge-k      {background:rgba(168,85,247,0.2);color:#d8b4fe;border:1px solid rgba(168,85,247,0.4)}
+.badge-ca     {background:rgba(34,197,94,0.2);color:#86efac;border:1px solid rgba(34,197,94,0.4)}
+.badge-mg     {background:rgba(249,115,22,0.2);color:#fdba74;border:1px solid rgba(249,115,22,0.4)}
+.badge-phos   {background:rgba(236,72,153,0.2);color:#f9a8d4;border:1px solid rgba(236,72,153,0.4)}
+.badge-iv     {background:rgba(99,102,241,0.2);color:#a5b4fc;border:1px solid rgba(99,102,241,0.4)}
+.badge-mem    {background:rgba(148,163,184,0.2);color:#cbd5e1;border:1px solid rgba(148,163,184,0.4)}
+
+/* ===== SECTION HEADERS ===== */
+.section-hdr{
+  font-size:1.1rem;font-weight:800;
+  padding:0.75rem 1.1rem;border-radius:0.75rem;
+  margin:2rem 0 0.75rem;letter-spacing:0.02em;
+}
+.sh-fluid   {background:#164e63;color:#a5f3fc}
+.sh-na      {background:#78350f;color:#fef3c7}
+.sh-k       {background:#4a1d96;color:#e9d5ff}
+.sh-ca      {background:#14532d;color:#bbf7d0}
+.sh-mg      {background:#7c2d12;color:#fed7aa}
+.sh-phos    {background:#831843;color:#fce7f3}
+.sh-iv      {background:#312e81;color:#c7d2fe}
+.sh-anchors {background:#0c4a6e;color:#bae6fd}
+
+/* ===== CONTENT BLOCKS ===== */
+.content-block{
+  background:var(--fe-card-bg);
+  border:1px solid rgba(6,182,212,0.12);
+  border-radius:0.85rem;
+  padding:1.5rem 1.35rem;
+  margin-bottom:1rem;
+}
+.content-block h3{
+  font-size:1.08rem;font-weight:700;
+  color:var(--fe-accent-light);
+  margin:1.2rem 0 0.5rem;
+}
+.content-block h3:first-child{margin-top:0}
+.content-block p{margin-bottom:0.6rem}
+.content-block ul,.content-block ol{margin:0.4rem 0 0.8rem 1.3rem}
+.content-block li{margin-bottom:0.35rem}
+
+/* ===== TABLES ===== */
+.info-table{
+  width:100%;border-collapse:collapse;margin:0.75rem 0 1rem;
+  font-size:0.92rem;
+}
+.info-table th{
+  background:rgba(6,182,212,0.15);color:var(--fe-accent-light);
+  padding:0.5rem 0.65rem;text-align:left;font-weight:700;
+  border-bottom:2px solid rgba(6,182,212,0.3);
+}
+.info-table td{
+  padding:0.45rem 0.65rem;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  vertical-align:top;
+}
+.info-table tr:last-child td{border-bottom:none}
+
+/* ===== COMPARISON GRID ===== */
+.compare-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;
+  margin:0.85rem 0;
+}
+.compare-card{
+  border-radius:0.75rem;padding:1rem;
+  border:1px solid rgba(255,255,255,0.08);
+}
+.compare-card h4{
+  font-size:0.95rem;font-weight:700;margin-bottom:0.5rem;
+  display:flex;align-items:center;gap:0.35rem;
+}
+.compare-card ul{margin:0 0 0 1.1rem;font-size:0.92rem}
+.compare-card li{margin-bottom:0.25rem}
+
+.card-hypo{background:rgba(59,130,246,0.1);border-color:rgba(59,130,246,0.25)}
+.card-hypo h4{color:#93c5fd}
+.card-hyper{background:rgba(239,68,68,0.1);border-color:rgba(239,68,68,0.25)}
+.card-hyper h4{color:#fca5a5}
+
+/* ===== PRIORITY / ALERT BOXES ===== */
+.alert-box{
+  border-radius:0.65rem;padding:0.85rem 1rem;margin:0.75rem 0;
+  font-size:0.93rem;
+}
+.alert-danger{
+  background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.3);
+  color:#fecaca;
+}
+.alert-warn{
+  background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);
+  color:#fef3c7;
+}
+.alert-info{
+  background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.3);
+  color:#a5f3fc;
+}
+.alert-success{
+  background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);
+  color:#bbf7d0;
+}
+
+/* ===== KEY RULE ===== */
+.key-rule{
+  display:flex;align-items:flex-start;gap:0.6rem;
+  background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.25);
+  border-radius:0.65rem;padding:0.75rem 1rem;margin:0.75rem 0;
+  color:#fde68a;font-size:0.93rem;
+}
+.rule-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.1rem}
+
+/* ===== MNEMONIC BOX ===== */
+.mnemonic-box{
+  background:linear-gradient(135deg,rgba(6,182,212,0.1),rgba(99,102,241,0.08));
+  border:1px solid rgba(6,182,212,0.25);border-radius:0.75rem;
+  padding:1rem 1.15rem;margin:0.85rem 0;
+}
+.mnemonic-box .title{
+  font-weight:700;font-size:1rem;color:var(--fe-accent-light);margin-bottom:0.5rem;
+}
+.mnemonic-box .letters span{
+  color:var(--fe-gold);font-weight:800;font-size:1.05rem;
+}
+
+/* ===== IV FLUID CARDS ===== */
+.iv-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;
+  margin:0.85rem 0;
+}
+.iv-card{
+  border-radius:0.65rem;padding:0.85rem;text-align:center;
+  border:1px solid rgba(255,255,255,0.1);
+}
+.iv-card h4{font-size:0.88rem;font-weight:700;margin-bottom:0.35rem}
+.iv-card .examples{font-size:0.82rem;color:var(--fe-text-muted)}
+.iv-isotonic{background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.25)}
+.iv-isotonic h4{color:#86efac}
+.iv-hypotonic{background:rgba(59,130,246,0.1);border-color:rgba(59,130,246,0.25)}
+.iv-hypotonic h4{color:#93c5fd}
+.iv-hypertonic{background:rgba(239,68,68,0.1);border-color:rgba(239,68,68,0.25)}
+.iv-hypertonic h4{color:#fca5a5}
+
+/* ===== VALUE RANGE BAR ===== */
+.range-bar{
+  display:flex;align-items:center;gap:0.5rem;
+  margin:0.5rem 0;font-size:0.88rem;font-weight:600;
+}
+.range-low{color:#93c5fd}
+.range-normal{
+  background:rgba(34,197,94,0.15);color:#86efac;
+  padding:0.2rem 0.75rem;border-radius:1rem;
+  border:1px solid rgba(34,197,94,0.3);
+}
+.range-high{color:#fca5a5}
+
+/* ===== DRUG / LYTE INLINE STYLES ===== */
+.drug{color:#93c5fd;font-weight:700}
+.lyte{color:#ffa040;font-weight:700}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+  .hero{padding:1.25rem 1rem 1.25rem}
+  .hero h1{font-size:1.5rem}
+  .content-block{padding:1rem 0.85rem}
+  .compare-grid{grid-template-columns:1fr}
+  .iv-grid{grid-template-columns:1fr}
+  .info-table{font-size:0.82rem}
+  .info-table th,.info-table td{padding:0.35rem 0.45rem}
+}
+</style>
+</head>
+<body>
+<div class="guide-container">
+
+<!-- ==================== HERO ==================== -->
+<div class="hero">
+  <h1>💧 Fluid &amp; Electrolytes</h1>
+  <div class="subtitle">Fluid balance, Na⁺, K⁺, Ca²⁺, Mg²⁺, PO₄³⁻ — normal ranges, imbalances, IV solutions &amp; clinical decision-making for NCLEX.</div>
+  <div class="badge-row">
+    <a class="badge badge-fluid" href="#sec-fluid">💧 Fluid Balance</a>
+    <a class="badge badge-na" href="#sec-na">🧂 Sodium</a>
+    <a class="badge badge-k" href="#sec-k">💜 Potassium</a>
+    <a class="badge badge-ca" href="#sec-ca">🦴 Calcium</a>
+    <a class="badge badge-mg" href="#sec-mg">🔥 Magnesium</a>
+    <a class="badge badge-phos" href="#sec-phos">🩷 Phosphorus</a>
+    <a class="badge badge-iv" href="#sec-iv">💉 IV Fluids</a>
+    <a class="badge badge-mem" href="#sec-anchors">🧠 Memory</a>
+  </div>
+</div>
+
+<!-- ==================== SECTION 1 — FLUID BALANCE ==================== -->
+<div id="sec-fluid" class="section-hdr sh-fluid">💧 Section 1 — Fluid Balance &amp; Body Compartments</div>
+<div class="content-block">
+  <h3>Total Body Water Distribution</h3>
+  <p>Water makes up approximately <strong>60%</strong> of adult body weight. It is distributed across two main compartments:</p>
+
+  <table class="info-table">
+    <tr><th>Compartment</th><th>Abbreviation</th><th>% of Body Water</th><th>Location</th></tr>
+    <tr><td><strong>Intracellular</strong></td><td>ICF</td><td>~2/3 (≈ 40% body wt)</td><td>Inside cells</td></tr>
+    <tr><td><strong>Extracellular</strong></td><td>ECF</td><td>~1/3 (≈ 20% body wt)</td><td>Outside cells</td></tr>
+    <tr><td>&nbsp; — Intravascular</td><td>IVF</td><td>~5% body wt</td><td>Plasma (blood vessels)</td></tr>
+    <tr><td>&nbsp; — Interstitial</td><td>ISF</td><td>~15% body wt</td><td>Between cells &amp; vessels</td></tr>
+    <tr><td>&nbsp; — Transcellular</td><td>TCF</td><td>~1-2%</td><td>CSF, pleural, peritoneal</td></tr>
+  </table>
+
+  <h3>Osmolality &amp; Fluid Movement</h3>
+  <p><strong>Serum osmolality</strong> measures the concentration of dissolved particles in blood. Normal range:</p>
+  <div class="range-bar">
+    <span class="range-low">⬇ &lt;275</span>
+    <span class="range-normal">✅ 275 – 295 mOsm/kg</span>
+    <span class="range-high">⬆ &gt;295</span>
+  </div>
+  <ul>
+    <li><strong>Water follows solute</strong> — fluid moves from LOW osmolality (dilute) to HIGH osmolality (concentrated)</li>
+    <li><strong>Osmosis</strong> = passive movement of water across semipermeable membrane</li>
+    <li><strong>ADH (antidiuretic hormone)</strong> = released when osmolality rises → kidneys retain water → dilutes serum</li>
+    <li><strong>Aldosterone</strong> = retains Na⁺ (and water follows) → increases intravascular volume</li>
+  </ul>
+
+  <h3>Fluid Volume Deficit (FVD) — Dehydration / Hypovolemia</h3>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>📋 Signs &amp; Symptoms</h4>
+      <ul>
+        <li>↓ BP, ↑ HR (tachycardia)</li>
+        <li>Weak, thready pulse</li>
+        <li>Poor skin turgor (tenting)</li>
+        <li>Dry mucous membranes</li>
+        <li>Concentrated urine (↑ specific gravity &gt;1.030)</li>
+        <li>↓ Urine output (&lt;30 mL/hr)</li>
+        <li>Weight loss (acute)</li>
+        <li>↑ BUN:creatinine ratio (&gt;20:1)</li>
+        <li>Flat neck veins when supine</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Nursing Priorities</h4>
+      <ul>
+        <li>Replace fluids — <strong>isotonic IV</strong> (NS or LR)</li>
+        <li>Monitor I&amp;O strictly</li>
+        <li>Daily weights (same time, same scale)</li>
+        <li>Assess orthostatic vital signs</li>
+        <li>Safety: fall precautions (dizziness)</li>
+        <li>Oral rehydration if tolerating PO</li>
+        <li>Monitor serum electrolytes &amp; BUN</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Fluid Volume Excess (FVE) — Hypervolemia / Overload</h3>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>📋 Signs &amp; Symptoms</h4>
+      <ul>
+        <li>↑ BP, bounding pulse</li>
+        <li>Weight gain (rapid)</li>
+        <li>Edema (peripheral, periorbital)</li>
+        <li>Distended neck veins (JVD)</li>
+        <li>Crackles / rales in lungs</li>
+        <li>Dyspnea, orthopnea</li>
+        <li>Dilute urine (↓ specific gravity)</li>
+        <li>↓ Hematocrit (hemodilution)</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Nursing Priorities</h4>
+      <ul>
+        <li>Restrict fluids &amp; sodium</li>
+        <li>Administer <span class="drug">furosemide</span> (loop diuretic) as ordered</li>
+        <li>Elevate HOB ≥ 30°</li>
+        <li>Monitor I&amp;O, daily weights</li>
+        <li>Auscultate lungs Q4H</li>
+        <li>Assess for pulmonary edema</li>
+        <li>Monitor potassium (diuretic risk)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span>
+    <div><strong>NCLEX Rule:</strong> 1 liter of fluid ≈ 1 kg (2.2 lbs). A gain of 2 lbs overnight = ~1 L fluid retention. <strong>Daily weights</strong> are the most accurate measure of fluid status.</div>
+  </div>
+
+  <h3>Third-Spacing</h3>
+  <p>Fluid shifts from intravascular space into interstitial tissues or body cavities (peritoneum, pleural space) where it <strong>cannot be used</strong>. Common in burns, liver failure, pancreatitis, and post-surgical patients.</p>
+  <ul>
+    <li><strong>Paradox:</strong> Patient is edematous (total body fluid ↑) but intravascularly depleted (↓ BP, ↑ HR)</li>
+    <li>Treatment: IV fluid replacement + treat underlying cause</li>
+    <li>Monitor for <strong>reabsorption phase</strong> (24-72 hrs) — fluid returns to vessels → risk for FVE</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 2 — SODIUM ==================== -->
+<div id="sec-na" class="section-hdr sh-na">🧂 Section 2 — Sodium (Na⁺)</div>
+<div class="content-block">
+  <h3>Normal Range</h3>
+  <div class="range-bar">
+    <span class="range-low">⬇ &lt;136</span>
+    <span class="range-normal">✅ 136 – 145 mEq/L</span>
+    <span class="range-high">⬆ &gt;145</span>
+  </div>
+  <p>Sodium is the <strong>most abundant extracellular cation</strong>. It regulates fluid balance, nerve impulses, and muscle contraction. Where Na⁺ goes, <strong>water follows</strong>.</p>
+
+  <h3>Hyponatremia (&lt;136 mEq/L)</h3>
+  <div class="alert-box alert-danger">
+    <strong>⚠️ Critical value: &lt;120 mEq/L</strong> — risk of cerebral edema, seizures, coma, death
+  </div>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>⬇️ Signs &amp; Symptoms</h4>
+      <ul>
+        <li>Confusion, headache, lethargy</li>
+        <li>Muscle weakness &amp; cramps</li>
+        <li>Nausea &amp; vomiting</li>
+        <li>Seizures (severe)</li>
+        <li>↓ Deep tendon reflexes</li>
+        <li>Abdominal cramping</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Treatment</h4>
+      <ul>
+        <li>Fluid restriction (dilutional)</li>
+        <li>Hypertonic saline (<strong>3% NaCl</strong>) for severe (&lt;120)</li>
+        <li>Correct slowly — max 8-12 mEq/L per 24 hrs</li>
+        <li>Monitor for osmotic demyelination syndrome</li>
+        <li>Treat underlying cause (SIADH, water intoxication)</li>
+        <li>Seizure precautions</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span>
+    <div><strong>NCLEX Rule:</strong> Correcting Na⁺ too rapidly causes <strong>osmotic demyelination syndrome (ODS)</strong> — irreversible brain damage. Rate must be ≤12 mEq/L in 24 hours.</div>
+  </div>
+
+  <h3>Hypernatremia (&gt;145 mEq/L)</h3>
+  <div class="alert-box alert-danger">
+    <strong>⚠️ Critical value: &gt;160 mEq/L</strong> — risk of cellular dehydration, seizures
+  </div>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>⬆️ Signs &amp; Symptoms</h4>
+      <ul>
+        <li>Extreme thirst</li>
+        <li>Dry, flushed skin</li>
+        <li>Fever (low-grade)</li>
+        <li>Restlessness → agitation → seizures</li>
+        <li>Muscle twitching &amp; rigidity</li>
+        <li>↓ Urine output (concentrated)</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Treatment</h4>
+      <ul>
+        <li>Hypotonic IV solutions (0.45% NaCl) or D5W</li>
+        <li>Increase free water intake (PO)</li>
+        <li>Correct slowly — ↓ Na⁺ no faster than 0.5 mEq/L/hr</li>
+        <li>Monitor for cerebral edema</li>
+        <li>Low-sodium diet</li>
+        <li>Assess neurologic status Q1-2H</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>SIADH vs. Diabetes Insipidus</h3>
+  <table class="info-table">
+    <tr><th>Feature</th><th>SIADH (↑ ADH)</th><th>Diabetes Insipidus (↓ ADH)</th></tr>
+    <tr><td><strong>Na⁺ Level</strong></td><td>↓ Hyponatremia</td><td>↑ Hypernatremia</td></tr>
+    <tr><td><strong>Fluid</strong></td><td>Retain water → dilutional</td><td>Lose massive water</td></tr>
+    <tr><td><strong>Urine</strong></td><td>Concentrated (↑ specific gravity)</td><td>Dilute (↓ specific gravity)</td></tr>
+    <tr><td><strong>Output</strong></td><td>↓ Oliguria</td><td>↑ Polyuria (4-30 L/day)</td></tr>
+    <tr><td><strong>Osmolality</strong></td><td>↓ Serum / ↑ Urine</td><td>↑ Serum / ↓ Urine</td></tr>
+    <tr><td><strong>Treatment</strong></td><td>Fluid restriction, <span class="drug">demeclocycline</span>, <span class="drug">conivaptan</span></td><td><span class="drug">desmopressin</span> (DDAVP), fluid replacement</td></tr>
+    <tr><td><strong>Mnemonic</strong></td><td>SIADH = <strong>S</strong>welling (fluid retention)</td><td>DI = <strong>D</strong>ry as a bone (losing fluid)</td></tr>
+  </table>
+</div>
+
+<!-- ==================== SECTION 3 — POTASSIUM ==================== -->
+<div id="sec-k" class="section-hdr sh-k">💜 Section 3 — Potassium (K⁺)</div>
+<div class="content-block">
+  <h3>Normal Range</h3>
+  <div class="range-bar">
+    <span class="range-low">⬇ &lt;3.5</span>
+    <span class="range-normal">✅ 3.5 – 5.0 mEq/L</span>
+    <span class="range-high">⬆ &gt;5.0</span>
+  </div>
+  <p>Potassium is the <strong>major intracellular cation</strong>. Even small changes are life-threatening because K⁺ directly affects <strong>cardiac conduction</strong>. Only 2% of total body K⁺ is in the blood.</p>
+
+  <div class="alert-box alert-danger">
+    <strong>⚠️ CRITICAL:</strong> Always check K⁺ before giving <span class="drug">digoxin</span>. Hypokalemia + digoxin = <strong>digoxin toxicity</strong>. Hold digoxin if K⁺ &lt;3.5.
+  </div>
+
+  <h3>Hypokalemia (&lt;3.5 mEq/L)</h3>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>⬇️ Signs &amp; Symptoms</h4>
+      <ul>
+        <li>Muscle weakness → flaccidity</li>
+        <li>Fatigue &amp; lethargy</li>
+        <li>↓ Bowel sounds → <strong>paralytic ileus</strong></li>
+        <li>Shallow respirations</li>
+        <li>Weak, irregular pulse</li>
+        <li>Leg cramps</li>
+        <li>ECG: <strong>flattened T waves</strong>, U waves, ST depression</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Treatment</h4>
+      <ul>
+        <li>Oral K⁺ replacement (preferred if not critical)</li>
+        <li>IV <span class="drug">potassium chloride</span> (KCl) — <strong>NEVER push IV</strong></li>
+        <li>Max rate: <strong>10-20 mEq/hr via pump ONLY</strong></li>
+        <li>Must dilute; infuse into large vein</li>
+        <li>Monitor telemetry during IV infusion</li>
+        <li>K⁺-rich foods: bananas, oranges, potatoes, spinach, avocados</li>
+        <li>Check Mg²⁺ — hypomagnesemia prevents K⁺ correction</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert-box alert-danger">
+    <strong>🚨 NEVER push IV potassium!</strong> It can cause fatal cardiac arrest. Must always be diluted and infused on a pump with cardiac monitoring.
+  </div>
+
+  <h3>Hyperkalemia (&gt;5.0 mEq/L)</h3>
+  <div class="alert-box alert-danger">
+    <strong>⚠️ Critical: &gt;6.5 mEq/L</strong> — risk of fatal cardiac dysrhythmias (V-fib, asystole)
+  </div>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>⬆️ Signs &amp; Symptoms</h4>
+      <ul>
+        <li>Muscle twitching → weakness → paralysis</li>
+        <li>Paresthesias (tingling)</li>
+        <li>Nausea, diarrhea, cramping</li>
+        <li>Bradycardia → heart block</li>
+        <li>ECG: <strong>tall, peaked T waves</strong>, wide QRS, absent P waves</li>
+        <li>Cardiac arrest</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Treatment — Act FAST</h4>
+      <ul>
+        <li><strong>1. Protect the heart:</strong> <span class="drug">calcium gluconate</span> IV (stabilizes myocardium)</li>
+        <li><strong>2. Shift K⁺ into cells:</strong> Regular <span class="drug">insulin</span> + D50W, <span class="drug">sodium bicarbonate</span>, nebulized <span class="drug">albuterol</span></li>
+        <li><strong>3. Remove K⁺ from body:</strong> <span class="drug">sodium polystyrene sulfonate</span> (Kayexalate), <span class="drug">patiromer</span>, loop diuretics</li>
+        <li><strong>4. Dialysis</strong> if refractory</li>
+        <li>Avoid K⁺-rich foods</li>
+        <li>Continuous cardiac monitoring</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🧠 Memory: Potassium &amp; the Heart</div>
+    <div class="letters">
+      Hypo K⁺ → <span>F</span>lat T waves &amp; <span>U</span> waves ("I'm <span>F</span>lat and feel <span>U</span>nwell")<br>
+      Hyper K⁺ → Tall, <span>P</span>eaked T waves ("The <span>T</span>ent is getting <span>T</span>all — <span>M</span>urder on the heart")
+    </div>
+  </div>
+
+  <h3>Potassium &amp; pH Relationship</h3>
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span>
+    <div><strong>K⁺ and H⁺ are BFFs</strong> — they trade places across cell membranes. In <strong>acidosis</strong>, H⁺ moves INTO cells, K⁺ moves OUT → hyperkalemia. In <strong>alkalosis</strong>, H⁺ moves OUT, K⁺ moves IN → hypokalemia. Always check pH when interpreting K⁺ levels!</div>
+  </div>
+</div>
+
+<!-- ==================== SECTION 4 — CALCIUM ==================== -->
+<div id="sec-ca" class="section-hdr sh-ca">🦴 Section 4 — Calcium (Ca²⁺)</div>
+<div class="content-block">
+  <h3>Normal Range (Total Calcium)</h3>
+  <div class="range-bar">
+    <span class="range-low">⬇ &lt;9.0</span>
+    <span class="range-normal">✅ 9.0 – 10.5 mg/dL</span>
+    <span class="range-high">⬆ &gt;10.5</span>
+  </div>
+  <p>Calcium is critical for <strong>bone structure, muscle contraction, nerve transmission, and blood clotting</strong>. It has an inverse relationship with phosphorus. Regulated by <strong>PTH</strong> (parathyroid hormone) and <strong>calcitonin</strong>.</p>
+
+  <table class="info-table">
+    <tr><th>Hormone</th><th>Source</th><th>Action on Ca²⁺</th><th>Mnemonic</th></tr>
+    <tr><td><strong>PTH</strong></td><td>Parathyroid</td><td>↑ Ca²⁺ (pulls from bones)</td><td>PTH = "Push The calcium Higher"</td></tr>
+    <tr><td><strong>Calcitonin</strong></td><td>Thyroid C cells</td><td>↓ Ca²⁺ (stores in bones)</td><td>CalciTONin TONes it down</td></tr>
+  </table>
+
+  <h3>Hypocalcemia (&lt;9.0 mg/dL)</h3>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>⬇️ Signs &amp; Symptoms</h4>
+      <ul>
+        <li>Tetany — muscle spasms, tingling</li>
+        <li><strong>Trousseau sign</strong> (+) → hand spasm with BP cuff</li>
+        <li><strong>Chvostek sign</strong> (+) → facial twitch (tap CN VII)</li>
+        <li>Hyperactive DTRs</li>
+        <li>Numbness/tingling around lips &amp; fingers</li>
+        <li>Laryngospasm (severe)</li>
+        <li>Seizures (severe)</li>
+        <li>ECG: prolonged QT interval</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Treatment</h4>
+      <ul>
+        <li>IV <span class="drug">calcium gluconate</span> (preferred) or <span class="drug">calcium chloride</span></li>
+        <li>Oral calcium + <span class="drug">vitamin D</span> supplements</li>
+        <li>Seizure precautions</li>
+        <li>Airway equipment at bedside (laryngospasm risk)</li>
+        <li>Administer SLOWLY IV (cardiac monitoring)</li>
+        <li>Ca²⁺-rich foods: dairy, leafy greens, sardines</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🧠 Trousseau &amp; Chvostek</div>
+    <div class="letters">
+      <span>T</span>rousseau = <span>T</span>rousers → hand (carpal spasm with BP cuff)<br>
+      <span>C</span>hvostek = <span>C</span>heek → facial twitch when tapped
+    </div>
+  </div>
+
+  <h3>Hypercalcemia (&gt;10.5 mg/dL)</h3>
+  <div class="alert-box alert-danger">
+    <strong>⚠️ Critical: &gt;13 mg/dL</strong> — cardiac arrest risk
+  </div>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>⬆️ Signs &amp; Symptoms</h4>
+      <ul>
+        <li>Muscle weakness &amp; fatigue</li>
+        <li>↓ Deep tendon reflexes</li>
+        <li>Constipation, anorexia, N/V</li>
+        <li>Polyuria → kidney stones</li>
+        <li>Confusion → lethargy → coma</li>
+        <li>Pathologic fractures</li>
+        <li>ECG: shortened QT interval</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Treatment</h4>
+      <ul>
+        <li>NS hydration (dilute &amp; promote excretion)</li>
+        <li><span class="drug">calcitonin</span> (rapid onset, short-lived)</li>
+        <li><span class="drug">zoledronic acid</span> / bisphosphonates (long-term)</li>
+        <li>Loop diuretics (<span class="drug">furosemide</span>) — NOT thiazides</li>
+        <li>Dialysis if severe/refractory</li>
+        <li>Avoid thiazide diuretics (retain Ca²⁺)</li>
+        <li>Weight-bearing exercise, low-calcium diet</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span>
+    <div><strong>NCLEX Rule:</strong> Thiazide diuretics <strong>increase</strong> calcium reabsorption (worsen hypercalcemia). Loop diuretics (<span class="drug">furosemide</span>) <strong>promote</strong> calcium excretion. Mnemonic: <strong>"Loops Lose calcium."</strong></div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🧠 Hypercalcemia: "Moans, Bones, Stones, Groans"</div>
+    <div class="letters">
+      <span>M</span>oans — confusion, lethargy<br>
+      <span>B</span>ones — bone pain, pathologic fractures<br>
+      <span>S</span>tones — renal calculi (kidney stones)<br>
+      <span>G</span>roans — constipation, abdominal pain
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SECTION 5 — MAGNESIUM ==================== -->
+<div id="sec-mg" class="section-hdr sh-mg">🔥 Section 5 — Magnesium (Mg²⁺)</div>
+<div class="content-block">
+  <h3>Normal Range</h3>
+  <div class="range-bar">
+    <span class="range-low">⬇ &lt;1.3</span>
+    <span class="range-normal">✅ 1.3 – 2.1 mg/dL</span>
+    <span class="range-high">⬆ &gt;2.1</span>
+  </div>
+  <p>Magnesium is the <strong>"forgotten electrolyte"</strong> — essential for neuromuscular function, enzyme activation, and maintaining K⁺ and Ca²⁺ balance. Mg²⁺ works closely with potassium: <strong>you cannot fix hypokalemia if Mg²⁺ is also low</strong>.</p>
+
+  <h3>Hypomagnesemia (&lt;1.3 mg/dL)</h3>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>⬇️ Signs &amp; Symptoms</h4>
+      <ul>
+        <li>Hyperactive DTRs</li>
+        <li>Tremors, muscle cramps</li>
+        <li>Positive Trousseau &amp; Chvostek (same as ↓Ca²⁺)</li>
+        <li>Insomnia, agitation</li>
+        <li>Dysphagia</li>
+        <li>Cardiac dysrhythmias</li>
+        <li>Torsades de pointes</li>
+        <li>Seizures (severe)</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Treatment</h4>
+      <ul>
+        <li>IV <span class="drug">magnesium sulfate</span> (MgSO₄) — infuse slowly</li>
+        <li>Oral <span class="drug">magnesium oxide</span></li>
+        <li>Monitor DTRs during infusion</li>
+        <li>Cardiac monitoring</li>
+        <li>Replace K⁺ and Ca²⁺ if also low</li>
+        <li>Mg²⁺-rich foods: nuts, greens, whole grains, chocolate</li>
+        <li>Common causes: alcoholism, diuretics, malnutrition</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span>
+    <div><strong>NCLEX Rule:</strong> Hypomagnesemia looks like hypocalcemia (positive Trousseau &amp; Chvostek). Always check Mg²⁺ when K⁺ is persistently low and won't correct — <strong>Mg²⁺ is the "gatekeeper" of K⁺.</strong></div>
+  </div>
+
+  <h3>Hypermagnesemia (&gt;2.1 mg/dL)</h3>
+  <div class="alert-box alert-danger">
+    <strong>⚠️ Critical: &gt;7 mg/dL</strong> — cardiac arrest, respiratory paralysis
+  </div>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>⬆️ Signs &amp; Symptoms</h4>
+      <ul>
+        <li><strong>↓ or absent DTRs</strong> (earliest sign)</li>
+        <li>Muscle weakness → flaccidity</li>
+        <li>Lethargy, drowsiness</li>
+        <li>Hypotension, bradycardia</li>
+        <li>Flushing &amp; warmth</li>
+        <li>N/V</li>
+        <li>Respiratory depression (late)</li>
+        <li>Cardiac arrest (very late)</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Treatment</h4>
+      <ul>
+        <li><strong>STOP all Mg²⁺ sources</strong></li>
+        <li>IV <span class="drug">calcium gluconate</span> (antagonist)</li>
+        <li>IV fluids + loop diuretics</li>
+        <li>Mechanical ventilation PRN</li>
+        <li>Dialysis if renal failure</li>
+        <li>Monitor DTRs frequently</li>
+        <li>Keep <span class="drug">calcium gluconate</span> at bedside during MgSO₄ infusions</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert-box alert-warn">
+    <strong>OB Connection:</strong> <span class="drug">Magnesium sulfate</span> is used to treat preeclampsia/eclampsia. Toxic levels cause ↓ DTRs → respiratory arrest. <strong>Antidote: <span class="drug">calcium gluconate</span></strong>. Check DTRs Q1H, urine output ≥ 30 mL/hr, respirations ≥ 12/min.
+  </div>
+</div>
+
+<!-- ==================== SECTION 6 — PHOSPHORUS ==================== -->
+<div id="sec-phos" class="section-hdr sh-phos">🩷 Section 6 — Phosphorus (PO₄³⁻)</div>
+<div class="content-block">
+  <h3>Normal Range</h3>
+  <div class="range-bar">
+    <span class="range-low">⬇ &lt;3.0</span>
+    <span class="range-normal">✅ 3.0 – 4.5 mg/dL</span>
+    <span class="range-high">⬆ &gt;4.5</span>
+  </div>
+  <p>Phosphorus is critical for <strong>ATP production, bone mineralization, and acid-base buffering</strong>. It has an <strong>inverse (seesaw) relationship with calcium</strong>: when one goes up, the other goes down.</p>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span>
+    <div><strong>Calcium-Phosphorus Seesaw:</strong> ↑ Ca²⁺ = ↓ PO₄ and ↑ PO₄ = ↓ Ca²⁺. This is HIGH-YIELD for NCLEX — especially in <strong>renal failure</strong> (↑ PO₄ → ↓ Ca²⁺ → bone loss).</div>
+  </div>
+
+  <h3>Hypophosphatemia (&lt;3.0 mg/dL)</h3>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>⬇️ Signs &amp; Symptoms</h4>
+      <ul>
+        <li>Muscle weakness</li>
+        <li>Confusion, irritability</li>
+        <li>Numbness &amp; tingling</li>
+        <li>Bone pain, pathologic fractures</li>
+        <li>Chest muscle weakness → respiratory failure</li>
+        <li>↓ Platelet function (bleeding risk)</li>
+        <li>Rhabdomyolysis (severe)</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Treatment</h4>
+      <ul>
+        <li>Oral phosphorus supplements</li>
+        <li>IV sodium phosphate or potassium phosphate (severe)</li>
+        <li>PO₄-rich foods: dairy, meat, nuts, beans, whole grains</li>
+        <li>Avoid aluminum-based antacids (bind phosphorus)</li>
+        <li>Monitor Ca²⁺ (inverse relationship)</li>
+        <li>Common cause: <strong>refeeding syndrome</strong>, DKA treatment</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert-box alert-warn">
+    <strong>Refeeding Syndrome:</strong> When malnourished patients resume nutrition, insulin surge drives PO₄ (and K⁺, Mg²⁺) into cells → severe hypophosphatemia → cardiac failure, respiratory failure, death. <strong>Feed slowly!</strong> Monitor electrolytes Q4-6H.
+  </div>
+
+  <h3>Hyperphosphatemia (&gt;4.5 mg/dL)</h3>
+  <div class="compare-grid">
+    <div class="compare-card card-hypo">
+      <h4>⬆️ Signs &amp; Symptoms</h4>
+      <ul>
+        <li>Signs of <strong>hypocalcemia</strong> (seesaw effect)</li>
+        <li>Tetany, muscle spasms</li>
+        <li>Soft tissue calcification</li>
+        <li>Pruritus (itching)</li>
+        <li>Often asymptomatic until severe</li>
+      </ul>
+    </div>
+    <div class="compare-card card-hyper">
+      <h4>🏥 Treatment</h4>
+      <ul>
+        <li>Phosphate binders: <span class="drug">sevelamer</span>, <span class="drug">calcium acetate</span></li>
+        <li>Take binders <strong>WITH meals</strong></li>
+        <li>Low-phosphorus diet</li>
+        <li>Dialysis (renal patients)</li>
+        <li>Treat underlying cause (usually CKD)</li>
+        <li>Monitor Ca²⁺ levels concurrently</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SECTION 7 — IV FLUIDS ==================== -->
+<div id="sec-iv" class="section-hdr sh-iv">💉 Section 7 — IV Fluids &amp; Solutions</div>
+<div class="content-block">
+  <h3>Tonicity Overview</h3>
+  <p>IV solutions are categorized by how their osmolarity compares to blood plasma (≈ 275-295 mOsm/L):</p>
+
+  <div class="iv-grid">
+    <div class="iv-card iv-isotonic">
+      <h4>Isotonic</h4>
+      <p>Same osmolarity as blood</p>
+      <p><strong>Stays in intravascular space</strong></p>
+      <div class="examples">NS (0.9% NaCl), LR, D5W*</div>
+    </div>
+    <div class="iv-card iv-hypotonic">
+      <h4>Hypotonic</h4>
+      <p>Lower osmolarity than blood</p>
+      <p><strong>Shifts INTO cells</strong></p>
+      <div class="examples">0.45% NaCl (½ NS), 0.225% NaCl (¼ NS)</div>
+    </div>
+    <div class="iv-card iv-hypertonic">
+      <h4>Hypertonic</h4>
+      <p>Higher osmolarity than blood</p>
+      <p><strong>Pulls OUT of cells</strong></p>
+      <div class="examples">3% NaCl, 5% NaCl, D10W, D5NS, D5LR</div>
+    </div>
+  </div>
+
+  <div class="alert-box alert-info">
+    <strong>D5W Note:</strong> D5W is initially isotonic in the bag but becomes <strong>hypotonic</strong> once infused because the body metabolizes the dextrose quickly, leaving only free water.
+  </div>
+
+  <h3>Solution Details</h3>
+  <table class="info-table">
+    <tr><th>Solution</th><th>Type</th><th>Use</th><th>Cautions</th></tr>
+    <tr><td><strong>0.9% NaCl (NS)</strong></td><td>Isotonic</td><td>Fluid resuscitation, blood transfusions, shock</td><td>Excess → hyperchloremic metabolic acidosis</td></tr>
+    <tr><td><strong>Lactated Ringer's (LR)</strong></td><td>Isotonic</td><td>Burns, GI losses, surgical replacement</td><td>Avoid in liver failure (can't metabolize lactate); NEVER with blood products</td></tr>
+    <tr><td><strong>D5W</strong></td><td>Isotonic → Hypotonic</td><td>Dehydration, med dilution, TKO</td><td>Avoid in ↑ ICP (worsens cerebral edema)</td></tr>
+    <tr><td><strong>0.45% NaCl (½ NS)</strong></td><td>Hypotonic</td><td>Cellular dehydration, hypernatremia, DKA maintenance</td><td>NEVER give with ↑ ICP</td></tr>
+    <tr><td><strong>3% NaCl</strong></td><td>Hypertonic</td><td>Severe hyponatremia (&lt;120), ↑ ICP (pulls fluid from brain)</td><td>Must infuse via pump; risk of FVE, pulmonary edema</td></tr>
+    <tr><td><strong>D5NS, D5LR</strong></td><td>Hypertonic</td><td>Maintenance fluids with caloric support</td><td>Monitor blood glucose</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span>
+    <div><strong>NCLEX Rule — Increased ICP:</strong> Use <strong>hypertonic</strong> solutions (3% NaCl) or <span class="drug">mannitol</span> to pull fluid OUT of brain cells. <strong>NEVER</strong> give hypotonic or D5W solutions — they cause cells to swell → herniation.</div>
+  </div>
+
+  <h3>When to Use What — Quick Reference</h3>
+  <table class="info-table">
+    <tr><th>Clinical Scenario</th><th>IV Solution</th><th>Why</th></tr>
+    <tr><td>Hemorrhage / Shock</td><td>NS or LR</td><td>Isotonic: expands intravascular volume</td></tr>
+    <tr><td>Blood transfusion</td><td>NS only</td><td>LR causes clotting (calcium in LR chelates citrate)</td></tr>
+    <tr><td>Severe hyponatremia</td><td>3% NaCl</td><td>Hypertonic: raises serum Na⁺</td></tr>
+    <tr><td>↑ ICP / Cerebral edema</td><td>3% NaCl or <span class="drug">mannitol</span></td><td>Pulls water out of swollen brain tissue</td></tr>
+    <tr><td>DKA (maintenance)</td><td>0.45% NaCl + KCl</td><td>Replaces free water after initial NS resuscitation</td></tr>
+    <tr><td>Hypernatremia</td><td>0.45% NaCl or D5W</td><td>Hypotonic: dilutes serum Na⁺</td></tr>
+    <tr><td>Burns (initial 24h)</td><td>LR (Parkland formula)</td><td>Isotonic: replaces massive ECF losses</td></tr>
+  </table>
+
+  <div class="mnemonic-box">
+    <div class="title">🧠 IV Fluid Memory Aid</div>
+    <div class="letters">
+      <span>I</span>sotonic stays <span>I</span>N the vessels (like water in a pipe)<br>
+      Hypo<span>T</span>onic goes in<span>T</span>o the cell (cell swells)<br>
+      Hyper<span>T</span>onic pulls ou<span>T</span> of the cell (cell shrinks)
+    </div>
+  </div>
+
+  <h3>Complications of IV Therapy</h3>
+  <table class="info-table">
+    <tr><th>Complication</th><th>Signs</th><th>Action</th></tr>
+    <tr><td><strong>Infiltration</strong></td><td>Cool, pale, swollen at site; ↓ flow rate</td><td>Stop infusion, remove catheter, elevate, warm compress</td></tr>
+    <tr><td><strong>Extravasation</strong></td><td>Pain, burning, blistering (vesicant drug)</td><td>Stop infusion, aspirate residual, apply antidote per policy</td></tr>
+    <tr><td><strong>Phlebitis</strong></td><td>Red, warm, tender, swollen vein (streak)</td><td>D/C IV, warm compress, relocate to opposite extremity</td></tr>
+    <tr><td><strong>Air embolism</strong></td><td>Sudden dyspnea, chest pain, hypotension</td><td>Clamp tubing, left Trendelenburg, call RRT</td></tr>
+    <tr><td><strong>Speed shock</strong></td><td>Flushed face, irregular pulse, shock</td><td>Stop infusion, call provider, monitor VS</td></tr>
+    <tr><td><strong>Fluid overload</strong></td><td>Crackles, JVD, ↑ BP, dyspnea</td><td>Slow/stop infusion, elevate HOB, notify provider</td></tr>
+  </table>
+
+  <div class="alert-box alert-danger">
+    <strong>Air Embolism Emergency:</strong> Place patient on <strong>LEFT side in Trendelenburg</strong> position. This traps air in the right atrium away from pulmonary vasculature. Clamp the IV line immediately.
+  </div>
+</div>
+
+<!-- ==================== SECTION 8 — MEMORY ANCHORS ==================== -->
+<div id="sec-anchors" class="section-hdr sh-anchors">🧠 Section 8 — Memory Anchors &amp; High-Yield Review</div>
+<div class="content-block">
+  <h3>Electrolyte Normal Ranges — Quick Reference</h3>
+  <table class="info-table">
+    <tr><th>Electrolyte</th><th>Normal Range</th><th>Critical Low</th><th>Critical High</th></tr>
+    <tr><td><strong>Na⁺</strong> (Sodium)</td><td>136 – 145 mEq/L</td><td>&lt;120</td><td>&gt;160</td></tr>
+    <tr><td><strong>K⁺</strong> (Potassium)</td><td>3.5 – 5.0 mEq/L</td><td>&lt;2.5</td><td>&gt;6.5</td></tr>
+    <tr><td><strong>Ca²⁺</strong> (Calcium)</td><td>9.0 – 10.5 mg/dL</td><td>&lt;6.0</td><td>&gt;13.0</td></tr>
+    <tr><td><strong>Mg²⁺</strong> (Magnesium)</td><td>1.3 – 2.1 mg/dL</td><td>&lt;1.0</td><td>&gt;7.0</td></tr>
+    <tr><td><strong>PO₄³⁻</strong> (Phosphorus)</td><td>3.0 – 4.5 mg/dL</td><td>&lt;1.0</td><td>&gt;8.0</td></tr>
+    <tr><td><strong>Cl⁻</strong> (Chloride)</td><td>96 – 106 mEq/L</td><td>&lt;80</td><td>&gt;115</td></tr>
+  </table>
+
+  <h3>Hypo vs. Hyper — Universal Patterns</h3>
+  <div class="mnemonic-box">
+    <div class="title">🧠 General Patterns for NCLEX</div>
+    <div class="letters">
+      <span>H</span>ypo levels → hyperexcitable nerves &amp; muscles (twitching, spasms, seizures, ↑ DTRs)<br>
+      <span>H</span>yper levels → hypoexcitable (weakness, flaccidity, ↓ DTRs, lethargy)<br><br>
+      <strong>Exception:</strong> Hypo<span>K</span>⁺ causes weakness (not excitability) because K⁺ affects cardiac &amp; skeletal muscle directly
+    </div>
+  </div>
+
+  <h3>Key Relationships</h3>
+  <table class="info-table">
+    <tr><th>Relationship</th><th>Clinical Significance</th></tr>
+    <tr><td><strong>Ca²⁺ ↔ PO₄</strong> (Inverse)</td><td>Seesaw: when one rises, the other falls. Key in CKD management.</td></tr>
+    <tr><td><strong>K⁺ ↔ H⁺</strong> (Trade places)</td><td>Acidosis → hyperkalemia; Alkalosis → hypokalemia</td></tr>
+    <tr><td><strong>Mg²⁺ → K⁺</strong> (Gatekeeper)</td><td>Must correct Mg²⁺ before K⁺ will normalize</td></tr>
+    <tr><td><strong>Na⁺ ↔ H₂O</strong> (Water follows)</td><td>↑ Na⁺ = water retention; ↓ Na⁺ = water excess (dilutional)</td></tr>
+    <tr><td><strong>Ca²⁺ + Digitalis</strong></td><td>↑ Ca²⁺ potentiates <span class="drug">digoxin</span> toxicity; ↓ Ca²⁺ reduces digoxin effectiveness</td></tr>
+    <tr><td><strong>K⁺ + Digitalis</strong></td><td>↓ K⁺ potentiates <span class="drug">digoxin</span> toxicity. ALWAYS check K⁺ before giving dig.</td></tr>
+  </table>
+
+  <h3>Drug–Electrolyte Interactions</h3>
+  <table class="info-table">
+    <tr><th>Drug</th><th>Effect on Electrolytes</th></tr>
+    <tr><td><span class="drug">Furosemide</span> (Lasix) — loop diuretic</td><td>↓ K⁺, ↓ Na⁺, ↓ Ca²⁺, ↓ Mg²⁺ ("Loops Lose everything")</td></tr>
+    <tr><td><span class="drug">Hydrochlorothiazide</span> (HCTZ) — thiazide</td><td>↓ K⁺, ↓ Na⁺, but <strong>↑ Ca²⁺</strong></td></tr>
+    <tr><td><span class="drug">Spironolactone</span> — K⁺-sparing diuretic</td><td><strong>↑ K⁺</strong> — monitor for hyperkalemia</td></tr>
+    <tr><td>ACE inhibitors (<span class="drug">lisinopril</span>)</td><td><strong>↑ K⁺</strong> — avoid K⁺ supplements</td></tr>
+    <tr><td><span class="drug">Prednisone</span> / corticosteroids</td><td>↓ K⁺, ↓ Ca²⁺, ↑ Na⁺ (retain Na⁺ &amp; water)</td></tr>
+    <tr><td><span class="drug">Insulin</span></td><td>Drives K⁺ INTO cells → ↓ serum K⁺</td></tr>
+    <tr><td><span class="drug">Digoxin</span></td><td>Toxicity potentiated by ↓ K⁺, ↓ Mg²⁺, ↑ Ca²⁺</td></tr>
+    <tr><td><span class="drug">Magnesium sulfate</span></td><td>Antidote for MgSO₄ toxicity: <span class="drug">calcium gluconate</span></td></tr>
+  </table>
+
+  <h3>NCLEX Priority Actions — Electrolyte Emergencies</h3>
+  <table class="info-table">
+    <tr><th>Emergency</th><th>FIRST Action</th></tr>
+    <tr><td>K⁺ &gt; 6.5 mEq/L</td><td>12-lead ECG → IV <span class="drug">calcium gluconate</span> → insulin + D50W</td></tr>
+    <tr><td>K⁺ &lt; 2.5 mEq/L</td><td>Cardiac monitor → IV KCl via pump (never push)</td></tr>
+    <tr><td>Na⁺ &lt; 120 mEq/L with seizures</td><td>Seizure precautions → 3% NaCl via pump (max 1-2 mL/kg/hr)</td></tr>
+    <tr><td>Ca²⁺ &lt; 6.0 with tetany</td><td>Airway first → IV <span class="drug">calcium gluconate</span> slowly → seizure precautions</td></tr>
+    <tr><td>Mg²⁺ &lt; 1.0 with torsades</td><td>IV <span class="drug">magnesium sulfate</span> bolus → cardiac monitoring</td></tr>
+    <tr><td>MgSO₄ toxicity (absent DTRs)</td><td>STOP infusion → IV <span class="drug">calcium gluconate</span> → assess respirations</td></tr>
+  </table>
+
+  <div class="mnemonic-box">
+    <div class="title">🧠 Master Mnemonic: "SALT MINE"</div>
+    <div class="letters">
+      <span>S</span>odium — where Na⁺ goes, water follows<br>
+      <span>A</span>cidosis → K⁺ out of cells (hyperkalemia)<br>
+      <span>L</span>oops Lose everything (loop diuretics deplete K⁺, Ca²⁺, Mg²⁺, Na⁺)<br>
+      <span>T</span>hiazides save calcium (↑ Ca²⁺ reabsorption)<br>
+      <span>M</span>agnesium is the gatekeeper of K⁺<br>
+      <span>I</span>nverse: Calcium &amp; Phosphorus (seesaw)<br>
+      <span>N</span>ever push IV potassium<br>
+      <span>E</span>CG first for K⁺ emergencies
+    </div>
+  </div>
+</div>
+
+</div><!-- end guide-container -->
+
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+  el.style.cursor='pointer';
+  el.title='Click to view drug card';
+  el.addEventListener('click',function(){
+    var name=this.textContent.trim();
+    if(window.parent&&window.parent!==window){
+      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

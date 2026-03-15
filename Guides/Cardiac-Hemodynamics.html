@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardiac &amp; Hemodynamics — NCLEX Crib Notes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--cx-bg:#120a10;--cx-mid:#1e0f1a;--cx-to:#2a1424;--cx-accent:#e11d48;--cx-light:#fda4af;--cx-text:#fce7f3;--cx-muted:#f9a8d4;--cx-gold:#fbbf24;--cx-card:rgba(255,255,255,0.04);--cx-border:rgba(225,29,72,0.25)}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:linear-gradient(160deg,var(--cx-bg),var(--cx-mid) 45%,var(--cx-to));color:var(--cx-text);min-height:100vh;line-height:1.6;font-size:1.02rem}
+.gc{max-width:52rem;margin:0 auto;padding:1.5rem 1rem 3rem}
+.hero{position:relative;background:linear-gradient(135deg,#1a0510,#2d0a1e 40%,#4a1130);border-radius:1.25rem;padding:2rem 1.75rem 1.75rem;margin-bottom:2rem;border:2px solid var(--cx-accent);overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60%;right:-30%;width:70%;height:200%;background:radial-gradient(ellipse,rgba(225,29,72,0.1),transparent 70%);pointer-events:none}
+.hero h1{font-size:2rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:0.3rem;position:relative}
+.hero .sub{font-size:0.95rem;color:var(--cx-muted);line-height:1.5;position:relative}
+.badge-row{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.85rem}
+.badge{display:inline-flex;align-items:center;gap:0.3rem;padding:0.25rem 0.65rem;border-radius:2rem;font-size:0.78rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;backdrop-filter:blur(4px);cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;text-decoration:none}
+.badge:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.b-anat{background:rgba(225,29,72,0.2);color:#fda4af;border:1px solid rgba(225,29,72,0.4)}
+.b-hf{background:rgba(168,85,247,0.2);color:#d8b4fe;border:1px solid rgba(168,85,247,0.4)}
+.b-cad{background:rgba(251,191,36,0.2);color:#fde68a;border:1px solid rgba(251,191,36,0.4)}
+.b-dys{background:rgba(34,197,94,0.2);color:#86efac;border:1px solid rgba(34,197,94,0.4)}
+.b-hemo{background:rgba(59,130,246,0.2);color:#93c5fd;border:1px solid rgba(59,130,246,0.4)}
+.b-valv{background:rgba(249,115,22,0.2);color:#fdba74;border:1px solid rgba(249,115,22,0.4)}
+.b-meds{background:rgba(236,72,153,0.2);color:#f9a8d4;border:1px solid rgba(236,72,153,0.4)}
+.b-mem{background:rgba(148,163,184,0.2);color:#cbd5e1;border:1px solid rgba(148,163,184,0.4)}
+.sh{font-size:1.1rem;font-weight:800;padding:0.75rem 1.1rem;border-radius:0.75rem;margin:2rem 0 0.75rem;letter-spacing:0.02em}
+.sh-anat{background:#4c0519;color:#fecdd3}.sh-hf{background:#3b0764;color:#e9d5ff}.sh-cad{background:#78350f;color:#fef3c7}
+.sh-dys{background:#14532d;color:#bbf7d0}.sh-hemo{background:#1e3a8a;color:#bfdbfe}.sh-valv{background:#7c2d12;color:#fed7aa}
+.sh-meds{background:#831843;color:#fce7f3}.sh-mem{background:#3f0d1e;color:#fda4af}
+.cb{background:var(--cx-card);border:1px solid var(--cx-border);border-radius:0.85rem;padding:1.4rem 1.25rem;margin-bottom:1rem}
+.cb h3{font-size:1.05rem;font-weight:700;color:var(--cx-light);margin:1.1rem 0 0.45rem}
+.cb h3:first-child{margin-top:0}
+.cb p{margin-bottom:0.5rem}.cb ul,.cb ol{margin:0.3rem 0 0.7rem 1.3rem}.cb li{margin-bottom:0.3rem}
+table.it{width:100%;border-collapse:collapse;margin:0.65rem 0 0.9rem;font-size:0.92rem}
+.it th{background:rgba(225,29,72,0.15);color:var(--cx-light);padding:0.45rem 0.6rem;text-align:left;font-weight:700;border-bottom:2px solid rgba(225,29,72,0.3)}
+.it td{padding:0.4rem 0.6rem;border-bottom:1px solid rgba(255,255,255,0.06);vertical-align:top}.it tr:last-child td{border-bottom:none}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:0.8rem 0}
+.cc{border-radius:0.7rem;padding:0.9rem;border:1px solid rgba(255,255,255,0.08)}
+.cc h4{font-size:0.93rem;font-weight:700;margin-bottom:0.4rem;display:flex;align-items:center;gap:0.3rem}
+.cc ul{margin:0 0 0 1rem;font-size:0.92rem}.cc li{margin-bottom:0.2rem}
+.cc-l{background:rgba(59,130,246,0.1);border-color:rgba(59,130,246,0.25)}.cc-l h4{color:#93c5fd}
+.cc-r{background:rgba(168,85,247,0.1);border-color:rgba(168,85,247,0.25)}.cc-r h4{color:#d8b4fe}
+.ab{border-radius:0.6rem;padding:0.8rem 0.95rem;margin:0.7rem 0;font-size:0.93rem}
+.ab-d{background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.3);color:#fecaca}
+.ab-w{background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);color:#fef3c7}
+.ab-i{background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);color:#bfdbfe}
+.ab-s{background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);color:#bbf7d0}
+.kr{display:flex;align-items:flex-start;gap:0.55rem;background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.25);border-radius:0.6rem;padding:0.7rem 0.95rem;margin:0.7rem 0;color:#fde68a;font-size:0.93rem}
+.kr-i{font-size:1.05rem;flex-shrink:0;margin-top:0.1rem}
+.mb{background:linear-gradient(135deg,rgba(225,29,72,0.1),rgba(168,85,247,0.08));border:1px solid rgba(225,29,72,0.25);border-radius:0.7rem;padding:0.9rem 1rem;margin:0.8rem 0}
+.mb .mt{font-weight:700;font-size:1rem;color:var(--cx-light);margin-bottom:0.4rem}
+.mb .ml span{color:var(--cx-gold);font-weight:800;font-size:1.05rem}
+.drug{color:#93c5fd;font-weight:700}.lyte{color:#ffa040;font-weight:700}
+@media(max-width:600px){.hero{padding:1.25rem 1rem}.hero h1{font-size:1.5rem}.cb{padding:0.9rem 0.8rem}.cg{grid-template-columns:1fr}.it{font-size:0.82rem}.it th,.it td{padding:0.3rem 0.4rem}}
+</style>
+</head>
+<body>
+<div class="gc">
+
+<div class="hero">
+<h1>❤️ Cardiac &amp; Hemodynamics</h1>
+<div class="sub">Conduction, heart failure, CAD, dysrhythmias, hemodynamic monitoring, valvular disorders &amp; cardiac pharmacology for NCLEX.</div>
+<div class="badge-row">
+<a class="badge b-anat" href="#sec-anat">🫀 Conduction</a>
+<a class="badge b-hf" href="#sec-hf">💜 Heart Failure</a>
+<a class="badge b-cad" href="#sec-cad">⚡ CAD &amp; MI</a>
+<a class="badge b-dys" href="#sec-dys">💚 Dysrhythmias</a>
+<a class="badge b-hemo" href="#sec-hemo">📊 Hemodynamics</a>
+<a class="badge b-valv" href="#sec-valv">🔥 Valves</a>
+<a class="badge b-meds" href="#sec-meds">💊 Cardiac Meds</a>
+<a class="badge b-mem" href="#sec-mem">🧠 Memory</a>
+</div>
+</div>
+
+<!-- SECTION 1 — CONDUCTION -->
+<div id="sec-anat" class="sh sh-anat">🫀 Section 1 — Cardiac Conduction System</div>
+<div class="cb">
+<h3>Normal Conduction Pathway</h3>
+<p>Electrical impulses follow a precise route through the heart:</p>
+<table class="it">
+<tr><th>Structure</th><th>Role</th><th>Rate (intrinsic)</th></tr>
+<tr><td><strong>SA Node</strong></td><td>Primary pacemaker — initiates impulse</td><td>60–100 bpm</td></tr>
+<tr><td><strong>AV Node</strong></td><td>Delays impulse (allows atrial filling)</td><td>40–60 bpm</td></tr>
+<tr><td><strong>Bundle of His</strong></td><td>Transmits impulse to ventricles</td><td>—</td></tr>
+<tr><td><strong>Bundle Branches</strong></td><td>R &amp; L branches → septum &amp; ventricles</td><td>20–40 bpm</td></tr>
+<tr><td><strong>Purkinje Fibers</strong></td><td>Rapid depolarization of ventricles</td><td>20–40 bpm</td></tr>
+</table>
+<div class="kr"><span class="kr-i">⚡</span><div><strong>NCLEX Rule:</strong> If the SA node fails, the AV node takes over (40–60 bpm). If both fail, the ventricles generate escape rhythm (20–40 bpm) — often too slow to sustain life.</div></div>
+
+<h3>ECG Basics</h3>
+<table class="it">
+<tr><th>Wave/Interval</th><th>Represents</th><th>Normal</th></tr>
+<tr><td><strong>P wave</strong></td><td>Atrial depolarization</td><td>Upright, uniform, precedes QRS</td></tr>
+<tr><td><strong>PR interval</strong></td><td>AV conduction time</td><td>0.12–0.20 sec</td></tr>
+<tr><td><strong>QRS complex</strong></td><td>Ventricular depolarization</td><td>0.06–0.12 sec</td></tr>
+<tr><td><strong>ST segment</strong></td><td>Early ventricular repolarization</td><td>Isoelectric (flat)</td></tr>
+<tr><td><strong>T wave</strong></td><td>Ventricular repolarization</td><td>Upright, rounded</td></tr>
+<tr><td><strong>QT interval</strong></td><td>Total ventricular activity</td><td>0.36–0.44 sec</td></tr>
+</table>
+<div class="ab ab-d"><strong>⚠️ ST Changes:</strong> Elevation = acute MI (STEMI). Depression = ischemia. Always correlate with troponin and patient presentation.</div>
+
+<h3>Cardiac Output</h3>
+<p><strong>CO = HR × SV</strong> (Cardiac Output = Heart Rate × Stroke Volume)</p>
+<ul>
+<li><strong>Preload</strong> — volume stretching ventricles at end-diastole (think: "volume IN")</li>
+<li><strong>Afterload</strong> — resistance the ventricles pump against (think: "pressure OUT")</li>
+<li><strong>Contractility</strong> — force of myocardial contraction</li>
+</ul>
+<div class="mb"><div class="mt">🧠 Frank-Starling Law</div><div class="ml">↑ Preload (stretch) → ↑ Stroke Volume → ↑ CO... <strong>up to a point</strong>. Overstretched fibers (severe HF) → ↓ CO. Think of a rubber band: stretch it moderately = good snap; overstretch it = weak/floppy.</div></div>
+</div>
+
+<!-- SECTION 2 — HEART FAILURE -->
+<div id="sec-hf" class="sh sh-hf">💜 Section 2 — Heart Failure (HF)</div>
+<div class="cb">
+<h3>Left-Sided vs. Right-Sided HF</h3>
+<div class="cg">
+<div class="cc cc-l">
+<h4>⬅️ Left-Sided (Pulmonary)</h4>
+<ul>
+<li>Dyspnea, orthopnea, PND</li>
+<li>Crackles / rales</li>
+<li>Cough (frothy, pink-tinged)</li>
+<li>Fatigue, ↓ exercise tolerance</li>
+<li>S3 gallop (volume overload)</li>
+<li>Tachycardia</li>
+<li>Pulmonary edema (severe)</li>
+</ul>
+</div>
+<div class="cc cc-r">
+<h4>➡️ Right-Sided (Systemic)</h4>
+<ul>
+<li>JVD (jugular venous distention)</li>
+<li>Peripheral edema (dependent)</li>
+<li>Hepatomegaly, ascites</li>
+<li>Weight gain</li>
+<li>Anorexia, nausea</li>
+<li>Increased CVP</li>
+</ul>
+</div>
+</div>
+<div class="kr"><span class="kr-i">⚡</span><div><strong>Left = Lung.</strong> Right = Rest of the body. Left failure often leads to right failure (blood backs up into pulmonary vasculature → ↑ pulmonary pressure → right side fails).</div></div>
+
+<h3>HF Classifications</h3>
+<table class="it">
+<tr><th>Type</th><th>EF</th><th>Problem</th><th>Treatment Focus</th></tr>
+<tr><td><strong>HFrEF</strong> (Systolic)</td><td>&lt;40%</td><td>Weak pump — can't eject adequately</td><td>↑ Contractility, ↓ preload/afterload</td></tr>
+<tr><td><strong>HFpEF</strong> (Diastolic)</td><td>≥50%</td><td>Stiff ventricle — can't fill adequately</td><td>↓ HR (more filling time), ↓ volume</td></tr>
+</table>
+
+<h3>Priority Nursing Interventions</h3>
+<ul>
+<li><strong>Daily weights</strong> — most accurate fluid status indicator (report gain &gt;2 lbs/day or 5 lbs/week)</li>
+<li>I&amp;O monitoring, sodium restriction (≤2g/day), fluid restriction if ordered</li>
+<li>Elevate HOB ≥ 30° (orthopnea, dyspnea)</li>
+<li>Administer <span class="drug">furosemide</span>, <span class="drug">lisinopril</span>/<span class="drug">enalapril</span>, <span class="drug">carvedilol</span>/<span class="drug">metoprolol succinate</span> as ordered</li>
+<li>Monitor K⁺ (diuretic risk), BNP levels, I&amp;O, SpO₂</li>
+<li>Assess lung sounds, edema, JVD Q shift</li>
+</ul>
+<div class="ab ab-i"><strong>BNP (B-type natriuretic peptide):</strong> Released when ventricles are stretched. BNP &gt;100 pg/mL = HF likely. Higher BNP = worse HF. Used to diagnose HF and monitor treatment response.</div>
+</div>
+
+<!-- SECTION 3 — CAD & MI -->
+<div id="sec-cad" class="sh sh-cad">⚡ Section 3 — Coronary Artery Disease &amp; MI</div>
+<div class="cb">
+<h3>Angina: Stable vs. Unstable</h3>
+<table class="it">
+<tr><th>Feature</th><th>Stable Angina</th><th>Unstable Angina</th></tr>
+<tr><td><strong>Trigger</strong></td><td>Predictable (exertion, stress)</td><td>Unpredictable; occurs at rest</td></tr>
+<tr><td><strong>Duration</strong></td><td>&lt;5 min; relieved by rest or NTG</td><td>&gt;15 min; NOT fully relieved by NTG</td></tr>
+<tr><td><strong>Troponin</strong></td><td>Negative</td><td>May be elevated</td></tr>
+<tr><td><strong>Risk</strong></td><td>Low immediate risk</td><td>Medical emergency — pre-MI</td></tr>
+</table>
+
+<h3>Acute MI — Time Is Muscle</h3>
+<div class="ab ab-d"><strong>Classic Presentation:</strong> Crushing substernal chest pain radiating to L arm/jaw, diaphoresis, dyspnea, nausea, sense of doom. <strong>Women &amp; diabetics</strong> may present atypically: fatigue, indigestion, back pain, no chest pain.</div>
+
+<h3>MI Interventions — MONA + More</h3>
+<table class="it">
+<tr><th>Intervention</th><th>Purpose</th><th>Key Points</th></tr>
+<tr><td><span class="drug">Morphine</span></td><td>Pain relief, ↓ preload</td><td>Use cautiously; monitor BP &amp; respirations</td></tr>
+<tr><td><strong>O₂</strong></td><td>↑ Myocardial oxygen supply</td><td>Only if SpO₂ &lt;94%; not routine</td></tr>
+<tr><td><span class="drug">Nitroglycerin</span></td><td>Vasodilation, ↓ preload</td><td>SL q5min × 3; hold if SBP &lt;90. <strong>No PDE5 inhibitors within 24–48h</strong></td></tr>
+<tr><td><span class="drug">Aspirin</span></td><td>Antiplatelet</td><td>162–325 mg CHEWED immediately</td></tr>
+<tr><td><span class="drug">Heparin</span></td><td>Anticoagulation</td><td>Monitor aPTT (1.5–2.5× control)</td></tr>
+<tr><td><span class="drug">Clopidogrel</span> / <span class="drug">ticagrelor</span></td><td>Dual antiplatelet</td><td>Loading dose + maintenance</td></tr>
+<tr><td><strong>PCI / Stent</strong></td><td>Reperfusion</td><td>Door-to-balloon ≤90 min</td></tr>
+<tr><td><span class="drug">Alteplase</span> (tPA)</td><td>Thrombolytic</td><td>Door-to-needle ≤30 min; if PCI unavailable</td></tr>
+</table>
+
+<h3>Cardiac Biomarkers</h3>
+<table class="it">
+<tr><th>Marker</th><th>Rises</th><th>Peaks</th><th>Returns to Normal</th></tr>
+<tr><td><strong>Troponin I/T</strong></td><td>3–6 hours</td><td>12–24 hours</td><td>7–14 days</td></tr>
+<tr><td><strong>CK-MB</strong></td><td>3–6 hours</td><td>12–24 hours</td><td>2–3 days</td></tr>
+<tr><td><strong>Myoglobin</strong></td><td>1–3 hours</td><td>4–12 hours</td><td>24 hours</td></tr>
+</table>
+<div class="kr"><span class="kr-i">⚡</span><div><strong>Troponin</strong> is the GOLD STANDARD for MI diagnosis — most specific and sensitive. Serial troponins (0h, 3h, 6h) confirm or rule out MI. CK-MB helps detect reinfarction.</div></div>
+
+<h3>Post-MI Complications</h3>
+<ul>
+<li><strong>Dysrhythmias</strong> — #1 cause of death in first 48h; continuous telemetry</li>
+<li><strong>Cardiogenic shock</strong> — massive LV damage → ↓ CO</li>
+<li><strong>Heart failure</strong> — weakened myocardium can't pump effectively</li>
+<li><strong>Ventricular septal rupture / papillary muscle rupture</strong> — new murmur post-MI = emergency</li>
+<li><strong>Pericarditis</strong> (Dressler syndrome) — 1–8 weeks post-MI; friction rub, chest pain relieved by leaning forward</li>
+</ul>
+</div>
+
+<!-- SECTION 4 — DYSRHYTHMIAS -->
+<div id="sec-dys" class="sh sh-dys">💚 Section 4 — Dysrhythmias</div>
+<div class="cb">
+<h3>Bradydysrhythmias</h3>
+<table class="it">
+<tr><th>Rhythm</th><th>Rate</th><th>Key Feature</th><th>Treatment</th></tr>
+<tr><td><strong>Sinus Bradycardia</strong></td><td>&lt;60</td><td>Normal rhythm, just slow</td><td><span class="drug">Atropine</span> if symptomatic; pacing</td></tr>
+<tr><td><strong>1° AV Block</strong></td><td>Normal</td><td>PR &gt;0.20 sec (prolonged)</td><td>Monitor; usually benign</td></tr>
+<tr><td><strong>2° Type I</strong> (Wenckebach)</td><td>Variable</td><td>PR progressively lengthens → dropped QRS</td><td>Monitor; <span class="drug">atropine</span> if symptomatic</td></tr>
+<tr><td><strong>2° Type II</strong></td><td>Variable</td><td>PR constant → sudden dropped QRS</td><td><strong>Pacemaker</strong> — can progress to 3°</td></tr>
+<tr><td><strong>3° (Complete)</strong></td><td>Very slow</td><td>P &amp; QRS march independently (no relationship)</td><td><strong>Transcutaneous pacing → permanent pacemaker</strong></td></tr>
+</table>
+<div class="kr"><span class="kr-i">⚡</span><div><strong>Block progression:</strong> 1° = delay. Wenckebach = "longer, longer, DROP." Type II = sudden drop (dangerous). 3° = complete dissociation (most dangerous). Type II &amp; 3° always need pacing.</div></div>
+
+<h3>Tachydysrhythmias</h3>
+<table class="it">
+<tr><th>Rhythm</th><th>Rate</th><th>Key Feature</th><th>Treatment</th></tr>
+<tr><td><strong>Sinus Tachycardia</strong></td><td>&gt;100</td><td>Normal rhythm, fast rate</td><td>Treat underlying cause</td></tr>
+<tr><td><strong>SVT</strong></td><td>150–250</td><td>Sudden onset/offset; narrow QRS</td><td>Vagal maneuvers → <span class="drug">adenosine</span> (rapid IV push)</td></tr>
+<tr><td><strong>A-fib</strong></td><td>Irreg irreg</td><td>No distinct P waves; irregularly irregular</td><td>Rate control: <span class="drug">diltiazem</span>, <span class="drug">metoprolol</span>; anticoagulate</td></tr>
+<tr><td><strong>A-flutter</strong></td><td>250–350 atrial</td><td>Sawtooth P waves</td><td>Similar to A-fib; cardioversion</td></tr>
+<tr><td><strong>V-tach</strong></td><td>&gt;150</td><td>Wide QRS; ≥3 consecutive PVCs</td><td>Pulse: <span class="drug">amiodarone</span>; No pulse: <strong>defibrillation</strong></td></tr>
+<tr><td><strong>V-fib</strong></td><td>—</td><td>Chaotic, no organized rhythm</td><td><strong>Immediate defibrillation + CPR</strong></td></tr>
+<tr><td><strong>Asystole</strong></td><td>0</td><td>Flatline — no electrical activity</td><td>CPR + <span class="drug">epinephrine</span>; <strong>do NOT defibrillate</strong></td></tr>
+</table>
+
+<div class="ab ab-d"><strong>🚨 Pulseless rhythms:</strong> V-fib &amp; Pulseless V-tach → <strong>DEFIBRILLATE</strong>. Asystole &amp; PEA → <strong>CPR + epinephrine</strong> (no shock). Know the difference — NCLEX tests this!</div>
+
+<h3>A-Fib — High Yield</h3>
+<ul>
+<li>Most common sustained dysrhythmia in adults</li>
+<li>Atria quiver instead of contracting → blood pools → <strong>clot formation → stroke risk</strong></li>
+<li><strong>CHA₂DS₂-VASc score</strong> determines anticoagulation need</li>
+<li>Anticoagulants: <span class="drug">warfarin</span> (INR 2–3), <span class="drug">apixaban</span>, <span class="drug">rivaroxaban</span></li>
+<li>Cardioversion: must anticoagulate ≥3 weeks before elective cardioversion OR rule out clot with TEE</li>
+</ul>
+</div>
+
+<!-- SECTION 5 — HEMODYNAMIC MONITORING -->
+<div id="sec-hemo" class="sh sh-hemo">📊 Section 5 — Hemodynamic Monitoring</div>
+<div class="cb">
+<h3>Key Hemodynamic Parameters</h3>
+<table class="it">
+<tr><th>Parameter</th><th>Normal</th><th>Reflects</th></tr>
+<tr><td><strong>CVP</strong> (Central Venous Pressure)</td><td>2–6 mmHg</td><td>Right heart preload (volume status)</td></tr>
+<tr><td><strong>PAP</strong> (Pulmonary Artery Pressure)</td><td>Systolic 20–30 / Diastolic 8–15</td><td>Pulmonary vascular resistance</td></tr>
+<tr><td><strong>PAWP/PCWP</strong> (Wedge Pressure)</td><td>8–12 mmHg</td><td>Left heart preload</td></tr>
+<tr><td><strong>CO</strong> (Cardiac Output)</td><td>4–8 L/min</td><td>Volume pumped per minute</td></tr>
+<tr><td><strong>SVR</strong> (Systemic Vascular Resistance)</td><td>800–1200 dynes</td><td>Afterload (peripheral resistance)</td></tr>
+<tr><td><strong>MAP</strong> (Mean Arterial Pressure)</td><td>70–105 mmHg</td><td>Organ perfusion pressure</td></tr>
+</table>
+
+<h3>Clinical Interpretation</h3>
+<table class="it">
+<tr><th>Condition</th><th>CVP</th><th>PAWP</th><th>CO</th><th>SVR</th></tr>
+<tr><td><strong>Hypovolemic Shock</strong></td><td>↓</td><td>↓</td><td>↓</td><td>↑</td></tr>
+<tr><td><strong>Cardiogenic Shock</strong></td><td>↑</td><td>↑</td><td>↓</td><td>↑</td></tr>
+<tr><td><strong>Septic Shock (early/warm)</strong></td><td>↓</td><td>↓</td><td>↑</td><td>↓</td></tr>
+<tr><td><strong>Right HF</strong></td><td>↑</td><td>Normal/↓</td><td>↓</td><td>↑</td></tr>
+<tr><td><strong>Left HF</strong></td><td>Normal/↑</td><td>↑</td><td>↓</td><td>↑</td></tr>
+</table>
+
+<div class="kr"><span class="kr-i">⚡</span><div><strong>CVP = right side. PAWP = left side.</strong> If BOTH are elevated with ↓ CO → cardiogenic shock (pump failure). If BOTH are low with ↓ CO → hypovolemia (tank empty). Septic shock is unique: high CO but low SVR (vasodilation).</div></div>
+
+<div class="ab ab-w"><strong>MAP &lt;65 mmHg</strong> = inadequate organ perfusion. Calculate: MAP = (SBP + 2×DBP) ÷ 3. Notify provider immediately if MAP drops below 65.</div>
+</div>
+
+<!-- SECTION 6 — VALVULAR DISORDERS -->
+<div id="sec-valv" class="sh sh-valv">🔥 Section 6 — Valvular Disorders</div>
+<div class="cb">
+<h3>Stenosis vs. Regurgitation</h3>
+<table class="it">
+<tr><th>Valve Problem</th><th>Pathology</th><th>Heart Sound</th></tr>
+<tr><td><strong>Mitral Stenosis</strong></td><td>Valve narrows → LA can't empty → LA enlarges → pulmonary congestion → A-fib</td><td>Rumbling diastolic murmur</td></tr>
+<tr><td><strong>Mitral Regurgitation</strong></td><td>Valve leaks → blood flows back to LA during systole</td><td>Blowing systolic murmur (apex → axilla)</td></tr>
+<tr><td><strong>Aortic Stenosis</strong></td><td>Valve narrows → LV hypertrophy → syncope, angina, HF</td><td>Harsh systolic murmur (crescendo-decrescendo)</td></tr>
+<tr><td><strong>Aortic Regurgitation</strong></td><td>Valve leaks → blood flows back to LV during diastole → widened pulse pressure</td><td>Blowing diastolic murmur</td></tr>
+</table>
+
+<div class="mb"><div class="mt">🧠 Murmur Timing</div><div class="ml"><span>S</span>tenosis/<span>R</span>egurgitation: Mitral <span>R</span>egurg &amp; Aortic <span>S</span>tenosis = <strong>Systolic</strong> murmurs. Mitral <span>S</span>tenosis &amp; Aortic <span>R</span>egurg = <strong>Diastolic</strong> murmurs. Mnemonic: <strong>MR. AS = Systolic</strong> (Mr. As → "Mr. Ass" in systole)</div></div>
+
+<h3>Aortic Stenosis — The "Triad"</h3>
+<div class="ab ab-d"><strong>Classic triad: Syncope + Angina + HF symptoms.</strong> Most dangerous valvular lesion. Sudden death risk. Avoid strenuous activity. Surgical/TAVR replacement when symptomatic.</div>
+
+<h3>Valve Replacement Nursing Care</h3>
+<ul>
+<li><strong>Mechanical valves:</strong> Lifelong <span class="drug">warfarin</span> (INR 2.5–3.5); clicking sound is normal</li>
+<li><strong>Bioprosthetic valves:</strong> Short-term anticoagulation only; limited lifespan (10–20 yrs)</li>
+<li><strong>Endocarditis prophylaxis:</strong> Antibiotics before dental procedures for ALL prosthetic valve patients</li>
+</ul>
+</div>
+
+<!-- SECTION 7 — CARDIAC MEDICATIONS -->
+<div id="sec-meds" class="sh sh-meds">💊 Section 7 — Cardiac Medications</div>
+<div class="cb">
+<h3>Beta-Blockers (-olol)</h3>
+<table class="it">
+<tr><th>Drug</th><th>Key Use</th><th>Critical Nursing Points</th></tr>
+<tr><td><span class="drug">Metoprolol</span></td><td>HF, HTN, post-MI</td><td>Hold if HR &lt;60 or SBP &lt;90; do NOT stop abruptly (rebound tachycardia)</td></tr>
+<tr><td><span class="drug">Carvedilol</span></td><td>HF (α &amp; β blocker)</td><td>Take with food; monitor for orthostatic hypotension</td></tr>
+<tr><td><span class="drug">Atenolol</span></td><td>HTN, angina</td><td>Cardioselective; safer for asthma (but still use caution)</td></tr>
+</table>
+<div class="ab ab-d"><strong>⚠️ Beta-blocker contraindications:</strong> Uncompensated HF, severe bradycardia, 2°/3° heart block, severe asthma/COPD. Mask hypoglycemia in diabetics (no tachycardia warning).</div>
+
+<h3>ACE Inhibitors (-pril) &amp; ARBs (-sartan)</h3>
+<table class="it">
+<tr><th>Class</th><th>Examples</th><th>Key Points</th></tr>
+<tr><td><strong>ACE-I</strong></td><td><span class="drug">Lisinopril</span>, <span class="drug">enalapril</span></td><td>Dry cough (bradykinin). Monitor K⁺ (hyperkalemia). Avoid in pregnancy.</td></tr>
+<tr><td><strong>ARB</strong></td><td><span class="drug">Losartan</span>, <span class="drug">valsartan</span></td><td>Alternative if ACE-I cough intolerable. Same K⁺ &amp; pregnancy concerns.</td></tr>
+</table>
+<div class="kr"><span class="kr-i">⚡</span><div><strong>First-dose hypotension:</strong> ACE-I/ARBs can cause a dramatic BP drop with the first dose. Give at bedtime initially. Hold if SBP &lt;90. Monitor renal function (BUN/Cr) and K⁺.</div></div>
+
+<h3>Antiarrhythmics</h3>
+<table class="it">
+<tr><th>Drug</th><th>Use</th><th>Critical Points</th></tr>
+<tr><td><span class="drug">Amiodarone</span></td><td>A-fib, V-tach</td><td>Pulmonary toxicity (baseline &amp; annual CXR + PFTs), thyroid dysfunction, corneal deposits, photosensitivity, hepatotoxicity. <strong>"Amio does everything bad."</strong></td></tr>
+<tr><td><span class="drug">Adenosine</span></td><td>SVT</td><td>Rapid IV push (1–2 sec) followed by rapid NS flush. Warn patient: brief asystole ("feeling of doom") is expected.</td></tr>
+<tr><td><span class="drug">Atropine</span></td><td>Symptomatic bradycardia</td><td>Blocks vagus nerve → ↑ HR. NOT effective in 2° Type II or 3° block.</td></tr>
+<tr><td><span class="drug">Lidocaine</span></td><td>V-tach, V-fib (alternative)</td><td>Monitor for CNS toxicity: twitching, confusion, seizures</td></tr>
+</table>
+
+<h3>Anticoagulants</h3>
+<table class="it">
+<tr><th>Drug</th><th>Monitor</th><th>Antidote</th><th>Key Teaching</th></tr>
+<tr><td><span class="drug">Heparin</span> (IV)</td><td>aPTT (1.5–2.5× control)</td><td><span class="drug">Protamine sulfate</span></td><td>IV; onset minutes; weight-based dosing</td></tr>
+<tr><td><span class="drug">Enoxaparin</span> (LMWH)</td><td>Anti-Xa (if monitored)</td><td><span class="drug">Protamine</span> (partial)</td><td>SubQ abdomen; don't rub site; no aPTT needed</td></tr>
+<tr><td><span class="drug">Warfarin</span></td><td>PT/INR (goal 2–3)</td><td><span class="drug">Vitamin K</span></td><td>PO; 3–5 day onset; avoid vitamin K foods; many drug interactions</td></tr>
+<tr><td><span class="drug">Apixaban</span>, <span class="drug">rivaroxaban</span></td><td>No routine monitoring</td><td><span class="drug">Andexanet alfa</span></td><td>Fixed dose; fewer food interactions; costly</td></tr>
+</table>
+
+<h3>Digoxin</h3>
+<ul>
+<li>↑ Contractility (positive inotrope), ↓ HR (negative chronotrope)</li>
+<li>Therapeutic range: <strong>0.5–2.0 ng/mL</strong> (narrow)</li>
+<li><strong>Hold if HR &lt;60</strong> (adults) or &lt;70 (children)</li>
+<li><strong>Check K⁺ before giving</strong> — hypokalemia = ↑ toxicity risk</li>
+<li>Toxicity signs: N/V, visual disturbances (yellow/green halos), bradycardia, heart block</li>
+<li>Antidote: <span class="drug">Digibind</span> (digoxin immune Fab)</li>
+</ul>
+
+<h3>Nitroglycerin</h3>
+<ul>
+<li><strong>SL:</strong> 1 tab q5min × 3 doses max. If no relief after 1st dose → call 911</li>
+<li>Store in dark glass container; replace q6 months; no cotton in bottle</li>
+<li><strong>Headache</strong> = expected (vasodilation)</li>
+<li>Contraindicated with <span class="drug">sildenafil</span>/PDE5 inhibitors (severe hypotension)</li>
+<li>IV NTG: use glass bottles and special non-PVC tubing</li>
+</ul>
+</div>
+
+<!-- SECTION 8 — MEMORY ANCHORS -->
+<div id="sec-mem" class="sh sh-mem">🧠 Section 8 — Memory Anchors &amp; High-Yield Review</div>
+<div class="cb">
+<h3>Shock Comparison — Quick Reference</h3>
+<table class="it">
+<tr><th>Shock Type</th><th>Cause</th><th>Key Finding</th><th>Priority Treatment</th></tr>
+<tr><td><strong>Hypovolemic</strong></td><td>Blood/fluid loss</td><td>↓ CVP, ↓ PAWP, flat neck veins</td><td>Volume replacement (NS, LR, blood)</td></tr>
+<tr><td><strong>Cardiogenic</strong></td><td>Pump failure (MI)</td><td>↑ CVP, ↑ PAWP, JVD, crackles</td><td><span class="drug">Dobutamine</span>, IABP, treat cause</td></tr>
+<tr><td><strong>Distributive/Septic</strong></td><td>Vasodilation</td><td>Warm/flushed (early), ↓ SVR</td><td>NS bolus → <span class="drug">norepinephrine</span>, abx</td></tr>
+<tr><td><strong>Obstructive</strong></td><td>Physical obstruction</td><td>JVD + hypotension (tamponade, PE)</td><td>Treat cause: pericardiocentesis, tPA</td></tr>
+<tr><td><strong>Neurogenic</strong></td><td>Spinal cord injury</td><td>Bradycardia + hypotension (warm, dry)</td><td><span class="drug">Atropine</span>, vasopressors, fluids</td></tr>
+<tr><td><strong>Anaphylactic</strong></td><td>Severe allergic rxn</td><td>Urticaria, angioedema, wheezing</td><td><span class="drug">Epinephrine</span> IM STAT</td></tr>
+</table>
+
+<h3>ACLS Quick Reference</h3>
+<table class="it">
+<tr><th>Rhythm</th><th>Shockable?</th><th>First-Line Drug</th></tr>
+<tr><td>V-fib / Pulseless V-tach</td><td><strong>YES</strong> — defibrillate</td><td><span class="drug">Epinephrine</span> q3-5min + <span class="drug">amiodarone</span></td></tr>
+<tr><td>Asystole / PEA</td><td><strong>NO</strong> — do NOT shock</td><td><span class="drug">Epinephrine</span> q3-5min; find &amp; treat cause (H's &amp; T's)</td></tr>
+<tr><td>Symptomatic bradycardia</td><td>No</td><td><span class="drug">Atropine</span> 1mg q3-5min (max 3mg)</td></tr>
+<tr><td>Stable narrow-complex tachy</td><td>No</td><td>Vagal → <span class="drug">adenosine</span> 6mg → 12mg → 12mg</td></tr>
+<tr><td>Unstable tachycardia (any)</td><td><strong>Synchronized cardioversion</strong></td><td>Sedate first if conscious</td></tr>
+</table>
+
+<div class="mb"><div class="mt">🧠 H's &amp; T's of Cardiac Arrest</div><div class="ml">
+<span>H</span>ypovolemia, <span>H</span>ypoxia, <span>H</span>ydrogen ion (acidosis), <span>H</span>ypo/Hyperkalemia, <span>H</span>ypothermia<br>
+<span>T</span>ension pneumothorax, <span>T</span>amponade, <span>T</span>oxins, <span>T</span>hrombosis (coronary/pulmonary)
+</div></div>
+
+<h3>Cardiac Drug — Antidote Pairs</h3>
+<table class="it">
+<tr><th>Drug</th><th>Antidote</th></tr>
+<tr><td><span class="drug">Heparin</span></td><td><span class="drug">Protamine sulfate</span></td></tr>
+<tr><td><span class="drug">Warfarin</span></td><td><span class="drug">Vitamin K</span> (phytonadione)</td></tr>
+<tr><td><span class="drug">Digoxin</span></td><td><span class="drug">Digibind</span> (digoxin immune Fab)</td></tr>
+<tr><td><span class="drug">Magnesium sulfate</span></td><td><span class="drug">Calcium gluconate</span></td></tr>
+<tr><td>Beta-blockers</td><td><span class="drug">Glucagon</span></td></tr>
+<tr><td>Ca²⁺ channel blockers</td><td><span class="drug">Calcium chloride</span> + <span class="drug">glucagon</span></td></tr>
+<tr><td><span class="drug">tPA</span> / thrombolytics</td><td><span class="drug">Aminocaproic acid</span> (Amicar)</td></tr>
+<tr><td><span class="drug">Apixaban</span> / <span class="drug">rivaroxaban</span></td><td><span class="drug">Andexanet alfa</span></td></tr>
+</table>
+
+<div class="mb"><div class="mt">🧠 Master Cardiac Mnemonic: "HEARTBEAT"</div><div class="ml">
+<span>H</span>old beta-blockers if HR &lt;60 or SBP &lt;90<br>
+<span>E</span>CG first for chest pain &amp; rhythm changes<br>
+<span>A</span>spirin CHEWED immediately for acute MI<br>
+<span>R</span>eperfusion: door-to-balloon ≤90 min, door-to-needle ≤30 min<br>
+<span>T</span>roponin is the gold standard biomarker<br>
+<span>B</span>NP confirms heart failure (↑ = worse)<br>
+<span>E</span>levate HOB for left-sided HF; daily weights<br>
+<span>A</span>nticoagulate A-fib (stroke prevention)<br>
+<span>T</span>each: no abrupt beta-blocker/NTG discontinuation
+</div></div>
+</div>
+
+</div>
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+el.style.cursor='pointer';
+el.title='Click to view drug card';
+el.addEventListener('click',function(){
+var name=this.textContent.trim();
+if(window.parent&&window.parent!==window){
+window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+}
+});
+});
+</script>
+</body>
+</html>
