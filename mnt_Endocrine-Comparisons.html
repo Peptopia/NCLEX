@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Endocrine Disorder Comparisons — NCLEX 85 & Done</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#0a0a1a;
+  color:#e2e8f0;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  padding:0;
+  font-size:1.05rem;
+}
+/* === ANIMATED BACKGROUND === */
+body::before{
+  content:'';position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(99,102,241,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 90%, rgba(168,85,247,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 50% 50%, rgba(6,182,212,0.04) 0%, transparent 70%);
+  pointer-events:none;
+}
+.guide-container{
+  max-width:920px;
+  margin:0 auto;
+  padding:1.5rem 1.4rem 4rem;
+}
+/* === HERO HEADER === */
+.hero{
+  position:relative;
+  background:linear-gradient(135deg,#1e1b4b 0%,#312e81 40%,#4338ca 100%);
+  border-radius:1.25rem;
+  padding:2rem 1.75rem 1.75rem;
+  margin-bottom:2rem;
+  border:2px solid #6366f1;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;
+  background:radial-gradient(circle,rgba(167,139,250,0.2),transparent 70%);
+  pointer-events:none;
+}
+.hero::after{
+  content:'⚗️';position:absolute;top:1rem;right:1.25rem;font-size:3rem;opacity:0.15;
+  pointer-events:none;
+}
+.hero h1{
+  font-size:1.85rem;font-weight:900;color:#fff;letter-spacing:-0.02em;margin-bottom:0.5rem;
+  text-shadow:0 2px 12px rgba(99,102,241,0.4);
+}
+.hero .subtitle{
+  font-size:1rem;color:#c7d2fe;line-height:1.65;font-weight:400;
+}
+.hero .badge-row{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.85rem}
+.hero .badge-row .badge{
+  display:inline-flex;align-items:center;gap:0.3rem;
+  padding:0.25rem 0.65rem;border-radius:2rem;font-size:0.78rem;font-weight:700;
+  letter-spacing:0.03em;text-transform:uppercase;
+  backdrop-filter:blur(4px);
+}
+.badge-thyroid{background:rgba(251,146,60,0.2);color:#fdba74;border:1px solid rgba(251,146,60,0.4)}
+.badge-adrenal{background:rgba(244,114,182,0.2);color:#f9a8d4;border:1px solid rgba(244,114,182,0.4)}
+.badge-adh{background:rgba(34,211,238,0.2);color:#67e8f9;border:1px solid rgba(34,211,238,0.4)}
+.badge-pth{background:rgba(163,230,53,0.2);color:#bef264;border:1px solid rgba(163,230,53,0.4)}
+.badge-pheo{background:rgba(248,113,113,0.2);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
+
+/* === SECTION HEADERS === */
+.section-hdr{
+  position:relative;
+  margin:2.5rem 0 1.25rem;
+  padding:1rem 1.25rem 1rem 1.15rem;
+  border-radius:1rem;
+  font-size:1.45rem;
+  font-weight:800;
+  letter-spacing:-0.01em;
+  overflow:hidden;
+}
+.section-hdr::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;opacity:0.92;border-radius:1rem;z-index:0;
+}
+.section-hdr span{position:relative;z-index:1}
+.section-hdr .sec-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;font-size:0.85rem;font-weight:900;
+  margin-right:0.5rem;vertical-align:middle;
+  box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+/* Section color themes */
+.sh-thyroid{border:2px solid #f97316;background:linear-gradient(135deg,#431407,#7c2d12,#9a3412)}
+.sh-thyroid::before{background:linear-gradient(135deg,rgba(249,115,22,0.1),transparent)}
+.sh-thyroid .sec-num{background:#f97316;color:#431407}
+.sh-thyroid span{color:#fed7aa}
+
+.sh-adrenal{border:2px solid #ec4899;background:linear-gradient(135deg,#500724,#831843,#9d174d)}
+.sh-adrenal::before{background:linear-gradient(135deg,rgba(236,72,153,0.1),transparent)}
+.sh-adrenal .sec-num{background:#ec4899;color:#500724}
+.sh-adrenal span{color:#fbcfe8}
+
+.sh-adh{border:2px solid #06b6d4;background:linear-gradient(135deg,#083344,#155e75,#0e7490)}
+.sh-adh::before{background:linear-gradient(135deg,rgba(6,182,212,0.1),transparent)}
+.sh-adh .sec-num{background:#06b6d4;color:#083344}
+.sh-adh span{color:#a5f3fc}
+
+.sh-pth{border:2px solid #84cc16;background:linear-gradient(135deg,#1a2e05,#365314,#3f6212)}
+.sh-pth::before{background:linear-gradient(135deg,rgba(132,204,22,0.1),transparent)}
+.sh-pth .sec-num{background:#84cc16;color:#1a2e05}
+.sh-pth span{color:#d9f99d}
+
+.sh-pheo{border:2px solid #ef4444;background:linear-gradient(135deg,#450a0a,#7f1d1d,#991b1b)}
+.sh-pheo::before{background:linear-gradient(135deg,rgba(239,68,68,0.1),transparent)}
+.sh-pheo .sec-num{background:#ef4444;color:#450a0a}
+.sh-pheo span{color:#fecaca}
+
+.sh-ref{border:2px solid #8b5cf6;background:linear-gradient(135deg,#2e1065,#4c1d95,#5b21b6)}
+.sh-ref::before{background:linear-gradient(135deg,rgba(139,92,246,0.1),transparent)}
+.sh-ref .sec-num{background:#8b5cf6;color:#2e1065}
+.sh-ref span{color:#ddd6fe}
+
+.sh-mem{border:2px solid #a78bfa;background:linear-gradient(135deg,#1e1b4b,#312e81,#3730a3)}
+.sh-mem::before{background:linear-gradient(135deg,rgba(167,139,250,0.1),transparent)}
+.sh-mem .sec-num{background:#a78bfa;color:#1e1b4b}
+.sh-mem span{color:#ede9fe}
+
+/* === VS BANNER === */
+.vs-banner{
+  display:flex;align-items:center;gap:0.75rem;
+  margin:1.25rem 0;
+  padding:0.6rem 1rem;
+  background:linear-gradient(90deg,rgba(30,27,75,0.5),rgba(15,23,42,0.8),rgba(30,27,75,0.5));
+  border-radius:0.75rem;
+  border:1px solid #334155;
+}
+.vs-banner .vs-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;
+  color:#94a3b8;flex-shrink:0;
+}
+.vs-banner .vs-cond{
+  font-size:1.08rem;font-weight:700;
+}
+.vs-banner .vs-circle{
+  flex-shrink:0;width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.75rem;font-weight:900;
+  background:linear-gradient(135deg,#4338ca,#6366f1);
+  color:#fff;
+  box-shadow:0 0 16px rgba(99,102,241,0.3);
+  letter-spacing:0.05em;
+}
+.vs-left{color:#f87171}
+.vs-right{color:#67e8f9}
+
+/* === COMPARISON TABLES === */
+h3{
+  font-size:1.18rem;color:#c4b5fd;margin:1.6rem 0 0.6rem;
+  font-weight:700;
+}
+h4{font-size:1.06rem;color:#a5b4fc;margin:1rem 0 0.4rem;font-weight:700}
+p,li{color:#e2e8f0;margin:0.3rem 0;font-size:1.02rem}
+ul,ol{padding-left:1.5rem}
+li{margin:0.25rem 0}
+li::marker{color:#818cf8}
+strong,b{color:#f1f5f9}
+em{color:#cbd5e1}
+
+.compare-table{
+  width:100%;border-collapse:separate;border-spacing:0;
+  margin:0.85rem 0 1.5rem;font-size:1rem;
+  border:2px solid #334155;border-radius:0.85rem;overflow:hidden;
+  box-shadow:0 4px 24px rgba(0,0,0,0.3);
+}
+.compare-table th{
+  background:linear-gradient(180deg,#1e1b4b,#252263);
+  color:#c4b5fd;font-weight:800;padding:0.7rem 0.75rem;text-align:left;
+  border-bottom:2px solid #4338ca;
+  font-size:0.88rem;text-transform:uppercase;letter-spacing:0.05em;
+  position:sticky;top:0;z-index:2;
+}
+.compare-table th:first-child{border-right:2px solid #334155}
+.compare-table td{
+  background:#0f172a;color:#e2e8f0;padding:0.65rem 0.75rem;
+  border-bottom:1px solid #1e293b;vertical-align:top;line-height:1.6;
+}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table tr:hover td{background:rgba(99,102,241,0.06)}
+.compare-table .cat-label{
+  font-weight:700;background:linear-gradient(90deg,#1a1635,#0f172a);
+  color:#c4b5fd;white-space:nowrap;min-width:115px;font-size:0.9rem;
+  border-right:2px solid #334155;
+}
+/* Column tinting for hyper/hypo */
+.compare-table td:nth-child(2){border-right:1px solid #1e293b}
+.compare-table .up{color:#f87171;font-weight:700}
+.compare-table .down{color:#67e8f9;font-weight:700}
+.compare-table .normal{color:#94a3b8}
+
+/* Arrow indicators */
+.arr-up::before{content:"↑ ";color:#f87171;font-weight:900}
+.arr-down::before{content:"↓ ";color:#67e8f9;font-weight:900}
+.arr-nl::before{content:"— ";color:#94a3b8}
+
+/* Inline semantic colors */
+.danger{color:#f87171;font-weight:700}
+.warn{color:#fbbf24;font-weight:700}
+.safe{color:#4ade80;font-weight:700}
+.drug{color:#818cf8;font-weight:700}
+.lyte{color:#67e8f9;font-weight:600}
+.dx{color:#f9a8d4;font-weight:600}
+
+/* === DX CARDS === */
+.dx-card{
+  position:relative;
+  background:linear-gradient(135deg,rgba(30,27,75,0.7),rgba(15,15,35,0.95));
+  border:2px solid #4338ca;border-radius:1.1rem;
+  padding:1.25rem 1.25rem;margin:1.25rem 0;
+  overflow:hidden;
+}
+.dx-card::before{
+  content:'';position:absolute;top:0;left:0;width:6px;height:100%;
+  border-radius:1.1rem 0 0 1.1rem;
+}
+.dx-card.card-hyper::before{background:linear-gradient(180deg,#f97316,#ef4444)}
+.dx-card.card-hypo::before{background:linear-gradient(180deg,#06b6d4,#3b82f6)}
+.dx-card.card-crisis::before{background:linear-gradient(180deg,#ef4444,#dc2626)}
+.dx-card.card-excess::before{background:linear-gradient(180deg,#eab308,#f59e0b)}
+.dx-card h3{margin-top:0;color:#e0e7ff;font-size:1.18rem}
+.dx-card .tag-row{display:flex;flex-wrap:wrap;gap:0.35rem;margin:0.4rem 0 0.65rem}
+.tag{
+  display:inline-flex;align-items:center;gap:0.25rem;
+  padding:0.2rem 0.6rem;border-radius:2rem;
+  font-size:0.78rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;
+}
+.tag-hyper{background:rgba(248,113,113,0.15);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
+.tag-hypo{background:rgba(103,232,249,0.15);color:#67e8f9;border:1px solid rgba(103,232,249,0.4)}
+.tag-excess{background:rgba(251,191,36,0.15);color:#fde68a;border:1px solid rgba(251,191,36,0.4)}
+.tag-deficit{background:rgba(129,140,248,0.15);color:#a5b4fc;border:1px solid rgba(129,140,248,0.4)}
+.tag-crisis{background:rgba(248,113,113,0.25);color:#fca5a5;border:1px solid rgba(248,113,113,0.5)}
+.tag-auto{background:rgba(168,85,247,0.15);color:#d8b4fe;border:1px solid rgba(168,85,247,0.4)}
+
+/* === MNEMONIC BOXES === */
+.mnemonic{
+  position:relative;
+  background:linear-gradient(135deg,#312e81,#3730a3);
+  border:2px solid #6366f1;border-radius:0.85rem;
+  padding:1rem 1.15rem 1rem 3rem;
+  margin:1rem 0;font-size:1.02rem;line-height:1.7;
+  box-shadow:0 4px 16px rgba(99,102,241,0.15);
+}
+.mnemonic::before{
+  content:'💡';position:absolute;left:0.85rem;top:0.9rem;font-size:1.35rem;
+}
+.mnemonic strong{color:#e9d5ff;font-size:1.06rem}
+.mnemonic em{color:#c4b5fd}
+
+/* === NCLEX TIP BOXES === */
+.nclex-tip{
+  position:relative;
+  background:linear-gradient(135deg,rgba(99,102,241,0.1),rgba(79,70,229,0.05));
+  border:1.5px solid #6366f1;border-left:5px solid #6366f1;
+  border-radius:0.75rem;
+  padding:1rem 1.15rem 1rem 3rem;
+  margin:1rem 0;font-size:1.02rem;line-height:1.65;
+}
+.nclex-tip::before{
+  content:'🎯';position:absolute;left:0.85rem;top:0.9rem;font-size:1.25rem;
+}
+.nclex-tip strong{color:#a5b4fc;font-size:1.04rem}
+
+/* === LETHAL/DANGER BOXES === */
+.lethal{
+  position:relative;
+  background:linear-gradient(135deg,rgba(248,113,113,0.12),rgba(220,38,38,0.06));
+  border:2px solid #dc2626;border-left:6px solid #ef4444;
+  border-radius:0.75rem;
+  padding:1rem 1.15rem 1rem 3.25rem;
+  margin:1rem 0;font-size:1.05rem;line-height:1.65;
+  box-shadow:0 0 20px rgba(239,68,68,0.08);
+}
+.lethal::before{
+  content:'☠️';position:absolute;left:0.85rem;top:0.85rem;font-size:1.35rem;
+}
+.lethal strong{color:#fca5a5;font-size:1.08rem}
+
+/* === QUICK REF GRID === */
+.qref{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0.85rem;margin:0.85rem 0}
+.qref-box{
+  background:linear-gradient(135deg,rgba(30,27,75,0.6),rgba(15,23,42,0.8));
+  border:1.5px solid #475569;border-radius:0.85rem;padding:0.85rem 1rem;
+  transition:border-color 0.2s,transform 0.2s;
+}
+.qref-box:hover{border-color:#818cf8;transform:translateY(-2px)}
+.qref-box h4{margin-top:0;font-size:1.05rem;color:#e0e7ff;font-weight:800}
+.qref-box ul{margin:0.25rem 0 0;padding-left:1.2rem}
+.qref-box li{font-size:0.98rem;margin:0.2rem 0;color:#cbd5e1}
+.qref-box li strong{color:#f1f5f9}
+
+/* === HR DIVIDERS === */
+.section-divider{
+  border:none;height:2px;margin:2rem 0;
+  background:linear-gradient(90deg,transparent,#4338ca,#6366f1,#4338ca,transparent);
+}
+
+/* === NUMBERED STEPS IN TREATMENT === */
+.tx-steps{counter-reset:tx}
+.tx-steps li{list-style:none;position:relative;padding-left:0.3rem;margin:0.35rem 0}
+.tx-steps li::before{
+  counter-increment:tx;content:counter(tx);
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:50%;
+  background:#4338ca;color:#e0e7ff;
+  font-size:0.72rem;font-weight:800;margin-right:0.45rem;
+  vertical-align:middle;
+}
+
+/* === STICKY NAV === */
+.nav-bar{
+  position:sticky;top:0;z-index:100;
+  display:flex;gap:0.35rem;padding:0.5rem 0;margin-bottom:0.5rem;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+  background:linear-gradient(180deg,#0a0a1a 60%,transparent);
+  scrollbar-width:none;
+}
+.nav-bar::-webkit-scrollbar{display:none}
+.nav-pill{
+  display:inline-flex;align-items:center;gap:0.25rem;
+  padding:0.35rem 0.7rem;border-radius:2rem;
+  font-size:0.75rem;font-weight:700;white-space:nowrap;
+  text-decoration:none;
+  border:1.5px solid #334155;background:rgba(15,23,42,0.8);
+  color:#94a3b8;transition:all 0.2s;cursor:pointer;
+  backdrop-filter:blur(8px);
+}
+.nav-pill:hover{border-color:#6366f1;color:#c4b5fd;background:rgba(67,56,202,0.15)}
+
+/* === ANIMATION ENTRANCES === */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.anim{animation:fadeUp 0.5s ease-out both}
+.d1{animation-delay:0.05s}.d2{animation-delay:0.1s}.d3{animation-delay:0.15s}
+.d4{animation-delay:0.2s}.d5{animation-delay:0.25s}
+
+/* === RESPONSIVE === */
+@media(max-width:640px){
+  .guide-container{padding:1rem 0.75rem 3rem}
+  .hero{padding:1.5rem 1.15rem;border-radius:1rem}
+  .hero h1{font-size:1.45rem}
+  .hero::after{display:none}
+  .section-hdr{font-size:1.2rem;padding:0.85rem 1rem}
+  .section-hdr .sec-num{width:26px;height:26px;font-size:0.75rem}
+  .compare-table{font-size:0.92rem}
+  .compare-table th,.compare-table td{padding:0.5rem 0.55rem}
+  .compare-table .cat-label{white-space:normal;min-width:80px;font-size:0.82rem}
+  .compare-table th{font-size:0.78rem}
+  .vs-banner{flex-direction:column;text-align:center;gap:0.35rem;padding:0.5rem 0.75rem}
+  .vs-banner .vs-circle{width:32px;height:32px;font-size:0.65rem}
+  .qref{grid-template-columns:1fr}
+  .dx-card{padding:1rem 1rem 1rem 1.15rem}
+  .mnemonic{padding-left:2.75rem}
+  .mnemonic::before{left:0.65rem}
+  .nclex-tip{padding-left:2.75rem}
+  .nclex-tip::before{left:0.65rem}
+  .lethal{padding-left:2.75rem}
+  .lethal::before{left:0.65rem}
+  .nav-bar{gap:0.25rem}
+  .nav-pill{font-size:0.68rem;padding:0.3rem 0.55rem}
+}
+</style>
+</head>
+<body>
+
+<div class="guide-container">
+
+<!-- HERO -->
+<div class="hero anim">
+<h1>⚗️ Endocrine Disorder Comparisons</h1>
+<p class="subtitle">A comprehensive side-by-side breakdown of the most commonly confused and compared endocrine conditions. Master the pathophysiology, signs &amp; symptoms, labs, electrolytes, hormones, and treatments for NCLEX success.</p>
+<div class="badge-row">
+<span class="badge badge-thyroid">🦋 Thyroid</span>
+<span class="badge badge-adrenal">🎭 Adrenal</span>
+<span class="badge badge-adh">💧 ADH</span>
+<span class="badge badge-pth">🦴 Parathyroid</span>
+<span class="badge badge-pheo">⚡ Pheo</span>
+</div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="nav-bar anim d1">
+<a class="nav-pill" href="#sec-thyroid">🦋 Thyroid</a>
+<a class="nav-pill" href="#sec-adrenal">🎭 Adrenal</a>
+<a class="nav-pill" href="#sec-adh">💧 ADH</a>
+<a class="nav-pill" href="#sec-pth">🦴 Parathyroid</a>
+<a class="nav-pill" href="#sec-pheo">⚡ Pheo</a>
+<a class="nav-pill" href="#sec-ref">📊 Quick Ref</a>
+<a class="nav-pill" href="#sec-mem">🧠 Memory</a>
+</nav>
+
+<!-- ====================================================== -->
+<div id="sec-thyroid" class="section-hdr sh-thyroid anim d2">
+<span><span class="sec-num">1</span> 🦋 Thyroid Disorders</span>
+</div>
+<!-- ====================================================== -->
+
+<div class="vs-banner anim d3">
+<span class="vs-cond vs-left">🧊 Hypothyroidism</span>
+<span class="vs-circle">VS</span>
+<span class="vs-cond vs-right">🔥 Hyperthyroidism</span>
+</div>
+
+<div class="mnemonic anim d3">
+<strong>Memory Aid — Think METABOLISM:</strong><br>
+<em>Hypo</em>thyroidism = Everything slows DOWN ↓ (cold, constipated, slow HR, weight gain, sluggish)<br>
+<em>Hyper</em>thyroidism = Everything speeds UP ↑ (hot, diarrhea, fast HR, weight loss, wired)
+</div>
+
+<table class="compare-table anim d4">
+<thead><tr>
+<th>Feature</th>
+<th>🧊 Hypothyroidism</th>
+<th>🔥 Hyperthyroidism</th>
+</tr></thead>
+<tbody>
+<tr><td class="cat-label">Pathophysiology</td>
+<td>Insufficient thyroid hormone (T3/T4) production. Metabolism slows globally. Most common cause: <strong>Hashimoto's thyroiditis</strong> (autoimmune destruction of thyroid gland).</td>
+<td>Excess thyroid hormone (T3/T4) production. Metabolism accelerates uncontrollably. Most common cause: <strong>Grave's disease</strong> (autoimmune stimulation of thyroid via TSI antibodies).</td></tr>
+
+<tr><td class="cat-label">Vitals</td>
+<td><span class="arr-down"></span>HR (bradycardia), <span class="arr-down"></span>BP, <span class="arr-down"></span>Temp, <span class="arr-down"></span>RR</td>
+<td><span class="arr-up"></span>HR (tachycardia), <span class="arr-up"></span>BP (systolic HTN), <span class="arr-up"></span>Temp, <span class="arr-up"></span>RR</td></tr>
+
+<tr><td class="cat-label">Weight</td>
+<td><span class="arr-up"></span><strong>Weight gain</strong> (despite poor appetite) — metabolism slowed</td>
+<td><span class="arr-down"></span><strong>Weight loss</strong> (despite increased appetite) — metabolism revved</td></tr>
+
+<tr><td class="cat-label">Temperature</td>
+<td><strong>Cold intolerance</strong> — always cold, wears extra layers</td>
+<td><strong>Heat intolerance</strong> — always hot, diaphoretic, sweating</td></tr>
+
+<tr><td class="cat-label">Cardiac</td>
+<td>Bradycardia, ↓ cardiac output, possible pericardial effusion, ↑ cholesterol</td>
+<td>Tachycardia, palpitations, <strong>atrial fibrillation</strong>, widened pulse pressure, HF risk</td></tr>
+
+<tr><td class="cat-label">GI</td>
+<td><strong>Constipation</strong>, decreased appetite, possible ileus</td>
+<td><strong>Diarrhea</strong>, increased appetite, hyperactive bowel sounds, weight loss</td></tr>
+
+<tr><td class="cat-label">Neuro/Psych</td>
+<td>Fatigue, lethargy, depression, slowed cognition, memory problems, slow speech</td>
+<td>Anxiety, irritability, insomnia, restlessness, fine tremors, emotional lability, short attention span</td></tr>
+
+<tr><td class="cat-label">Skin/Hair</td>
+<td>Dry/coarse skin, brittle nails, <strong>hair loss</strong>, non-pitting edema (myxedema), puffy face</td>
+<td>Warm/moist/smooth skin, fine hair, <strong>pretibial myxedema</strong> (Grave's), diaphoresis</td></tr>
+
+<tr><td class="cat-label">Eyes</td>
+<td>Periorbital edema (puffy eyelids)</td>
+<td><strong>Exophthalmos</strong> (bulging eyes — Grave's specific). Lid lag, lid retraction. May be permanent even after treatment.</td></tr>
+
+<tr><td class="cat-label">Neck</td>
+<td>Possible goiter (if iodine deficiency or Hashimoto's)</td>
+<td><strong>Diffuse goiter</strong> (Grave's), <strong>thyroid bruit</strong> (audible with stethoscope due to ↑ blood flow)</td></tr>
+
+<tr><td class="cat-label">Reproductive</td>
+<td>Menorrhagia (heavy periods), decreased libido, infertility</td>
+<td>Amenorrhea or oligomenorrhea (light/absent periods), decreased libido</td></tr>
+
+<tr><td class="cat-label">Musculoskeletal</td>
+<td>Muscle cramps, weakness, joint stiffness, carpal tunnel</td>
+<td>Muscle wasting, weakness, osteoporosis risk, hyperreflexia</td></tr>
+
+<tr><td class="cat-label">🧪 TSH</td>
+<td class="up">↑ ELEVATED (pituitary screaming for more T4)</td>
+<td class="down">↓ LOW (pituitary suppressed by excess T4)</td></tr>
+
+<tr><td class="cat-label">🧪 T3 / T4</td>
+<td class="down">↓ LOW (the primary deficiency)</td>
+<td class="up">↑ ELEVATED (the primary excess)</td></tr>
+
+<tr><td class="cat-label">🧪 Cholesterol</td>
+<td class="up">↑ Elevated (slowed lipid metabolism)</td>
+<td class="down">↓ Low-normal</td></tr>
+
+<tr><td class="cat-label">🧪 Glucose</td>
+<td><span class="arr-down"></span>Hypoglycemia risk</td>
+<td><span class="arr-up"></span>Hyperglycemia risk</td></tr>
+
+<tr><td class="cat-label">Electrolytes</td>
+<td><span class="lyte">↓ Na+ (dilutional hyponatremia)</span>, ↑ CO2</td>
+<td><span class="lyte">↑ Ca++ (bone resorption)</span>, ↓ Mg++</td></tr>
+
+<tr><td class="cat-label">💊 Treatment</td>
+<td><span class="drug">Levothyroxine (Synthroid)</span> — thyroid hormone replacement. <strong>Lifelong therapy.</strong><br>
+• Take on empty stomach, 30-60 min before breakfast<br>
+• Same time daily, same brand<br>
+• Monitor TSH every 6-8 weeks initially</td>
+<td><span class="drug">PTU (Propylthiouracil)</span> or <span class="drug">Methimazole (Tapazole)</span> — antithyroid drugs<br>
+<span class="drug">Radioactive iodine (I-131)</span> — ablation therapy<br>
+<span class="drug">Beta-blockers (Propranolol)</span> — symptomatic tachycardia<br>
+<strong>Thyroidectomy</strong> — surgical removal</td></tr>
+</tbody></table>
+
+<div class="nclex-tip">
+<strong>NCLEX Key:</strong> TSH and T4 are <strong>inverse</strong> in primary thyroid disease. If TSH is HIGH, thyroid hormones are LOW (hypothyroid). If TSH is LOW, thyroid hormones are HIGH (hyperthyroid). Think: TSH is the thermostat — it cranks up when the furnace (thyroid) isn't working.
+</div>
+
+<!-- Grave's Disease Detail -->
+<div class="dx-card card-hyper">
+<h3>🔥 Grave's Disease — Deep Dive</h3>
+<div class="tag-row"><span class="tag tag-hyper">HYPERTHYROID</span> <span class="tag tag-auto">AUTOIMMUNE</span></div>
+<p><strong>Pathophysiology:</strong> Autoimmune disorder where <strong>thyroid-stimulating immunoglobulins (TSI)</strong> mimic TSH, causing the thyroid to overproduce T3/T4 uncontrollably. Most common cause of hyperthyroidism. Affects women 5-10× more than men.</p>
+<h4>Unique Grave's Features (The "Grave's Triad"):</h4>
+<ul>
+<li><strong>Diffuse goiter</strong> — symmetrically enlarged, non-tender thyroid</li>
+<li><strong>Exophthalmos</strong> — proptosis (bulging eyes) from retro-orbital inflammation. May NOT resolve with treatment. Protect eyes: artificial tears, sunglasses, elevate HOB, tape eyelids at night if needed.</li>
+<li><strong>Pretibial myxedema</strong> — thickened, waxy skin on shins (dermopathy)</li>
+</ul>
+<h4>Labs Specific to Grave's:</h4>
+<ul>
+<li><strong>TSI (Thyroid Stimulating Immunoglobulin)</strong> — POSITIVE (diagnostic)</li>
+<li><strong>Anti-TPO antibodies</strong> — often positive</li>
+<li><strong>Radioactive iodine uptake (RAIU)</strong> — INCREASED diffuse uptake</li>
+</ul>
+</div>
+
+<!-- Hashimoto's Detail -->
+<div class="dx-card card-hypo">
+<h3>🧊 Hashimoto's Thyroiditis — Deep Dive</h3>
+<div class="tag-row"><span class="tag tag-hypo">HYPOTHYROID</span> <span class="tag tag-auto">AUTOIMMUNE</span></div>
+<p><strong>Pathophysiology:</strong> Autoimmune destruction of thyroid tissue by <strong>anti-TPO (anti-thyroid peroxidase) antibodies</strong> and lymphocytic infiltration. Gradual, progressive thyroid failure. Most common cause of hypothyroidism in the US.</p>
+<h4>Unique Features:</h4>
+<ul>
+<li>Painless goiter (firm, rubbery) — may be initial presentation before hypothyroid symptoms develop</li>
+<li>May have transient hyperthyroidism early (Hashitoxicosis) as stored hormone is released from damaged cells</li>
+<li>Family history of autoimmune disease common</li>
+</ul>
+<h4>Labs Specific to Hashimoto's:</h4>
+<ul>
+<li><strong>Anti-TPO antibodies</strong> — POSITIVE (highly diagnostic)</li>
+<li><strong>Anti-thyroglobulin antibodies</strong> — often positive</li>
+<li><strong>TSH ↑, T4 ↓</strong> — classic primary hypothyroid pattern</li>
+</ul>
+</div>
+
+<!-- THYROID CRISES -->
+<div class="vs-banner">
+<span class="vs-cond vs-left">🌪️ Thyroid Storm</span>
+<span class="vs-circle">VS</span>
+<span class="vs-cond vs-right">🥶 Myxedema Coma</span>
+</div>
+
+<div class="lethal">
+<strong>Both are LIFE-THREATENING emergencies requiring ICU-level care!</strong>
+</div>
+
+<table class="compare-table">
+<thead><tr>
+<th>Feature</th>
+<th>🌪️ Thyroid Storm</th>
+<th>🥶 Myxedema Coma</th>
+</tr></thead>
+<tbody>
+<tr><td class="cat-label">Base Condition</td>
+<td>Extreme <strong>hyperthyroidism</strong> crisis</td>
+<td>Extreme <strong>hypothyroidism</strong> crisis</td></tr>
+
+<tr><td class="cat-label">Trigger</td>
+<td>Infection, surgery, trauma, DKA, stopping antithyroid meds, iodine contrast, labor/delivery</td>
+<td>Infection, cold exposure, sedatives/opioids, surgery, stopping levothyroxine, MI</td></tr>
+
+<tr><td class="cat-label">Temperature</td>
+<td class="up"><strong>Hyperpyrexia (&gt;104°F/40°C)</strong> — extreme fever</td>
+<td class="down"><strong>Hypothermia (&lt;95°F/35°C)</strong> — cannot generate heat</td></tr>
+
+<tr><td class="cat-label">Heart</td>
+<td class="up">Severe tachycardia (&gt;140), AFib, HF, hypertension → cardiovascular collapse</td>
+<td class="down">Severe bradycardia, hypotension, pericardial effusion → cardiovascular collapse</td></tr>
+
+<tr><td class="cat-label">Neuro</td>
+<td>Agitation, delirium, psychosis, seizures → coma</td>
+<td>Lethargy, confusion, stupor → <strong>coma</strong>, hypoventilation</td></tr>
+
+<tr><td class="cat-label">GI</td>
+<td>N/V, diarrhea, abdominal pain, jaundice (liver failure)</td>
+<td>Paralytic ileus, abdominal distension, constipation</td></tr>
+
+<tr><td class="cat-label">Mortality</td>
+<td class="up"><strong>20-30%</strong> even with treatment</td>
+<td class="up"><strong>30-60%</strong> even with treatment</td></tr>
+
+<tr><td class="cat-label">💊 Treatment</td>
+<td>
+<ol class="tx-steps">
+<li><span class="drug">PTU</span> (blocks T4→T3 conversion) — loading dose</li>
+<li><span class="drug">Potassium iodide (SSKI)</span> — given 1 hour AFTER PTU</li>
+<li><span class="drug">Propranolol (IV)</span> — control HR</li>
+<li><span class="drug">Hydrocortisone</span> — prevent adrenal crisis</li>
+<li><strong>Cooling blankets</strong> (NOT aspirin — displaces T4 from proteins)</li>
+<li>O2, IV fluids, glucose</li>
+</ol>
+</td>
+<td>
+<ol class="tx-steps">
+<li><span class="drug">IV Levothyroxine</span> — cautious, slow replacement</li>
+<li><span class="drug">IV Hydrocortisone</span> — prevent adrenal crisis</li>
+<li><strong>Passive rewarming</strong> (blankets, warm room — NOT active rewarming)</li>
+<li>Ventilatory support (CO2 retention)</li>
+<li>IV fluids (cautious — risk of water intoxication)</li>
+<li>Monitor for seizures</li>
+</ol>
+</td></tr>
+</tbody></table>
+
+<div class="nclex-tip">
+<strong>NCLEX Key — Thyroid Storm:</strong> Do NOT give aspirin — it displaces T4 from binding proteins, making storm WORSE. Use acetaminophen for fever. Give PTU BEFORE iodine (otherwise iodine feeds the overactive thyroid).
+</div>
+
+<div class="nclex-tip">
+<strong>NCLEX Key — Myxedema Coma:</strong> Do NOT actively rewarm (heating blankets, warm bath) — causes peripheral vasodilation → cardiovascular collapse. Use passive rewarming only. IV levothyroxine must be given SLOWLY — too fast causes fatal arrhythmias.
+</div>
+
+<hr class="section-divider">
+
+<!-- ====================================================== -->
+<div id="sec-adrenal" class="section-hdr sh-adrenal">
+<span><span class="sec-num">2</span> 🎭 Adrenal Disorders</span>
+</div>
+<!-- ====================================================== -->
+
+<div class="vs-banner">
+<span class="vs-cond vs-left">🌕 Cushing's Syndrome</span>
+<span class="vs-circle">VS</span>
+<span class="vs-cond vs-right">🌑 Addison's Disease</span>
+</div>
+
+<div class="mnemonic">
+<strong>Memory Aid — Think CORTISOL:</strong><br>
+<em>Cushing's</em> = TOO MUCH cortisol → <strong>C</strong>ushing = <strong>C</strong>ortisol e<strong>X</strong>cess (think: "Cushy" = full/round/excess)<br>
+<em>Addison's</em> = NOT ENOUGH cortisol → <strong>A</strong>ddison = <strong>A</strong>drenal <strong>D</strong>eficiency (think: "Add-it-on" = needs to add cortisol)
+</div>
+
+<table class="compare-table">
+<thead><tr>
+<th>Feature</th>
+<th>🌕 Cushing's Syndrome</th>
+<th>🌑 Addison's Disease</th>
+</tr></thead>
+<tbody>
+<tr><td class="cat-label">Pathophysiology</td>
+<td><strong>Excess cortisol</strong> — from pituitary adenoma (Cushing's Disease), adrenal tumor, ectopic ACTH, or prolonged exogenous steroid use (most common cause!)</td>
+<td><strong>Adrenocortical insufficiency</strong> — autoimmune destruction of adrenal cortex (most common), TB, hemorrhage. Loss of cortisol, aldosterone, AND androgens.</td></tr>
+
+<tr><td class="cat-label">Appearance</td>
+<td><strong>Moon face</strong>, <strong>buffalo hump</strong> (dorsocervical fat pad), <strong>truncal obesity</strong> with thin extremities, <strong>purple striae</strong> on abdomen/thighs</td>
+<td>Weight loss, muscle wasting, <strong>bronze/hyperpigmentation</strong> (↑ACTH stimulates melanocytes — especially skin creases, buccal mucosa, nipples, scars)</td></tr>
+
+<tr><td class="cat-label">Vitals</td>
+<td><span class="arr-up"></span>BP (<strong>hypertension</strong>) — cortisol enhances catecholamine effects</td>
+<td><span class="arr-down"></span>BP (<strong>hypotension</strong>, orthostatic) — loss of aldosterone + cortisol</td></tr>
+
+<tr><td class="cat-label">Fluid Status</td>
+<td><strong>Fluid retention</strong>, edema, weight gain (cortisol has mineralocorticoid activity)</td>
+<td><strong>Dehydration</strong>, hypovolemia, weight loss (loss of aldosterone → can't retain Na+/H2O)</td></tr>
+
+<tr><td class="cat-label">Glucose</td>
+<td class="up"><strong>↑ Hyperglycemia</strong> (cortisol promotes gluconeogenesis) — "steroid diabetes"</td>
+<td class="down"><strong>↓ Hypoglycemia</strong> (loss of cortisol impairs gluconeogenesis)</td></tr>
+
+<tr><td class="cat-label">Immune</td>
+<td><strong>Immunosuppressed</strong> — ↑ infection risk, delayed wound healing, ↑ WBC (false leukocytosis)</td>
+<td>Normal to slightly ↑ immune function</td></tr>
+
+<tr><td class="cat-label">Skin</td>
+<td>Thin, fragile skin; easy bruising; hirsutism (excess hair); acne; purple striae</td>
+<td><strong>Bronze hyperpigmentation</strong>; vitiligo (autoimmune); ↓ body hair (↓ androgens)</td></tr>
+
+<tr><td class="cat-label">Neuro/Psych</td>
+<td>Euphoria → depression, psychosis, insomnia, emotional lability, cognitive impairment</td>
+<td>Fatigue, weakness, depression, irritability, confusion</td></tr>
+
+<tr><td class="cat-label">Bones</td>
+<td><strong>Osteoporosis</strong> — cortisol inhibits osteoblasts, promotes calcium loss</td>
+<td>Generally preserved (no excess cortisol)</td></tr>
+
+<tr><td class="cat-label">GI</td>
+<td>Peptic ulcer risk (↓ mucosal protection), GI bleeding</td>
+<td>Nausea, vomiting, anorexia, abdominal pain, diarrhea</td></tr>
+
+<tr><td class="cat-label">🧪 Cortisol</td>
+<td class="up">↑ ELEVATED (24-hour urine cortisol elevated)</td>
+<td class="down">↓ LOW (AM cortisol depressed)</td></tr>
+
+<tr><td class="cat-label">🧪 ACTH</td>
+<td>Depends on cause:<br>↑ if pituitary/ectopic (ACTH-dependent)<br>↓ if adrenal tumor or exogenous steroids</td>
+<td class="up">↑ ELEVATED (pituitary compensating for failed adrenals)</td></tr>
+
+<tr><td class="cat-label">🧪 Na+</td>
+<td class="up">↑ Hypernatremia (cortisol retains Na+)</td>
+<td class="down">↓ <strong>Hyponatremia</strong> (can't retain Na+ without aldosterone)</td></tr>
+
+<tr><td class="cat-label">🧪 K+</td>
+<td class="down">↓ <strong>Hypokalemia</strong> (cortisol wastes K+)</td>
+<td class="up">↑ <strong>Hyperkalemia</strong> (can't excrete K+ without aldosterone)</td></tr>
+
+<tr><td class="cat-label">🧪 Glucose</td>
+<td class="up">↑ Hyperglycemia</td>
+<td class="down">↓ Hypoglycemia</td></tr>
+
+<tr><td class="cat-label">🧪 Ca++</td>
+<td class="up">↑ Hypercalcemia (bone resorption)</td>
+<td class="normal">Usually normal</td></tr>
+
+<tr><td class="cat-label">Diagnostic Test</td>
+<td><strong>Dexamethasone suppression test</strong> — cortisol does NOT suppress (positive)<br>24-hr urine free cortisol ↑<br>Midnight salivary cortisol ↑</td>
+<td><strong>ACTH stimulation (Cosyntropin) test</strong> — cortisol does NOT rise (positive)<br>AM cortisol &lt;3 is diagnostic</td></tr>
+
+<tr><td class="cat-label">💊 Treatment</td>
+<td>
+<ul>
+<li>Address cause: remove tumor, taper exogenous steroids</li>
+<li><span class="drug">Ketoconazole</span> — suppresses cortisol synthesis</li>
+<li>Surgery: transsphenoidal hypophysectomy (pituitary), adrenalectomy</li>
+<li><strong>Radiation</strong> if surgery not possible</li>
+<li>Will need <strong>lifetime cortisol replacement</strong> after adrenalectomy</li>
+</ul>
+</td>
+<td>
+<ul>
+<li><span class="drug">Hydrocortisone (Cortef)</span> — cortisol replacement (⅔ AM, ⅓ PM)</li>
+<li><span class="drug">Fludrocortisone (Florinef)</span> — aldosterone replacement</li>
+<li><strong>Lifelong therapy — NEVER stop abruptly</strong></li>
+<li>Increase dose 2-3× during stress/illness/surgery</li>
+<li>Medical alert bracelet essential</li>
+</ul>
+</td></tr>
+</tbody></table>
+
+<div class="mnemonic">
+<strong>Cushing's Electrolyte Memory:</strong> Cortisol acts like aldosterone — <strong>retains Na+ &amp; H2O, wastes K+</strong>.<br>
+Think: "Cushing Keeps Sodium, Kicks out Potassium" → ↑Na+, ↓K+, ↑glucose, ↑BP<br><br>
+<strong>Addison's Electrolyte Memory:</strong> Opposite of Cushing's — lost aldosterone means:<br>
+Think: "Addison Adds Potassium, Subtracts Sodium" → ↓Na+, ↑K+, ↓glucose, ↓BP
+</div>
+
+<!-- Addisonian Crisis -->
+<div class="dx-card card-crisis">
+<h3>⚡ Addisonian Crisis (Acute Adrenal Crisis)</h3>
+<div class="tag-row"><span class="tag tag-crisis">🚨 EMERGENCY</span> <span class="tag tag-deficit">CORTISOL DEFICIT</span></div>
+<p><strong>Trigger:</strong> Stress (infection, trauma, surgery) in undiagnosed Addison's OR abrupt withdrawal of exogenous steroids in steroid-dependent patient.</p>
+<h4>Signs — Think "Circulatory Collapse":</h4>
+<ul>
+<li><span class="danger">Profound hypotension / shock</span> — may not respond to vasopressors without cortisol</li>
+<li><span class="danger">Severe hypoglycemia</span></li>
+<li><span class="danger">Hyperkalemia → cardiac arrhythmias</span></li>
+<li>Severe dehydration, N/V, abdominal pain, fever, confusion → coma</li>
+</ul>
+<h4>Emergency Treatment:</h4>
+<ol class="tx-steps">
+<li><span class="drug">IV Hydrocortisone 100mg bolus</span> STAT, then 50-100mg q6-8h</li>
+<li><strong>Aggressive IV NS (0.9% NaCl)</strong> with dextrose (D5NS)</li>
+<li>Treat hyperkalemia (kayexalate, insulin/glucose)</li>
+<li>Identify and treat trigger (antibiotics if infection)</li>
+</ol>
+</div>
+
+<div class="lethal">
+<strong>NEVER abruptly discontinue corticosteroids!</strong> Chronic steroid use suppresses the HPA axis. Abrupt withdrawal can precipitate Addisonian crisis and death. Always TAPER steroids gradually.
+</div>
+
+<hr class="section-divider">
+
+<!-- ====================================================== -->
+<div id="sec-adh" class="section-hdr sh-adh">
+<span><span class="sec-num">3</span> 💧 ADH Disorders — SIADH vs. Diabetes Insipidus</span>
+</div>
+<!-- ====================================================== -->
+
+<div class="vs-banner">
+<span class="vs-cond vs-left">💧 SIADH (Excess ADH)</span>
+<span class="vs-circle">VS</span>
+<span class="vs-cond vs-right">🏜️ Diabetes Insipidus</span>
+</div>
+
+<div class="mnemonic">
+<strong>Memory Aid:</strong><br>
+<em>SIADH</em> = <strong>S</strong>yndrome of <strong>I</strong>nappropriate ADH = TOO MUCH ADH → retains too much water → <strong>dilutional hyponatremia</strong><br>
+<em>DI</em> = <strong>D</strong>iabetes <strong>I</strong>nsipidus = NOT ENOUGH ADH (or kidneys ignore it) → loses too much water → <strong>dehydration &amp; hypernatremia</strong>
+</div>
+
+<table class="compare-table">
+<thead><tr>
+<th>Feature</th>
+<th>💧 SIADH (Excess ADH)</th>
+<th>🏜️ Diabetes Insipidus (Deficient ADH)</th>
+</tr></thead>
+<tbody>
+<tr><td class="cat-label">Pathophysiology</td>
+<td>Excessive ADH secretion → kidneys retain water → dilutional hyponatremia. Causes: lung cancer (SCLC #1), brain injury, pneumonia, meds (SSRIs, carbamazepine, cyclophosphamide).</td>
+<td><strong>Central DI:</strong> pituitary doesn't produce ADH (head trauma, surgery, tumor).<br><strong>Nephrogenic DI:</strong> kidneys resist ADH (lithium #1, hypercalcemia, hypokalemia).</td></tr>
+
+<tr><td class="cat-label">Fluid Balance</td>
+<td><strong>Fluid overload</strong> — water retention, but NO edema (dilutional). Weight gain. Concentrated urine, dilute serum.</td>
+<td><strong>Severe dehydration</strong> — massive water loss. Weight loss. Dilute urine, concentrated serum.</td></tr>
+
+<tr><td class="cat-label">Urine Output</td>
+<td class="down"><strong>↓ Decreased &amp; CONCENTRATED</strong><br>Urine specific gravity &gt;1.030<br>Urine osmolality &gt;100</td>
+<td class="up"><strong>↑ Massive polyuria (4-20 L/day!) &amp; DILUTE</strong><br>Urine specific gravity &lt;1.005<br>Urine osmolality &lt;200</td></tr>
+
+<tr><td class="cat-label">Thirst</td>
+<td>Normal or ↓ (dilute serum suppresses thirst)</td>
+<td><strong>Extreme polydipsia</strong> (raging thirst)</td></tr>
+
+<tr><td class="cat-label">🧪 Serum Na+</td>
+<td class="down"><strong>↓ HYPONATREMIA (&lt;135)</strong> — the hallmark. Dilutional.</td>
+<td class="up"><strong>↑ HYPERNATREMIA (&gt;145)</strong> — water loss concentrates sodium</td></tr>
+
+<tr><td class="cat-label">🧪 Serum Osm</td>
+<td class="down">↓ LOW (&lt;280) — dilute serum</td>
+<td class="up">↑ HIGH (&gt;300) — concentrated serum</td></tr>
+
+<tr><td class="cat-label">🧪 Urine Osm</td>
+<td class="up">↑ HIGH — kidneys concentrate urine</td>
+<td class="down">↓ LOW — kidneys can't concentrate</td></tr>
+
+<tr><td class="cat-label">🧪 Urine Sp Gr</td>
+<td class="up">↑ HIGH (&gt;1.030)</td>
+<td class="down">↓ LOW (&lt;1.005)</td></tr>
+
+<tr><td class="cat-label">Neuro Symptoms</td>
+<td>Confusion, HA, lethargy, N/V, <span class="danger">seizures</span> (if Na+ &lt;120) → coma. All from brain cell swelling (cerebral edema).</td>
+<td>Weakness, fatigue, confusion (from dehydration). Less neuro risk unless Na+ rises rapidly.</td></tr>
+
+<tr><td class="cat-label">💊 Treatment</td>
+<td>
+<ol class="tx-steps">
+<li><strong>Fluid restriction</strong> (500-1000 mL/day) — #1 intervention</li>
+<li><span class="drug">Demeclocycline</span> — blocks ADH action on kidneys</li>
+<li><span class="drug">Conivaptan / Tolvaptan</span> — ADH receptor antagonists</li>
+<li><span class="drug">Hypertonic saline (3% NaCl)</span> — ONLY if symptomatic seizures. Raise Na+ no faster than <strong>8-12 mEq/L per 24 hours</strong></li>
+<li>Treat underlying cause</li>
+</ol>
+</td>
+<td>
+<strong>Central DI:</strong> <span class="drug">Desmopressin (DDAVP)</span> — synthetic ADH replacement (intranasal, IV, or PO)<br><br>
+<strong>Nephrogenic DI:</strong><br>
+<ul>
+<li><span class="drug">Thiazide diuretics (HCTZ)</span> — paradoxically ↓ urine output</li>
+<li>Low-sodium diet</li>
+<li>Remove offending drug (lithium)</li>
+</ul>
+<br><strong>Both types:</strong> Adequate fluid replacement, strict I&amp;O, daily weights
+</td></tr>
+</tbody></table>
+
+<div class="nclex-tip">
+<strong>NCLEX Key — SIADH:</strong> Think "Swimming In ADH" — too much water retained. Key danger is <strong>hyponatremia → seizures</strong>. Correct Na+ SLOWLY — rapid correction causes <strong>osmotic demyelination syndrome</strong> (central pontine myelinolysis) which is devastating and irreversible.
+</div>
+
+<div class="nclex-tip">
+<strong>NCLEX Key — DI:</strong> Think "Dry &amp; Insatiably thirsty." Monitor for dehydration, weight loss, tachycardia, poor skin turgor. <strong>Water deprivation test</strong> is diagnostic: if urine stays dilute after fluid restriction → DI confirmed. If DDAVP corrects it → Central DI. If not → Nephrogenic DI.
+</div>
+
+<hr class="section-divider">
+
+<!-- ====================================================== -->
+<div id="sec-pth" class="section-hdr sh-pth">
+<span><span class="sec-num">4</span> 🦴 Parathyroid Disorders</span>
+</div>
+<!-- ====================================================== -->
+
+<div class="vs-banner">
+<span class="vs-cond vs-left">☀️ Hyperparathyroidism</span>
+<span class="vs-circle">VS</span>
+<span class="vs-cond vs-right">❄️ Hypoparathyroidism</span>
+</div>
+
+<div class="mnemonic">
+<strong>Memory Aid — PTH raises calcium:</strong><br>
+<em>Hyper</em>parathyroidism = TOO MUCH PTH → <strong>↑ Ca++</strong> (bones release calcium → "bones, stones, groans, moans")<br>
+<em>Hypo</em>parathyroidism = NOT ENOUGH PTH → <strong>↓ Ca++</strong> (tetany, spasms, seizures → "CATS go numb")
+</div>
+
+<table class="compare-table">
+<thead><tr>
+<th>Feature</th>
+<th>☀️ Hyperparathyroidism</th>
+<th>❄️ Hypoparathyroidism</th>
+</tr></thead>
+<tbody>
+<tr><td class="cat-label">Pathophysiology</td>
+<td>Excess PTH → pulls Ca++ from bones, ↑ renal Ca++ reabsorption, ↑ intestinal Ca++ absorption. Usually parathyroid adenoma.</td>
+<td>Insufficient PTH → Ca++ stays in bones, ↑ renal Ca++ excretion, ↓ absorption. Usually post-thyroidectomy (#1 cause).</td></tr>
+
+<tr><td class="cat-label">🧪 Calcium</td>
+<td class="up"><strong>↑ Hypercalcemia</strong></td>
+<td class="down"><strong>↓ Hypocalcemia</strong></td></tr>
+
+<tr><td class="cat-label">🧪 Phosphorus</td>
+<td class="down">↓ Hypophosphatemia (inverse relationship)</td>
+<td class="up">↑ Hyperphosphatemia (inverse relationship)</td></tr>
+
+<tr><td class="cat-label">🧪 PTH</td>
+<td class="up">↑ Elevated</td>
+<td class="down">↓ Low or absent</td></tr>
+
+<tr><td class="cat-label">Mnemonic</td>
+<td><strong>"Bones, Stones, Groans, Moans"</strong><br>
+Bones: fractures, bone pain, osteoporosis<br>
+Stones: kidney stones (Ca++ deposits)<br>
+Groans: abdominal pain, constipation, N/V, pancreatitis<br>
+Moans: fatigue, depression, confusion, psychosis</td>
+<td><strong>"CATS go numb"</strong><br>
+<strong>C</strong>onvulsions (seizures)<br>
+<strong>A</strong>rrhythmias (prolonged QT)<br>
+<strong>T</strong>etany (Trousseau's &amp; Chvostek's signs)<br>
+<strong>S</strong>pasms &amp; Stridor (laryngospasm)</td></tr>
+
+<tr><td class="cat-label">Cardiac</td>
+<td>Shortened QT, bradycardia, heart block, cardiac arrest at extreme levels</td>
+<td><strong>Prolonged QT</strong>, ventricular arrhythmias, cardiac arrest</td></tr>
+
+<tr><td class="cat-label">Neuromuscular</td>
+<td><strong>Muscle weakness</strong>, fatigue, decreased DTRs, hypotonia</td>
+<td><strong>Tetany</strong>, muscle spasms, hyperreflexia, <strong>Trousseau's sign</strong> (carpal spasm with BP cuff), <strong>Chvostek's sign</strong> (facial twitch on tap)</td></tr>
+
+<tr><td class="cat-label">Renal</td>
+<td><strong>Kidney stones</strong>, polyuria, polydipsia, nephrocalcinosis</td>
+<td>Decreased urine calcium</td></tr>
+
+<tr><td class="cat-label">💊 Treatment</td>
+<td>
+<strong>Acute hypercalcemia:</strong>
+<ol class="tx-steps">
+<li><span class="drug">IV NS (aggressive hydration)</span></li>
+<li><span class="drug">Furosemide (Lasix)</span> — promotes Ca++ excretion</li>
+<li><span class="drug">Calcitonin</span> — rapid Ca++ lowering</li>
+<li><span class="drug">Bisphosphonates</span> — inhibit bone resorption</li>
+</ol>
+<strong>Definitive:</strong> Parathyroidectomy
+</td>
+<td>
+<strong>Acute hypocalcemia:</strong><br>
+• <span class="drug">IV Calcium gluconate</span> (slow IV push with cardiac monitoring!)<br>
+• Seizure precautions, airway management<br>
+<strong>Chronic:</strong><br>
+• <span class="drug">Oral calcium + Vitamin D (Calcitriol)</span><br>
+• <strong>Lifelong supplementation</strong>
+</td></tr>
+</tbody></table>
+
+<div class="nclex-tip">
+<strong>NCLEX Key — Post-Thyroidectomy:</strong> Monitor for <strong>accidental parathyroid removal</strong>. Check Ca++ levels q4-6h. Keep <span class="drug">IV calcium gluconate</span> at bedside! Watch for tingling, numbness, Trousseau's, Chvostek's signs — these indicate hypocalcemia. Also watch for <strong>laryngeal nerve damage</strong> (hoarseness) and <strong>hemorrhage</strong> (check behind neck, sensation of tightness).
+</div>
+
+<hr class="section-divider">
+
+<!-- ====================================================== -->
+<div id="sec-pheo" class="section-hdr sh-pheo">
+<span><span class="sec-num">5</span> ⚡ Pheochromocytoma</span>
+</div>
+<!-- ====================================================== -->
+
+<div class="dx-card card-excess">
+<h3>⚡ Pheochromocytoma</h3>
+<div class="tag-row"><span class="tag tag-excess">CATECHOLAMINE EXCESS</span> <span class="tag tag-crisis">HYPERTENSIVE CRISIS RISK</span></div>
+<p><strong>Pathophysiology:</strong> Rare catecholamine-secreting tumor of the <strong>adrenal medulla</strong> (90%) or extra-adrenal paraganglia. Produces massive amounts of <strong>epinephrine and norepinephrine</strong> → severe, paroxysmal hypertension.</p>
+
+<h4>The "5 Ps" of Pheochromocytoma:</h4>
+<ul>
+<li><strong>P</strong>ressure (severe hypertension — intermittent or sustained, BP &gt;200 systolic)</li>
+<li><strong>P</strong>ain (severe headache — pounding)</li>
+<li><strong>P</strong>erspiration (profuse diaphoresis)</li>
+<li><strong>P</strong>alpitations (tachycardia, arrhythmias)</li>
+<li><strong>P</strong>allor (vasoconstriction → pale face)</li>
+</ul>
+
+<h4>Labs:</h4>
+<ul>
+<li><strong>24-hour urine metanephrines &amp; VMA</strong> — ↑ ELEVATED (gold standard)</li>
+<li><strong>Plasma free metanephrines</strong> — ↑ ELEVATED (screening test)</li>
+<li>↑ Glucose (catecholamines promote glycogenolysis)</li>
+</ul>
+
+<h4>Treatment:</h4>
+<ol class="tx-steps">
+<li><span class="drug">Phenoxybenzamine (Dibenzyline)</span> — alpha-blocker (given FIRST, 10-14 days pre-op)</li>
+<li><span class="drug">Propranolol</span> — beta-blocker (given AFTER alpha-blockade established)</li>
+<li><strong>Surgical removal (adrenalectomy)</strong> — definitive cure</li>
+</ol>
+</div>
+
+<div class="lethal">
+<strong>CRITICAL: NEVER give beta-blockers BEFORE alpha-blockers in pheochromocytoma!</strong> Beta-blockade alone → unopposed alpha stimulation → severe hypertensive crisis → stroke/death. Always <strong>alpha-block FIRST</strong>, then add beta-blocker.
+</div>
+
+<div class="nclex-tip">
+<strong>NCLEX Key:</strong> Avoid triggers: abdominal palpation, Valsalva maneuver, heavy lifting, emotional stress, tyramine-rich foods. <strong>Never palpate the abdomen</strong> of a suspected pheochromocytoma patient — can trigger lethal hypertensive crisis.
+</div>
+
+<hr class="section-divider">
+
+<!-- ====================================================== -->
+<div id="sec-ref" class="section-hdr sh-ref">
+<span><span class="sec-num">6</span> 📊 Quick-Reference Comparison Tables</span>
+</div>
+<!-- ====================================================== -->
+
+<h3>Electrolyte &amp; Hormone Summary — All Disorders at a Glance</h3>
+
+<table class="compare-table">
+<thead><tr>
+<th>Disorder</th>
+<th>Na+</th>
+<th>K+</th>
+<th>Ca++</th>
+<th>Glucose</th>
+<th>Key Hormone</th>
+</tr></thead>
+<tbody>
+<tr><td class="cat-label">Hyperthyroidism</td><td>Normal</td><td>Normal</td><td class="up">↑</td><td class="up">↑</td><td>T3/T4 <span class="up">↑</span>, TSH <span class="down">↓</span></td></tr>
+<tr><td class="cat-label">Hypothyroidism</td><td class="down">↓</td><td>Normal</td><td>Normal</td><td class="down">↓</td><td>T3/T4 <span class="down">↓</span>, TSH <span class="up">↑</span></td></tr>
+<tr><td class="cat-label">Cushing's</td><td class="up">↑</td><td class="down">↓</td><td class="up">↑</td><td class="up">↑</td><td>Cortisol <span class="up">↑</span></td></tr>
+<tr><td class="cat-label">Addison's</td><td class="down">↓</td><td class="up">↑</td><td>Normal</td><td class="down">↓</td><td>Cortisol <span class="down">↓</span>, ACTH <span class="up">↑</span></td></tr>
+<tr><td class="cat-label">SIADH</td><td class="down"><strong>↓↓</strong></td><td>Normal</td><td>Normal</td><td>Normal</td><td>ADH <span class="up">↑</span></td></tr>
+<tr><td class="cat-label">DI</td><td class="up"><strong>↑↑</strong></td><td>Normal</td><td>Normal</td><td>Normal</td><td>ADH <span class="down">↓</span> (Central)</td></tr>
+<tr><td class="cat-label">Hyperparathyroid</td><td>Normal</td><td>Normal</td><td class="up"><strong>↑↑</strong></td><td>Normal</td><td>PTH <span class="up">↑</span></td></tr>
+<tr><td class="cat-label">Hypoparathyroid</td><td>Normal</td><td>Normal</td><td class="down"><strong>↓↓</strong></td><td>Normal</td><td>PTH <span class="down">↓</span></td></tr>
+<tr><td class="cat-label">Pheo</td><td>Normal</td><td>Normal</td><td>Normal</td><td class="up">↑</td><td>Catecholamines <span class="up">↑↑↑</span></td></tr>
+</tbody></table>
+
+<h3>Diagnostic Tests — Quick Reference</h3>
+
+<table class="compare-table">
+<thead><tr>
+<th>Disorder</th>
+<th>Primary Diagnostic Test</th>
+<th>Key Result</th>
+</tr></thead>
+<tbody>
+<tr><td class="cat-label">Grave's</td><td>TSI antibodies + RAIU scan</td><td>TSI positive; diffuse ↑ uptake</td></tr>
+<tr><td class="cat-label">Hashimoto's</td><td>Anti-TPO antibodies</td><td>Positive; TSH ↑, T4 ↓</td></tr>
+<tr><td class="cat-label">Cushing's</td><td>Dexamethasone suppression test</td><td>Cortisol does NOT suppress</td></tr>
+<tr><td class="cat-label">Addison's</td><td>ACTH stimulation (Cosyntropin) test</td><td>Cortisol does NOT rise</td></tr>
+<tr><td class="cat-label">SIADH</td><td>Serum Na+ &amp; osmolality + urine osmolality</td><td>Serum Na+ ↓, serum osm ↓, urine osm ↑</td></tr>
+<tr><td class="cat-label">DI</td><td>Water deprivation test + DDAVP trial</td><td>Urine stays dilute; DDAVP corrects Central, not Nephrogenic</td></tr>
+<tr><td class="cat-label">Hyperparathyroid</td><td>Serum Ca++ &amp; PTH levels</td><td>Ca++ ↑, PTH ↑, PO4 ↓</td></tr>
+<tr><td class="cat-label">Pheo</td><td>24-hour urine metanephrines/VMA</td><td>Markedly elevated</td></tr>
+</tbody></table>
+
+<h3>Treatment Summary — Quick Reference</h3>
+
+<table class="compare-table">
+<thead><tr>
+<th>Disorder</th>
+<th>First-Line Treatment</th>
+<th>Critical Nursing Consideration</th>
+</tr></thead>
+<tbody>
+<tr><td class="cat-label">Hyperthyroidism</td><td><span class="drug">Methimazole</span> or <span class="drug">PTU</span> + <span class="drug">Beta-blockers</span></td><td>Monitor for agranulocytosis (sore throat, fever → hold med, get CBC)</td></tr>
+<tr><td class="cat-label">Hypothyroidism</td><td><span class="drug">Levothyroxine</span></td><td>Empty stomach AM; report chest pain, palpitations (overreplacement)</td></tr>
+<tr><td class="cat-label">Thyroid Storm</td><td><span class="drug">PTU → SSKI → Propranolol → Hydrocortisone</span></td><td>NO aspirin; cooling blankets; ICU monitoring</td></tr>
+<tr><td class="cat-label">Myxedema Coma</td><td><span class="drug">IV Levothyroxine + IV Hydrocortisone</span></td><td>Passive rewarming ONLY; slow hormone replacement</td></tr>
+<tr><td class="cat-label">Cushing's</td><td>Address cause; <span class="drug">Ketoconazole</span>; surgery</td><td>Protect from infection; prevent falls (osteoporosis)</td></tr>
+<tr><td class="cat-label">Addison's</td><td><span class="drug">Hydrocortisone + Fludrocortisone</span></td><td>NEVER stop abruptly; double dose in illness; medical alert bracelet</td></tr>
+<tr><td class="cat-label">Addisonian Crisis</td><td><span class="drug">IV Hydrocortisone 100mg</span> + <strong>IV NS with D5</strong></td><td>Circulatory collapse; treat hyperkalemia; find trigger</td></tr>
+<tr><td class="cat-label">SIADH</td><td><strong>Fluid restriction</strong>; <span class="drug">Demeclocycline</span></td><td>Raise Na+ no faster than 8-12 mEq/24h (risk osmotic demyelination)</td></tr>
+<tr><td class="cat-label">DI</td><td><span class="drug">DDAVP</span> (Central); <span class="drug">Thiazides</span> (Nephrogenic)</td><td>Strict I&amp;O; daily weights; prevent dehydration</td></tr>
+<tr><td class="cat-label">Hyperparathyroid</td><td>Hydration + <span class="drug">Lasix</span> + <span class="drug">Calcitonin</span>; parathyroidectomy</td><td>Strain urine for stones; encourage fluids; fall precautions</td></tr>
+<tr><td class="cat-label">Hypoparathyroid</td><td><span class="drug">IV Ca++ gluconate</span> (acute); <span class="drug">Oral Ca++ + Calcitriol</span> (chronic)</td><td>Keep IV Ca++ at bedside post-thyroidectomy; seizure precautions</td></tr>
+<tr><td class="cat-label">Pheo</td><td><span class="drug">Phenoxybenzamine</span> → then <span class="drug">Beta-blocker</span> → adrenalectomy</td><td>Alpha BEFORE beta; NEVER palpate abdomen; avoid triggers</td></tr>
+</tbody></table>
+
+<hr class="section-divider">
+
+<!-- ====================================================== -->
+<div id="sec-mem" class="section-hdr sh-mem">
+<span><span class="sec-num">7</span> 🧠 High-Yield NCLEX Memory Anchors</span>
+</div>
+<!-- ====================================================== -->
+
+<div class="qref">
+<div class="qref-box">
+<h4>🔥 "Hot T" → Hyperthyroidism</h4>
+<ul>
+<li>Hot, sweaty, tachycardic</li>
+<li>Tremors, thin (weight loss)</li>
+<li>TSH is Tiny (low)</li>
+<li>T3/T4 are Towering (high)</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>🧊 "Cold T" → Hypothyroidism</h4>
+<ul>
+<li>Cold, constipated, chunky (weight gain)</li>
+<li>Tired, thick skin, thinning hair</li>
+<li>TSH is Tremendous (high)</li>
+<li>T3/T4 are Tiny (low)</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>🌕 "Cushy Cushing's"</h4>
+<ul>
+<li>Cushy = round (moon face, buffalo hump)</li>
+<li>Sugar UP (hyperglycemia)</li>
+<li>Sodium UP, Potassium DOWN</li>
+<li>BP UP, immune DOWN</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>🌑 "Add-it-on Addison's"</h4>
+<ul>
+<li>Needs to "add" cortisol back</li>
+<li>Sugar DOWN (hypoglycemia)</li>
+<li>Sodium DOWN, Potassium UP</li>
+<li>BP DOWN, skin DARK (bronze)</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>💧 "Swimming in ADH" → SIADH</h4>
+<ul>
+<li>Retains water → dilutes sodium</li>
+<li>Low Na+, low serum osmolality</li>
+<li>Concentrated urine, ↓ output</li>
+<li>Treatment: RESTRICT fluids</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>🏜️ "Dry &amp; Insipid" → DI</h4>
+<ul>
+<li>Loses water → concentrates sodium</li>
+<li>High Na+, high serum osmolality</li>
+<li>Dilute urine, MASSIVE output</li>
+<li>Treatment: REPLACE fluids + DDAVP</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>🦴 "Bones Stones Groans Moans"</h4>
+<ul>
+<li>HYPERparathyroid = HYPERcalcemia</li>
+<li>Bones break, stones form, belly groans, patient moans</li>
+<li>PTH ↑, Ca++ ↑, PO4 ↓</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>😾 "CATS go numb"</h4>
+<ul>
+<li>HYPOparathyroid = HYPOcalcemia</li>
+<li>Convulsions, Arrhythmias, Tetany, Spasms</li>
+<li>Trousseau's &amp; Chvostek's signs positive</li>
+<li>PTH ↓, Ca++ ↓, PO4 ↑</li>
+</ul>
+</div>
+</div>
+
+<div class="nclex-tip" style="margin-top:1.25rem">
+<strong>Final NCLEX Tip:</strong> When comparing any two endocrine disorders, start with the hormone — is it <strong>excess or deficit?</strong> Then think through the downstream effects on metabolism, electrolytes, vitals, and target organs. Endocrine disorders almost always come in <strong>opposite pairs</strong>: hyper/hypo, excess/deficit. Master one, and you automatically know the other by reversing everything.
+</div>
+
+</div><!-- end guide-container -->
+</body>
+</html>
