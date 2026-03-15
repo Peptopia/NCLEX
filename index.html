@@ -2182,7 +2182,7 @@ window.launchEndoCompareQuiz = function() {
 initQuizUI('Endo Comparisons Quiz', 'endocompare');
 };
 window.openEndoGuide = function() {
-openGuideHtml('Guides/Endocrine-Comparisons.html');
+openGuideHtml('mnt_Endocrine-Comparisons.html');
 };
 window.launchSection = function(key) {
 if (key === 'fullexam') { showFullExam(); return; }
@@ -2481,7 +2481,7 @@ categories: [
 { name: 'Crib Notes', icon: '\uD83D\uDCDD', items: [
 { title: 'Quizlet - 2000 Questions', file: 'Klimek Quizlet - 2000 Questions.pdf', emoji: '\u2753' },
 { title: 'Study Plan', file: 'Study Plan.pdf', emoji: '\uD83D\uDDD3\uFE0F' },
-{ title: 'Endo Comparisons', file: 'Guides/Endocrine-Comparisons.html', emoji: '\u2697\uFE0F', isHtml: true }
+{ title: 'Endo Comparisons', file: 'mnt_Endocrine-Comparisons.html', emoji: '\u2697\uFE0F', isHtml: true }
 ]},
 { name: 'Quick Reference', icon: '\uD83D\uDCCC', items: [
 { title: 'Eponymns', file: 'Eponymns.pdf', emoji: '\uD83C\uDFF7\uFE0F' },
@@ -2690,7 +2690,7 @@ el.classList.add('active');
 }
 var url = GH_PAGES + file;
 var titleMatch = file.match(/([^/]+)\.html$/);
-var guideTitle = titleMatch ? titleMatch[1].replace(/-/g, ' ') : 'Guide';
+var guideTitle = titleMatch ? titleMatch[1].replace(/^mnt_/, '').replace(/-/g, ' ') : 'Guide';
 var lectureView = document.getElementById('lecture-view');
 var iframe = document.getElementById('lecture-iframe');
 iframe.src = url;
