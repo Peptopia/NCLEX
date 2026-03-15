@@ -1,0 +1,1102 @@
+[
+  {
+    "q": "A nurse is assessing a patient admitted with acute dehydration. Which finding is MOST consistent with fluid volume deficit?",
+    "options": [
+      "Poor skin turgor, <span class=\"hl-lyte\">HR 118</span>, and <span class=\"hl-lyte\">BP 86/54</span>",
+      "Weight gain of <span class=\"hl-lyte\">3 kg</span> over 24 hours",
+      "Bounding pulse with <span class=\"hl-lyte\">BP 168/92</span>",
+      "Crackles auscultated in bilateral lung bases"
+    ],
+    "correct": 0,
+    "rationale": "Poor skin turgor, tachycardia (<span class=\"hl-lyte\">HR 118</span>), and hypotension (<span class=\"hl-lyte\">BP 86/54</span>) are classic signs of fluid volume deficit (FVD). The body compensates for low volume with increased heart rate. Bounding pulse, weight gain, and crackles are signs of fluid volume excess."
+  },
+  {
+    "q": "A patient with heart failure gains <span class=\"hl-lyte\">2 kg</span> overnight. How much fluid has the patient retained?",
+    "options": [
+      "<span class=\"hl-lyte\">2,000 mL</span>",
+      "<span class=\"hl-lyte\">1,000 mL</span>",
+      "<span class=\"hl-lyte\">500 mL</span>",
+      "<span class=\"hl-lyte\">3,000 mL</span>"
+    ],
+    "correct": 0,
+    "rationale": "1 liter of fluid equals approximately 1 kg (2.2 lbs). A gain of <span class=\"hl-lyte\">2 kg</span> = approximately <span class=\"hl-lyte\">2,000 mL</span> (2 liters) of fluid retained. Daily weights are the most accurate measure of fluid status \u2014 weigh at the same time, same scale, same clothing."
+  },
+  {
+    "q": "Which assessment finding is the MOST accurate indicator of a patient's fluid balance status?",
+    "options": [
+      "24-hour intake and output records",
+      "Skin turgor assessment",
+      "Serum sodium level",
+      "Daily weights taken at the same time"
+    ],
+    "correct": 3,
+    "rationale": "Daily weights are the MOST accurate measure of fluid status. I&O records are prone to inaccuracies (insensible losses, incomplete documentation). Sodium levels reflect concentration, not necessarily volume. Skin turgor is subjective and affected by age. Weight is objective and measurable."
+  },
+  {
+    "q": "A nurse is caring for a patient with fluid volume excess. Which intervention is MOST appropriate?",
+    "options": [
+      "Administer <span class=\"hl-drug\">furosemide</span> as ordered and monitor <span class=\"hl-lyte\">potassium</span> levels",
+      "Increase IV fluid rate to flush excess sodium",
+      "Encourage additional oral fluid intake",
+      "Place the patient flat in bed"
+    ],
+    "correct": 0,
+    "rationale": "For fluid volume excess, <span class=\"hl-drug\">furosemide</span> (loop diuretic) promotes fluid excretion. Since loop diuretics deplete potassium, monitoring <span class=\"hl-lyte\">K+</span> is essential. Increasing fluids would worsen overload. Oral fluid intake should be restricted. Elevate HOB (not flat) to ease breathing."
+  },
+  {
+    "q": "A patient with severe burns develops third-spacing. The nurse understands that which finding is characteristic of this condition?",
+    "options": [
+      "The patient's intravascular volume is increased",
+      "The patient has decreased total body water",
+      "The patient is edematous but hypotensive",
+      "The patient has increased urine output"
+    ],
+    "correct": 2,
+    "rationale": "Third-spacing is the paradox: fluid shifts from intravascular space into interstitial tissues, causing edema (total body fluid UP) while intravascular volume is DEPLETED (hypotension, tachycardia). The patient appears swollen but is actually volume depleted where it counts \u2014 inside the vessels."
+  },
+  {
+    "q": "A nurse is monitoring a post-surgical patient during the reabsorption phase (48-72 hours after injury). Which complication should the nurse anticipate?",
+    "options": [
+      "Fluid volume excess as third-spaced fluid returns to the vasculature",
+      "Dehydration and hypovolemic shock",
+      "Metabolic acidosis from lactic acid accumulation",
+      "Hyperkalemia from cellular breakdown"
+    ],
+    "correct": 0,
+    "rationale": "During the reabsorption phase (24-72 hours post-injury), fluid that shifted into interstitial spaces returns to the intravascular compartment. This can cause fluid volume excess, pulmonary edema, and heart failure. The nurse should monitor for crackles, JVD, elevated BP, and respiratory distress."
+  },
+  {
+    "q": "A patient has a serum osmolality of <span class=\"hl-lyte\">310 mOsm/kg</span>. The nurse interprets this as:",
+    "options": [
+      "Normal \u2014 within the range of <span class=\"hl-lyte\">275-295 mOsm/kg</span>",
+      "Hypo-osmolar \u2014 indicating fluid overload",
+      "Hyperosmolar \u2014 indicating dehydration or solute excess",
+      "Unreliable \u2014 osmolality cannot be measured from blood"
+    ],
+    "correct": 2,
+    "rationale": "Normal serum osmolality is <span class=\"hl-lyte\">275-295 mOsm/kg</span>. A value of <span class=\"hl-lyte\">310</span> is elevated (hyperosmolar), indicating either dehydration (concentrated blood) or excess solute (hyperglycemia, hypernatremia). ADH should be released in response to retain water and dilute the serum."
+  },
+  {
+    "q": "A nurse is educating a patient about the role of aldosterone. Which statement demonstrates correct understanding?",
+    "options": [
+      "'Aldosterone causes the kidneys to excrete sodium and retain potassium'",
+      "'Aldosterone is released when blood pressure is too high'",
+      "'Aldosterone stimulates the posterior pituitary to release ADH'",
+      "'Aldosterone causes the kidneys to retain sodium, and water follows \u2014 increasing blood volume'"
+    ],
+    "correct": 3,
+    "rationale": "Aldosterone (from adrenal cortex) promotes sodium retention in the kidneys, and water follows sodium, increasing intravascular volume and blood pressure. It also promotes potassium excretion. It is released via the RAAS system when blood pressure or volume is LOW."
+  },
+  {
+    "q": "A patient with FVD has <span class=\"hl-lyte\">urine specific gravity 1.038</span>. The nurse understands this indicates:",
+    "options": [
+      "Dilute urine suggesting fluid overload",
+      "Normal urine concentration (<span class=\"hl-lyte\">1.005-1.030</span>)",
+      "Concentrated urine consistent with dehydration",
+      "A laboratory error requiring repeat testing"
+    ],
+    "correct": 2,
+    "rationale": "Normal urine specific gravity is <span class=\"hl-lyte\">1.005-1.030</span>. A value of <span class=\"hl-lyte\">1.038</span> indicates highly concentrated urine \u2014 the kidneys are retaining water to compensate for low intravascular volume. This is consistent with dehydration/FVD. In FVE, urine would be dilute (low specific gravity)."
+  },
+  {
+    "q": "A patient admitted with heart failure has crackles bilaterally, JVD, and peripheral edema. Which nursing intervention takes PRIORITY?",
+    "options": [
+      "Weigh the patient and compare to previous weight",
+      "Restrict fluids to 1500 mL per day",
+      "Apply compression stockings to reduce edema",
+      "Elevate the head of bed to at least 30 degrees"
+    ],
+    "correct": 3,
+    "rationale": "The priority with crackles and dyspnea is AIRWAY and BREATHING \u2014 elevate HOB to facilitate lung expansion and reduce dyspnea. This is an ABC priority. Weighing, compression stockings, and fluid restriction are all appropriate but not the FIRST action when the patient has respiratory symptoms."
+  },
+  {
+    "q": "Which patient is at GREATEST risk for developing fluid volume deficit?",
+    "options": [
+      "A patient receiving IV normal saline at 125 mL/hr",
+      "A patient with chronic kidney disease and anuria",
+      "A patient with persistent vomiting and diarrhea for 3 days who is unable to take PO",
+      "A patient with heart failure on a sodium-restricted diet"
+    ],
+    "correct": 2,
+    "rationale": "Persistent vomiting and diarrhea for 3 days with no oral intake leads to severe fluid and electrolyte losses without replacement \u2014 high risk for FVD. The NS patient is receiving fluids, the CKD patient retains fluid, and the HF patient's sodium restriction doesn't cause volume loss."
+  },
+  {
+    "q": "A nurse is assessing orthostatic vital signs. Which finding indicates orthostatic hypotension?",
+    "options": [
+      "Supine <span class=\"hl-lyte\">BP 130/80</span> \u2192 Standing <span class=\"hl-lyte\">BP 128/78</span>",
+      "Supine <span class=\"hl-lyte\">BP 128/82</span> \u2192 Standing <span class=\"hl-lyte\">BP 104/62</span> with dizziness",
+      "Supine <span class=\"hl-lyte\">HR 72</span> \u2192 Standing <span class=\"hl-lyte\">HR 76</span>",
+      "Supine <span class=\"hl-lyte\">BP 140/90</span> \u2192 Standing <span class=\"hl-lyte\">BP 136/88</span>"
+    ],
+    "correct": 1,
+    "rationale": "Orthostatic hypotension is defined as a drop of \u2265<span class=\"hl-lyte\">20 mmHg systolic</span> or \u2265<span class=\"hl-lyte\">10 mmHg diastolic</span> upon standing, often with symptoms (dizziness, lightheadedness). The drop from <span class=\"hl-lyte\">128/82</span> to <span class=\"hl-lyte\">104/62</span> (24 mmHg systolic, 20 mmHg diastolic) with dizziness is significant and suggests hypovolemia."
+  },
+  {
+    "q": "A nurse is caring for a patient receiving a blood transfusion. Which IV solution should be used to prime the tubing?",
+    "options": [
+      "Lactated Ringer's (LR)",
+      "0.9% Normal Saline (NS)",
+      "D5W (5% Dextrose in Water)",
+      "0.45% Normal Saline (\u00bd NS)"
+    ],
+    "correct": 1,
+    "rationale": "ONLY 0.9% Normal Saline is compatible with blood products. LR contains calcium, which can cause clotting of blood products. Dextrose solutions cause hemolysis of red blood cells. Hypotonic solutions are also incompatible. NS is the universal blood transfusion companion."
+  },
+  {
+    "q": "A nurse is monitoring intake and output. Which items should be counted as fluid INTAKE? (Select the BEST answer)",
+    "options": [
+      "IV fluids, oral liquids, tube feedings, and IV medications",
+      "Only IV fluids and blood products",
+      "Only measurable oral fluids like water and juice",
+      "Oral fluids and IV fluids only"
+    ],
+    "correct": 0,
+    "rationale": "All sources of fluid entering the body must be counted: IV fluids, oral liquids (water, juice, coffee, soup, gelatin, ice chips \u2014 count ice as half volume), tube feedings, IV medication piggybacks, and blood products. Accurate I&O requires tracking ALL fluid sources."
+  },
+  {
+    "q": "A patient has a BUN:creatinine ratio of <span class=\"hl-lyte\">25:1</span>. The nurse interprets this as:",
+    "options": [
+      "Normal \u2014 the expected ratio is <span class=\"hl-lyte\">10-20:1</span>",
+      "Suggestive of intrinsic kidney disease",
+      "A sign of post-renal obstruction",
+      "Indicative of prerenal azotemia (dehydration)"
+    ],
+    "correct": 3,
+    "rationale": "Normal BUN:creatinine ratio is <span class=\"hl-lyte\">10-20:1</span>. A ratio ><span class=\"hl-lyte\">20:1</span> suggests prerenal azotemia \u2014 the kidneys are underperfused (dehydration, hypovolemia, heart failure). BUN rises disproportionately to creatinine because the kidneys reabsorb more urea when blood flow is decreased."
+  },
+  {
+    "q": "A patient's lab results show <span class=\"hl-lyte\">Na+ 128 mEq/L</span>. The nurse should FIRST assess for:",
+    "options": [
+      "Extreme thirst and dry mucous membranes",
+      "Polyuria with dilute urine",
+      "Fever and flushed, dry skin",
+      "Confusion, headache, and muscle weakness"
+    ],
+    "correct": 3,
+    "rationale": "Hyponatremia (<span class=\"hl-lyte\">Na+ 128</span>, normal <span class=\"hl-lyte\">136-145</span>) causes neurological symptoms due to cellular swelling: confusion, headache, lethargy, muscle weakness, and nausea. Thirst, dry skin, and fever are signs of HYPERnatremia. Polyuria with dilute urine is seen in diabetes insipidus."
+  },
+  {
+    "q": "A patient with SIADH has a serum sodium of <span class=\"hl-lyte\">118 mEq/L</span> and is having seizures. Which intervention does the nurse anticipate?",
+    "options": [
+      "Administer hypotonic IV solution (0.45% NaCl)",
+      "Increase oral free water intake",
+      "Administer hypertonic saline (<span class=\"hl-lyte\">3% NaCl</span>) via infusion pump",
+      "Restrict all IV fluids completely"
+    ],
+    "correct": 2,
+    "rationale": "Severe hyponatremia (<span class=\"hl-lyte\">Na+ <120</span>) with seizures is a life-threatening emergency requiring <span class=\"hl-lyte\">3% NaCl</span> (hypertonic saline) to slowly raise sodium. It MUST be given via infusion pump in ICU with hourly Na+ monitoring. Hypotonic solutions and free water would WORSEN the hyponatremia. Correction must not exceed <span class=\"hl-lyte\">8-12 mEq/L</span> in 24 hours."
+  },
+  {
+    "q": "A nurse is caring for a patient with SIADH. Which intervention is MOST appropriate?",
+    "options": [
+      "Fluid restriction, monitor daily weights and I&O",
+      "Encourage increased oral fluid intake",
+      "Administer IV normal saline bolus",
+      "Give <span class=\"hl-drug\">desmopressin</span> (DDAVP)"
+    ],
+    "correct": 0,
+    "rationale": "SIADH causes EXCESS ADH \u2192 water retention \u2192 dilutional hyponatremia. The primary treatment is fluid RESTRICTION (typically <span class=\"hl-lyte\">500-1000 mL/day</span>). Encouraging fluids would worsen it. <span class=\"hl-drug\">Desmopressin</span> is used for DIABETES INSIPIDUS (\u2193 ADH), not SIADH. Monitor weights and I&O to track fluid balance."
+  },
+  {
+    "q": "A nurse is differentiating between SIADH and diabetes insipidus. Which finding is MOST consistent with diabetes insipidus?",
+    "options": [
+      "Urine output of <span class=\"hl-lyte\">8 liters</span> in 24 hours with very dilute urine",
+      "Urine output of <span class=\"hl-lyte\">200 mL</span> in 8 hours with concentrated urine",
+      "Serum sodium <span class=\"hl-lyte\">125 mEq/L</span> with weight gain",
+      "Edema and elevated blood pressure"
+    ],
+    "correct": 0,
+    "rationale": "Diabetes insipidus (\u2193 ADH) = massive water loss \u2192 polyuria (<span class=\"hl-lyte\">4-30 L/day</span>), polydipsia, very dilute urine (\u2193 specific gravity), hypernatremia, weight loss. SIADH is the OPPOSITE: \u2193 urine output, concentrated urine, hyponatremia, weight gain. Remember: DI = Dry (losing water), SIADH = Swelling (retaining water)."
+  },
+  {
+    "q": "A patient with hyponatremia is receiving <span class=\"hl-lyte\">3% NaCl</span>. The serum sodium rises from <span class=\"hl-lyte\">116</span> to <span class=\"hl-lyte\">130 mEq/L</span> in 10 hours. The nurse should:",
+    "options": [
+      "Continue the infusion \u2014 the target is 145 mEq/L",
+      "Increase the infusion rate to reach normal levels faster",
+      "Switch to normal saline to maintain the current level",
+      "STOP the infusion and notify the provider \u2014 correction is too rapid"
+    ],
+    "correct": 3,
+    "rationale": "The sodium rose <span class=\"hl-lyte\">14 mEq/L</span> in 10 hours, which exceeds the maximum safe rate of <span class=\"hl-lyte\">8-12 mEq/L in 24 hours</span>. Rapid correction causes osmotic demyelination syndrome (ODS) \u2014 irreversible pontine damage. STOP the hypertonic saline immediately and notify the provider."
+  },
+  {
+    "q": "A patient with hypernatremia has <span class=\"hl-lyte\">Na+ 162 mEq/L</span>. Which IV fluid does the nurse anticipate?",
+    "options": [
+      "<span class=\"hl-lyte\">3% NaCl</span> (hypertonic saline)",
+      "0.9% NaCl (normal saline)",
+      "Lactated Ringer's solution",
+      "0.45% NaCl (half normal saline) or D5W"
+    ],
+    "correct": 3,
+    "rationale": "Hypernatremia (<span class=\"hl-lyte\">Na+ >145</span>) requires dilution with hypotonic solutions. 0.45% NaCl (\u00bd NS) or D5W (which becomes hypotonic after dextrose metabolism) provides free water to dilute the high sodium. Hypertonic saline would worsen it. NS and LR would not effectively lower sodium."
+  },
+  {
+    "q": "A nurse is correcting hypernatremia in a patient with <span class=\"hl-lyte\">Na+ 158 mEq/L</span>. What is the safe rate of correction?",
+    "options": [
+      "Lower Na+ by <span class=\"hl-lyte\">10-15 mEq/L</span> in the first 2 hours",
+      "Lower Na+ no faster than <span class=\"hl-lyte\">0.5 mEq/L per hour</span>",
+      "Return to normal (<span class=\"hl-lyte\">140 mEq/L</span>) within 6 hours",
+      "There is no rate limitation for hypernatremia correction"
+    ],
+    "correct": 1,
+    "rationale": "Hypernatremia must be corrected slowly \u2014 no faster than <span class=\"hl-lyte\">0.5 mEq/L per hour</span> (or <span class=\"hl-lyte\">10-12 mEq/L in 24 hours</span>). Rapid correction causes cerebral edema as water rushes into brain cells that have adapted to the hyperosmolar state. Slow correction allows brain cells to readjust."
+  },
+  {
+    "q": "A patient with heart failure develops hyponatremia. The nurse understands the MOST likely cause is:",
+    "options": [
+      "Excessive sodium intake in the diet",
+      "Dilutional hyponatremia from excess water retention",
+      "Renal sodium wasting from kidney damage",
+      "Inadequate ADH secretion"
+    ],
+    "correct": 1,
+    "rationale": "Heart failure \u2192 poor cardiac output \u2192 kidneys sense low perfusion \u2192 RAAS activated \u2192 water and sodium retained. But water is retained in excess of sodium, leading to DILUTIONAL hyponatremia. The total body sodium may actually be normal or even elevated, but the excess water dilutes the concentration."
+  },
+  {
+    "q": "Which medication is used to treat SIADH by blocking ADH receptors in the kidneys?",
+    "options": [
+      "<span class=\"hl-drug\">Conivaptan</span> (Vaprisol)",
+      "<span class=\"hl-drug\">Desmopressin</span> (DDAVP)",
+      "<span class=\"hl-drug\">Furosemide</span> (Lasix)",
+      "<span class=\"hl-drug\">Spironolactone</span> (Aldactone)"
+    ],
+    "correct": 0,
+    "rationale": "<span class=\"hl-drug\">Conivaptan</span> and <span class=\"hl-drug\">tolvaptan</span> are vasopressin receptor antagonists ('vaptans') that block ADH at the kidney. They promote free water excretion without sodium loss \u2014 ideal for SIADH. <span class=\"hl-drug\">Desmopressin</span> is synthetic ADH (opposite effect). Diuretics address volume but not the ADH mechanism."
+  },
+  {
+    "q": "A patient with diabetes insipidus is being discharged on desmopressin. Which statement by the patient indicates understanding?",
+    "options": [
+      "'I will restrict my fluid intake to 500 mL per day'",
+      "'This medication will help my body get rid of excess water'",
+      "'I should take this medication to replace the ADH my body isn't making, and monitor for decreased urine output as a sign it's working'",
+      "'I only need this medication when I feel thirsty'"
+    ],
+    "correct": 2,
+    "rationale": "<span class=\"hl-drug\">Desmopressin</span> (DDAVP) is synthetic ADH \u2014 it replaces the missing hormone in diabetes insipidus. The patient should expect DECREASED urine output (the drug promotes water reabsorption). They should NOT restrict fluids excessively. The medication must be taken regularly, not PRN."
+  },
+  {
+    "q": "Which patient is at HIGHEST risk for developing hyponatremia?",
+    "options": [
+      "A patient with diabetes insipidus who forgets to take DDAVP",
+      "A marathon runner who drinks only water (<span class=\"hl-lyte\">6 liters</span>) during a race without electrolyte replacement",
+      "A patient with Cushing syndrome on high-dose corticosteroids",
+      "A patient receiving hypertonic saline for increased ICP"
+    ],
+    "correct": 1,
+    "rationale": "Exercise-associated hyponatremia (water intoxication) occurs when athletes drink excessive free water without electrolyte replacement, diluting serum sodium. Drinking <span class=\"hl-lyte\">6 liters</span> of water can drop Na+ dangerously. DI patients get HYPERnatremia. Cushing's retains Na+. Hypertonic saline raises Na+."
+  },
+  {
+    "q": "A nurse receives a lab result: <span class=\"hl-lyte\">Na+ 119 mEq/L</span>. What is the PRIORITY nursing action?",
+    "options": [
+      "Encourage the patient to increase dietary sodium",
+      "Implement seizure precautions and notify the provider immediately",
+      "Restrict fluids and recheck the level in 24 hours",
+      "Document the finding and continue monitoring"
+    ],
+    "correct": 1,
+    "rationale": "A sodium of <span class=\"hl-lyte\">119 mEq/L</span> is critically low (< <span class=\"hl-lyte\">120</span>), placing the patient at imminent risk for seizures, cerebral edema, and death. IMMEDIATE actions: seizure precautions, notify provider, prepare for possible <span class=\"hl-lyte\">3% NaCl</span> administration in ICU. This is a medical emergency that cannot wait."
+  },
+  {
+    "q": "A patient on <span class=\"hl-drug\">furosemide</span> has a serum potassium of <span class=\"hl-lyte\">3.1 mEq/L</span>. The nurse should FIRST:",
+    "options": [
+      "Encourage the patient to eat a banana",
+      "Place the patient on cardiac monitoring",
+      "Hold the next dose of furosemide and recheck in 24 hours",
+      "Administer IV <span class=\"hl-drug\">potassium chloride</span> by rapid push"
+    ],
+    "correct": 1,
+    "rationale": "With <span class=\"hl-lyte\">K+ 3.1</span> (hypokalemia), the FIRST priority is cardiac monitoring because low K+ causes dangerous dysrhythmias (U waves, flattened T waves, cardiac arrest). Then notify the provider for K+ replacement orders. NEVER push IV potassium \u2014 it's lethal. Diet alone is insufficient for this level."
+  },
+  {
+    "q": "A nurse is preparing to administer <span class=\"hl-drug\">KCl 40 mEq</span> IV. Which action is ESSENTIAL?",
+    "options": [
+      "Administer undiluted via IV push for rapid correction",
+      "Mix with D5W and administer as a bolus",
+      "Infuse as fast as possible to prevent cardiac complications",
+      "Dilute in at least <span class=\"hl-lyte\">100 mL</span> of IV fluid and infuse via pump, never exceeding <span class=\"hl-lyte\">10 mEq/hr</span> peripherally"
+    ],
+    "correct": 3,
+    "rationale": "IV <span class=\"hl-drug\">KCl</span> is a HIGH-ALERT medication. It must ALWAYS be: (1) Diluted (never concentrated), (2) Infused via pump (never gravity), (3) Rate limited: max <span class=\"hl-lyte\">10 mEq/hr</span> peripheral, <span class=\"hl-lyte\">20 mEq/hr</span> central. IV push potassium causes FATAL cardiac arrest. Continuous cardiac monitoring is required during infusion."
+  },
+  {
+    "q": "A patient has a potassium level of <span class=\"hl-lyte\">6.8 mEq/L</span>. Which medication should the nurse administer FIRST?",
+    "options": [
+      "<span class=\"hl-drug\">Sodium polystyrene sulfonate</span> (Kayexalate) orally",
+      "<span class=\"hl-drug\">Calcium gluconate</span> IV",
+      "<span class=\"hl-drug\">Regular insulin</span> with D50W IV",
+      "<span class=\"hl-drug\">Furosemide</span> IV"
+    ],
+    "correct": 1,
+    "rationale": "With critical hyperkalemia (<span class=\"hl-lyte\">K+ 6.8</span>), the FIRST priority is to protect the heart. <span class=\"hl-drug\">Calcium gluconate</span> stabilizes the cardiac membrane (does NOT lower K+). Then shift K+ into cells with <span class=\"hl-drug\">insulin</span> + D50W. Then remove K+ with <span class=\"hl-drug\">Kayexalate</span>, diuretics, or dialysis. Order: Protect \u2192 Shift \u2192 Remove."
+  },
+  {
+    "q": "A nurse reviews an ECG and notes tall, peaked T waves, a widened QRS complex, and absent P waves. Which electrolyte imbalance does this indicate?",
+    "options": [
+      "Hypokalemia",
+      "Hypocalcemia",
+      "Hyperkalemia",
+      "Hypernatremia"
+    ],
+    "correct": 2,
+    "rationale": "Tall peaked T waves, widened QRS, and absent P waves are the classic ECG progression of hyperkalemia. As K+ rises: (1) tall T waves, (2) flattened P waves, (3) widened QRS, (4) sine wave pattern \u2192 V-fib \u2192 asystole. Hypokalemia shows flattened T waves and U waves."
+  },
+  {
+    "q": "A nurse is monitoring a patient receiving IV potassium replacement. Which assessment finding requires IMMEDIATE action?",
+    "options": [
+      "The patient develops a new irregular heart rhythm on telemetry",
+      "The patient reports mild burning at the IV site",
+      "The patient's oral potassium supplement causes mild nausea",
+      "The patient requests a meal with high-potassium foods"
+    ],
+    "correct": 0,
+    "rationale": "A new irregular heart rhythm during IV K+ replacement could indicate hyperkalemia from too-rapid infusion OR the existing hypokalemia causing dysrhythmias. Either way, it requires IMMEDIATE action: stop or slow the infusion, check a stat K+ level, and obtain a 12-lead ECG. Burning at the site is uncomfortable but not immediately life-threatening."
+  },
+  {
+    "q": "A patient's potassium level is <span class=\"hl-lyte\">2.8 mEq/L</span>. The nurse is unable to correct the hypokalemia despite aggressive K+ replacement. Which electrolyte should the nurse check?",
+    "options": [
+      "<span class=\"hl-lyte\">Sodium</span> (Na+)",
+      "<span class=\"hl-lyte\">Phosphorus</span> (PO4)",
+      "<span class=\"hl-lyte\">Magnesium</span> (Mg2+)",
+      "<span class=\"hl-lyte\">Chloride</span> (Cl-)"
+    ],
+    "correct": 2,
+    "rationale": "Magnesium is the 'gatekeeper' of potassium. If <span class=\"hl-lyte\">Mg2+</span> is low, the kidneys continue to waste K+ regardless of replacement. You MUST correct hypomagnesemia before hypokalemia will resolve. This is a high-yield NCLEX concept. Always check Mg2+ when K+ is refractory to treatment."
+  },
+  {
+    "q": "A patient in metabolic acidosis has a pH of 7.28. The nurse anticipates which potassium change?",
+    "options": [
+      "Hypokalemia \u2014 K+ moves into cells in acidosis",
+      "Hyperkalemia \u2014 H+ moves into cells and K+ moves out",
+      "No change \u2014 pH does not affect potassium levels",
+      "Hypokalemia \u2014 the kidneys excrete K+ to compensate"
+    ],
+    "correct": 1,
+    "rationale": "In acidosis, excess H+ ions move INTO cells for buffering. To maintain electrical neutrality, K+ moves OUT of cells into the serum \u2192 hyperkalemia. This is the K+/H+ exchange concept. In alkalosis, the opposite occurs: H+ moves out, K+ moves in \u2192 hypokalemia."
+  },
+  {
+    "q": "A nurse is preparing to administer <span class=\"hl-drug\">digoxin</span> to a patient. The morning potassium level is <span class=\"hl-lyte\">3.2 mEq/L</span>. What should the nurse do?",
+    "options": [
+      "Administer the <span class=\"hl-drug\">digoxin</span> as ordered",
+      "Hold the <span class=\"hl-drug\">digoxin</span> and notify the provider",
+      "Give the <span class=\"hl-drug\">digoxin</span> with a potassium-rich snack",
+      "Administer the <span class=\"hl-drug\">digoxin</span> with an antacid to prevent nausea"
+    ],
+    "correct": 1,
+    "rationale": "Hypokalemia (<span class=\"hl-lyte\">K+ 3.2</span>) potentiates <span class=\"hl-drug\">digoxin</span> toxicity by increasing myocardial sensitivity to the drug. The nurse should HOLD <span class=\"hl-drug\">digoxin</span> when K+ < <span class=\"hl-lyte\">3.5 mEq/L</span> and notify the provider. The provider may order potassium replacement before resuming <span class=\"hl-drug\">digoxin</span>. This is a critical NCLEX safety point."
+  },
+  {
+    "q": "Which ECG finding is MOST associated with hypokalemia?",
+    "options": [
+      "Tall, peaked T waves",
+      "Flattened T waves with prominent U waves",
+      "Shortened QT interval",
+      "Widened QRS complex"
+    ],
+    "correct": 1,
+    "rationale": "Hypokalemia produces: flattened T waves, ST depression, and prominent U waves (small wave after T wave). Memory aid: 'I feel FLAT and UNWELL' (flat T, U waves). Tall peaked T waves = hyperkalemia. Shortened QT = hypercalcemia. Widened QRS = severe hyperkalemia."
+  },
+  {
+    "q": "A patient with hyperkalemia is ordered <span class=\"hl-drug\">regular insulin 10 units IV</span> with <span class=\"hl-lyte\">D50W</span>. The nurse understands this works by:",
+    "options": [
+      "Permanently removing potassium from the body through the kidneys",
+      "Binding potassium in the GI tract for fecal elimination",
+      "Stabilizing the cardiac cell membrane against dysrhythmias",
+      "Driving potassium INTO cells temporarily, lowering serum K+"
+    ],
+    "correct": 3,
+    "rationale": "<span class=\"hl-drug\">Insulin</span> activates the sodium-potassium pump, driving K+ from the serum INTO cells \u2014 this is a temporary SHIFT, not elimination. D50W prevents hypoglycemia from the insulin. K+ will eventually leak back out, so definitive removal (Kayexalate, dialysis) is still needed."
+  },
+  {
+    "q": "Which patient is at HIGHEST risk for hyperkalemia?",
+    "options": [
+      "A patient with chronic diarrhea losing <span class=\"hl-lyte\">2 liters</span> of stool per day",
+      "A patient with bulimia who induces vomiting daily",
+      "A patient taking <span class=\"hl-drug\">furosemide</span> <span class=\"hl-lyte\">80 mg</span> daily for heart failure",
+      "A patient with end-stage renal disease who missed <span class=\"hl-lyte\">2 dialysis</span> sessions"
+    ],
+    "correct": 3,
+    "rationale": "The kidneys excrete 90% of potassium. End-stage renal disease + missed dialysis = K+ accumulates rapidly \u2192 life-threatening hyperkalemia. Diarrhea causes K+ LOSS (hypokalemia). <span class=\"hl-drug\">Furosemide</span> wastes K+. Vomiting causes K+ loss through metabolic alkalosis."
+  },
+  {
+    "q": "A nurse is teaching a patient about dietary potassium. Which food list is HIGHEST in K+?",
+    "options": [
+      "White bread, pasta, crackers, and white rice",
+      "Chicken breast, egg whites, and corn",
+      "Apples, grapes, lettuce, and cucumber",
+      "Bananas, oranges, potatoes, spinach, and avocados"
+    ],
+    "correct": 3,
+    "rationale": "High-potassium foods include bananas, oranges (and orange juice), potatoes, tomatoes, spinach, avocados, dried fruits, beans, and dairy. Low-potassium alternatives: apples, grapes, berries, lettuce, green beans, white rice. Important for both hypo-K+ (increase) and hyper-K+ (restrict) teaching."
+  },
+  {
+    "q": "A nurse is caring for a patient with <span class=\"hl-lyte\">K+ 7.1 mEq/L</span>. After administering <span class=\"hl-drug\">calcium gluconate</span>, what is the NEXT priority intervention?",
+    "options": [
+      "Administer <span class=\"hl-drug\">regular insulin</span> with D50W to shift K+ intracellularly",
+      "Administer <span class=\"hl-drug\">Kayexalate</span> orally",
+      "Prepare the patient for immediate hemodialysis",
+      "Restrict dietary potassium and recheck levels in 4 hours"
+    ],
+    "correct": 0,
+    "rationale": "The treatment sequence for critical hyperkalemia is: (1) PROTECT the heart \u2014 <span class=\"hl-drug\">calcium gluconate</span> (done), (2) SHIFT K+ into cells \u2014 <span class=\"hl-drug\">insulin</span> + D50W, <span class=\"hl-drug\">sodium bicarbonate</span>, nebulized <span class=\"hl-drug\">albuterol</span>, (3) REMOVE K+ \u2014 <span class=\"hl-drug\">Kayexalate</span>, dialysis, diuretics. After cardiac protection, the next step is shifting K+ to buy time."
+  },
+  {
+    "q": "A patient with diabetic ketoacidosis (DKA) presents with <span class=\"hl-lyte\">K+ 5.6 mEq/L</span>. After <span class=\"hl-drug\">insulin</span> therapy begins, the nurse expects the potassium to:",
+    "options": [
+      "Remain stable because DKA does not affect potassium",
+      "Decrease as insulin drives K+ into cells and acidosis corrects",
+      "Increase further as acidosis worsens",
+      "Fluctuate unpredictably without any pattern"
+    ],
+    "correct": 1,
+    "rationale": "In DKA, K+ is falsely elevated because: (1) acidosis shifts K+ out of cells, (2) insulin deficiency prevents cellular K+ uptake. Once <span class=\"hl-drug\">insulin</span> is given and acidosis corrects, K+ rapidly drops as it shifts back into cells. Total body K+ is actually DEPLETED. Monitor K+ closely and replace when it drops below <span class=\"hl-lyte\">5.0 mEq/L</span>."
+  },
+  {
+    "q": "A patient receiving <span class=\"hl-drug\">spironolactone</span> and an ACE inhibitor has a serum K+ of <span class=\"hl-lyte\">5.8 mEq/L</span>. The nurse understands this is due to:",
+    "options": [
+      "The combination having no effect on potassium",
+      "<span class=\"hl-drug\">Spironolactone</span> blocking sodium absorption only",
+      "The ACE inhibitor causing potassium excretion",
+      "Both medications causing potassium retention \u2014 additive hyperkalemia risk"
+    ],
+    "correct": 3,
+    "rationale": "Both <span class=\"hl-drug\">spironolactone</span> (K+-sparing diuretic) and ACE inhibitors (block aldosterone indirectly) cause potassium RETENTION. Together, they create additive hyperkalemia risk. This is a high-alert drug combination. Patients must be monitored frequently and taught to avoid K+ supplements and salt substitutes (which contain KCl)."
+  },
+  {
+    "q": "A nurse is assessing a post-thyroidectomy patient who reports tingling around the mouth and fingertips. The calcium level is <span class=\"hl-lyte\">7.4 mg/dL</span>. Which assessment should the nurse perform FIRST?",
+    "options": [
+      "Assess deep tendon reflexes (DTR)",
+      "Assess pupillary response",
+      "Check Trousseau and Chvostek signs",
+      "Perform a Glasgow Coma Scale assessment"
+    ],
+    "correct": 2,
+    "rationale": "Perioral and fingertip tingling with low calcium (<span class=\"hl-lyte\">7.4 mg/dL</span>, normal <span class=\"hl-lyte\">9.0-10.5</span>) after thyroidectomy suggests hypocalcemia from accidental parathyroid damage. Trousseau (BP cuff \u2192 carpal spasm) and Chvostek (facial tap \u2192 twitch) are specific bedside tests for hypocalcemia. DTRs help but are less specific."
+  },
+  {
+    "q": "A nurse inflates a blood pressure cuff on a patient's arm. After 3 minutes, the patient's hand exhibits carpal spasm (thumb adduction, finger flexion). This positive sign is called:",
+    "options": [
+      "Chvostek sign",
+      "Kernig sign",
+      "Trousseau sign",
+      "Babinski sign"
+    ],
+    "correct": 2,
+    "rationale": "Trousseau sign = carpal spasm (hand cramping) induced by inflating a BP cuff above systolic pressure for 3 minutes. It indicates latent tetany from hypocalcemia. Memory: Trousseau = Trousers (hand/arm). Chvostek = Cheek (facial twitch when tapped). Kernig/Babinski are neurological signs."
+  },
+  {
+    "q": "A patient with <span class=\"hl-lyte\">Ca2+ 7.0 mg/dL</span> is prescribed IV <span class=\"hl-drug\">calcium gluconate</span>. Which is the MOST important nursing action during administration?",
+    "options": [
+      "Infuse slowly with continuous cardiac monitoring",
+      "Administer via IM injection for faster absorption",
+      "Infuse rapidly to correct the deficit quickly",
+      "Mix with sodium bicarbonate for better absorption"
+    ],
+    "correct": 0,
+    "rationale": "IV <span class=\"hl-drug\">calcium gluconate</span> must be administered SLOWLY (usually over 10-20 minutes) with continuous cardiac monitoring. Rapid infusion can cause bradycardia, hypotension, and cardiac arrest. Never give IM (causes tissue necrosis). Never mix with bicarbonate (precipitates). Monitor the IV site for infiltration (calcium is a vesicant)."
+  },
+  {
+    "q": "Which statement BEST describes the calcium-phosphorus relationship?",
+    "options": [
+      "Calcium and phosphorus have an inverse (seesaw) relationship",
+      "Calcium and phosphorus rise and fall together",
+      "Calcium levels are not affected by phosphorus levels",
+      "Phosphorus controls calcium but calcium does not affect phosphorus"
+    ],
+    "correct": 0,
+    "rationale": "Calcium and phosphorus have an INVERSE relationship \u2014 when one goes up, the other goes down (seesaw). This is critical in chronic kidney disease: kidneys cannot excrete phosphorus \u2192 hyperphosphatemia \u2192 hypocalcemia \u2192 secondary hyperparathyroidism \u2192 bone disease."
+  },
+  {
+    "q": "A patient with chronic kidney disease has <span class=\"hl-lyte\">PO4 7.2 mg/dL</span> and <span class=\"hl-lyte\">Ca2+ 7.8 mg/dL</span>. The nurse anticipates administering:",
+    "options": [
+      "<span class=\"hl-drug\">Sevelamer</span> (phosphate binder) with meals",
+      "<span class=\"hl-drug\">Calcium gluconate</span> IV stat",
+      "Phosphorus supplements to increase absorption",
+      "Thiazide diuretics to promote calcium retention"
+    ],
+    "correct": 0,
+    "rationale": "In CKD, phosphorus accumulates (kidneys can't excrete it) \u2192 drives calcium down (inverse relationship). The treatment is phosphate BINDERS like <span class=\"hl-drug\">sevelamer</span> taken WITH MEALS to bind dietary phosphorus in the gut and prevent absorption. Lowering phosphorus allows calcium to rise. IV calcium is for emergencies only."
+  },
+  {
+    "q": "A patient with hypercalcemia is prescribed IV normal saline and a loop diuretic. The nurse understands the rationale is:",
+    "options": [
+      "NS replaces calcium and the diuretic removes excess sodium",
+      "NS dilutes the serum calcium and the loop diuretic promotes calcium excretion in urine",
+      "NS provides potassium and the diuretic removes excess phosphorus",
+      "NS corrects metabolic acidosis while the diuretic lowers blood pressure"
+    ],
+    "correct": 1,
+    "rationale": "For hypercalcemia: (1) NS hydration dilutes serum calcium and restores volume, (2) Loop diuretics (<span class=\"hl-drug\">furosemide</span>) promote calcium excretion in urine ('Loops Lose calcium'). Important: AVOID thiazide diuretics \u2014 they RETAIN calcium and worsen hypercalcemia."
+  },
+  {
+    "q": "A nurse is teaching about <span class=\"hl-drug\">calcitonin</span> for hypercalcemia. Which statement is accurate?",
+    "options": [
+      "<span class=\"hl-drug\">Calcitonin</span> takes 2-3 days to begin working",
+      "<span class=\"hl-drug\">Calcitonin</span> works by blocking PTH receptors",
+      "<span class=\"hl-drug\">Calcitonin</span> permanently cures hypercalcemia",
+      "<span class=\"hl-drug\">Calcitonin</span> provides rapid onset but short-lived effect \u2014 often used as a bridge therapy"
+    ],
+    "correct": 3,
+    "rationale": "<span class=\"hl-drug\">Calcitonin</span> inhibits bone resorption and increases renal calcium excretion. It works within hours (rapid onset) but its effect diminishes over 48-72 hours (tachyphylaxis). It is used as a bridge therapy while waiting for bisphosphonates (<span class=\"hl-drug\">zoledronic acid</span>) to take effect (2-4 days)."
+  },
+  {
+    "q": "A patient with hypercalcemia reports 'bones ache, I'm constipated, confused, and passed a kidney stone last week.' This presentation is remembered by which mnemonic?",
+    "options": [
+      "Moans, Bones, Stones, Groans",
+      "MUDPILES",
+      "SALT MINE",
+      "ATEN"
+    ],
+    "correct": 0,
+    "rationale": "Hypercalcemia mnemonic: Moans (confusion, lethargy), Bones (bone pain, pathologic fractures from calcium leaving bones), Stones (renal calculi/kidney stones), Groans (constipation, abdominal pain). The most common cause is hyperparathyroidism or malignancy."
+  },
+  {
+    "q": "Which medication should the nurse AVOID administering to a patient with hypercalcemia?",
+    "options": [
+      "<span class=\"hl-drug\">Furosemide</span> (loop diuretic)",
+      "<span class=\"hl-drug\">Calcitonin</span> (salmon calcitonin)",
+      "<span class=\"hl-drug\">Hydrochlorothiazide</span> (thiazide diuretic)",
+      "Normal saline IV"
+    ],
+    "correct": 2,
+    "rationale": "Thiazide diuretics (<span class=\"hl-drug\">hydrochlorothiazide</span>) promote calcium REABSORPTION in the kidneys \u2014 they WORSEN hypercalcemia. Loop diuretics (<span class=\"hl-drug\">furosemide</span>) promote calcium EXCRETION and are appropriate. Remember: 'Thiazides save calcium, Loops lose calcium.'"
+  },
+  {
+    "q": "A patient with <span class=\"hl-lyte\">Ca2+ 6.2 mg/dL</span> develops laryngospasm. What is the PRIORITY nursing action?",
+    "options": [
+      "Administer oral calcium supplements immediately",
+      "Ensure an open airway and prepare for emergency IV calcium administration",
+      "Notify the provider and anticipate a dietary consult",
+      "Perform Trousseau test to confirm hypocalcemia"
+    ],
+    "correct": 1,
+    "rationale": "Laryngospasm from severe hypocalcemia (<span class=\"hl-lyte\">Ca2+ 6.2</span>) is an AIRWAY EMERGENCY. Priority: (1) Ensure open airway \u2014 position, suction, have emergency intubation equipment ready, (2) IV <span class=\"hl-drug\">calcium gluconate</span> STAT. Do not waste time with oral supplements or diagnostic tests during an acute airway crisis."
+  },
+  {
+    "q": "Which patient condition is MOST likely to cause hypocalcemia?",
+    "options": [
+      "Hyperparathyroidism",
+      "Prolonged immobility",
+      "Hypoparathyroidism (post-thyroidectomy parathyroid damage)",
+      "Excessive vitamin D supplementation"
+    ],
+    "correct": 2,
+    "rationale": "Hypoparathyroidism (from accidental parathyroid removal during thyroidectomy) decreases PTH \u2192 calcium drops because PTH is needed to pull calcium from bones and promote renal calcium reabsorption. Hyperparathyroidism causes HYPERcalcemia. Immobility causes hypercalcemia (calcium leaves bones). Excess vitamin D increases calcium."
+  },
+  {
+    "q": "The nurse understands that which laboratory value should be considered when interpreting total serum calcium?",
+    "options": [
+      "Serum potassium",
+      "Hemoglobin A1C",
+      "Serum albumin",
+      "Serum creatinine"
+    ],
+    "correct": 2,
+    "rationale": "About 40% of calcium is bound to albumin. In HYPOalbuminemia (liver disease, malnutrition), total calcium appears LOW but ionized (active) calcium may be NORMAL. For every 1 g/dL drop in albumin below 4.0, add 0.8 mg/dL to the total calcium for a 'corrected' value. Ionized calcium is the most accurate test."
+  },
+  {
+    "q": "A patient receiving IV <span class=\"hl-drug\">magnesium sulfate</span> for preeclampsia has absent deep tendon reflexes. What is the nurse's FIRST action?",
+    "options": [
+      "Continue the infusion and recheck DTRs in one hour",
+      "Administer a bolus of <span class=\"hl-drug\">magnesium sulfate</span> for breakthrough seizures",
+      "Increase IV fluids to dilute the magnesium",
+      "STOP the magnesium infusion immediately"
+    ],
+    "correct": 3,
+    "rationale": "Absent DTRs is the earliest sign of <span class=\"hl-drug\">magnesium sulfate</span> toxicity. The progression is: \u2193 DTRs \u2192 absent DTRs \u2192 respiratory depression \u2192 cardiac arrest. STOP the infusion IMMEDIATELY, then notify the provider and prepare <span class=\"hl-drug\">calcium gluconate</span> (antidote). Assessment sequence: DTRs Q1H, respirations \u2265 12, urine output \u2265 30 mL/hr."
+  },
+  {
+    "q": "The antidote for <span class=\"hl-drug\">magnesium sulfate</span> toxicity is:",
+    "options": [
+      "<span class=\"hl-drug\">Vitamin K</span>",
+      "<span class=\"hl-drug\">Protamine sulfate</span>",
+      "<span class=\"hl-drug\">Calcium gluconate</span>",
+      "<span class=\"hl-drug\">Naloxone</span>"
+    ],
+    "correct": 2,
+    "rationale": "<span class=\"hl-drug\">Calcium gluconate</span> is the antidote for <span class=\"hl-drug\">magnesium sulfate</span> toxicity \u2014 it antagonizes the neuromuscular effects of excess magnesium. It should be kept at the bedside whenever MgSO\u2084 is infusing. Other antidotes: <span class=\"hl-drug\">Vitamin K</span> \u2192 warfarin, <span class=\"hl-drug\">Protamine</span> \u2192 heparin, <span class=\"hl-drug\">Naloxone</span> \u2192 opioids."
+  },
+  {
+    "q": "A patient with chronic alcoholism has <span class=\"hl-lyte\">Mg2+ 0.9 mg/dL</span>. The nurse anticipates which associated electrolyte imbalances?",
+    "options": [
+      "Hypokalemia and hypocalcemia",
+      "Hyperkalemia and hypercalcemia",
+      "Hypernatremia and hyperphosphatemia",
+      "No other electrolytes are affected"
+    ],
+    "correct": 0,
+    "rationale": "Low Mg2+ (<span class=\"hl-lyte\">0.9 mg/dL</span>, normal <span class=\"hl-lyte\">1.3-2.1</span>) commonly coexists with hypokalemia (Mg2+ is the K+ gatekeeper \u2014 can't fix K+ without fixing Mg2+ first) and hypocalcemia (Mg2+ depletion impairs PTH release). Alcoholism is the #1 cause of hypomagnesemia due to poor nutrition and renal wasting."
+  },
+  {
+    "q": "A nurse is monitoring a patient receiving IV <span class=\"hl-drug\">magnesium sulfate</span>. Which three assessments are ESSENTIAL before each continued dose?",
+    "options": [
+      "Blood glucose, pupil size, and skin color",
+      "Heart rate, blood pressure, and temperature",
+      "Deep tendon reflexes, respiratory rate, and urine output",
+      "Oxygen saturation, weight, and abdominal girth"
+    ],
+    "correct": 2,
+    "rationale": "The three CRITICAL assessments for <span class=\"hl-drug\">MgSO\u2084</span> therapy are: (1) DTRs \u2014 must be present (1+ or greater), (2) Respirations \u2014 must be \u2265 12/min, (3) Urine output \u2014 must be \u2265 30 mL/hr (kidneys excrete Mg2+; if oliguric, Mg2+ accumulates). If ANY are abnormal, HOLD the dose and notify the provider."
+  },
+  {
+    "q": "A patient with hypomagnesemia presents with a cardiac rhythm showing polymorphic ventricular tachycardia with QT prolongation. This rhythm is called:",
+    "options": [
+      "Ventricular fibrillation",
+      "Torsades de pointes",
+      "Atrial flutter",
+      "Supraventricular tachycardia"
+    ],
+    "correct": 1,
+    "rationale": "Torsades de pointes ('twisting of the points') is a specific type of polymorphic ventricular tachycardia associated with prolonged QT interval. It is classically caused by hypomagnesemia and hypokalemia. Treatment: IV <span class=\"hl-drug\">magnesium sulfate</span> bolus. This is different from standard V-tach, which is treated with <span class=\"hl-drug\">amiodarone</span>."
+  },
+  {
+    "q": "A nurse is caring for a patient with <span class=\"hl-lyte\">Mg2+ 8.2 mg/dL</span> after accidental overdose. Which signs does the nurse expect?",
+    "options": [
+      "Hyperactive DTRs, tremors, and seizures",
+      "Polyuria, polydipsia, and weight loss",
+      "Tachycardia, hypertension, and diaphoresis",
+      "Absent DTRs, respiratory depression, and hypotension"
+    ],
+    "correct": 3,
+    "rationale": "Severe hypermagnesemia (<span class=\"hl-lyte\">Mg2+ 8.2</span>, critical > <span class=\"hl-lyte\">7.0</span>) causes CNS and neuromuscular depression: absent DTRs, lethargy, muscle flaccidity, hypotension, bradycardia, and respiratory depression. Think: too much Mg2+ = everything SLOWS DOWN. HYPOmagnesemia causes excitability (hyperactive DTRs, tremors)."
+  },
+  {
+    "q": "Which finding indicates hypomagnesemia and hypocalcemia share a similar presentation?",
+    "options": [
+      "Both cause decreased deep tendon reflexes",
+      "Both cause positive Trousseau and Chvostek signs",
+      "Both cause respiratory depression",
+      "Both cause constipation and lethargy"
+    ],
+    "correct": 1,
+    "rationale": "Both hypomagnesemia and hypocalcemia cause neuromuscular excitability \u2014 including positive Trousseau sign (carpal spasm) and Chvostek sign (facial twitch). This is because low Mg2+ impairs PTH release \u2192 secondary hypocalcemia. Always check BOTH Mg2+ and Ca2+ when either is low."
+  },
+  {
+    "q": "Which dietary sources are HIGHEST in magnesium?",
+    "options": [
+      "White bread, pasta, and refined grains",
+      "Nuts, spinach, whole grains, dark chocolate, and legumes",
+      "Red meat, eggs, and poultry",
+      "Citrus fruits, berries, and melon"
+    ],
+    "correct": 1,
+    "rationale": "High-magnesium foods: nuts (almonds, cashews), dark leafy greens (spinach, Swiss chard), whole grains, legumes, dark chocolate, and avocados. Refined/processed foods lose magnesium during processing. Teaching patients to eat whole, unprocessed foods helps maintain adequate Mg2+ levels."
+  },
+  {
+    "q": "A patient on <span class=\"hl-drug\">furosemide</span> long-term develops muscle cramps, tremors, and cardiac irritability. Labs show <span class=\"hl-lyte\">Mg2+ 1.0 mg/dL</span>. This is MOST likely caused by:",
+    "options": [
+      "<span class=\"hl-drug\">Furosemide</span> increasing renal magnesium reabsorption",
+      "The patient's high-magnesium diet",
+      "<span class=\"hl-drug\">Furosemide</span> promoting renal magnesium excretion",
+      "A laboratory error"
+    ],
+    "correct": 2,
+    "rationale": "Loop diuretics (<span class=\"hl-drug\">furosemide</span>) inhibit the sodium-potassium-chloride cotransporter in the loop of Henle, which also wastes magnesium, potassium, and calcium. 'Loops Lose everything.' Long-term use requires monitoring of K+, Mg2+, Ca2+, and Na+ levels."
+  },
+  {
+    "q": "A patient receiving <span class=\"hl-drug\">MgSO4</span> for preeclampsia has: DTRs 2+, respirations 14/min, urine output 40 mL/hr, and <span class=\"hl-lyte\">BP 148/96</span>. The nurse should:",
+    "options": [
+      "Hold the infusion \u2014 the patient's blood pressure is still elevated",
+      "Increase the infusion rate to better control blood pressure",
+      "Administer <span class=\"hl-drug\">calcium gluconate</span> \u2014 the patient is showing toxicity",
+      "Continue the infusion \u2014 all safety parameters are within acceptable limits"
+    ],
+    "correct": 3,
+    "rationale": "All three MgSO\u2084 safety parameters are acceptable: DTRs present (2+), respirations \u2265 12 (14/min), and urine output \u2265 30 mL/hr (40 mL/hr). The BP is still elevated but MgSO\u2084 is for SEIZURE PREVENTION, not BP control. Other antihypertensives (<span class=\"hl-drug\">hydralazine</span>, <span class=\"hl-drug\">labetalol</span>) manage the BP separately."
+  },
+  {
+    "q": "A patient with chronic kidney disease (CKD) has an elevated phosphorus level. The nurse understands the PRIMARY cause is:",
+    "options": [
+      "Excessive dietary phosphorus intake only",
+      "Excessive vitamin D activation by the kidneys",
+      "Overproduction of PTH by the parathyroid glands",
+      "The kidneys' inability to excrete phosphorus"
+    ],
+    "correct": 3,
+    "rationale": "In CKD, the kidneys lose the ability to excrete phosphorus \u2192 accumulation \u2192 hyperphosphatemia. This triggers the calcium-phosphorus seesaw (\u2191 PO4 \u2192 \u2193 Ca2+), which stimulates PTH release (secondary hyperparathyroidism) \u2192 calcium pulled from bones \u2192 renal osteodystrophy."
+  },
+  {
+    "q": "A patient is prescribed <span class=\"hl-drug\">sevelamer</span> (Renagel) for hyperphosphatemia. When should the nurse instruct the patient to take this medication?",
+    "options": [
+      "On an empty stomach first thing in the morning",
+      "At bedtime with a full glass of water",
+      "One hour after meals for maximum absorption",
+      "WITH meals to bind dietary phosphorus"
+    ],
+    "correct": 3,
+    "rationale": "Phosphate binders (<span class=\"hl-drug\">sevelamer</span>, <span class=\"hl-drug\">calcium acetate</span>) must be taken WITH MEALS to bind phosphorus from food in the GI tract, preventing absorption. Taking them without food renders them ineffective \u2014 there's no phosphorus to bind. This is a critical patient education point."
+  },
+  {
+    "q": "A malnourished patient begins receiving total parenteral nutrition (TPN). Within 24 hours, the patient develops cardiac dysrhythmias and respiratory distress. The nurse suspects:",
+    "options": [
+      "Allergic reaction to the TPN formula",
+      "Hyperkalemia from the potassium in TPN",
+      "Fluid volume overload from the TPN infusion",
+      "Refeeding syndrome with severe hypophosphatemia"
+    ],
+    "correct": 3,
+    "rationale": "Refeeding syndrome occurs when malnourished patients resume nutrition. Insulin surge drives phosphorus (and K+, Mg2+) into cells \u2192 severe hypophosphatemia \u2192 impaired ATP production \u2192 cardiac failure, respiratory failure, death. Prevention: start feeds SLOWLY and monitor electrolytes (especially PO4, K+, Mg2+) Q4-6H."
+  },
+  {
+    "q": "The nurse is teaching a CKD patient about dietary phosphorus restriction. Which foods should be AVOIDED?",
+    "options": [
+      "Fresh fruits and vegetables",
+      "White rice, pasta, and lean chicken breast",
+      "Dairy products, processed meats, cola drinks, and nuts",
+      "Fresh fish and olive oil"
+    ],
+    "correct": 2,
+    "rationale": "High-phosphorus foods include: dairy (milk, cheese, yogurt), processed meats (hot dogs, deli meat), cola/dark sodas, nuts, beans, chocolate, and foods with phosphate additives. These should be restricted in CKD. Fresh fruits, vegetables, and refined grains are generally lower in phosphorus."
+  },
+  {
+    "q": "A patient with hyperphosphatemia and hypocalcemia asks why both are occurring together. The nurse's BEST explanation is:",
+    "options": [
+      "'Calcium and phosphorus have a seesaw relationship \u2014 when phosphorus goes up, calcium goes down'",
+      "'High phosphorus and low calcium are unrelated findings'",
+      "'Your kidneys are excreting too much calcium'",
+      "'You are not eating enough dairy products'"
+    ],
+    "correct": 0,
+    "rationale": "The calcium-phosphorus inverse relationship (seesaw) means that when phosphorus rises, calcium falls. In CKD, the kidneys cannot excrete phosphorus \u2192 hyperphosphatemia \u2192 calcium binds with phosphorus and precipitates \u2192 hypocalcemia \u2192 PTH tries to compensate by pulling calcium from bones."
+  },
+  {
+    "q": "A patient in DKA is being treated with <span class=\"hl-drug\">insulin</span> and IV fluids. The nurse should monitor closely for:",
+    "options": [
+      "Hyperphosphatemia from insulin resistance",
+      "Hypernatremia from excessive saline infusion",
+      "Elevated calcium from bone resorption",
+      "Hypophosphatemia as <span class=\"hl-drug\">insulin</span> drives phosphorus into cells"
+    ],
+    "correct": 3,
+    "rationale": "During DKA treatment, <span class=\"hl-drug\">insulin</span> drives not only glucose and potassium but also phosphorus into cells \u2192 hypophosphatemia. Severe hypophosphatemia can cause respiratory failure (diaphragm weakness), hemolytic anemia (RBC membrane instability), and rhabdomyolysis. Monitor PO4 during DKA correction."
+  },
+  {
+    "q": "Which electrolyte imbalance is MOST associated with rhabdomyolysis?",
+    "options": [
+      "Hypernatremia",
+      "Hypophosphatemia (severe)",
+      "Hyperchloremia",
+      "Hypomagnesemia"
+    ],
+    "correct": 1,
+    "rationale": "Severe hypophosphatemia impairs ATP production (phosphorus is a component of ATP). Without adequate ATP, cell membranes destabilize, leading to rhabdomyolysis (skeletal muscle breakdown). This releases myoglobin into the blood \u2192 myoglobinuria \u2192 acute kidney injury. Phosphorus < 1.0 mg/dL is dangerous."
+  },
+  {
+    "q": "The inverse relationship between calcium and phosphorus is regulated primarily by which hormone?",
+    "options": [
+      "Parathyroid hormone (PTH)",
+      "Aldosterone",
+      "Antidiuretic hormone (ADH)",
+      "Cortisol"
+    ],
+    "correct": 0,
+    "rationale": "PTH is the master regulator of calcium-phosphorus balance. When calcium drops, PTH is released: (1) pulls calcium from bones, (2) increases renal calcium reabsorption, (3) promotes vitamin D activation (increases gut calcium absorption), (4) increases renal phosphorus EXCRETION. PTH raises calcium and lowers phosphorus."
+  },
+  {
+    "q": "A patient in hypovolemic shock arrives at the ED. Which IV fluid should the nurse anticipate administering FIRST?",
+    "options": [
+      "D5W (5% Dextrose in Water)",
+      "3% Hypertonic saline",
+      "0.9% Normal Saline (NS) or Lactated Ringer's (LR)",
+      "0.45% Half Normal Saline"
+    ],
+    "correct": 2,
+    "rationale": "Hypovolemic shock requires rapid intravascular volume expansion. ISOTONIC solutions (0.9% NS or LR) stay in the vascular space and effectively restore circulating volume. D5W becomes hypotonic (leaves vessels). Hypertonic saline is for specific conditions. Half NS is hypotonic and inadequate for resuscitation."
+  },
+  {
+    "q": "A nurse is administering Lactated Ringer's solution. Which patient condition is a CONTRAINDICATION?",
+    "options": [
+      "Dehydration from vomiting and diarrhea",
+      "Burn injuries requiring fluid resuscitation",
+      "Post-surgical fluid replacement",
+      "Liver failure (hepatic encephalopathy)"
+    ],
+    "correct": 3,
+    "rationale": "LR contains lactate, which must be converted to bicarbonate by the liver. In liver failure, the liver cannot metabolize the lactate \u2192 lactic acidosis worsens. Use NS instead. LR is also contraindicated when running with blood products (calcium in LR can cause clotting with citrated blood)."
+  },
+  {
+    "q": "A nurse is caring for a patient with increased intracranial pressure (ICP). Which IV solution should NEVER be administered?",
+    "options": [
+      "3% Hypertonic saline",
+      "<span class=\"hl-drug\">Mannitol</span> (osmotic diuretic)",
+      "0.45% Half Normal Saline or D5W",
+      "0.9% Normal Saline"
+    ],
+    "correct": 2,
+    "rationale": "Hypotonic solutions (0.45% NaCl, D5W) cause water to shift INTO cells \u2014 including brain cells. This WORSENS cerebral edema and increases ICP, which can lead to brain herniation. For elevated ICP, use HYPERTONIC solutions (3% NaCl) or mannitol to PULL water OUT of brain cells."
+  },
+  {
+    "q": "After infusing D5W, the nurse understands that this solution EFFECTIVELY acts as:",
+    "options": [
+      "An isotonic solution that stays in the intravascular space",
+      "A hypertonic solution that pulls fluid from cells",
+      "A colloid that increases oncotic pressure",
+      "A hypotonic solution because the body metabolizes the dextrose, leaving only free water"
+    ],
+    "correct": 3,
+    "rationale": "D5W is isotonic IN THE BAG (osmolarity ~252 mOsm/L) but becomes HYPOTONIC after infusion because the dextrose is rapidly metabolized by cells, leaving only free water. This free water distributes across all compartments. Therefore, D5W should not be used for intravascular volume replacement."
+  },
+  {
+    "q": "A patient receiving a blood transfusion begins to shiver and develops a temperature spike. The nurse's FIRST action is:",
+    "options": [
+      "Slow the infusion rate and monitor closely",
+      "Obtain a blood culture and continue the infusion",
+      "Administer <span class=\"hl-drug\">diphenhydramine</span> and continue the transfusion",
+      "Stop the transfusion immediately and keep the vein open with NS"
+    ],
+    "correct": 3,
+    "rationale": "Any sign of a transfusion reaction (fever, chills, urticaria, hypotension, back pain, hemoglobinuria) requires IMMEDIATE action: (1) STOP the transfusion, (2) Keep IV open with NS, (3) Notify provider and blood bank, (4) Return blood bag and new blood sample to lab. NEVER slow and continue \u2014 stop completely."
+  },
+  {
+    "q": "A patient develops sudden dyspnea, chest pain, and hypotension during IV infusion. The nurse suspects an air embolism. What POSITION should the nurse place the patient in?",
+    "options": [
+      "Left lateral Trendelenburg (left side, head down)",
+      "Right lateral with head elevated",
+      "High Fowler's with legs elevated",
+      "Prone position with arms above the head"
+    ],
+    "correct": 0,
+    "rationale": "For air embolism: place the patient on the LEFT SIDE in TRENDELENBURG position (head lower than feet). This traps the air in the right atrium (preventing it from entering the pulmonary vasculature) and allows it to be absorbed gradually. Clamp the IV line immediately and call for emergency assistance."
+  },
+  {
+    "q": "A nurse notes that an IV infusion site is cool, pale, and swollen with a decreased flow rate. This finding is MOST consistent with:",
+    "options": [
+      "Phlebitis",
+      "Speed shock",
+      "Infiltration",
+      "Septicemia"
+    ],
+    "correct": 2,
+    "rationale": "Infiltration = IV fluid leaking into surrounding tissue. Signs: cool, pale, swollen site, decreased flow rate, no blood return. Action: stop infusion, remove catheter, elevate extremity, warm compress (unless vesicant \u2014 then cold). Phlebitis presents as warm, red, tender along the vein."
+  },
+  {
+    "q": "Which IV complication presents as redness, warmth, tenderness, and a visible streak along the vein?",
+    "options": [
+      "Infiltration",
+      "Phlebitis",
+      "Extravasation",
+      "Air embolism"
+    ],
+    "correct": 1,
+    "rationale": "Phlebitis = vein inflammation. Signs: redness, warmth, tenderness, swelling, and a palpable cord or visible streak along the vein. Caused by mechanical irritation (catheter), chemical (medications), or infectious agents. Treatment: D/C IV, warm moist compress, restart in opposite extremity."
+  },
+  {
+    "q": "A patient with DKA is being resuscitated. After the initial NS bolus, the provider orders 0.45% NaCl. The nurse understands this change is because:",
+    "options": [
+      "The patient developed hyperkalemia and needs potassium-free fluid",
+      "0.45% NaCl corrects the metabolic acidosis better than NS",
+      "Initial NS resuscitation restored volume; now hypotonic fluid replaces intracellular water loss",
+      "The patient developed a transfusion reaction to the NS"
+    ],
+    "correct": 2,
+    "rationale": "DKA treatment follows a protocol: (1) Initial NS bolus for volume resuscitation (intravascular depletion), (2) Switch to 0.45% NaCl for maintenance \u2014 this hypotonic fluid replaces total body water (intracellular) that was lost through osmotic diuresis. It also prevents hyperchloremic acidosis from excessive NS."
+  },
+  {
+    "q": "A burn patient weighing 80 kg has 40% TBSA burns. Using the Parkland formula, what is the total IV fluid volume for the first 24 hours?",
+    "options": [
+      "<span class=\"hl-lyte\">6,400 mL</span> of Lactated Ringer's",
+      "<span class=\"hl-lyte\">6,400 mL</span> of D5W",
+      "<span class=\"hl-lyte\">12,800 mL</span> of Normal Saline",
+      "<span class=\"hl-lyte\">12,800 mL</span> of Lactated Ringer's"
+    ],
+    "correct": 3,
+    "rationale": "Parkland formula: <span class=\"hl-lyte\">4 mL \u00d7 kg \u00d7 %TBSA</span> = 4 \u00d7 80 \u00d7 40 = <span class=\"hl-lyte\">12,800 mL</span> of LR in 24 hours. Give half in the first 8 hours, the remaining half over the next 16 hours. Always use LR (most physiologically similar to plasma). Time starts from the BURN INJURY, not hospital arrival."
+  },
+  {
+    "q": "A nurse is administering a hypertonic IV solution. Which assessment is MOST important?",
+    "options": [
+      "Monitoring for signs of dehydration",
+      "Checking for decreased urine output only",
+      "Assessing for signs of fluid volume overload (crackles, JVD, elevated BP)",
+      "Monitoring blood glucose levels only"
+    ],
+    "correct": 2,
+    "rationale": "Hypertonic solutions pull water from cells INTO the intravascular space \u2192 rapid volume expansion \u2192 risk of fluid volume overload, especially in patients with compromised cardiac or renal function. Monitor for crackles, JVD, elevated BP, dyspnea, and peripheral edema. These solutions often require ICU-level monitoring."
+  },
+  {
+    "q": "Which statement about IV solution compatibility is CORRECT?",
+    "options": [
+      "Blood products should ONLY be infused with 0.9% Normal Saline",
+      "Blood products can be infused with Lactated Ringer's",
+      "Dextrose solutions are preferred for blood transfusions",
+      "Any isotonic solution is compatible with blood products"
+    ],
+    "correct": 0,
+    "rationale": "Blood products are ONLY compatible with 0.9% Normal Saline. LR contains calcium \u2192 calcium chelates the citrate preservative in stored blood \u2192 clots form. Dextrose causes hemolysis of red blood cells. This is a critical safety rule: NS is the universal blood transfusion companion."
+  },
+  {
+    "q": "A patient is admitted with severe hyponatremia. The nurse is monitoring the 3% NaCl infusion. Which complication is MOST concerning with too-rapid correction?",
+    "options": [
+      "Osmotic demyelination syndrome (central pontine myelinolysis)",
+      "Hyperkalemia",
+      "Diabetes insipidus",
+      "Metabolic alkalosis"
+    ],
+    "correct": 0,
+    "rationale": "Correcting hyponatremia too rapidly (> <span class=\"hl-lyte\">8-12 mEq/L in 24 hours</span>) causes osmotic demyelination syndrome (ODS/central pontine myelinolysis). Brain cells that adapted to low osmolality by losing solutes suddenly shrink when osmolality rises too fast \u2192 irreversible damage to myelin in the pons. Symptoms: quadriplegia, dysphagia, dysarthria."
+  },
+  {
+    "q": "A nurse is infusing <span class=\"hl-drug\">potassium chloride</span> (KCl) in 0.9% NS via peripheral IV. The patient reports severe burning at the IV site. The nurse should:",
+    "options": [
+      "Slow the infusion rate, check the site for infiltration, and consider further dilution or a larger vein",
+      "Reassure the patient that burning is normal with K+ infusions and continue",
+      "Discontinue the infusion permanently",
+      "Switch to IV push administration for faster completion"
+    ],
+    "correct": 0,
+    "rationale": "Burning with peripheral IV <span class=\"hl-drug\">KCl</span> infusion is common due to the irritant nature of potassium on small veins. Actions: (1) slow the rate, (2) check for infiltration, (3) consider further dilution or a larger-gauge vein. If pain persists, may need central line access. NEVER push IV potassium."
+  },
+  {
+    "q": "During a rapid fluid resuscitation with NS, the patient develops labored breathing and an SpO2 drop. The nurse suspects iatrogenic fluid overload. What is the PRIORITY action?",
+    "options": [
+      "Slow or stop the infusion, elevate HOB, apply oxygen, and notify the provider",
+      "Continue the infusion but add a diuretic",
+      "Lower the head of bed to improve venous return",
+      "Switch to a hypertonic solution to pull fluid out of the lungs"
+    ],
+    "correct": 0,
+    "rationale": "Signs of iatrogenic fluid overload during resuscitation (dyspnea, SpO2 drop, crackles) require: (1) SLOW or STOP the infusion, (2) Elevate HOB \u2265 30\u00b0 to ease breathing, (3) Apply supplemental oxygen, (4) Notify provider \u2014 may need diuretic. Lowering HOB worsens respiratory distress. Hypertonic saline would worsen overload."
+  },
+  {
+    "q": "Which electrolyte imbalance is associated with prolonged QT interval on ECG?",
+    "options": [
+      "Hyperkalemia",
+      "Hypernatremia",
+      "Hypocalcemia",
+      "Hypermagnesemia"
+    ],
+    "correct": 2,
+    "rationale": "Hypocalcemia prolongs the QT interval on ECG. Prolonged QT increases the risk of torsades de pointes and sudden cardiac death. Hyperkalemia shows peaked T waves. Hypercalcemia SHORTENS the QT interval. Remember: Low calcium = LONG QT."
+  },
+  {
+    "q": "The mnemonic 'Loops Lose' refers to which diuretic effect?",
+    "options": [
+      "Loop diuretics retain potassium, calcium, and magnesium",
+      "Loop diuretics only affect sodium excretion",
+      "Loop diuretics cause excretion of potassium, calcium, magnesium, and sodium",
+      "Loop diuretics cause hyperkalemia"
+    ],
+    "correct": 2,
+    "rationale": "Loop diuretics (<span class=\"hl-drug\">furosemide</span>, <span class=\"hl-drug\">bumetanide</span>) act on the Loop of Henle and cause loss of K+, Na+, Ca2+, and Mg2+ \u2014 'Loops Lose everything.' This is why patients on long-term loop diuretics need monitoring of all four electrolytes and may need supplements."
+  },
+  {
+    "q": "A patient is taking <span class=\"hl-drug\">hydrochlorothiazide</span> (HCTZ). Which electrolyte change should the nurse monitor for?",
+    "options": [
+      "Hypocalcemia \u2014 thiazides waste calcium",
+      "Hypercalcemia \u2014 thiazides promote calcium reabsorption",
+      "Hyperkalemia \u2014 thiazides retain potassium",
+      "Hypermagnesemia \u2014 thiazides retain magnesium"
+    ],
+    "correct": 1,
+    "rationale": "Thiazide diuretics promote calcium REABSORPTION (save calcium), which can cause hypercalcemia. This is why thiazides are contraindicated in hypercalcemia but may be used therapeutically in patients with osteoporosis (beneficial). Remember: 'Thiazides save calcium; Loops lose calcium.'"
+  },
+  {
+    "q": "Which electrolyte must be corrected BEFORE potassium can be effectively repleted?",
+    "options": [
+      "Magnesium (Mg2+)",
+      "Calcium (Ca2+)",
+      "Sodium (Na+)",
+      "Phosphorus (PO4)"
+    ],
+    "correct": 0,
+    "rationale": "Magnesium is the 'gatekeeper' of potassium. Hypomagnesemia causes renal potassium wasting \u2014 no matter how much K+ you give, the kidneys will continue to excrete it if Mg2+ is low. Always check and correct Mg2+ FIRST when K+ is refractory to replacement."
+  },
+  {
+    "q": "A nurse is reviewing medications and notes a patient takes <span class=\"hl-drug\">digoxin</span>, <span class=\"hl-drug\">furosemide</span>, and a potassium supplement. Which concern is HIGHEST priority?",
+    "options": [
+      "The potassium supplement is unnecessary since <span class=\"hl-drug\">furosemide</span> retains K+",
+      "Monitoring K+ closely because hypokalemia from <span class=\"hl-drug\">furosemide</span> potentiates <span class=\"hl-drug\">digoxin</span> toxicity",
+      "<span class=\"hl-drug\">Digoxin</span> and <span class=\"hl-drug\">furosemide</span> cannot be taken together",
+      "The patient should switch <span class=\"hl-drug\">furosemide</span> to a thiazide to avoid interactions"
+    ],
+    "correct": 1,
+    "rationale": "This is a HIGH-YIELD drug interaction: <span class=\"hl-drug\">furosemide</span> depletes K+ \u2192 hypokalemia potentiates <span class=\"hl-drug\">digoxin</span> toxicity \u2192 fatal dysrhythmias. The K+ supplement is essential to prevent this. Monitor K+ regularly (hold <span class=\"hl-drug\">digoxin</span> if K+ < <span class=\"hl-lyte\">3.5</span>) and watch for digoxin toxicity signs: N/V, visual changes (halos), bradycardia."
+  },
+  {
+    "q": "A nurse is interpreting lab results in a patient with metabolic alkalosis. Which potassium level does the nurse anticipate?",
+    "options": [
+      "Hypokalemia (K+ < 3.5)",
+      "Normal potassium (K+ 3.5-5.0)",
+      "Hyperkalemia (K+ > 5.0)",
+      "Potassium is unaffected by pH"
+    ],
+    "correct": 0,
+    "rationale": "In alkalosis, excess H+ moves OUT of cells \u2192 K+ moves IN to maintain electrical neutrality \u2192 hypokalemia. This is the K+/H+ exchange: acidosis \u2192 hyperkalemia, alkalosis \u2192 hypokalemia. Always interpret K+ in the context of the patient's acid-base status."
+  },
+  {
+    "q": "Which electrolyte emergency requires keeping emergency airway equipment at the bedside?",
+    "options": [
+      "Hypernatremia",
+      "Severe hypocalcemia (risk of laryngospasm)",
+      "Hyperphosphatemia",
+      "Mild hypokalemia"
+    ],
+    "correct": 1,
+    "rationale": "Severe hypocalcemia can cause laryngospasm (vocal cord spasm) \u2192 airway obstruction. Emergency airway equipment (suction, O2, intubation supplies) should be at the bedside. Also prepare IV calcium gluconate. Post-thyroidectomy patients are at highest risk due to potential parathyroid damage."
+  },
+  {
+    "q": "A patient with CKD Stage 5 develops bone pain and pathologic fractures. The nurse understands this is caused by:",
+    "options": [
+      "Hypocalcemia from inability to activate vitamin D and chronic hyperphosphatemia (renal osteodystrophy)",
+      "Hypercalcemia from excessive PTH production",
+      "Hypermagnesemia from inability to excrete Mg2+",
+      "Hyponatremia causing bone demineralization"
+    ],
+    "correct": 0,
+    "rationale": "Renal osteodystrophy: CKD \u2192 can't activate vitamin D \u2192 \u2193 gut Ca2+ absorption \u2192 can't excrete PO4 \u2192 hyperphosphatemia \u2192 further \u2193 Ca2+ (seesaw) \u2192 secondary hyperparathyroidism \u2192 PTH pulls Ca2+ from bones \u2192 bone pain, fractures. Treatment: phosphate binders, vitamin D, and dialysis."
+  },
+  {
+    "q": "A patient is admitted with <span class=\"hl-lyte\">Na+ 168 mEq/L</span>, lethargy, and dry mucous membranes. The nurse expects to find which additional assessment finding?",
+    "options": [
+      "Edema and weight gain",
+      "Distended neck veins and crackles",
+      "Cool, clammy skin with bradycardia",
+      "Extreme thirst and decreased urine output with concentrated urine"
+    ],
+    "correct": 3,
+    "rationale": "Severe hypernatremia (<span class=\"hl-lyte\">Na+ 168</span>) indicates significant water deficit. Assessment findings: intense thirst (brain triggers thirst center), decreased urine output (kidneys conserve water), concentrated urine (high specific gravity), dry mucous membranes, altered mental status, and potentially seizures."
+  },
+  {
+    "q": "Which patient statement indicates a need for further teaching about potassium supplements?",
+    "options": [
+      "'I will take my potassium with food to reduce stomach upset'",
+      "'I can crush my extended-release potassium tablet if it's hard to swallow'",
+      "'I should not use salt substitutes while taking potassium supplements'",
+      "'I will report muscle weakness or irregular heartbeat to my doctor'"
+    ],
+    "correct": 1,
+    "rationale": "Extended-release (ER) potassium tablets must NEVER be crushed, chewed, or broken. This releases the entire dose at once \u2192 GI irritation, ulceration, and potentially dangerous hyperkalemia from rapid absorption. If the patient can't swallow the tablet, request a liquid formulation."
+  },
+  {
+    "q": "A patient receiving TPN develops a serum glucose of <span class=\"hl-lyte\">340 mg/dL</span>. The nurse anticipates which electrolyte change?",
+    "options": [
+      "Hyperkalemia from glucose-induced cellular damage",
+      "Osmotic diuresis leading to losses of multiple electrolytes (Na+, K+, Mg2+, PO4)",
+      "Isolated hyperphosphatemia",
+      "No electrolyte changes occur with hyperglycemia"
+    ],
+    "correct": 1,
+    "rationale": "TPN-induced hyperglycemia (<span class=\"hl-lyte\">glucose 340</span>) causes osmotic diuresis \u2014 glucose in the urine pulls water and electrolytes with it \u2192 depletion of Na+, K+, Mg2+, and PO4. This is similar to the mechanism in DKA. Monitor blood glucose Q4-6H during TPN and cover with <span class=\"hl-drug\">insulin</span> as ordered."
+  },
+  {
+    "q": "A nurse is performing discharge teaching for a patient on long-term diuretic therapy. Which instruction is MOST important?",
+    "options": [
+      "'Drink at least 3 liters of water daily to prevent dehydration'",
+      "'You can stop taking the medication once your swelling resolves'",
+      "'Weigh yourself daily at the same time and report a gain of 2+ lbs overnight'",
+      "'There is no need for follow-up lab work while taking diuretics'"
+    ],
+    "correct": 2,
+    "rationale": "Daily weights are the MOST important self-monitoring tool for patients on diuretics. A weight gain of 2+ lbs overnight (\u2248 1 liter of fluid) may indicate fluid retention requiring dose adjustment. Patients should never stop diuretics without provider guidance. Follow-up labs (K+, Na+, BUN, creatinine) are essential."
+  },
+  {
+    "q": "A nurse reviews a patient's ABG: pH <span class=\"hl-lyte\">7.32</span>, PaCO\u2082 <span class=\"hl-lyte\">48</span>, HCO\u2083 <span class=\"hl-lyte\">24</span>, and <span class=\"hl-lyte\">K+ 5.4 mEq/L</span>. The nurse understands the elevated K+ is MOST likely due to:",
+    "options": [
+      "Excessive dietary potassium intake",
+      "Respiratory acidosis causing K+ to shift out of cells",
+      "Renal failure preventing potassium excretion",
+      "A laboratory error requiring repeat testing"
+    ],
+    "correct": 1,
+    "rationale": "The ABG shows respiratory acidosis (pH <span class=\"hl-lyte\">7.32</span> \u2193, PaCO\u2082 <span class=\"hl-lyte\">48</span> \u2191, HCO\u2083 normal). In acidosis, excess H+ moves INTO cells and K+ shifts OUT to maintain electrical neutrality \u2192 hyperkalemia. This is a compensatory mechanism, not a primary potassium problem. As the acidosis resolves, K+ will normalize."
+  }
+]
