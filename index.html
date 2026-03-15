@@ -92,7 +92,8 @@ psych:         {bg:'#f0fdfa',accent:'#0d9488',dk:'#134e4a',lt:'#ccfbf1',hf:'#ccf
 hemonc:        {bg:'#fff1f2',accent:'#e11d48',dk:'#881337',lt:'#ffe4e6',hf:'#ffe4e6',ht:'#fecdd3'},
 musc:          {bg:'#fff7ed',accent:'#ea580c',dk:'#9a3412',lt:'#fed7aa',hf:'#ffedd5',ht:'#fed7aa'},
 integ:         {bg:'#fdf2f8',accent:'#db2777',dk:'#9d174d',lt:'#fce7f3',hf:'#fce7f3',ht:'#fbcfe8'},
-obhtn:         {bg:'#fdf2f8',accent:'#db2777',dk:'#9d174d',lt:'#fce7f3',hf:'#fce7f3',ht:'#fbcfe8'},
+obhtn:         {bg:'#eef4f8',accent:'#3d5e80',dk:'#1a2840',lt:'#d0e4f0',hf:'#dce8f2',ht:'#c4d8e8'},
+obmatnb:       {bg:'#ecf7f2',accent:'#2d6b55',dk:'#0f2e24',lt:'#c8e6d8',hf:'#d5ede2',ht:'#b8ddc8'},
 yellowfever:   {bg:'#fffbeb',accent:'#b45309',dk:'#78350f',lt:'#fef3c7',hf:'#fef3c7',ht:'#fde68a'},
 comprehensive: {bg:'#f5f3ff',accent:'#6d28d9',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede9fe',ht:'#ddd6fe'},
 comprehensive2:{bg:'#faf5ff',accent:'#7e22ce',dk:'#581c87',lt:'#f3e8ff',hf:'#f3e8ff',ht:'#e9d5ff'},
@@ -1275,14 +1276,22 @@ for (var fi = 0; fi < GROUPS.foundations.length; fi++) {
 var fkey = GROUPS.foundations[fi];
 if (foundCards[fkey]) foundationsHtml += foundCards[fkey];
 }
-var obHtnCard = '<div class="home-card" data-section="obhtn" style="animation-delay:' + ((idx + 1) * 0.04) + 's; border-color:#db2777;" onclick="openObHtnGuide()">' +
-'<div class="home-card-header" style="background-color:#fce7f3; color:#9d174d;">' +
+var obHtnCard = '<div class="home-card" data-section="obhtn" style="animation-delay:' + ((idx + 1) * 0.04) + 's; border-color:#5a8aad;" onclick="openObHtnGuide()">' +
+'<div class="home-card-header" style="background-color:#d0e4f0; color:#1a2840;">' +
 '<span class="home-card-emoji">\uD83E\uDD30</span><span>OB Hypertensive</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#9d174d;">Preeclampsia vs Eclampsia vs HELLP — diagnostic criteria, MgSO4 management, toxicity cascade &amp; nursing priorities.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:#1a2840;">Preeclampsia vs Eclampsia vs HELLP — diagnostic criteria, MgSO4 management, toxicity cascade &amp; nursing priorities.</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openObHtnGuide();"><span class="quiz-icon">\uD83D\uDCD6</span> Go</button>' +
 '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchObHtnQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span> 100 Questions</button></div></div>';
 systemsHtml += obHtnCard;
+var obMatNbCard = '<div class="home-card" data-section="obmatnb" style="animation-delay:' + ((idx + 1.5) * 0.04) + 's; border-color:#4a9a7d;" onclick="openObMatNbGuide()">' +
+'<div class="home-card-header" style="background-color:#c8e6d8; color:#0f2e24;">' +
+'<span class="home-card-emoji">\uD83D\uDC76</span><span>OB Mat-Newborn</span></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:#0f2e24;">Antepartum hemorrhage, L&amp;D emergencies, fetal monitoring, PPH, newborn assessment &amp; high-risk OB medications.</div></div>' +
+'<div class="home-card-footer">' +
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openObMatNbGuide();"><span class="quiz-icon">\uD83D\uDCD6</span> Go</button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchObMatNbQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span> 100 Questions</button></div></div>';
+systemsHtml += obMatNbCard;
 document.getElementById('home-grid-systems').innerHTML = '<div class="klimek-banner">\uD83C\uDFE5 Systems</div>' + systemsHtml;
 var yfCard = '<div class="home-card" data-section="yellowfever" style="animation-delay:' + (idx * 0.04) + 's; border-color:var(--amber-800);" onclick="launchYellowFeverQuiz()">' +
 '<div class="home-card-header" style="background-color:var(--amber-100); color:var(--amber-800);">' +
@@ -2140,7 +2149,7 @@ return r.json();
 }).then(function(j) {
 var raw = Array.isArray(j) ? j : (j.questions || []);
 var qs = raw.map(function(item, idx) {
-return { q: item.q || item.question, a: item.options || item.a, correct: item.correct !== undefined ? item.correct : item.answer, rationale: item.rationale || 'Review the study guide for a detailed explanation of this topic.', origIdx: idx };
+return { q: item.q || item.question, a: item.options || item.a, correct: item.correct !== undefined ? item.correct : item.answer, rationale: item.rationale || '', origIdx: idx };
 });
 ghQuizCache[sectionKey] = qs;
 return qs;
@@ -2217,6 +2226,12 @@ initQuizUI('OB Hypertensive Disorders Quiz', 'obhtn');
 window.openObHtnGuide = function() {
 openGuideHtml('Guides/OB-Hypertensive-Disorders.html');
 };
+window.launchObMatNbQuiz = function() {
+initQuizUI('OB Maternal-Newborn Quiz', 'obmatnb');
+};
+window.openObMatNbGuide = function() {
+openGuideHtml('Guides/OB-Maternal-Newborn.html');
+};
 window.launchSection = function(key) {
 if (key === 'fullexam') { showFullExam(); return; }
 if (key === 'yellowfever') { launchYellowFeverQuiz(); return; }
@@ -2224,6 +2239,7 @@ if (key === 'comprehensive') { launchComprehensiveQuiz(); return; }
 if (key === 'comprehensive2') { launchComprehensive2Quiz(); return; }
 if (key === 'endocompare') { launchEndoCompareQuiz(); return; }
 if (key === 'obhtn') { launchObHtnQuiz(); return; }
+if (key === 'obmatnb') { launchObMatNbQuiz(); return; }
 if (contentData[key]) { switchTab(key); setTimeout(startQuiz, 120); }
 };
 function showQuestion() {
@@ -2247,6 +2263,7 @@ document.getElementById('q-options').innerHTML = optHTML;
 document.getElementById('quiz-modal').scrollTop = 0;
 }
 function formatRationale(text, correctAnswerText) {
+if (!text && correctAnswerText) text = 'Correct answer: ' + correctAnswerText.replace(/<[^>]+>/g,'');
 var html = fmtText(text);
 html = html.replace(/([.!?])\s+(?=[A-Z])/g, '$1<br>');
 if (correctAnswerText) {
@@ -2516,7 +2533,8 @@ categories: [
 { title: 'Quizlet - 2000 Questions', file: 'Klimek Quizlet - 2000 Questions.pdf', emoji: '\u2753' },
 { title: 'Study Plan', file: 'Study Plan.pdf', emoji: '\uD83D\uDDD3\uFE0F' },
 { title: 'Endo Comparisons', file: 'Guides/Endocrine-Comparisons.html', emoji: '\u2697\uFE0F', isHtml: true },
-{ title: 'OB Hypertensive', file: 'Guides/OB-Hypertensive-Disorders.html', emoji: '\uD83E\uDD30', isHtml: true }
+{ title: 'OB Hypertensive', file: 'Guides/OB-Hypertensive-Disorders.html', emoji: '\uD83E\uDD30', isHtml: true },
+{ title: 'OB Mat-Newborn', file: 'Guides/OB-Maternal-Newborn.html', emoji: '\uD83D\uDC76', isHtml: true }
 ]},
 { name: 'Quick Reference', icon: '\uD83D\uDCCC', items: [
 { title: 'Eponymns', file: 'Eponymns.pdf', emoji: '\uD83C\uDFF7\uFE0F' },

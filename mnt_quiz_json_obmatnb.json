@@ -1,0 +1,1102 @@
+[
+  {
+    "q": "A client at 32 weeks' gestation presents with sudden, painless, bright red vaginal bleeding. Which action should the nurse prioritize?",
+    "options": [
+      "Perform a sterile digital vaginal examination",
+      "Prepare the client for an abdominal ultrasound",
+      "Administer oxytocin to stimulate contractions",
+      "Place the client in a lithotomy position"
+    ],
+    "correct": 1,
+    "rationale": "Painless bright red bleeding in the third trimester is the hallmark of placenta previa. A digital vaginal exam is NEVER performed because it could rupture placental vessels and cause fatal hemorrhage. Ultrasound is the gold standard to confirm placental location before any invasive assessment."
+  },
+  {
+    "q": "A nurse is differentiating between placenta previa and placental abruption. Which finding is most characteristic of placental abruption?",
+    "options": [
+      "Painless, bright red vaginal bleeding",
+      "Soft, non-tender uterus on palpation",
+      "Rigid, board-like abdomen with <span class='hl-lyte'>dark red</span> vaginal bleeding",
+      "Bleeding that stops spontaneously without intervention"
+    ],
+    "correct": 2,
+    "rationale": "Placental abruption presents with painful, dark red bleeding and a rigid board-like abdomen due to concealed retroplacental hemorrhage. The uterus becomes hypertonic and tender. Placenta previa, in contrast, presents with painless bright red bleeding and a soft, relaxed uterus."
+  },
+  {
+    "q": "Which client is at highest risk for placental abruption?",
+    "options": [
+      "A 22-year-old primigravida with gestational diabetes",
+      "A 35-year-old with chronic <span class='hl-lyte'>hypertension</span> and cocaine use",
+      "A 28-year-old with a history of placenta previa",
+      "A 30-year-old with hypothyroidism"
+    ],
+    "correct": 1,
+    "rationale": "Hypertension is the #1 risk factor for placental abruption. Cocaine use is also a major risk factor because it causes sudden vasoconstriction and hypertension, leading to premature placental separation. Prior C-section is a risk factor for previa, not abruption."
+  },
+  {
+    "q": "A client with suspected placenta previa has been admitted. The nurse should question which provider order?",
+    "options": [
+      "Continuous electronic fetal monitoring",
+      "Perform a sterile digital cervical exam to assess dilation",
+      "Obtain type and crossmatch for 2 units PRBCs",
+      "Administer <span class='hl-drug'>betamethasone</span> 12 mg IM"
+    ],
+    "correct": 1,
+    "rationale": "A digital vaginal exam is ABSOLUTELY CONTRAINDICATED with suspected placenta previa. Inserting fingers through the cervix could disrupt placental tissue overlying the os, causing massive, life-threatening hemorrhage. Always confirm placental location via ultrasound first. The other orders are appropriate."
+  },
+  {
+    "q": "A client at 30 weeks' gestation with placenta previa is stable with minimal bleeding. The nurse anticipates which management plan?",
+    "options": [
+      "Bed rest, monitoring, and <span class='hl-drug'>betamethasone</span> for fetal lung maturity",
+      "Immediate cesarean delivery",
+      "Induction of labor with oxytocin",
+      "Amniotomy to reduce uterine pressure"
+    ],
+    "correct": 0,
+    "rationale": "For a stable previa patient at 30 weeks with minimal bleeding, expectant management is appropriate: bed rest, close monitoring, and <span class='hl-drug'>betamethasone</span> to accelerate fetal lung maturity since the fetus is <34 weeks. Delivery would be planned around 36-37 weeks or sooner if hemorrhage becomes uncontrollable."
+  },
+  {
+    "q": "A nurse is caring for a client with a complete placental abruption. The fetal heart rate tracing shows <span class='hl-lyte'>late decelerations</span> with decreasing variability. What is the priority action?",
+    "options": [
+      "Prepare for an emergency cesarean delivery",
+      "Increase the IV fluid rate and administer oxygen",
+      "Reposition the client to the left lateral position",
+      "Perform an amniotomy to assess amniotic fluid"
+    ],
+    "correct": 0,
+    "rationale": "Late decelerations with decreasing variability in the setting of placental abruption indicates significant uteroplacental insufficiency and fetal compromise. Emergency cesarean delivery is the priority to save both mother and fetus. While repositioning and fluids are important, they will not resolve the underlying placental separation."
+  },
+  {
+    "q": "A client is diagnosed with vasa previa. The nurse should prepare for which planned intervention?",
+    "options": [
+      "Vaginal delivery at 39 weeks with close monitoring",
+      "Induction of labor at 37 weeks with amniotomy",
+      "Scheduled cesarean delivery at <span class='hl-lyte'>35-36 weeks</span> gestation",
+      "Expectant management until spontaneous labor begins"
+    ],
+    "correct": 2,
+    "rationale": "Vasa previa involves fetal blood vessels running across the cervical os. If membranes rupture, the fetus can exsanguinate within minutes. A planned cesarean delivery is scheduled at <span class='hl-lyte'>35-36 weeks</span> before labor onset to prevent membrane rupture and fetal hemorrhage. Amniotomy is absolutely contraindicated."
+  },
+  {
+    "q": "A nurse suspects vasa previa after a client's membranes rupture and bright red bleeding occurs. Which test helps differentiate fetal blood from maternal blood?",
+    "options": [
+      "Kleihauer-Betke test",
+      "Coagulation panel with fibrinogen level",
+      "Apt test (alkali denaturation test)",
+      "Coombs test"
+    ],
+    "correct": 2,
+    "rationale": "The Apt test (alkali denaturation test) distinguishes fetal hemoglobin from adult hemoglobin. Fetal hemoglobin is resistant to alkali denaturation and remains pink, while adult hemoglobin turns yellow-brown. This is critical because with vasa previa, the bleeding is FETAL blood, and the fetus can die from exsanguination rapidly."
+  },
+  {
+    "q": "Which client history places a pregnant woman at greatest risk for placenta previa?",
+    "options": [
+      "History of preeclampsia in a previous pregnancy",
+      "Family history of deep vein thrombosis",
+      "Previous cesarean delivery with uterine scarring",
+      "Gestational diabetes in current pregnancy"
+    ],
+    "correct": 2,
+    "rationale": "Prior cesarean delivery with uterine scarring is the most significant risk factor for placenta previa. The scar disrupts normal endometrial tissue, causing the placenta to implant lower in the uterus over the cervical os. Other risk factors include multiparity, advanced maternal age, and smoking."
+  },
+  {
+    "q": "A client at 28 weeks with placental abruption has <span class='hl-lyte'>fibrinogen 150 mg/dL</span> (normal 200-400). The nurse recognizes this indicates:",
+    "options": [
+      "Normal coagulation status requiring no intervention",
+      "Maternal iron deficiency requiring supplementation",
+      "Fetal anemia requiring intrauterine transfusion",
+      "Developing disseminated intravascular coagulation (DIC)"
+    ],
+    "correct": 3,
+    "rationale": "A <span class='hl-lyte'>fibrinogen level of 150 mg/dL</span> is below normal (200-400 mg/dL) and indicates developing DIC, a life-threatening complication of placental abruption. In abruption, tissue thromboplastin from the damaged placenta enters the maternal circulation, triggering the coagulation cascade and consuming clotting factors."
+  },
+  {
+    "q": "A client presents at 34 weeks with moderate vaginal bleeding. Ultrasound confirms a marginal placenta previa. The fetus is stable. What is the nurse's priority?",
+    "options": [
+      "Encourage ambulation to assess bleeding patterns",
+      "Monitor maternal vital signs and <span class='hl-lyte'>fetal heart rate</span> while maintaining IV access",
+      "Prepare for immediate cesarean section",
+      "Administer <span class='hl-drug'>misoprostol</span> to ripen the cervix"
+    ],
+    "correct": 1,
+    "rationale": "With a marginal previa at 34 weeks with a stable fetus, close monitoring is the priority. The nurse should establish IV access, monitor VS and FHR continuously, type and crossmatch blood, and maintain bed rest. <span class='hl-drug'>Misoprostol</span> and ambulation are contraindicated. Immediate cesarean is not indicated since the fetus is stable."
+  },
+  {
+    "q": "During a placental abruption, the nurse notes the client's fundal height has increased from 28 cm to 32 cm in one hour. This finding suggests:",
+    "options": [
+      "Rapid fetal growth requiring further assessment",
+      "Concealed hemorrhage accumulating behind the placenta",
+      "Polyhydramnios developing secondary to the abruption",
+      "Incorrect measurement technique requiring remeasurement"
+    ],
+    "correct": 1,
+    "rationale": "An increasing fundal height during abruption is a classic sign of concealed hemorrhage \u2014 blood is accumulating behind the placenta and expanding the uterus even though minimal or no external bleeding is visible. This is extremely dangerous because the blood loss can be massive while appearing deceptively stable externally."
+  },
+  {
+    "q": "A nurse is caring for a client receiving <span class='hl-drug'>betamethasone</span> at 29 weeks for threatened preterm birth. Which statement indicates the client needs further teaching?",
+    "options": [
+      "\"This medication helps my baby's lungs mature faster.\"",
+      "\"This steroid will prevent my baby from getting respiratory distress entirely.\"",
+      "\"I will need two injections given 24 hours apart.\"",
+      "\"My blood sugar may be temporarily elevated after the injection.\""
+    ],
+    "correct": 1,
+    "rationale": "<span class='hl-drug'>Betamethasone</span> accelerates fetal lung maturity by stimulating surfactant production, but it does NOT guarantee prevention of respiratory distress syndrome \u2014 it significantly reduces the risk and severity. Two doses of 12 mg IM are given 24 hours apart. Maternal hyperglycemia is a known side effect."
+  },
+  {
+    "q": "A client at 26 weeks with placenta previa is on bed rest. Which assessment finding requires the nurse to notify the provider immediately?",
+    "options": [
+      "The client reports mild low back discomfort",
+      "The client's pad is saturated with bright red blood and <span class='hl-lyte'>BP is 90/58 mmHg</span>",
+      "Fetal heart rate is <span class='hl-lyte'>145 bpm</span> with moderate variability",
+      "The client's hemoglobin is 11.2 g/dL"
+    ],
+    "correct": 1,
+    "rationale": "A saturated pad with bright red blood plus hypotension (<span class='hl-lyte'>BP 90/58</span>) indicates active hemorrhage with hemodynamic compromise \u2014 this is an emergency. The nurse must notify the provider immediately, increase IV fluids, prepare for possible emergency delivery, and obtain blood products. The other findings are within normal limits."
+  },
+  {
+    "q": "Which nursing intervention is most important when caring for a client with a suspected placental abruption?",
+    "options": [
+      "Limiting IV fluids to prevent pulmonary edema",
+      "Administering pain medication to keep the client comfortable",
+      "Encouraging the client to ambulate to prevent blood clots",
+      "Measuring abdominal girth every 30 minutes to detect concealed bleeding"
+    ],
+    "correct": 3,
+    "rationale": "Measuring abdominal girth at regular intervals is crucial for detecting concealed hemorrhage in placental abruption. The fundus may increase in size as blood accumulates behind the placenta, even when external bleeding appears minimal. This assessment, along with vital signs and FHR monitoring, helps detect worsening hemorrhage before hemodynamic collapse."
+  },
+  {
+    "q": "A nurse discovers a prolapsed umbilical cord after spontaneous rupture of membranes. What is the FIRST nursing action?",
+    "options": [
+      "Place a gloved hand in the vagina to lift the presenting part off the cord",
+      "Cover the cord with sterile saline-soaked gauze",
+      "Place the client in a supine position and call the provider",
+      "Administer <span class='hl-drug'>terbutaline</span> 0.25 mg subcutaneously"
+    ],
+    "correct": 0,
+    "rationale": "The IMMEDIATE priority with cord prolapse is relieving pressure on the cord. The nurse must insert a gloved hand into the vagina and manually elevate the presenting part off the umbilical cord to restore blood flow. This hand is NOT removed until the baby is delivered by emergency cesarean. Other actions (saline gauze, positioning) are important but come after this life-saving intervention."
+  },
+  {
+    "q": "After identifying a prolapsed cord, the nurse has elevated the presenting part. Which position should the nurse place the client in while awaiting emergency delivery?",
+    "options": [
+      "Supine with legs elevated on pillows",
+      "Right lateral with a pillow between the knees",
+      "High Fowler's position to aid breathing",
+      "Knee-chest or Trendelenburg position"
+    ],
+    "correct": 3,
+    "rationale": "Knee-chest or Trendelenburg position uses gravity to shift the presenting part away from the prolapsed cord, reducing compression. The nurse continues to hold the presenting part off the cord manually while the client is positioned. Supine and Fowler's positions would increase pressure on the cord."
+  },
+  {
+    "q": "A nurse is caring for a client with a prolapsed cord. Which intervention for the exposed cord is essential?",
+    "options": [
+      "Attempt to replace the cord back through the cervix",
+      "Keep the cord warm and moist with sterile saline-soaked gauze",
+      "Apply a warm dry blanket to the cord",
+      "Clamp and cut the cord immediately"
+    ],
+    "correct": 1,
+    "rationale": "The exposed cord must be kept warm and moist with sterile saline-soaked gauze to prevent vasospasm from cold or drying, which would further compromise fetal blood flow. NEVER attempt to replace the cord \u2014 this could cause further compression or vasospasm. Clamping would cut off fetal blood supply entirely."
+  },
+  {
+    "q": "During delivery, the fetal head delivers but the anterior shoulder becomes impacted behind the symphysis pubis. Which maneuver should the nurse anticipate FIRST?",
+    "options": [
+      "Application of fundal pressure to push the baby out",
+      "Wood's screw maneuver to rotate the posterior shoulder",
+      "McRoberts maneuver \u2014 sharply flexing the maternal thighs to the abdomen",
+      "Zavanelli maneuver to push the head back in"
+    ],
+    "correct": 2,
+    "rationale": "McRoberts maneuver (hyperflexing the maternal thighs against the abdomen) is the FIRST-LINE intervention for shoulder dystocia. It straightens the sacral promontory and rotates the symphysis pubis, often freeing the impacted shoulder. FUNDAL PRESSURE IS NEVER APPLIED \u2014 it can worsen impaction and cause uterine rupture."
+  },
+  {
+    "q": "A nurse is managing a shoulder dystocia. The provider requests pressure to help free the shoulder. Which type of pressure is appropriate?",
+    "options": [
+      "Suprapubic pressure applied with downward force",
+      "Fundal pressure applied by a second nurse",
+      "Cricoid pressure to prevent aspiration",
+      "Pressure on the maternal perineum to stretch the tissue"
+    ],
+    "correct": 0,
+    "rationale": "SUPRAPUBIC pressure (applied just above the pubic bone) is used to push the anterior shoulder away from the symphysis pubis. FUNDAL PRESSURE IS NEVER USED \u2014 it pushes the shoulder further into the pelvis, worsening the dystocia and risking uterine rupture. This is a critical NCLEX distinction."
+  },
+  {
+    "q": "After a shoulder dystocia delivery, the nurse assesses the newborn and finds the right arm limp with the wrist flexed and the forearm pronated. This finding is consistent with:",
+    "options": [
+      "Clavicular fracture requiring immobilization",
+      "Erb's palsy (brachial plexus injury) at C5-C6",
+      "Cerebral palsy from intrapartum hypoxia",
+      "Normal newborn posturing that will resolve spontaneously"
+    ],
+    "correct": 1,
+    "rationale": "Erb's palsy (brachial plexus injury at C5-C6) is the classic complication of shoulder dystocia. The affected arm hangs limply in a \"waiter's tip\" position \u2014 adducted, internally rotated, with the forearm pronated and wrist flexed. Most cases resolve with physical therapy, but severe cases may require surgical repair."
+  },
+  {
+    "q": "A laboring client suddenly screams about a \"tearing\" sensation, and contractions abruptly cease. The nurse palpates fetal parts through the abdomen. The nurse should FIRST:",
+    "options": [
+      "Administer <span class='hl-drug'>oxytocin</span> to re-establish contractions",
+      "Assess cervical dilation immediately",
+      "Prepare for emergency laparotomy",
+      "Apply an external fetal monitor and reposition the client"
+    ],
+    "correct": 2,
+    "rationale": "These are classic signs of uterine rupture: sudden tearing pain, cessation of contractions, palpable fetal parts through the abdominal wall, and maternal shock. This is a surgical emergency requiring immediate laparotomy to deliver the fetus and repair or remove the uterus. <span class='hl-drug'>Oxytocin</span> would be contraindicated as it could worsen the rupture."
+  },
+  {
+    "q": "Which client is at greatest risk for uterine rupture during labor?",
+    "options": [
+      "A primigravida in spontaneous labor at 40 weeks",
+      "A multigravida with a history of precipitous labor",
+      "A client with a history of cervical cerclage",
+      "A client with a previous classical (vertical) uterine incision"
+    ],
+    "correct": 3,
+    "rationale": "A previous classical (vertical) uterine incision is the highest risk factor for uterine rupture \u2014 the vertical incision extends into the active (contractile) upper segment of the uterus, creating a weak point. These clients are NEVER candidates for VBAC and require repeat cesarean delivery before labor onset."
+  },
+  {
+    "q": "A client in active labor suddenly develops acute respiratory distress, cyanosis, hypotension, and begins oozing from her IV site. The nurse suspects:",
+    "options": [
+      "Pulmonary embolism from a deep vein thrombosis",
+      "Severe allergic reaction to IV medications",
+      "Amniotic fluid embolism with disseminated intravascular coagulation",
+      "Eclamptic seizure with aspiration pneumonia"
+    ],
+    "correct": 2,
+    "rationale": "The triad of sudden respiratory distress + cardiovascular collapse + DIC (coagulopathy evidenced by oozing from IV sites) is the classic presentation of amniotic fluid embolism (AFE). AFE carries a 60-80% mortality rate and treatment is entirely supportive \u2014 there is no definitive treatment. This is a catastrophic, unpredictable complication."
+  },
+  {
+    "q": "A client with an amniotic fluid embolism is deteriorating rapidly. Which nursing action is most appropriate?",
+    "options": [
+      "Administer <span class='hl-drug'>magnesium sulfate</span> for seizure prophylaxis",
+      "Provide aggressive supportive care including intubation, vasopressors, and blood products",
+      "Prepare for immediate vaginal delivery to remove the source",
+      "Administer <span class='hl-drug'>methylergonovine</span> to control uterine bleeding"
+    ],
+    "correct": 1,
+    "rationale": "Amniotic fluid embolism treatment is ENTIRELY SUPPORTIVE \u2014 there is no definitive cure. Management focuses on maintaining airway (intubation), circulation (vasopressors, IV fluids), and treating DIC (blood products, cryoprecipitate for fibrinogen replacement). The mortality rate is 60-80% even with optimal care."
+  },
+  {
+    "q": "During labor, the nurse applies Gaskin maneuver (all-fours position) for shoulder dystocia. The rationale for this maneuver is:",
+    "options": [
+      "It allows direct visualization of the perineum",
+      "It compresses the fundus to aid expulsion",
+      "It applies pressure to the anterior shoulder",
+      "It increases the AP diameter of the pelvis by allowing the sacrum to move posteriorly"
+    ],
+    "correct": 3,
+    "rationale": "The Gaskin (all-fours) maneuver for shoulder dystocia works by allowing the sacrum to move freely posteriorly, which increases the anteroposterior diameter of the pelvic outlet. Gravity also helps reposition the fetus. This is often tried when McRoberts and suprapubic pressure have failed. It does NOT involve fundal pressure."
+  },
+  {
+    "q": "A nurse caring for a client in labor notes the umbilical cord is visible at the vulva after spontaneous rupture of membranes. The <span class='hl-lyte'>fetal heart rate drops to 80 bpm</span>. Which actions should occur simultaneously? (Select the priority set.)",
+    "options": [
+      "Call for help, attempt to push the cord back in, and start oxytocin",
+      "Place the client supine, apply oxygen via nasal cannula, increase IV rate",
+      "Elevate the presenting part, call for emergency cesarean, keep cord moist with sterile saline",
+      "Document the finding, notify the charge nurse, prepare for vaginal delivery"
+    ],
+    "correct": 2,
+    "rationale": "With a visible prolapsed cord and <span class='hl-lyte'>fetal bradycardia (80 bpm)</span>, the nurse must simultaneously: (1) insert a gloved hand to elevate the presenting part off the cord, (2) call for emergency cesarean section, and (3) keep the cord warm and moist with sterile saline gauze. Never push the cord back in. This is a life-threatening emergency."
+  },
+  {
+    "q": "Which factor in a client's history should alert the nurse to an increased risk of shoulder dystocia?",
+    "options": [
+      "Estimated fetal weight of 3,200 grams",
+      "Maternal height of 5'8\" with normal BMI",
+      "Previous delivery complicated by shoulder dystocia",
+      "Gestational age of 38 weeks with vertex presentation"
+    ],
+    "correct": 2,
+    "rationale": "A history of previous shoulder dystocia is one of the strongest risk factors for recurrence. Other risk factors include fetal macrosomia (>4,000g), maternal diabetes, maternal obesity, prolonged second stage of labor, and operative vaginal delivery (vacuum/forceps). An estimated weight of 3,200g is normal and not a risk factor."
+  },
+  {
+    "q": "The nurse is reviewing signs and symptoms of uterine rupture. Which assessment finding would be LEAST consistent with this diagnosis?",
+    "options": [
+      "Sudden cessation of uterine contractions",
+      "Fetal heart rate shows <span class='hl-lyte'>prolonged deceleration</span>",
+      "Gradual onset of mild cramping over several hours",
+      "Maternal signs of hemorrhagic shock"
+    ],
+    "correct": 2,
+    "rationale": "Uterine rupture presents with SUDDEN, dramatic symptoms \u2014 not gradual cramping. Classic signs include sudden severe \"tearing\" pain, abrupt cessation of contractions, fetal heart rate abnormalities, recession of the presenting part, palpable fetal parts through the abdomen, and rapid development of hemorrhagic shock."
+  },
+  {
+    "q": "A nurse suspects amniotic fluid embolism. Which diagnostic finding would support this diagnosis?",
+    "options": [
+      "Gradually increasing blood pressure with proteinuria",
+      "Normal coagulation studies with elevated liver enzymes",
+      "Isolated respiratory alkalosis without cardiovascular changes",
+      "<span class='hl-lyte'>Elevated D-dimer</span> with prolonged PT/PTT and low fibrinogen"
+    ],
+    "correct": 3,
+    "rationale": "AFE triggers massive activation of the coagulation cascade leading to DIC: <span class='hl-lyte'>elevated D-dimer</span>, prolonged PT/PTT, decreased fibrinogen, decreased platelets, and presence of fibrin degradation products. The triad is respiratory failure + cardiovascular collapse + DIC. Elevated BP with proteinuria suggests preeclampsia, not AFE."
+  },
+  {
+    "q": "A nurse is interpreting a fetal heart rate tracing showing a baseline of <span class='hl-lyte'>155 bpm</span>, moderate variability, positive accelerations, and no decelerations. This is classified as:",
+    "options": [
+      "Category III \u2014 requires immediate intervention",
+      "Uninterpretable \u2014 requires internal monitoring",
+      "Category II \u2014 indeterminate, requires further evaluation",
+      "Category I \u2014 normal, continue routine monitoring"
+    ],
+    "correct": 3,
+    "rationale": "Category I (normal): <span class='hl-lyte'>Baseline 110-160 bpm</span>, moderate variability (6-25 bpm), accelerations present or absent, no late or variable decelerations. A baseline of <span class='hl-lyte'>155 bpm</span> with moderate variability and accelerations is reassuring. Category I requires no intervention beyond routine monitoring."
+  },
+  {
+    "q": "A fetal heart rate tracing shows recurrent late decelerations with minimal variability. This is classified as:",
+    "options": [
+      "Category I \u2014 normal, continue routine care",
+      "Category III \u2014 abnormal, prepare for immediate delivery",
+      "Category II \u2014 indeterminate, increase monitoring frequency",
+      "Benign pattern requiring no intervention"
+    ],
+    "correct": 1,
+    "rationale": "Category III (abnormal) includes: absent variability WITH recurrent late decelerations, recurrent variable decelerations, or bradycardia; OR a sinusoidal pattern. Recurrent late decelerations with minimal variability indicates significant fetal hypoxia and requires immediate intervention including intrauterine resuscitation and preparation for emergent delivery."
+  },
+  {
+    "q": "Using the VEAL CHOP mnemonic, variable decelerations are most commonly caused by:",
+    "options": [
+      "Head compression during contractions",
+      "Uteroplacental insufficiency",
+      "Fetal sleep cycles",
+      "Umbilical cord compression"
+    ],
+    "correct": 3,
+    "rationale": "VEAL CHOP: Variable decelerations = Cord compression, Early decelerations = Head compression, Accelerations = OK (fetal well-being), Late decelerations = Placental insufficiency. Variable decelerations are caused by umbilical cord compression, which can occur with oligohydramnios, cord prolapse, or nuchal cord."
+  },
+  {
+    "q": "A nurse notes early decelerations on the fetal heart rate tracing during active labor. The appropriate nursing response is:",
+    "options": [
+      "Continue to monitor \u2014 early decelerations are benign and expected",
+      "Turn off the oxytocin infusion and give oxygen",
+      "Notify the provider immediately for emergency evaluation",
+      "Prepare for emergency cesarean delivery"
+    ],
+    "correct": 0,
+    "rationale": "Early decelerations mirror contractions (onset, peak, and recovery match the contraction pattern) and are caused by fetal head compression during descent. They are benign and require no intervention \u2014 just continued monitoring. They are a Category I finding when accompanied by normal baseline and moderate variability."
+  },
+  {
+    "q": "A laboring client's fetal tracing shows a sinusoidal pattern. The nurse should:",
+    "options": [
+      "Recognize this as Category III and prepare for immediate intervention",
+      "Reposition the client and provide IV fluids",
+      "Continue monitoring as this is a normal variant",
+      "Administer oxygen via face mask and reassess in 30 minutes"
+    ],
+    "correct": 0,
+    "rationale": "A sinusoidal pattern (smooth, undulating, sine wave-like pattern with absent variability) is ALWAYS Category III and indicates severe fetal anemia, often from Rh isoimmunization, fetal-maternal hemorrhage, or twin-to-twin transfusion. It requires immediate intervention and likely emergent delivery."
+  },
+  {
+    "q": "A client receiving <span class='hl-drug'>oxytocin</span> develops tachysystole (>5 contractions in 10 minutes). The fetal heart rate shows <span class='hl-lyte'>late decelerations</span>. What is the nurse's FIRST action?",
+    "options": [
+      "Increase the IV fluid rate",
+      "Reposition the client to the left lateral position",
+      "Discontinue the <span class='hl-drug'>oxytocin</span> infusion immediately",
+      "Administer <span class='hl-drug'>terbutaline</span> 0.25 mg subcutaneously"
+    ],
+    "correct": 2,
+    "rationale": "With tachysystole and late decelerations, the FIRST action is to STOP the <span class='hl-drug'>oxytocin</span> \u2014 it's causing the excessive contractions which lead to uteroplacental insufficiency (late decels). After stopping oxytocin, the nurse should reposition to left lateral, increase IV fluids, and apply oxygen. <span class='hl-drug'>Terbutaline</span> may be given if tachysystole persists."
+  },
+  {
+    "q": "Which <span class='hl-lyte'>fetal heart rate baseline</span> warrants concern and further evaluation?",
+    "options": [
+      "<span class='hl-lyte'>130 bpm</span> with moderate variability",
+      "<span class='hl-lyte'>170 bpm</span> with minimal variability",
+      "<span class='hl-lyte'>145 bpm</span> with accelerations",
+      "<span class='hl-lyte'>120 bpm</span> with moderate variability"
+    ],
+    "correct": 1,
+    "rationale": "Normal FHR baseline is <span class='hl-lyte'>110-160 bpm</span>. A baseline of <span class='hl-lyte'>170 bpm</span> is fetal tachycardia (>160 bpm), and combined with minimal variability, suggests fetal compromise \u2014 possibly from maternal fever, infection (chorioamnionitis), fetal hypoxia, or medication effects. This requires immediate evaluation."
+  },
+  {
+    "q": "Intrauterine resuscitation measures include all of the following EXCEPT:",
+    "options": [
+      "Repositioning the client to left lateral position",
+      "Administering an IV fluid bolus of <span class='hl-lyte'>500-1000 mL</span> lactated Ringer's",
+      "Applying oxygen via non-rebreather mask at 10 L/min",
+      "Increasing the <span class='hl-drug'>oxytocin</span> infusion rate to strengthen contractions"
+    ],
+    "correct": 3,
+    "rationale": "Intrauterine resuscitation includes: (1) Reposition to left lateral, (2) IV fluid bolus, (3) Oxygen via mask, (4) STOP <span class='hl-drug'>oxytocin</span> \u2014 never increase it during fetal distress, (5) <span class='hl-drug'>Terbutaline</span> for tachysystole, (6) Amnioinfusion for variable decelerations. Increasing oxytocin would worsen uteroplacental insufficiency."
+  },
+  {
+    "q": "A nurse notes variable decelerations during labor. The provider orders amnioinfusion. The nurse understands the purpose of this intervention is to:",
+    "options": [
+      "Induce labor by increasing amniotic fluid pressure",
+      "Cushion the umbilical cord to relieve compression",
+      "Warm the fetus to prevent cold stress",
+      "Dilute meconium to prevent aspiration syndrome"
+    ],
+    "correct": 1,
+    "rationale": "Amnioinfusion (infusing sterile normal saline through an intrauterine pressure catheter) replaces amniotic fluid volume to cushion the umbilical cord, relieving the compression that causes variable decelerations. It can also help dilute meconium, but the primary indication for variable decelerations is cord cushioning."
+  },
+  {
+    "q": "The nurse is assessing moderate variability on a fetal heart tracing. This is defined as fluctuations of:",
+    "options": [
+      "<span class='hl-lyte'>6-25 bpm</span> \u2014 moderate variability",
+      "<span class='hl-lyte'>1-5 bpm</span> \u2014 minimal variability",
+      "<span class='hl-lyte'>0 bpm</span> \u2014 absent variability",
+      "<span class='hl-lyte'>>25 bpm</span> \u2014 marked variability"
+    ],
+    "correct": 0,
+    "rationale": "Moderate variability (<span class='hl-lyte'>6-25 bpm</span>) is the MOST reassuring finding on a fetal heart rate tracing \u2014 it indicates an intact fetal autonomic nervous system with adequate oxygenation. Absent (0) and minimal (1-5) variability are concerning. Marked (>25 bpm) may indicate acute hypoxia."
+  },
+  {
+    "q": "A client in labor has a fetal tracing showing <span class='hl-lyte'>late decelerations</span> with every contraction. After intrauterine resuscitation, the pattern persists. The nurse should anticipate:",
+    "options": [
+      "Continuing current management for another 30 minutes",
+      "Preparing for operative vaginal delivery or cesarean section",
+      "Administering a second bolus of IV fluids only",
+      "Applying a fetal scalp electrode for internal monitoring"
+    ],
+    "correct": 1,
+    "rationale": "Recurrent late decelerations that persist despite intrauterine resuscitation indicate ongoing uteroplacental insufficiency. If the pattern does not resolve with conservative measures (repositioning, fluids, oxygen, stopping oxytocin), the nurse should prepare for expedited delivery \u2014 either operative vaginal delivery if criteria are met, or cesarean section."
+  },
+  {
+    "q": "Which intervention is appropriate for a client experiencing tachysystole (more than 5 contractions in 10 minutes) without <span class='hl-drug'>oxytocin</span> infusion?",
+    "options": [
+      "Administer <span class='hl-drug'>methylergonovine</span> to regulate contractions",
+      "Apply fundal pressure to speed delivery",
+      "Administer <span class='hl-drug'>terbutaline</span> 0.25 mg subcutaneously",
+      "Begin <span class='hl-drug'>oxytocin</span> infusion to synchronize contractions"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Terbutaline</span> 0.25 mg SQ is a beta-2 agonist tocolytic that relaxes uterine smooth muscle, reducing contraction frequency. It's used for tachysystole both with and without oxytocin. <span class='hl-drug'>Methylergonovine</span> would INCREASE contractions. Fundal pressure and starting oxytocin are contraindicated during tachysystole."
+  },
+  {
+    "q": "The nurse is evaluating a Category II fetal heart rate tracing. Which statement about Category II is correct?",
+    "options": [
+      "Category II tracings are always benign and require no further action",
+      "Category II tracings are rare and occur in less than 5% of labors",
+      "Category II always requires immediate cesarean delivery",
+      "Category II includes all tracings that are not Category I or Category III"
+    ],
+    "correct": 3,
+    "rationale": "Category II is the \"catch-all\" category \u2014 it includes ALL tracings that don't meet Category I (normal) or Category III (abnormal) criteria. Most fetal heart rate tracings fall into Category II, which requires continued monitoring, evaluation of the clinical situation, and potential interventions to promote fetal well-being."
+  },
+  {
+    "q": "A nurse identifies a prolonged deceleration lasting 3 minutes with the <span class='hl-lyte'>FHR at 90 bpm</span>. The appropriate initial response is:",
+    "options": [
+      "Document the finding and continue observation",
+      "Increase the <span class='hl-drug'>oxytocin</span> to stimulate a stronger contraction pattern",
+      "Perform intrauterine resuscitation measures immediately",
+      "Prepare for immediate vaginal examination"
+    ],
+    "correct": 2,
+    "rationale": "A prolonged deceleration (<span class='hl-lyte'>FHR below baseline for 2-10 minutes</span>) at <span class='hl-lyte'>90 bpm</span> requires immediate intrauterine resuscitation: reposition to left lateral, stop oxytocin, give IV fluid bolus, apply O2 mask. If the deceleration persists beyond 10 minutes, it becomes bradycardia and requires emergent delivery."
+  },
+  {
+    "q": "An acceleration on a fetal heart rate tracing is defined as an increase of at least <span class='hl-lyte'>15 bpm</span> above baseline lasting at least 15 seconds for a fetus \u226532 weeks. Accelerations indicate:",
+    "options": [
+      "Fetal distress requiring immediate intervention",
+      "Fetal well-being and adequate oxygenation",
+      "Umbilical cord compression between contractions",
+      "Uteroplacental insufficiency during contractions"
+    ],
+    "correct": 1,
+    "rationale": "Accelerations are the hallmark of fetal well-being \u2014 they demonstrate an intact fetal central nervous system with adequate oxygenation (reactive non-stress test). For a fetus \u226532 weeks: increase of <span class='hl-lyte'>\u226515 bpm above baseline for \u226515 seconds</span>. For <32 weeks: <span class='hl-lyte'>\u226510 bpm for \u226510 seconds</span>."
+  },
+  {
+    "q": "A nurse is caring for a postpartum client whose uterus is boggy and displaced to the right. What is the nurse's FIRST action?",
+    "options": [
+      "Administer <span class='hl-drug'>methylergonovine</span> 0.2 mg IM",
+      "Have the client empty her bladder, then perform uterine massage",
+      "Prepare for a blood transfusion",
+      "Administer <span class='hl-drug'>oxytocin</span> IV bolus"
+    ],
+    "correct": 1,
+    "rationale": "A uterus displaced to the right suggests a full bladder, which prevents the uterus from contracting effectively. The FIRST action is to have the client void (or catheterize if unable), then perform fundal massage. A full bladder is the most common correctable cause of uterine atony. Medications come after these initial interventions."
+  },
+  {
+    "q": "Which is the most common cause of postpartum hemorrhage, accounting for approximately 80% of cases?",
+    "options": [
+      "Retained placental fragments (Tissue)",
+      "Uterine atony (Tone)",
+      "Cervical or vaginal lacerations (Trauma)",
+      "Disseminated intravascular coagulation (Thrombin)"
+    ],
+    "correct": 1,
+    "rationale": "The 4 T's of PPH are Tone, Trauma, Tissue, and Thrombin. Uterine atony (Tone) is the #1 cause, responsible for approximately 80% of all PPH. The uterus fails to contract adequately after placental delivery, allowing blood to flow from the open placental site. Risk factors include overdistended uterus, prolonged labor, and magnesium sulfate use."
+  },
+  {
+    "q": "A nurse performs bimanual uterine massage on a client with postpartum hemorrhage due to uterine atony. After 15 seconds of massage, the uterus remains boggy. The nurse should:",
+    "options": [
+      "Stop massaging and apply an ice pack to the fundus",
+      "Prepare the client for a hysterectomy",
+      "Place the client in Trendelenburg position only",
+      "Continue massage while another nurse notifies the provider and prepares uterotonics"
+    ],
+    "correct": 3,
+    "rationale": "If uterine massage does not quickly achieve a firm uterus, continue the massage while activating the hemorrhage team. Uterotonics should be administered simultaneously: <span class='hl-drug'>oxytocin</span> IV, followed by second-line agents if needed. Hysterectomy is a last resort after all pharmacological and surgical measures have failed."
+  },
+  {
+    "q": "A provider orders <span class='hl-drug'>methylergonovine (Methergine)</span> 0.2 mg IM for a postpartum client with uterine atony. The nurse should question this order if the client has a history of:",
+    "options": [
+      "<span class='hl-lyte'>Chronic hypertension</span>",
+      "Diabetes mellitus",
+      "Asthma",
+      "Hypothyroidism"
+    ],
+    "correct": 0,
+    "rationale": "<span class='hl-drug'>Methylergonovine (Methergine)</span> is an ergot alkaloid that causes sustained uterine contraction but also causes systemic vasoconstriction. It is ABSOLUTELY CONTRAINDICATED in clients with <span class='hl-lyte'>hypertension</span> because it can cause dangerous blood pressure elevation, stroke, or myocardial infarction. This is a critical NCLEX drug-safety question."
+  },
+  {
+    "q": "A postpartum client with atony is not responding to <span class='hl-drug'>oxytocin</span> or <span class='hl-drug'>methylergonovine</span>. The provider orders <span class='hl-drug'>carboprost (Hemabate)</span> 0.25 mg IM. The nurse should hold this medication if the client has:",
+    "options": [
+      "A history of gestational diabetes",
+      "A history of asthma or reactive airway disease",
+      "An allergy to penicillin",
+      "A history of migraine headaches"
+    ],
+    "correct": 1,
+    "rationale": "<span class='hl-drug'>Carboprost (Hemabate)</span> is a prostaglandin F2-alpha analogue that stimulates uterine contraction. It is CONTRAINDICATED IN ASTHMA because it causes bronchospasm. Side effects include diarrhea, fever, and nausea. Remember: <span class='hl-drug'>Methergine</span> = no hypertension; <span class='hl-drug'>Hemabate</span> = no asthma."
+  },
+  {
+    "q": "A client with postpartum hemorrhage unresponsive to other uterotonics receives <span class='hl-drug'>misoprostol</span>. By which route is this medication most commonly administered for PPH?",
+    "options": [
+      "Intravenous bolus",
+      "Rectal administration, <span class='hl-lyte'>800-1000 mcg</span>",
+      "Sublingual only",
+      "Intramuscular injection"
+    ],
+    "correct": 1,
+    "rationale": "<span class='hl-drug'>Misoprostol</span> for PPH is most commonly administered rectally at <span class='hl-lyte'>800-1000 mcg</span>. Rectal administration provides sustained absorption even in hemorrhaging patients who may be vomiting (limiting oral/sublingual routes). It is a prostaglandin E1 analogue that stimulates uterine contraction and is often used as a last-line uterotonic."
+  },
+  {
+    "q": "A nurse is assessing a postpartum client 3 days after delivery. The client reports foul-smelling lochia, chills, and has a temperature of <span class='hl-lyte'>102.4\u00b0F (39.1\u00b0C)</span>. The nurse suspects:",
+    "options": [
+      "Normal postpartum diaphoresis",
+      "Mastitis from breastfeeding",
+      "Postpartum endometritis",
+      "Urinary tract infection"
+    ],
+    "correct": 2,
+    "rationale": "Foul-smelling lochia + fever + chills in the early postpartum period is the classic triad of postpartum endometritis (uterine infection). Risk factors include cesarean delivery, prolonged rupture of membranes, and multiple vaginal examinations. Treatment is IV antibiotics \u2014 typically <span class='hl-drug'>clindamycin</span> + <span class='hl-drug'>gentamicin</span> (the \"gold standard\" combination)."
+  },
+  {
+    "q": "A postpartum client with endometritis is started on IV antibiotic therapy. Which combination is considered the gold-standard treatment?",
+    "options": [
+      "<span class='hl-drug'>Clindamycin</span> and <span class='hl-drug'>gentamicin</span>",
+      "<span class='hl-drug'>Amoxicillin</span> and <span class='hl-drug'>metronidazole</span>",
+      "<span class='hl-drug'>Vancomycin</span> and <span class='hl-drug'>ciprofloxacin</span>",
+      "<span class='hl-drug'>Cephalexin</span> and <span class='hl-drug'>azithromycin</span>"
+    ],
+    "correct": 0,
+    "rationale": "The gold-standard treatment for postpartum endometritis is <span class='hl-drug'>clindamycin</span> (covers anaerobes and gram-positive organisms) + <span class='hl-drug'>gentamicin</span> (covers gram-negative organisms). This combination provides broad-spectrum coverage against the polymicrobial organisms commonly involved in postpartum uterine infections."
+  },
+  {
+    "q": "A nurse is educating a postpartum client about recognizing signs of deep vein thrombosis (DVT). Which finding should the client report immediately?",
+    "options": [
+      "Bilateral ankle edema that resolves with elevation",
+      "Varicose veins that were present during pregnancy",
+      "Bilateral leg cramps after prolonged standing",
+      "Unilateral calf swelling, redness, and warmth with pain on dorsiflexion"
+    ],
+    "correct": 3,
+    "rationale": "UNILATERAL calf swelling, redness, warmth, and a positive Homans' sign (pain on dorsiflexion) are classic signs of DVT. Postpartum women are at high risk due to Virchow's triad: venous stasis, hypercoagulability, and endothelial injury. Bilateral edema is more likely physiologic. DVT can progress to pulmonary embolism if untreated."
+  },
+  {
+    "q": "A postpartum client suddenly develops chest pain, dyspnea, and tachycardia on postpartum day 5. The nurse's priority is to:",
+    "options": [
+      "Recognize signs of pulmonary embolism and activate the rapid response team",
+      "Encourage deep breathing and ambulation",
+      "Administer a PRN analgesic for the chest pain",
+      "Reassure the client that chest discomfort is common postpartum"
+    ],
+    "correct": 0,
+    "rationale": "Sudden onset chest pain + dyspnea + tachycardia in a postpartum client is pulmonary embolism (PE) until proven otherwise. PE is a life-threatening emergency requiring immediate intervention: activate the rapid response team, administer oxygen, obtain labs (D-dimer, ABG), prepare for CT pulmonary angiography, and anticipate anticoagulation therapy."
+  },
+  {
+    "q": "A nurse is differentiating between postpartum depression and postpartum psychosis. Which finding indicates postpartum PSYCHOSIS?",
+    "options": [
+      "Persistent sadness and difficulty bonding with the infant beginning 2 weeks postpartum",
+      "Mood swings and tearfulness resolving within 2 weeks (\"baby blues\")",
+      "Hallucinations, delusions, and thoughts of harming the infant with onset 1-2 weeks postpartum",
+      "Mild anxiety about parenting abilities with adequate self-care"
+    ],
+    "correct": 2,
+    "rationale": "Postpartum psychosis is a PSYCHIATRIC EMERGENCY characterized by hallucinations, delusions, severe confusion, paranoia, and thoughts of harming self or infant. Onset is typically 1-2 weeks postpartum. It requires immediate psychiatric hospitalization and separation from the infant for safety. PP depression involves sadness/anhedonia but not psychotic symptoms."
+  },
+  {
+    "q": "A nurse identifies postpartum psychosis in a client. Which action takes priority?",
+    "options": [
+      "Encourage the mother to breastfeed to promote bonding",
+      "Schedule outpatient counseling within the next week",
+      "Administer <span class='hl-drug'>sertraline</span> and schedule follow-up in 2 weeks",
+      "Ensure the safety of the mother and infant \u2014 do NOT leave them alone together"
+    ],
+    "correct": 3,
+    "rationale": "Postpartum psychosis is a psychiatric emergency with risk of infanticide and suicide. The PRIORITY is safety \u2014 the mother should never be left alone with the infant. Immediate psychiatric evaluation and likely inpatient hospitalization are required. Outpatient management is insufficient for psychosis. Antidepressants alone do not treat psychotic symptoms."
+  },
+  {
+    "q": "During assessment of a client 1 hour after vaginal delivery, the nurse notes a firm uterus at the midline with a steady trickle of bright red blood. The most likely cause is:",
+    "options": [
+      "Cervical or vaginal laceration (Trauma)",
+      "Uterine atony requiring fundal massage",
+      "Retained placental fragments (Tissue)",
+      "Coagulation disorder (Thrombin)"
+    ],
+    "correct": 0,
+    "rationale": "A FIRM uterus with continued bright red bleeding points to a source other than atony (which presents with a boggy uterus). A steady trickle of bright red blood with a well-contracted uterus is classic for cervical or vaginal laceration (Trauma). The provider should inspect the birth canal for lacerations requiring surgical repair."
+  },
+  {
+    "q": "Which client is at the HIGHEST risk for uterine atony after delivery?",
+    "options": [
+      "A primipara who delivered a 3,200 g infant after 8 hours of labor",
+      "A client who had a scheduled cesarean delivery at 39 weeks with one fetus",
+      "A multipara who delivered twins after receiving <span class='hl-drug'>magnesium sulfate</span> and <span class='hl-drug'>oxytocin</span> augmentation",
+      "A primipara who had a spontaneous vaginal delivery with a second-degree laceration"
+    ],
+    "correct": 2,
+    "rationale": "This client has multiple risk factors for uterine atony: (1) multiparity \u2014 the uterine muscle is overstretched from multiple pregnancies, (2) twin gestation \u2014 overdistended uterus, (3) <span class='hl-drug'>magnesium sulfate</span> \u2014 relaxes smooth muscle including the uterus, (4) oxytocin augmentation \u2014 prolonged exposure can desensitize oxytocin receptors. All factors impair postpartum uterine contraction."
+  },
+  {
+    "q": "A nurse is managing a postpartum hemorrhage. The client has lost approximately <span class='hl-lyte'>1500 mL</span> of blood. Which set of vital sign changes would the nurse expect?",
+    "options": [
+      "<span class='hl-lyte'>BP 130/85, HR 72, RR 16</span> \u2014 no significant changes",
+      "<span class='hl-lyte'>BP 100/70, HR 110, RR 24</span> \u2014 compensated shock",
+      "<span class='hl-lyte'>BP 80/50, HR 135, RR 32</span> \u2014 decompensated shock",
+      "<span class='hl-lyte'>BP 150/95, HR 60, RR 12</span> \u2014 hypertensive response"
+    ],
+    "correct": 1,
+    "rationale": "A blood loss of <span class='hl-lyte'>1500 mL</span> (Class II-III hemorrhage) typically produces compensated shock: mild hypotension, tachycardia (HR 100-120), increased respiratory rate, and anxiety. The body compensates by increasing heart rate and vasoconstriction. Decompensated shock (BP 80/50, HR >130) occurs with greater blood loss (~2000+ mL) when compensatory mechanisms fail."
+  },
+  {
+    "q": "A nurse is performing a 1-minute APGAR assessment on a newborn. The infant has a heart rate of <span class='hl-lyte'>110 bpm</span>, a weak cry, some flexion of extremities, grimace response to stimulation, and a pink body with blue extremities. What is the APGAR score?",
+    "options": [
+      "6",
+      "5",
+      "7",
+      "8"
+    ],
+    "correct": 0,
+    "rationale": "APGAR scoring: Heart rate <span class='hl-lyte'>110 bpm</span> (>100) = 2; Respiratory effort (weak cry) = 1; Muscle tone (some flexion) = 1; Reflex irritability (grimace only) = 1; Color (pink body with blue extremities/acrocyanosis) = 1. Total = 2 + 1 + 1 + 1 + 1 = 6. Remember: completely pink = 2, acrocyanosis = 1, pale/blue = 0. A score of 7-10 is normal; 4-6 requires some intervention."
+  },
+  {
+    "q": "A nurse notes that a newborn's APGAR score is 4 at 1 minute and 6 at 5 minutes. Which statement about APGAR scoring is correct?",
+    "options": [
+      "The 1-minute APGAR score should guide whether to begin resuscitation",
+      "APGAR scores determine whether a newborn has cerebral palsy",
+      "An APGAR score below 7 at 5 minutes always indicates brain damage",
+      "APGAR scores assess the newborn's transition to extrauterine life but do NOT guide resuscitation decisions"
+    ],
+    "correct": 3,
+    "rationale": "APGAR scores assess the newborn's adjustment to extrauterine life at 1 and 5 minutes but do NOT guide resuscitation decisions. Resuscitation should begin based on the newborn's clinical condition (breathing, heart rate, tone) \u2014 not the APGAR score. A low score does not predict long-term neurological outcomes."
+  },
+  {
+    "q": "A nurse assesses a newborn with a soft, diffuse swelling that crosses suture lines on the scalp. This finding is most consistent with:",
+    "options": [
+      "Caput succedaneum \u2014 a benign finding that resolves in days",
+      "Cephalohematoma \u2014 refer to the provider immediately",
+      "Subgaleal hemorrhage \u2014 a medical emergency",
+      "Craniosynostosis requiring surgical evaluation"
+    ],
+    "correct": 0,
+    "rationale": "Caput succedaneum is edema that CROSSES suture lines, is present at birth, and resolves within a few days. It results from pressure on the presenting part during delivery. Cephalohematoma does NOT cross suture lines (confined to one bone by periosteum), appears hours after birth, and may take weeks to resolve."
+  },
+  {
+    "q": "A nurse notes a cephalohematoma on a newborn. Which characteristic distinguishes a cephalohematoma from caput succedaneum?",
+    "options": [
+      "It does NOT cross suture lines and may increase in size after birth",
+      "It crosses suture lines and is present at birth",
+      "It is associated with pitting edema on the scalp",
+      "It resolves within 24 hours without intervention"
+    ],
+    "correct": 0,
+    "rationale": "Cephalohematoma is a subperiosteal collection of blood that does NOT cross suture lines because it is confined by the periosteum to a single cranial bone. It may not be apparent at birth and can increase in size during the first few days. It takes weeks to months to resolve and increases the risk of jaundice as the trapped blood breaks down."
+  },
+  {
+    "q": "A nurse assesses jaundice in a newborn at 18 hours of life. Which action is most appropriate?",
+    "options": [
+      "Place the infant under a bilirubin light as a routine precaution",
+      "Report immediately \u2014 jaundice within the first <span class='hl-lyte'>24 hours</span> is ALWAYS pathologic",
+      "Document the finding as normal physiologic jaundice",
+      "Encourage frequent breastfeeding and reassess in 12 hours"
+    ],
+    "correct": 1,
+    "rationale": "Jaundice appearing within the first <span class='hl-lyte'>24 hours</span> of life is ALWAYS pathologic and requires immediate evaluation. Common causes include ABO/Rh incompatibility, sepsis, and hemolytic disease. Physiologic jaundice appears after 24 hours, typically peaking at day 3-5 in term infants. Early jaundice can lead to dangerously high bilirubin levels if not treated promptly."
+  },
+  {
+    "q": "A nurse is caring for a jaundiced newborn under phototherapy. Which finding indicates a serious complication of untreated hyperbilirubinemia?",
+    "options": [
+      "Bronze-colored skin discoloration",
+      "Loose, frequent green stools",
+      "Opisthotonos (arching of the back) and high-pitched cry \u2014 signs of kernicterus",
+      "Mild skin rash on the trunk"
+    ],
+    "correct": 2,
+    "rationale": "Kernicterus occurs when unconjugated bilirubin crosses the blood-brain barrier and deposits in the basal ganglia. Signs include opisthotonos (severe back arching), high-pitched cry, lethargy, poor feeding, and seizures. Kernicterus is IRREVERSIBLE and causes permanent neurological damage. Bronze skin is a benign effect of phototherapy."
+  },
+  {
+    "q": "A newborn's <span class='hl-lyte'>blood glucose is 35 mg/dL</span> at 2 hours of life. The infant is alert and able to latch. Which intervention is most appropriate?",
+    "options": [
+      "Administer <span class='hl-lyte'>D25W</span> intravenously immediately",
+      "Feed the infant immediately and recheck glucose in 30-60 minutes",
+      "Administer <span class='hl-lyte'>D50W</span> intravenously to rapidly correct the glucose",
+      "Observe and recheck glucose at the next scheduled feeding"
+    ],
+    "correct": 1,
+    "rationale": "Neonatal hypoglycemia (<span class='hl-lyte'><40 mg/dL</span> in the first 4 hours) in an alert, feeding-capable infant is treated by feeding immediately and rechecking the glucose in 30-60 minutes. <span class='hl-lyte'>D25W and D50W are NEVER used in neonates</span> \u2014 they are too concentrated and can cause rebound hypoglycemia, brain damage, and vessel sclerosis. If IV glucose is needed, use <span class='hl-lyte'>D10W</span>."
+  },
+  {
+    "q": "A nurse is caring for a hypoglycemic newborn who is lethargic and unable to feed. Which IV solution is appropriate for neonatal hypoglycemia?",
+    "options": [
+      "<span class='hl-lyte'>D10W</span> via IV infusion",
+      "<span class='hl-lyte'>D5W</span> at maintenance rate",
+      "<span class='hl-lyte'>D25W</span> IV push",
+      "<span class='hl-lyte'>D50W</span> IV push"
+    ],
+    "correct": 0,
+    "rationale": "For neonates unable to feed, <span class='hl-lyte'>D10W</span> is the appropriate IV solution. <span class='hl-lyte'>D25W and D50W</span> are NEVER used in neonates \u2014 the high osmolality can cause severe osmotic shifts, rebound hypoglycemia, and CNS damage. <span class='hl-lyte'>D5W</span> is typically insufficient to correct symptomatic hypoglycemia."
+  },
+  {
+    "q": "A premature infant at 30 weeks' gestation exhibits grunting, nasal flaring, and intercostal retractions shortly after birth. The nurse suspects respiratory distress syndrome (RDS). The primary cause of RDS is:",
+    "options": [
+      "Meconium aspiration blocking the airways",
+      "Persistent pulmonary hypertension of the newborn",
+      "Congenital pneumonia from group B streptococcus",
+      "Surfactant deficiency due to lung immaturity"
+    ],
+    "correct": 3,
+    "rationale": "RDS is caused by surfactant deficiency due to immature lungs in premature infants. Surfactant reduces alveolar surface tension and prevents alveolar collapse. Without it, the alveoli collapse with each breath, causing progressive atelectasis. Signs include grunting (to maintain positive end-expiratory pressure), nasal flaring, and retractions."
+  },
+  {
+    "q": "A premature newborn with RDS is prescribed exogenous surfactant. The nurse understands this medication is administered via:",
+    "options": [
+      "Nebulizer treatment over 30 minutes",
+      "Intramuscular injection in the vastus lateralis",
+      "Intravenous infusion over 4 hours",
+      "Endotracheal tube directly into the lungs"
+    ],
+    "correct": 3,
+    "rationale": "Exogenous surfactant is administered directly into the lungs via the endotracheal (ET) tube. The infant is intubated, and the surfactant is instilled in aliquots while the infant is positioned to distribute the medication evenly throughout the lungs. It cannot be given by any other route as it must coat the alveolar surfaces directly."
+  },
+  {
+    "q": "A nurse is assessing a newborn of a mother with a history of opioid use disorder. At 48 hours of life, the infant exhibits tremors, high-pitched cry, increased Moro reflex, and poor feeding. The nurse recognizes these as signs of:",
+    "options": [
+      "Neonatal abstinence syndrome (NAS)",
+      "Neonatal sepsis requiring IV antibiotics",
+      "Hypoglycemia requiring IV dextrose",
+      "Birth trauma causing neurological damage"
+    ],
+    "correct": 0,
+    "rationale": "Neonatal abstinence syndrome (NAS) presents 24-72 hours after birth with CNS hyperirritability: tremors, high-pitched cry, hyperactive Moro reflex, irritability, poor feeding, seizures. It results from in-utero opioid exposure and subsequent withdrawal after birth. The Finnegan Scoring System is used to assess severity and guide pharmacological treatment."
+  },
+  {
+    "q": "A nurse is using the Finnegan Scale to assess a newborn with NAS. The infant's score is 9 on three consecutive assessments. The nurse should anticipate:",
+    "options": [
+      "Continuing non-pharmacological comfort measures only",
+      "Transferring to the NICU for surgical evaluation",
+      "Discharging the infant home with close follow-up",
+      "Initiating pharmacological treatment with <span class='hl-drug'>morphine</span> or <span class='hl-drug'>methadone</span> taper"
+    ],
+    "correct": 3,
+    "rationale": "A Finnegan score of \u22658 on three consecutive assessments indicates the need for pharmacological intervention. Treatment typically involves a slow taper of <span class='hl-drug'>morphine</span> or <span class='hl-drug'>methadone</span> to manage withdrawal symptoms safely. Non-pharmacological measures (swaddling, dim lighting, frequent small feedings) continue alongside pharmacological treatment."
+  },
+  {
+    "q": "A nurse is educating parents about the 4 mechanisms of heat loss in newborns. Which scenario demonstrates heat loss by CONVECTION?",
+    "options": [
+      "Leaving the newborn uncovered near an air conditioning vent",
+      "Placing the newborn on a cold scale without a blanket",
+      "Placing the newborn's crib near a cold window",
+      "Not drying the newborn immediately after birth"
+    ],
+    "correct": 0,
+    "rationale": "Convection is heat loss through air currents moving over the skin \u2014 like a draft from an air conditioning vent, fan, or open door. Conduction = heat loss to a cold surface (cold scale). Radiation = heat loss to nearby cold objects without direct contact (cold window). Evaporation = heat loss through moisture on the skin (wet newborn)."
+  },
+  {
+    "q": "A nurse assesses a newborn's umbilical cord and documents a two-vessel cord. The nurse understands this finding:",
+    "options": [
+      "Is a normal variant requiring no follow-up",
+      "Requires screening for congenital anomalies, especially renal and cardiac",
+      "Indicates the mother had gestational diabetes",
+      "Is only significant if the infant is premature"
+    ],
+    "correct": 1,
+    "rationale": "A normal umbilical cord has 3 vessels (2 arteries, 1 vein). A two-vessel cord (single umbilical artery) is associated with an increased risk of congenital anomalies, particularly renal and cardiac defects. All infants with a 2-vessel cord should be screened with a renal ultrasound and cardiac evaluation."
+  },
+  {
+    "q": "Normal newborn vital signs include which of the following?",
+    "options": [
+      "HR <span class='hl-lyte'>120-160 bpm</span>, RR <span class='hl-lyte'>30-60</span>/min, Temp <span class='hl-lyte'>97.5-99.3\u00b0F</span>",
+      "HR <span class='hl-lyte'>90-120 bpm</span>, RR <span class='hl-lyte'>20-40</span>/min, Temp <span class='hl-lyte'>96.0-98.0\u00b0F</span>",
+      "HR <span class='hl-lyte'>160-200 bpm</span>, RR <span class='hl-lyte'>60-80</span>/min, Temp <span class='hl-lyte'>99.5-100.4\u00b0F</span>",
+      "HR <span class='hl-lyte'>80-100 bpm</span>, RR <span class='hl-lyte'>12-20</span>/min, Temp <span class='hl-lyte'>98.6-100.0\u00b0F</span>"
+    ],
+    "correct": 0,
+    "rationale": "Normal newborn vital signs: HR <span class='hl-lyte'>120-160 bpm</span>, RR <span class='hl-lyte'>30-60</span>/min, Temperature <span class='hl-lyte'>97.5-99.3\u00b0F</span> (36.4-37.4\u00b0C). Values outside these ranges require immediate assessment. A heart rate <100 bpm requires resuscitative intervention. Respiratory rate >60 may indicate tachypnea of the newborn or respiratory distress."
+  },
+  {
+    "q": "A newborn develops cold stress. The nurse knows that cold stress leads to which metabolic consequence?",
+    "options": [
+      "Metabolic acidosis from increased oxygen consumption and anaerobic metabolism",
+      "Respiratory alkalosis from hyperventilation",
+      "Metabolic alkalosis from decreased carbon dioxide production",
+      "No metabolic changes if the infant is rewarmed within 1 hour"
+    ],
+    "correct": 0,
+    "rationale": "Cold stress triggers a cascade: the newborn burns brown fat for heat \u2192 increases oxygen consumption \u2192 when oxygen demand exceeds supply, anaerobic metabolism produces lactic acid \u2192 metabolic acidosis. Additionally, cold stress can cause pulmonary vasoconstriction, hypoglycemia (glucose used for thermogenesis), and respiratory distress."
+  },
+  {
+    "q": "A nurse is caring for a newborn under phototherapy for jaundice. Which nursing intervention is MOST important?",
+    "options": [
+      "Cover the infant's eyes with protective eye shields and monitor skin integrity",
+      "Dress the infant in warm clothing to prevent cold stress",
+      "Limit feedings during phototherapy to prevent emesis",
+      "Keep the infant's diaper on at all times during treatment"
+    ],
+    "correct": 0,
+    "rationale": "Eye protection is ESSENTIAL during phototherapy to prevent retinal damage from the high-intensity light. The infant should be undressed (except for diaper) to maximize skin exposure to the light. Frequent feedings are encouraged (not limited) to promote bilirubin excretion through stool, and the infant should be monitored for temperature instability."
+  },
+  {
+    "q": "A nurse identifies a newborn with physiologic jaundice. Which characteristic distinguishes physiologic from pathologic jaundice?",
+    "options": [
+      "Physiologic jaundice peaks at <span class='hl-lyte'>day 3-5</span> in term infants and resolves by 1-2 weeks",
+      "Physiologic jaundice appears within the first 24 hours of life",
+      "Physiologic jaundice causes bilirubin levels to rise above <span class='hl-lyte'>20 mg/dL</span>",
+      "Physiologic jaundice requires phototherapy in all cases"
+    ],
+    "correct": 0,
+    "rationale": "Physiologic jaundice appears AFTER 24 hours, peaks at <span class='hl-lyte'>day 3-5</span> in term infants (day 5-7 in preterm), and resolves by 1-2 weeks. Bilirubin levels rise gradually and remain below treatment thresholds. Pathologic jaundice appears within 24 hours, rises rapidly (>5 mg/dL/day), and may require aggressive treatment."
+  },
+  {
+    "q": "A nurse in the newborn nursery notes that an infant born 4 hours ago has not passed meconium and has a distended abdomen. The priority nursing action is:",
+    "options": [
+      "Record the finding as a normal variation and reassess in 12 hours",
+      "Administer a glycerin suppository to stimulate stooling",
+      "Notify the provider \u2014 this may indicate a gastrointestinal obstruction",
+      "Increase oral feedings to promote intestinal motility"
+    ],
+    "correct": 2,
+    "rationale": "While most newborns pass meconium within 24-48 hours, abdominal distension at 4 hours combined with no meconium passage warrants prompt evaluation. This could indicate intestinal obstruction, Hirschsprung disease, meconium ileus (associated with cystic fibrosis), or imperforate anus. The provider should be notified for further assessment."
+  },
+  {
+    "q": "A newborn of a diabetic mother (IDM) is large for gestational age at <span class='hl-lyte'>4,800 grams</span>. The nurse should monitor this infant closely for:",
+    "options": [
+      "Hyperglycemia and polyuria",
+      "Respiratory alkalosis and hypernatremia",
+      "Elevated bilirubin only during the first hour",
+      "Hypoglycemia, hypocalcemia, and <span class='hl-lyte'>polycythemia</span>"
+    ],
+    "correct": 3,
+    "rationale": "Infants of diabetic mothers (IDM) are at high risk for: (1) Hypoglycemia \u2014 the infant's pancreas was producing excess insulin in utero in response to maternal hyperglycemia; after birth, glucose supply stops but insulin production continues. (2) Hypocalcemia. (3) <span class='hl-lyte'>Polycythemia</span> \u2014 increased RBC production from chronic fetal hypoxia. (4) Hyperbilirubinemia. (5) RDS."
+  },
+  {
+    "q": "A nurse is administering <span class='hl-drug'>oxytocin (Pitocin)</span> to augment labor. Which safety measure is MOST important?",
+    "options": [
+      "Administering the medication via IV push for rapid onset",
+      "Running the oxytocin as a primary IV line without a pump",
+      "Using an infusion pump and titrating based on contraction pattern and FHR",
+      "Increasing the dose every 5 minutes until adequate contractions are achieved"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Oxytocin</span> must ALWAYS be administered via an IV infusion pump \u2014 NEVER by IV push or bolus, as this can cause tetanic contractions, uterine rupture, fetal distress, and maternal death. The dose is titrated gradually based on contraction pattern (frequency, duration, intensity) and fetal heart rate response."
+  },
+  {
+    "q": "A nurse is monitoring a client receiving <span class='hl-drug'>oxytocin</span> for labor induction. Which finding requires the nurse to STOP the infusion immediately?",
+    "options": [
+      "Contractions every 3 minutes lasting 60 seconds",
+      "Cervical dilation has progressed from 4 cm to 6 cm",
+      "Client reports moderate discomfort during contractions",
+      "Fetal heart rate tracing shows <span class='hl-lyte'>late decelerations</span> with decreased variability"
+    ],
+    "correct": 3,
+    "rationale": "<span class='hl-drug'>Oxytocin</span> must be STOPPED immediately if: (1) Late decelerations or prolonged decelerations appear, (2) Tachysystole occurs (>5 contractions in 10 minutes), (3) Fetal bradycardia develops, (4) Uterine hyperstimulation with non-reassuring FHR. Late decelerations with decreased variability indicate significant fetal compromise."
+  },
+  {
+    "q": "A client receiving <span class='hl-drug'>oxytocin</span> complains of a severe headache and has <span class='hl-lyte'>decreased urine output</span> and <span class='hl-lyte'>serum sodium of 125 mEq/L</span>. The nurse recognizes these as signs of:",
+    "options": [
+      "Preeclampsia developing during labor",
+      "Dehydration requiring increased IV fluid rate",
+      "Normal side effects of oxytocin that require no intervention",
+      "Oxytocin-induced water intoxication (hyponatremia)"
+    ],
+    "correct": 3,
+    "rationale": "<span class='hl-drug'>Oxytocin</span> has an antidiuretic effect (structurally similar to ADH/vasopressin). Prolonged administration with hypotonic IV solutions can cause water intoxication: <span class='hl-lyte'>hyponatremia</span>, headache, confusion, decreased urine output, nausea, and potentially seizures. The nurse should stop oxytocin, restrict fluids, and notify the provider."
+  },
+  {
+    "q": "A client in preterm labor at 30 weeks is prescribed <span class='hl-drug'>terbutaline</span> 0.25 mg subcutaneously. Before administration, which assessment is most critical?",
+    "options": [
+      "Blood glucose level",
+      "Fetal position via Leopold's maneuvers",
+      "Maternal heart rate \u2014 hold if <span class='hl-lyte'>HR >120 bpm</span>",
+      "Maternal weight for accurate dosing"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Terbutaline</span> is a beta-2 agonist tocolytic that causes tachycardia as a significant side effect. The nurse must assess the maternal heart rate BEFORE administration \u2014 the drug is HELD if the maternal <span class='hl-lyte'>HR exceeds 120 bpm</span>. Other side effects include tremor, hyperglycemia, and hypokalemia."
+  },
+  {
+    "q": "A nurse is administering <span class='hl-drug'>terbutaline</span> to a client in preterm labor. Which side effects should the nurse anticipate? (Select the priority assessment.)",
+    "options": [
+      "Bradycardia, hypotension, and constipation",
+      "Hypothermia, decreased reflexes, and flushing",
+      "Tachycardia, tremor, <span class='hl-lyte'>hyperglycemia</span>, and <span class='hl-lyte'>hypokalemia</span>",
+      "Respiratory depression, hypoglycemia, and sedation"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Terbutaline</span> beta-2 adrenergic effects include: tachycardia (cardiac stimulation), tremor (skeletal muscle stimulation), <span class='hl-lyte'>hyperglycemia</span> (glycogenolysis), and <span class='hl-lyte'>hypokalemia</span> (intracellular potassium shift). Monitor heart rate, blood glucose, potassium levels, and watch for signs of pulmonary edema."
+  },
+  {
+    "q": "A client at 28 weeks' gestation is prescribed <span class='hl-drug'>betamethasone</span> to promote fetal lung maturity. The nurse should administer:",
+    "options": [
+      "<span class='hl-lyte'>6 mg</span> IM in a single dose",
+      "<span class='hl-lyte'>12 mg</span> IV push as a one-time dose",
+      "Two doses of <span class='hl-lyte'>12 mg</span> IM given <span class='hl-lyte'>24 hours apart</span>",
+      "Four doses of <span class='hl-lyte'>6 mg</span> IM given <span class='hl-lyte'>6 hours apart</span>"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Betamethasone</span> for fetal lung maturity: two doses of <span class='hl-lyte'>12 mg IM given 24 hours apart</span>. The corticosteroid stimulates surfactant production in the fetal lungs. It is indicated between <span class='hl-lyte'>24-34 weeks</span> gestation when preterm delivery is anticipated within 7 days. Maximum benefit occurs 48 hours after the first dose."
+  },
+  {
+    "q": "A nurse is preparing to administer <span class='hl-drug'>RhoGAM (Rh immune globulin)</span> to an Rh-negative client. Which test must be performed BEFORE administration?",
+    "options": [
+      "Indirect Coombs test \u2014 must be negative",
+      "Complete blood count with differential",
+      "Group B streptococcus culture",
+      "24-hour urine protein collection"
+    ],
+    "correct": 0,
+    "rationale": "An indirect Coombs test must be NEGATIVE before administering <span class='hl-drug'>RhoGAM</span>. A positive indirect Coombs means the mother has already developed Rh antibodies (sensitization has occurred), and <span class='hl-drug'>RhoGAM</span> would be ineffective \u2014 it can only PREVENT sensitization, not reverse it. <span class='hl-drug'>RhoGAM</span> is given at 28 weeks and within 72 hours postpartum."
+  },
+  {
+    "q": "An Rh-negative mother delivers an Rh-positive infant. By which route and within what timeframe should <span class='hl-drug'>RhoGAM</span> be administered?",
+    "options": [
+      "IV push within 24 hours of delivery",
+      "Subcutaneous injection within 48 hours of delivery",
+      "Oral tablet within 1 week of delivery",
+      "IM injection within 72 hours of delivery"
+    ],
+    "correct": 3,
+    "rationale": "<span class='hl-drug'>RhoGAM</span> is administered IM ONLY (never IV) within 72 hours after delivery of an Rh-positive infant. It prevents maternal sensitization by destroying fetal Rh-positive red blood cells in the maternal circulation before the mother's immune system can produce anti-Rh antibodies."
+  },
+  {
+    "q": "A nurse receives an order for <span class='hl-drug'>methylergonovine (Methergine)</span> 0.2 mg IM for a postpartum client. The client's <span class='hl-lyte'>blood pressure is 148/96 mmHg</span>. The nurse should:",
+    "options": [
+      "Administer the medication as ordered",
+      "Administer a half dose to reduce the risk of hypertensive crisis",
+      "Hold the medication and notify the provider \u2014 contraindicated with hypertension",
+      "Give the medication IV instead of IM for better blood pressure control"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Methylergonovine (Methergine)</span> is CONTRAINDICATED with <span class='hl-lyte'>hypertension</span> (BP \u2265140/90). It causes potent vasoconstriction that can precipitate hypertensive crisis, stroke, or MI. The nurse must HOLD the medication and notify the provider. An alternative uterotonic should be selected \u2014 <span class='hl-drug'>oxytocin</span> or <span class='hl-drug'>misoprostol</span> would be safer options."
+  },
+  {
+    "q": "A nurse is caring for a client with postpartum hemorrhage who has a history of asthma. Which uterotonic medication should the nurse anticipate will be AVOIDED?",
+    "options": [
+      "<span class='hl-drug'>Oxytocin (Pitocin)</span> IV infusion",
+      "<span class='hl-drug'>Methylergonovine (Methergine)</span> 0.2 mg IM",
+      "<span class='hl-drug'>Misoprostol</span> 800 mcg rectally",
+      "<span class='hl-drug'>Carboprost (Hemabate)</span> 0.25 mg IM"
+    ],
+    "correct": 3,
+    "rationale": "<span class='hl-drug'>Carboprost (Hemabate)</span> is CONTRAINDICATED in asthma. As a prostaglandin F2-alpha, it causes bronchospasm. Remember the critical NCLEX drug contraindications: <span class='hl-drug'>Methergine</span> = NO hypertension; <span class='hl-drug'>Hemabate</span> = NO asthma. <span class='hl-drug'>Oxytocin</span> and <span class='hl-drug'>misoprostol</span> can be used safely in asthmatic patients."
+  },
+  {
+    "q": "A client receiving <span class='hl-drug'>misoprostol</span> for cervical ripening has a history of a previous cesarean delivery. The nurse should:",
+    "options": [
+      "Administer the medication as ordered since it is safe with a uterine scar",
+      "Give a reduced dose to minimize risk",
+      "Question the order \u2014 misoprostol for cervical ripening is contraindicated with prior C-section",
+      "Administer the misoprostol but increase fetal monitoring frequency"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Misoprostol</span> for cervical ripening is CONTRAINDICATED in clients with a prior cesarean delivery or uterine surgery. It can cause uterine hyperstimulation and increase the risk of uterine rupture at the scar site. Mechanical methods (Foley catheter) are preferred for cervical ripening in clients with prior uterine scars."
+  },
+  {
+    "q": "Before starting <span class='hl-drug'>oxytocin</span> for labor induction in a client who had <span class='hl-drug'>misoprostol</span> for cervical ripening, the nurse should ensure:",
+    "options": [
+      "The misoprostol insert has been removed AND an appropriate waiting period has elapsed",
+      "At least 30 minutes have passed since the last dose of misoprostol",
+      "Misoprostol and oxytocin can be safely administered simultaneously",
+      "The client has received a dose of <span class='hl-drug'>terbutaline</span> to prevent tachysystole"
+    ],
+    "correct": 0,
+    "rationale": "<span class='hl-drug'>Misoprostol</span> (or any prostaglandin cervical ripening agent) must be REMOVED before starting <span class='hl-drug'>oxytocin</span>, and an appropriate waiting period must elapse. Using them simultaneously causes dangerous uterine hyperstimulation and increases the risk of uterine rupture. The interval depends on the specific agent used."
+  },
+  {
+    "q": "A nurse is administering <span class='hl-drug'>magnesium sulfate</span> to a preeclamptic client. The nurse should HOLD the infusion and notify the provider if:",
+    "options": [
+      "Deep tendon reflexes are <span class='hl-lyte'>2+</span> (normal)",
+      "Urine output is <span class='hl-lyte'>\u226530 mL/hour</span>",
+      "The client reports mild warmth and flushing",
+      "Respiratory rate drops to <span class='hl-lyte'>10 breaths/min</span> and DTRs are absent"
+    ],
+    "correct": 3,
+    "rationale": "<span class='hl-drug'>Magnesium sulfate</span> toxicity signs in order: loss of DTRs \u2192 respiratory depression \u2192 cardiac arrest. The nurse must HOLD the infusion if: <span class='hl-lyte'>respirations <12/min</span>, DTRs absent, or <span class='hl-lyte'>urine output <30 mL/hr</span> (decreased renal excretion leads to accumulation). The antidote is <span class='hl-drug'>calcium gluconate</span> 1g IV."
+  },
+  {
+    "q": "The antidote for <span class='hl-drug'>magnesium sulfate</span> toxicity is:",
+    "options": [
+      "<span class='hl-drug'>Naloxone</span> (Narcan) 0.4 mg IV",
+      "<span class='hl-drug'>Vitamin K</span> (phytonadione) IM",
+      "<span class='hl-drug'>Protamine sulfate</span> IV",
+      "<span class='hl-drug'>Calcium gluconate</span> 1 gram IV push"
+    ],
+    "correct": 3,
+    "rationale": "<span class='hl-drug'>Calcium gluconate</span> 1 gram IV is the antidote for <span class='hl-drug'>magnesium sulfate</span> toxicity. It should be kept at the bedside whenever magnesium is being administered. Calcium antagonizes the neuromuscular blocking effects of magnesium. <span class='hl-drug'>Naloxone</span> reverses opioids, <span class='hl-drug'>protamine</span> reverses heparin, and <span class='hl-drug'>Vitamin K</span> reverses warfarin."
+  },
+  {
+    "q": "A nurse is monitoring a client receiving <span class='hl-drug'>magnesium sulfate</span> for seizure prophylaxis in severe preeclampsia. Which assessment parameters should be monitored at least every hour?",
+    "options": [
+      "Blood glucose level and fetal weight estimation",
+      "Deep tendon reflexes, <span class='hl-lyte'>respiratory rate</span>, and <span class='hl-lyte'>urine output</span>",
+      "Cervical dilation and effacement progress",
+      "Maternal weight and dietary intake"
+    ],
+    "correct": 1,
+    "rationale": "The three critical assessments for <span class='hl-drug'>magnesium sulfate</span> monitoring are: (1) Deep tendon reflexes \u2014 first sign of toxicity is loss of DTRs, (2) <span class='hl-lyte'>Respiratory rate</span> \u2014 must be \u226512/min, (3) <span class='hl-lyte'>Urine output</span> \u2014 must be \u226530 mL/hr (magnesium is excreted renally). These parameters detect toxicity progression before respiratory arrest occurs."
+  },
+  {
+    "q": "A client at 34 weeks' gestation requires <span class='hl-drug'>betamethasone</span>. The nurse explains that this medication's primary purpose is to:",
+    "options": [
+      "Stop preterm contractions and delay delivery",
+      "Prevent maternal infection during preterm labor",
+      "Stimulate fetal lung surfactant production to reduce respiratory distress",
+      "Lower the mother's blood pressure if preeclampsia develops"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Betamethasone</span> is an antenatal corticosteroid that crosses the placenta and stimulates fetal surfactant production, significantly reducing the incidence and severity of respiratory distress syndrome (RDS) in premature infants. It does NOT stop contractions (it's not a tocolytic) and does NOT prevent infection."
+  },
+  {
+    "q": "A client in preterm labor has received <span class='hl-drug'>terbutaline</span> and now reports palpitations. Her <span class='hl-lyte'>heart rate is 128 bpm</span>. The nurse should:",
+    "options": [
+      "Hold the next dose \u2014 <span class='hl-lyte'>HR >120 bpm</span> is the threshold for holding terbutaline",
+      "Administer a second dose of terbutaline to fully suppress contractions",
+      "Reassure the client that this is an expected effect and continue monitoring",
+      "Administer <span class='hl-drug'>metoprolol</span> to counteract the tachycardia"
+    ],
+    "correct": 0,
+    "rationale": "<span class='hl-drug'>Terbutaline</span> should be HELD if the maternal <span class='hl-lyte'>heart rate exceeds 120 bpm</span>. At 128 bpm, this client has exceeded the safety threshold. While tachycardia is an expected beta-2 effect, rates above 120 increase the risk of maternal cardiac complications. The nurse should hold the medication and notify the provider."
+  },
+  {
+    "q": "A nurse is reviewing the timing of <span class='hl-drug'>RhoGAM</span> administration. In which situations should an Rh-negative mother receive <span class='hl-drug'>RhoGAM</span>? (Select the most complete answer.)",
+    "options": [
+      "Only after delivery of an Rh-positive infant",
+      "Only during the first pregnancy \u2014 subsequent pregnancies do not require it",
+      "Only if the indirect Coombs test is positive",
+      "At 28 weeks gestation, after delivery, and after any potentially sensitizing event (miscarriage, amniocentesis, trauma)"
+    ],
+    "correct": 3,
+    "rationale": "<span class='hl-drug'>RhoGAM</span> is given to unsensitized Rh-negative mothers at: (1) 28 weeks gestation (routine prophylaxis), (2) within 72 hours after delivery of an Rh-positive infant, and (3) after ANY potentially sensitizing event \u2014 miscarriage, ectopic pregnancy, amniocentesis, chorionic villus sampling, abdominal trauma, or second/third trimester bleeding."
+  },
+  {
+    "q": "A new nurse asks why <span class='hl-drug'>carboprost (Hemabate)</span> is not given to a postpartum client with PPH who has asthma. The best explanation is:",
+    "options": [
+      "<span class='hl-drug'>Hemabate</span> lowers blood pressure dangerously in asthmatic patients",
+      "<span class='hl-drug'>Hemabate</span> is a prostaglandin F2-alpha that causes bronchospasm in patients with reactive airway disease",
+      "<span class='hl-drug'>Hemabate</span> interacts with inhaled bronchodilators causing cardiac arrhythmias",
+      "<span class='hl-drug'>Hemabate</span> is only effective in non-asthmatic patients due to airway receptor differences"
+    ],
+    "correct": 1,
+    "rationale": "<span class='hl-drug'>Carboprost (Hemabate)</span> is a prostaglandin F2-alpha analogue. Prostaglandin F2-alpha causes smooth muscle contraction \u2014 this includes both the uterus (therapeutic effect) AND the bronchial smooth muscle (adverse effect). In patients with asthma or reactive airway disease, this bronchospasm can be severe and life-threatening."
+  },
+  {
+    "q": "A nurse is preparing to administer <span class='hl-drug'>oxytocin</span> for postpartum hemorrhage. Which route is appropriate for this indication?",
+    "options": [
+      "IV infusion of <span class='hl-lyte'>10-40 units</span> in 1000 mL lactated Ringer's via infusion pump",
+      "Intramuscular injection of 10 units in the deltoid",
+      "IV push of 10 units as a rapid bolus",
+      "Subcutaneous injection of 5 units in the abdomen"
+    ],
+    "correct": 0,
+    "rationale": "For postpartum hemorrhage, <span class='hl-drug'>oxytocin</span> is administered as a dilute IV infusion (<span class='hl-lyte'>10-40 units</span> in 1000 mL crystalloid) via an infusion pump. <span class='hl-drug'>Oxytocin</span> should NEVER be given as an undiluted IV bolus \u2014 this can cause severe hypotension, cardiac arrhythmias, and water intoxication. IM injection (10 units) may be used when IV access is not available."
+  }
+]
