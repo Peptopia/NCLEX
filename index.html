@@ -71,13 +71,13 @@ html:not(.dark) #peptopia-klimek-guide .home-card[data-section="cardiac"] .home-
 /* Enforce 2-line max on card descriptors */
 #peptopia-klimek-guide .home-card-desc{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 /* Collection group containers (Comprehensive, Maternal-Pediatric) */
-#peptopia-klimek-guide .coll-group{flex:0 1 auto;width:auto;max-width:100%;background:linear-gradient(135deg,#a292be 0%,#9886b4 50%,#a292be 100%);border:1px solid rgba(80,50,130,0.25);border-radius:0.6rem;padding:0.8rem 0.75rem 0.75rem;margin-top:0.25rem}
-html.dark #peptopia-klimek-guide .coll-group{background:linear-gradient(135deg,#161228 0%,#1a1530 50%,#161228 100%);border-color:rgba(140,110,200,0.25)}
-#peptopia-klimek-guide .coll-label{color:#f0e6ff;font-weight:700;font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:0.55rem;padding-left:0.25rem;opacity:0.9}
+#peptopia-klimek-guide .coll-group{flex:0 1 auto;width:-moz-fit-content;width:fit-content;max-width:100%;background:linear-gradient(135deg,#9585ad 0%,#8b7ba3 50%,#9585ad 100%);border:1px solid rgba(100,70,150,0.3);border-radius:0.6rem;padding:0.75rem;margin:0.25rem auto 0}
+html.dark #peptopia-klimek-guide .coll-group{background:linear-gradient(135deg,#0d0b1e 0%,#110e24 50%,#0d0b1e 100%);border-color:rgba(120,90,180,0.25)}
+#peptopia-klimek-guide .coll-label{color:#e0d4f0;font-weight:700;font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:0.55rem;padding-left:0;opacity:0.9}
 html.dark #peptopia-klimek-guide .coll-label{color:#c4b5fd}
 #peptopia-klimek-guide .coll-cards{display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center}
-#peptopia-klimek-guide .coll-cards .home-card{flex:0 1 calc(33.333% - 0.5rem);min-width:250px}
-@media(max-width:600px){#peptopia-klimek-guide .coll-cards .home-card{flex:0 0 100%;min-width:0}}
+#peptopia-klimek-guide .coll-cards .home-card{flex:0 0 280px;max-width:320px}
+@media(max-width:600px){#peptopia-klimek-guide .coll-cards .home-card{flex:0 0 100%;max-width:100%}}
 /* Gold Rules card in dark mode */
 html.dark #peptopia-klimek-guide .gold-rules-card{border-color:#d97706}
 html.dark #peptopia-klimek-guide .gold-rules-card .home-card-header{background:linear-gradient(135deg,#451a03,#78350f) !important;color:#fde68a !important}
@@ -178,7 +178,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=8.0';
+var CACHE_BUST = '?v=9.0';
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -2272,7 +2272,8 @@ document.getElementById('q-rationale').classList.remove('visible');
 document.getElementById('next-btn').style.display = 'none';
 fetchGitHubQuiz(secKey).then(function(quizQs) {
 if (quizQs.length === 0) {
-document.getElementById('quiz-title').textContent = 'No questions available';
+document.getElementById('quiz-title').textContent = 'Questions loading — try refreshing';
+document.getElementById('q-text').textContent = 'The quiz data may still be syncing with the CDN. Please refresh the page or try again in a moment.';
 return;
 }
 var saved = loadQuizSession(secKey);
@@ -2685,7 +2686,7 @@ categories: [
 { title: 'Graphics - 29 Pages', file: 'Lecture Notes - Graphics 29 Pages.pdf', emoji: '\uD83C\uDFA8' },
 { title: 'Yellow Review', file: 'Yellow Review.pdf', emoji: '\uD83D\uDD30' },
 { title: 'Prioritization & Delegation', file: 'NCLEX_Prioritization_Delegation_Guide.pdf', emoji: '\uD83C\uDFAF' },
-{ title: 'Addiction & Heavy Antibiotics', file: 'NCLEX_Addiction_Toxicology_Guide.pdf', emoji: '\uD83E\uDDEA' }
+{ title: 'Addiction', file: 'NCLEX_Addiction_Toxicology_Guide.pdf', emoji: '\uD83E\uDDEA' }
 ]},
 { name: 'Slides', icon: '\uD83C\uDFA5', themed: true, items: [
 { title: 'Cardiovascular', file: 'Cardiovascular.pdf', key: 'cardio' },
