@@ -1,0 +1,1102 @@
+[
+  {
+    "q": "A nurse is preparing to care for a client diagnosed with active pulmonary tuberculosis. Which personal protective equipment is required?",
+    "options": [
+      "Surgical mask and gloves",
+      "Gown, gloves, and surgical mask",
+      "Fit-tested <span class='hl-drug'>N95 respirator</span>",
+      "Face shield and sterile gloves"
+    ],
+    "correct": 2,
+    "rationale": "Active pulmonary TB requires AIRBORNE precautions: a fit-tested <span class='hl-drug'>N95 respirator</span> (not a regular surgical mask), a negative-pressure airborne infection isolation room (AIIR), and the door must remain closed. A surgical mask is used for droplet precautions, not airborne."
+  },
+  {
+    "q": "A nurse is assigning rooms for new admissions. Which client requires a negative-pressure airborne infection isolation room (AIIR)?",
+    "options": [
+      "A client with methicillin-resistant Staphylococcus aureus (MRSA)",
+      "A client with active varicella (chickenpox)",
+      "A client with Clostridium difficile infection",
+      "A client with influenza A"
+    ],
+    "correct": 1,
+    "rationale": "Varicella (chickenpox) requires AIRBORNE precautions with a negative-pressure AIIR. The mnemonic for airborne diseases: Measles, TB, Chickenpox (varicella)/disseminated Zoster, Smallpox. MRSA and C. diff require contact precautions. Influenza requires droplet precautions."
+  },
+  {
+    "q": "Which client should the nurse place on DROPLET precautions?",
+    "options": [
+      "A client with scabies",
+      "A client with a wound infected with vancomycin-resistant enterococci (VRE)",
+      "A client with active pulmonary tuberculosis",
+      "A client with pertussis (whooping cough)"
+    ],
+    "correct": 3,
+    "rationale": "Pertussis (whooping cough) is transmitted via respiratory droplets and requires droplet precautions (surgical mask within 3-6 feet, private room, door may remain open). Scabies and VRE require contact precautions. TB requires airborne precautions."
+  },
+  {
+    "q": "A nurse is preparing to enter a room of a client on contact precautions for <span class='hl-lyte'>MRSA</span>. Which PPE must the nurse don before entering?",
+    "options": [
+      "N95 respirator and sterile gloves",
+      "Gown and gloves",
+      "Surgical mask only",
+      "Gown, gloves, N95 respirator, and face shield"
+    ],
+    "correct": 1,
+    "rationale": "Contact precautions for <span class='hl-lyte'>MRSA</span> require GOWN and GLOVES upon entering the room. A mask is NOT required for contact precautions unless there is also a risk of droplet/airborne transmission. Dedicated equipment (stethoscope, BP cuff) should be kept in the room."
+  },
+  {
+    "q": "When donning personal protective equipment (PPE), which is the correct ORDER?",
+    "options": [
+      "Gloves \u2192 Gown \u2192 Mask \u2192 Goggles",
+      "Gown \u2192 Mask \u2192 Goggles \u2192 Gloves",
+      "Mask \u2192 Goggles \u2192 Gown \u2192 Gloves",
+      "Goggles \u2192 Mask \u2192 Gown \u2192 Gloves"
+    ],
+    "correct": 1,
+    "rationale": "The correct donning order is: (1) Gown, (2) Mask or N95 respirator, (3) Goggles or face shield, (4) Gloves (LAST \u2014 go on over the gown cuffs). Gloves are applied last because they are the most likely to become contaminated and are removed first during doffing."
+  },
+  {
+    "q": "When removing (doffing) PPE, which item should be removed LAST?",
+    "options": [
+      "Gloves",
+      "Gown",
+      "Mask or N95 respirator",
+      "Goggles/Face shield"
+    ],
+    "correct": 2,
+    "rationale": "The correct doffing order is: (1) Gloves (most contaminated \u2014 removed FIRST), (2) Goggles/face shield, (3) Gown, (4) Mask/N95 (removed LAST \u2014 furthest from contaminated surfaces). Hand hygiene is performed after each item is removed and again after all PPE is removed."
+  },
+  {
+    "q": "A nurse is caring for a client with meningococcal meningitis. Which type of precautions should the nurse implement?",
+    "options": [
+      "Airborne precautions with N95 respirator",
+      "Contact precautions with gown and gloves",
+      "Droplet precautions with surgical mask",
+      "Standard precautions only"
+    ],
+    "correct": 2,
+    "rationale": "Meningococcal meningitis is transmitted via respiratory droplets and requires droplet precautions: surgical mask within 3-6 feet of the client, private room (door may remain open). Close contacts should receive prophylactic antibiotics (rifampin or ciprofloxacin)."
+  },
+  {
+    "q": "Standard precautions should be applied to which client population?",
+    "options": [
+      "ALL clients regardless of diagnosis or perceived infection status",
+      "Only clients who are immunocompromised",
+      "Only clients with confirmed infectious diseases",
+      "Only clients in isolation rooms"
+    ],
+    "correct": 0,
+    "rationale": "Standard precautions are the FOUNDATION of infection control and are applied to ALL clients, ALL the time, regardless of diagnosis. They assume all blood, body fluids, secretions, excretions (except sweat), non-intact skin, and mucous membranes may contain transmissible infectious agents."
+  },
+  {
+    "q": "A client with disseminated herpes zoster is admitted. The nurse should implement which precautions?",
+    "options": [
+      "Droplet precautions only",
+      "Contact AND airborne precautions",
+      "Contact precautions only",
+      "Standard precautions only"
+    ],
+    "correct": 1,
+    "rationale": "Disseminated herpes zoster (widespread shingles, not confined to a single dermatome) requires BOTH contact AND airborne precautions. The virus can be spread both by direct contact with vesicular fluid and through airborne transmission. Localized herpes zoster requires only contact precautions."
+  },
+  {
+    "q": "A client on airborne precautions needs to be transported for a CT scan. Which action is most appropriate?",
+    "options": [
+      "The client wears an N95 respirator during transport",
+      "The client wears a surgical mask during transport",
+      "Transport staff wears surgical masks; the client does not need a mask",
+      "Cancel the CT scan \u2014 airborne precaution clients cannot leave the room"
+    ],
+    "correct": 1,
+    "rationale": "When a client on airborne precautions must be transported, the CLIENT wears a SURGICAL mask (not an N95 \u2014 those are for healthcare workers). The client's mask reduces dispersal of infectious droplet nuclei. The receiving department should be notified in advance to minimize exposure."
+  },
+  {
+    "q": "A nurse is caring for a client with respiratory syncytial virus (RSV). Which type of precautions should be implemented?",
+    "options": [
+      "Airborne precautions with N95 respirator",
+      "Droplet precautions with surgical mask",
+      "Contact precautions with gown and gloves",
+      "Standard precautions only \u2014 RSV is not transmitted person-to-person"
+    ],
+    "correct": 2,
+    "rationale": "RSV is primarily spread through CONTACT with respiratory secretions (on hands, surfaces, fomites). Contact precautions (gown and gloves) are the primary precautions. While some institutions also add droplet precautions, contact is the primary transmission route for RSV."
+  },
+  {
+    "q": "Which disease requires the nurse to implement CONTACT precautions?",
+    "options": [
+      "Rubella (German measles)",
+      "Influenza A",
+      "Pulmonary tuberculosis",
+      "Scabies"
+    ],
+    "correct": 3,
+    "rationale": "Scabies is transmitted by direct skin-to-skin contact and requires CONTACT precautions (gown and gloves). Rubella requires droplet precautions. Influenza requires droplet precautions. Tuberculosis requires airborne precautions."
+  },
+  {
+    "q": "A nurse observes a colleague re-enter a client's room on contact precautions after stepping out briefly without re-gowning. What should the nurse do?",
+    "options": [
+      "Ignore it \u2014 the colleague was only out of the room briefly",
+      "Report the colleague to the nursing board immediately",
+      "Wait until the end of the shift to complete an incident report",
+      "Remind the colleague that a new gown and gloves must be donned each time the room is entered"
+    ],
+    "correct": 3,
+    "rationale": "Fresh PPE must be donned each time a healthcare worker enters a room on transmission-based precautions, regardless of how briefly they stepped out. The nurse should immediately and respectfully remind the colleague to maintain proper precautions. This is a patient safety issue requiring prompt correction."
+  },
+  {
+    "q": "A client with measles (rubeola) is admitted. The nurse should implement which precautions?",
+    "options": [
+      "Contact precautions with gown and gloves",
+      "Airborne precautions with <span class='hl-drug'>N95 respirator</span> and negative-pressure room",
+      "Droplet precautions with surgical mask",
+      "Standard precautions only \u2014 measles is no longer contagious once the rash appears"
+    ],
+    "correct": 1,
+    "rationale": "Measles (rubeola) requires AIRBORNE precautions: <span class='hl-drug'>N95 respirator</span>, negative-pressure AIIR, door closed. Measles is one of the most contagious diseases \u2014 airborne droplet nuclei can remain suspended for up to 2 hours. Non-immune staff should NOT enter the room if immune staff are available."
+  },
+  {
+    "q": "The nurse understands that the MOST effective method to prevent the spread of infection in healthcare settings is:",
+    "options": [
+      "Wearing gloves during all patient interactions",
+      "Hand hygiene performed before and after every patient contact",
+      "Routine environmental cleaning with bleach",
+      "Administering prophylactic antibiotics to high-risk patients"
+    ],
+    "correct": 1,
+    "rationale": "HAND HYGIENE is the single most effective method to prevent the transmission of infections in healthcare settings. It should be performed before and after every patient contact, before and after glove use, after contact with potentially contaminated surfaces, and before invasive procedures."
+  },
+  {
+    "q": "When should a healthcare worker use <span class='hl-drug'>soap and water</span> instead of alcohol-based hand sanitizer?",
+    "options": [
+      "Only before surgical procedures",
+      "Only when the hand sanitizer dispenser is empty",
+      "When caring for clients with <span class='hl-lyte'>C. difficile</span> or Bacillus spores, or when hands are visibly soiled",
+      "Alcohol-based sanitizer is always preferred over soap and water"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Soap and water</span> is REQUIRED (not just preferred) when: (1) Hands are visibly soiled with blood or body fluids, (2) Caring for clients with <span class='hl-lyte'>C. difficile</span> \u2014 alcohol does NOT kill spores, (3) Caring for clients with norovirus, (4) After using the restroom. For all other situations, alcohol-based sanitizer (\u226560% alcohol) is acceptable."
+  },
+  {
+    "q": "A nurse is caring for a client with mumps. Which precaution type is appropriate?",
+    "options": [
+      "Airborne precautions",
+      "Contact precautions",
+      "Droplet precautions",
+      "No additional precautions beyond standard"
+    ],
+    "correct": 2,
+    "rationale": "Mumps is transmitted via respiratory droplets and requires DROPLET precautions: surgical mask within 3-6 feet of the client, private room (door may remain open). Droplet diseases include: influenza, pertussis, meningococcal meningitis, strep pharyngitis, mumps, rubella."
+  },
+  {
+    "q": "A healthcare worker is exposed to a client with varicella. The worker has no history of chickenpox or vaccination. What action should be taken?",
+    "options": [
+      "No action needed \u2014 adults are not susceptible to varicella",
+      "Place the healthcare worker on airborne precautions immediately",
+      "Administer <span class='hl-drug'>varicella vaccine</span> within 3-5 days of exposure and monitor for symptoms",
+      "Administer prophylactic oseltamivir (Tamiflu)"
+    ],
+    "correct": 2,
+    "rationale": "For non-immune healthcare workers exposed to varicella: (1) Administer <span class='hl-drug'>varicella vaccine</span> within 3-5 days of exposure (post-exposure prophylaxis), (2) Remove from direct patient care from day 8-21 post-exposure if they develop symptoms, (3) <span class='hl-drug'>Varicella-zoster immune globulin (VZIG)</span> may be given if the vaccine is contraindicated."
+  },
+  {
+    "q": "A client on contact precautions for MRSA asks why all healthcare workers must wear gowns and gloves. The best response is:",
+    "options": [
+      "\"The gown and gloves help prevent the bacteria on your skin from spreading to other patients through our hands and clothing.\"",
+      "\"You have a dangerous, life-threatening infection that could spread to other patients.\"",
+      "\"It's hospital policy, and we must follow it.\"",
+      "\"We wear this equipment for our own protection so we don't catch your infection.\""
+    ],
+    "correct": 0,
+    "rationale": "The nurse should provide an honest, non-stigmatizing explanation focused on preventing transmission to other vulnerable patients. MRSA is carried on the skin and can be transmitted via contact with contaminated hands, equipment, or clothing. The explanation should be educational without causing alarm."
+  },
+  {
+    "q": "Which client can be safely cohorted (share a room) with another client?",
+    "options": [
+      "A client with influenza and a client with TB",
+      "A client with MRSA and a client with VRE",
+      "Two clients both diagnosed with the same strain of C. difficile",
+      "A client with scabies and a client with meningococcal meningitis"
+    ],
+    "correct": 2,
+    "rationale": "Clients with the SAME infection can be cohorted (placed together) when private rooms are unavailable. Two clients with the same organism (e.g., both with C. diff) can share a room. Clients with DIFFERENT organisms should NOT be cohorted to prevent cross-infection."
+  },
+  {
+    "q": "A nurse is setting up a sterile field for a wound dressing change. Which action contaminates the sterile field?",
+    "options": [
+      "Opening the sterile package by pulling the far flap first",
+      "Turning away from the sterile field to answer a question",
+      "Placing sterile supplies in the center of the sterile drape",
+      "Keeping the sterile field at or above waist level"
+    ],
+    "correct": 1,
+    "rationale": "Turning your back on a sterile field CONTAMINATES it because you can no longer verify it has not been touched or contaminated. The sterile field must be kept within view at all times. A new field must be set up. The other actions are correct sterile technique."
+  },
+  {
+    "q": "A nurse is performing a sterile dressing change and notices that sterile saline has spilled, wetting the edge of the sterile drape. The nurse should:",
+    "options": [
+      "Replace the entire sterile field with new sterile supplies",
+      "Blot the wet area with a sterile towel and continue",
+      "Continue the procedure \u2014 the drape is still mostly dry",
+      "Add another sterile drape on top of the wet area"
+    ],
+    "correct": 0,
+    "rationale": "WET = CONTAMINATED. Moisture allows microorganisms to wick through fabric (strike-through contamination), compromising the sterile barrier. The ENTIRE field must be replaced \u2014 there is no way to salvage a wet sterile field by blotting or covering."
+  },
+  {
+    "q": "When opening a sterile package, the nurse should open the wrapper flaps in which order?",
+    "options": [
+      "Near flap first, then sides, then far flap",
+      "Any order is acceptable as long as the inner contents remain untouched",
+      "Left flap, right flap, near flap, far flap",
+      "Far flap first, then side flaps, then near flap last"
+    ],
+    "correct": 3,
+    "rationale": "The correct order is: FAR flap first (away from you), then the SIDE flaps, then the NEAR flap (toward you) last. Opening the far flap first prevents you from reaching over the sterile contents, which would contaminate them. This is a frequently tested sterile technique question."
+  },
+  {
+    "q": "The outer <span class='hl-lyte'>1 inch</span> border of a sterile drape is considered:",
+    "options": [
+      "Contaminated \u2014 do not place sterile items within this border",
+      "Semi-sterile and acceptable for placing supplies",
+      "Sterile if no one has touched it",
+      "Sterile only if the drape was opened within the last 30 minutes"
+    ],
+    "correct": 0,
+    "rationale": "The outer <span class='hl-lyte'>1 inch</span> (2.5 cm) of a sterile drape is considered CONTAMINATED because it may have come into contact with non-sterile surfaces during setup. All sterile items must be placed within the inner portion of the field, away from this border."
+  },
+  {
+    "q": "A nurse is assisting with a lumbar puncture and realizes the sterile glove has a small tear. The nurse should:",
+    "options": [
+      "Continue the procedure \u2014 the tear is small",
+      "Apply a second sterile glove over the torn one",
+      "Remove the torn glove immediately and apply a new sterile glove",
+      "Cover the tear with a sterile bandage and continue"
+    ],
+    "correct": 2,
+    "rationale": "ANY breach in sterile glove integrity requires immediate removal and replacement with a new sterile glove. A torn glove is contaminated, and covering it does not restore sterility. This applies to all sterile procedures \u2014 there is no acceptable workaround for a torn glove."
+  },
+  {
+    "q": "Which procedure requires STERILE technique?",
+    "options": [
+      "Inserting an indwelling urinary catheter",
+      "Measuring vital signs",
+      "Administering an oral medication",
+      "Performing oropharyngeal suctioning"
+    ],
+    "correct": 0,
+    "rationale": "Inserting an indwelling urinary catheter requires STERILE technique to prevent catheter-associated urinary tract infections (CAUTI). The urinary bladder is normally a sterile environment. Oral meds, vital signs, and oropharyngeal suctioning use clean (medical asepsis) technique."
+  },
+  {
+    "q": "A nurse is preparing to add sterile supplies to an already-established sterile field. The correct method is:",
+    "options": [
+      "Remove the wrapper and let the item slide onto the field without touching the wrapper to the field",
+      "Carefully lean over the field and place the item precisely where needed",
+      "Ask a colleague to hold the sterile field while adding the item",
+      "Drop the item onto the field from a 6-12 inch height to avoid reaching over it"
+    ],
+    "correct": 3,
+    "rationale": "Sterile items should be dropped onto the field from a height of approximately 6 inches. This prevents the non-sterile package wrapper from touching the sterile field and prevents the nurse from reaching across the field. The item should land on the center of the field, not the 1-inch border."
+  },
+  {
+    "q": "During a sterile procedure, the nurse's hands should be maintained at which position?",
+    "options": [
+      "At or above waist level and within sight at all times",
+      "At the sides to prevent contamination",
+      "Below the waist to ensure stability",
+      "Behind the back when not actively touching the sterile field"
+    ],
+    "correct": 0,
+    "rationale": "During sterile procedures, hands must remain AT OR ABOVE WAIST LEVEL and within the nurse's line of sight at all times. Anything below the waist is considered non-sterile. Hands behind the back are out of sight and could contact non-sterile surfaces."
+  },
+  {
+    "q": "A student nurse asks when it is appropriate to use clean technique instead of sterile technique. The best example is:",
+    "options": [
+      "Changing a colostomy appliance",
+      "Performing a central line dressing change",
+      "Inserting a peripheral IV catheter",
+      "Assisting with chest tube insertion"
+    ],
+    "correct": 0,
+    "rationale": "Changing a colostomy appliance uses CLEAN (medical asepsis) technique because the stoma and surrounding skin are not sterile areas \u2014 the GI tract is not sterile. Central line dressings, IV insertion, and chest tube insertion all require sterile technique."
+  },
+  {
+    "q": "A nurse preparing a sterile field notices a fly land briefly on the sterile drape. The nurse should:",
+    "options": [
+      "Discard the field, obtain new supplies, and set up a new sterile field",
+      "Continue the procedure \u2014 momentary contact with a fly is insignificant",
+      "Brush the area where the fly landed with a sterile gauze pad",
+      "Spray the area with antiseptic solution and proceed"
+    ],
+    "correct": 0,
+    "rationale": "ANY non-sterile object touching the sterile field contaminates it \u2014 including insects. The entire field must be discarded, and new sterile supplies must be used to set up a fresh field. There is no method to re-sterilize a contaminated field."
+  },
+  {
+    "q": "When pouring sterile solution into a receptacle on the sterile field, the nurse should:",
+    "options": [
+      "Pour with the label facing up to keep the label clean for future identification",
+      "Pour from a height of 1-2 inches to minimize splashing",
+      "Hold the bottle <span class='hl-lyte'>4-6 inches</span> above the receptacle and pour steadily away from the label",
+      "Rest the bottle lip on the receptacle edge for accuracy"
+    ],
+    "correct": 2,
+    "rationale": "Pour from a height of <span class='hl-lyte'>4-6 inches</span> to prevent contamination of the bottle by the field. Pour away from the label to keep it readable. NEVER rest the bottle lip on the sterile receptacle (contaminates the bottle and the field). Discard the remaining solution \u2014 do not recap or reuse."
+  },
+  {
+    "q": "A nurse is performing tracheostomy suctioning. This procedure requires:",
+    "options": [
+      "Clean technique \u2014 the trachea is not normally sterile",
+      "Sterile technique \u2014 the lower airway is normally sterile",
+      "Either clean or sterile technique based on facility policy",
+      "Standard precautions only \u2014 no special technique needed"
+    ],
+    "correct": 1,
+    "rationale": "Tracheostomy (endotracheal) suctioning requires STERILE technique because the lower airway below the larynx is normally sterile. Introducing non-sterile equipment could cause a respiratory infection. In contrast, oropharyngeal and nasopharyngeal suctioning use CLEAN technique because the upper airway is not sterile."
+  },
+  {
+    "q": "A nurse sets up a sterile field at 0900 but is called away for an emergency. The nurse returns at 0920. What should the nurse do?",
+    "options": [
+      "Continue with the sterile field \u2014 20 minutes is within the safe time limit",
+      "Cover the field with a sterile drape to maintain sterility and proceed",
+      "Discard the field and set up a new one \u2014 an unattended sterile field is considered contaminated",
+      "Have another nurse verify the field was not disturbed, then proceed"
+    ],
+    "correct": 2,
+    "rationale": "An unattended sterile field is ALWAYS considered contaminated because no one was monitoring it for potential contamination. Even covering it doesn't help because the field was already left unobserved. A new sterile field must be established regardless of how briefly the nurse was away."
+  },
+  {
+    "q": "Which statement by a new nurse indicates a need for further teaching about sterile technique?",
+    "options": [
+      "\"I opened the far flap of the sterile package first.\"",
+      "\"I reached across the sterile field to grab the forceps on the other side.\"",
+      "\"I kept all sterile items within the center of the sterile drape.\"",
+      "\"I discarded the sterile field when I noticed the drape was damp.\""
+    ],
+    "correct": 1,
+    "rationale": "NEVER reach across a sterile field \u2014 your arm passes over the sterile area and may drop contaminants onto it. To access items on the other side, walk around to that side of the field. All other statements describe correct sterile technique."
+  },
+  {
+    "q": "A nurse needs to prepare a sterile field for a wound irrigation. Which action should be performed FIRST?",
+    "options": [
+      "Open the sterile supplies and arrange them on the field",
+      "Pour sterile saline into the irrigation container",
+      "Put on sterile gloves",
+      "Perform hand hygiene thoroughly"
+    ],
+    "correct": 3,
+    "rationale": "Hand hygiene is ALWAYS performed FIRST \u2014 before touching any sterile supplies, opening packages, or setting up the field. The sequence is: hand hygiene \u2192 open sterile package \u2192 set up field \u2192 apply sterile gloves \u2192 arrange supplies \u2192 perform procedure."
+  },
+  {
+    "q": "A nurse is caring for a client with a <span class='hl-lyte'>C. difficile</span> infection. After removing gloves, the nurse should perform hand hygiene using:",
+    "options": [
+      "Alcohol-based hand sanitizer for at least 15 seconds",
+      "Either alcohol-based sanitizer or soap and water",
+      "<span class='hl-drug'>Soap and water</span> \u2014 alcohol does NOT kill C. difficile spores",
+      "No hand hygiene is needed after glove removal"
+    ],
+    "correct": 2,
+    "rationale": "For <span class='hl-lyte'>C. difficile</span>, <span class='hl-drug'>soap and water</span> is MANDATORY. Alcohol-based hand sanitizer does NOT kill C. diff spores \u2014 this is one of the most frequently tested infection control concepts on NCLEX. Physical friction from washing with soap and water is needed to remove spores from the skin."
+  },
+  {
+    "q": "Which disinfectant is appropriate for environmental surfaces in a room where a client with <span class='hl-lyte'>C. difficile</span> was housed?",
+    "options": [
+      "Standard quaternary ammonium compounds",
+      "Alcohol-based surface wipes",
+      "Hydrogen peroxide 3% solution",
+      "<span class='hl-drug'>Bleach-based (sodium hypochlorite)</span> disinfectant"
+    ],
+    "correct": 3,
+    "rationale": "<span class='hl-drug'>Bleach-based (sodium hypochlorite)</span> disinfectant is required for <span class='hl-lyte'>C. difficile</span> environmental decontamination. C. diff spores are resistant to most standard disinfectants including quaternary ammonium compounds and alcohol. Only bleach (or UV light/hydrogen peroxide vapor) effectively destroys spores."
+  },
+  {
+    "q": "A nurse is reviewing the CLABSI prevention bundle. Which catheter insertion site has the LOWEST infection rate?",
+    "options": [
+      "Femoral vein",
+      "Internal jugular vein",
+      "<span class='hl-lyte'>Subclavian vein</span>",
+      "Peripheral veins in the antecubital fossa"
+    ],
+    "correct": 2,
+    "rationale": "The <span class='hl-lyte'>subclavian vein</span> has the LOWEST central line infection rate. The femoral vein has the HIGHEST infection rate due to proximity to the groin. Subclavian > internal jugular > femoral for infection risk. Site selection is a critical component of the CLABSI prevention bundle."
+  },
+  {
+    "q": "During central line insertion, maximal sterile barrier precautions include:",
+    "options": [
+      "Sterile gloves and a small drape around the insertion site",
+      "Gown and gloves with a standard drape",
+      "Cap, mask, sterile gown, sterile gloves, and a full-body sterile drape",
+      "N95 respirator, gown, and sterile gloves"
+    ],
+    "correct": 2,
+    "rationale": "Maximal sterile barrier precautions for central line insertion include ALL five components: cap, mask, sterile gown, sterile gloves, and a FULL-BODY sterile drape (not just a small fenestrated drape). This is a key element of the CLABSI prevention bundle."
+  },
+  {
+    "q": "The nurse is caring for a client with a central venous catheter. The transparent dressing should be changed every:",
+    "options": [
+      "<span class='hl-lyte'>24 hours</span>",
+      "<span class='hl-lyte'>7 days</span> for transparent dressings (or <span class='hl-lyte'>2 days</span> for gauze dressings)",
+      "<span class='hl-lyte'>48 hours</span> or when the gauze dressing is soiled",
+      "Only when the dressing is visibly soiled or loosened"
+    ],
+    "correct": 1,
+    "rationale": "Transparent semi-permeable dressings on central lines are changed every <span class='hl-lyte'>7 days</span>. Gauze dressings are changed every <span class='hl-lyte'>2 days (48 hours)</span>. Either type should be changed immediately if damp, loosened, or visibly soiled. Changing more frequently than needed increases the risk of site manipulation and infection."
+  },
+  {
+    "q": "Which nursing action is MOST important for preventing catheter-associated urinary tract infections (CAUTI)?",
+    "options": [
+      "Performing daily catheter care with betadine",
+      "Irrigating the catheter with normal saline every shift",
+      "Assessing daily for continued need and removing the catheter as early as possible",
+      "Changing the urinary catheter routinely every 7 days"
+    ],
+    "correct": 2,
+    "rationale": "The MOST effective intervention for CAUTI prevention is daily assessment for continued need and EARLY REMOVAL. Each day a catheter remains in place, the infection risk increases by 3-7%. Routine irrigation and betadine cleansing are NOT recommended. Catheters are NOT changed on a routine schedule."
+  },
+  {
+    "q": "A nurse discovers that a client's urinary catheter drainage bag has been elevated above the level of the bladder. The nurse should:",
+    "options": [
+      "Immediately lower the drainage bag below bladder level and monitor for signs of UTI",
+      "Document the finding and notify the provider",
+      "Clamp the tubing for 30 minutes to prevent backflow",
+      "Replace the entire catheter system with a new sterile set"
+    ],
+    "correct": 0,
+    "rationale": "The drainage bag must ALWAYS be below the level of the bladder to prevent retrograde flow of bacteria-laden urine back into the bladder. Immediately reposition the bag and monitor for UTI signs (fever, cloudy urine, dysuria). Clamping is not appropriate and the system doesn't need replacing."
+  },
+  {
+    "q": "A nurse is implementing the VAP (Ventilator-Associated Pneumonia) prevention bundle. Which intervention reduces aspiration risk?",
+    "options": [
+      "Elevating the head of bed to <span class='hl-lyte'>30-45 degrees</span>",
+      "Keeping the head of bed flat to prevent skin breakdown",
+      "Performing oral care with normal saline every 4 hours",
+      "Suctioning the endotracheal tube only when secretions are visible"
+    ],
+    "correct": 0,
+    "rationale": "Elevating the HOB to <span class='hl-lyte'>30-45 degrees</span> reduces the risk of gastric aspiration, a primary cause of VAP. Other VAP bundle elements include: oral care with <span class='hl-drug'>chlorhexidine</span> every 12 hours, daily sedation vacation, daily spontaneous breathing trial, DVT/PUD prophylaxis, and maintaining cuff pressure at <span class='hl-lyte'>20-30 cm H\u2082O</span>."
+  },
+  {
+    "q": "Oral care for a ventilated patient in the VAP prevention bundle should use:",
+    "options": [
+      "Normal saline rinse every 2 hours",
+      "Lemon glycerin swabs every 4 hours",
+      "Hydrogen peroxide rinse every 8 hours",
+      "<span class='hl-drug'>Chlorhexidine</span> oral rinse every <span class='hl-lyte'>12 hours</span>"
+    ],
+    "correct": 3,
+    "rationale": "<span class='hl-drug'>Chlorhexidine</span> oral care every <span class='hl-lyte'>12 hours</span> is a key component of the VAP prevention bundle. It reduces the bacterial load in the oral cavity, decreasing the risk of aspiration pneumonia. Lemon glycerin swabs are avoided (dry mucous membranes). Plain saline rinses are less effective than chlorhexidine."
+  },
+  {
+    "q": "A client develops a surgical site infection 4 days after abdominal surgery. Which preoperative nursing action could have helped prevent this?",
+    "options": [
+      "Shaving the surgical site the night before surgery",
+      "Keeping the surgical dressing in place for 7 days after surgery",
+      "Applying topical antibiotic ointment to the site immediately after surgery",
+      "Administering prophylactic antibiotics within <span class='hl-lyte'>1 hour</span> before surgical incision"
+    ],
+    "correct": 3,
+    "rationale": "Prophylactic antibiotics should be administered within <span class='hl-lyte'>1 hour</span> before the surgical incision (2 hours for vancomycin/fluoroquinolones). This ensures therapeutic drug levels in tissue at the time of incision. Hair should be CLIPPED (not shaved) \u2014 shaving creates micro-abrasions that harbor bacteria. The surgical dressing is typically removed at 24-48 hours."
+  },
+  {
+    "q": "A nurse prepares to remove hair from a surgical site. The correct method is:",
+    "options": [
+      "Dry shaving with a disposable razor the morning of surgery",
+      "Wet shaving with an electric razor the night before surgery",
+      "Applying depilatory cream 2 hours before surgery",
+      "Clipping hair with electric clippers immediately before surgery"
+    ],
+    "correct": 3,
+    "rationale": "Hair removal (when necessary) should be done by CLIPPING with electric clippers as close to the time of surgery as possible. NEVER shave \u2014 razors create micro-abrasions that serve as entry points for bacteria, significantly increasing SSI risk. Depilatory cream may cause skin irritation and allergic reactions."
+  },
+  {
+    "q": "The first-line treatment for <span class='hl-lyte'>C. difficile</span> infection is:",
+    "options": [
+      "<span class='hl-drug'>IV vancomycin</span> \u2014 it provides systemic coverage",
+      "<span class='hl-drug'>Oral vancomycin</span> or <span class='hl-drug'>fidaxomicin</span> \u2014 they reach the gut lumen directly",
+      "<span class='hl-drug'>Ciprofloxacin</span> \u2014 a broad-spectrum fluoroquinolone",
+      "<span class='hl-drug'>Oral metronidazole</span> is always the first choice"
+    ],
+    "correct": 1,
+    "rationale": "First-line treatment for C. diff is <span class='hl-drug'>oral vancomycin</span> or <span class='hl-drug'>fidaxomicin</span>. These reach the gut lumen where C. diff resides. <span class='hl-drug'>IV vancomycin</span> does NOT reach therapeutic levels in the gut and is INEFFECTIVE for C. diff. <span class='hl-drug'>Metronidazole</span> may be used for mild cases but is no longer first-line. Fluoroquinolones can actually CAUSE C. diff."
+  },
+  {
+    "q": "A client with a central line develops fever, chills, and positive blood cultures. The nurse should anticipate which intervention FIRST?",
+    "options": [
+      "Apply warm compresses to the insertion site",
+      "Administer antipyretics and monitor temperature trends",
+      "Flush the line with heparin to clear the suspected infection",
+      "Notify the provider \u2014 anticipate central line removal and new peripheral/central access"
+    ],
+    "correct": 3,
+    "rationale": "Fever, chills, and positive blood cultures in a client with a central line = suspected CLABSI. The priority is to notify the provider, who will likely order line removal (the infected line is the source). New vascular access will be established at a different site. Blood cultures should be drawn from the line AND peripherally before antibiotic initiation."
+  },
+  {
+    "q": "The nurse is inserting an indwelling urinary catheter. Which skin antiseptic is recommended for perineal cleansing before catheter insertion?",
+    "options": [
+      "<span class='hl-drug'>Chlorhexidine</span> 2% solution",
+      "Hydrogen peroxide 3%",
+      "<span class='hl-drug'>Povidone-iodine</span> or soap and water",
+      "Alcohol-based antiseptic wipes"
+    ],
+    "correct": 2,
+    "rationale": "For urinary catheter insertion, perineal cleansing with <span class='hl-drug'>povidone-iodine</span> or soap and water is the standard of care. Note: while <span class='hl-drug'>chlorhexidine</span> is preferred for central line insertion sites, it is NOT universally recommended for urethral meatal cleansing (facility protocols may vary)."
+  },
+  {
+    "q": "Which finding in a client with an indwelling catheter indicates a possible CAUTI?",
+    "options": [
+      "New onset of <span class='hl-lyte'>fever, cloudy urine, and suprapubic tenderness</span>",
+      "Clear, pale yellow urine with no sediment",
+      "Urine output of 60 mL per hour",
+      "The catheter bag is one-quarter full at the end of the shift"
+    ],
+    "correct": 0,
+    "rationale": "Signs of CAUTI include: <span class='hl-lyte'>fever</span>, <span class='hl-lyte'>cloudy or foul-smelling urine</span>, suprapubic tenderness, new-onset confusion (especially in elderly), urgency or frequency (if catheter is removed), and flank pain. Clear, pale yellow urine and normal output are expected findings."
+  },
+  {
+    "q": "A nurse administers a tuberculin skin test (TST/PPD). When should the test be read?",
+    "options": [
+      "Immediately after injection",
+      "24 hours after injection",
+      "One week after injection",
+      "Between <span class='hl-lyte'>48 and 72 hours</span> after injection"
+    ],
+    "correct": 3,
+    "rationale": "The TST (Mantoux test) must be read between <span class='hl-lyte'>48 and 72 hours</span> after intradermal injection. If the client does not return within 72 hours, the test must be repeated. The nurse measures the area of INDURATION (hardened, raised area) in millimeters \u2014 NOT the redness (erythema)."
+  },
+  {
+    "q": "When reading a TST result, the nurse should measure:",
+    "options": [
+      "The diameter of redness (erythema) surrounding the injection site",
+      "The diameter of induration (hardened, raised area) in millimeters",
+      "Both the redness and the induration, then average the two",
+      "The size of the wheal that formed during the initial injection"
+    ],
+    "correct": 1,
+    "rationale": "The nurse measures ONLY the INDURATION (firm, raised area) by palpating across the forearm and measuring the diameter in millimeters. Redness (erythema) alone is NOT significant and should NOT be measured or reported as a positive result. This is a critical distinction frequently tested on NCLEX."
+  },
+  {
+    "q": "A healthcare worker has a TST result of <span class='hl-lyte'>12 mm</span> induration. This result is interpreted as:",
+    "options": [
+      "Positive \u2014 <span class='hl-lyte'>\u226510 mm</span> is positive for healthcare workers",
+      "Negative \u2014 15 mm or greater is required for healthcare workers",
+      "Borderline \u2014 repeat the test in 2 weeks",
+      "Inconclusive \u2014 an IGRA blood test is needed"
+    ],
+    "correct": 0,
+    "rationale": "For healthcare workers, a TST is positive at <span class='hl-lyte'>\u226510 mm</span> induration. Categories: \u22655 mm for HIV+/immunosuppressed/recent contacts; \u226510 mm for healthcare workers, high-risk groups; \u226515 mm for low-risk persons with no known risk factors. This healthcare worker's <span class='hl-lyte'>12 mm</span> result is positive."
+  },
+  {
+    "q": "Which TB screening test is PREFERRED for a client who received the BCG vaccine as a child?",
+    "options": [
+      "Tuberculin skin test (TST/Mantoux)",
+      "IGRA blood test (QuantiFERON-TB Gold or T-SPOT)",
+      "Chest X-ray as initial screening",
+      "Sputum culture"
+    ],
+    "correct": 1,
+    "rationale": "IGRA (Interferon-Gamma Release Assay) blood tests are preferred for BCG-vaccinated individuals because BCG vaccination can cause a false-positive TST result. IGRA tests are unaffected by prior BCG vaccination. They require only one visit (no return for reading) and have higher specificity."
+  },
+  {
+    "q": "A client has a positive TST result. What is the NEXT step?",
+    "options": [
+      "Obtain a chest X-ray to differentiate latent from active TB",
+      "Immediately start RIPE therapy",
+      "Repeat the TST to confirm the result",
+      "Place the client in airborne isolation immediately"
+    ],
+    "correct": 0,
+    "rationale": "A positive TST means EXPOSURE/INFECTION \u2014 not necessarily active disease. The next step is a chest X-ray to look for signs of active TB (infiltrates, cavitation). If the CXR is abnormal, sputum cultures are obtained. Do NOT repeat the TST (a positive result will remain positive). Do NOT start treatment until active vs latent is determined."
+  },
+  {
+    "q": "A client is prescribed <span class='hl-drug'>isoniazid (INH)</span> for latent TB infection. The nurse should instruct the client to take which supplement to prevent a common side effect?",
+    "options": [
+      "<span class='hl-drug'>Vitamin C</span> to boost immune function",
+      "<span class='hl-drug'>Iron</span> to prevent anemia",
+      "<span class='hl-drug'>Calcium</span> to prevent bone loss",
+      "<span class='hl-drug'>Vitamin B6 (pyridoxine)</span> to prevent peripheral neuropathy"
+    ],
+    "correct": 3,
+    "rationale": "<span class='hl-drug'>Isoniazid (INH)</span> interferes with vitamin B6 metabolism, leading to peripheral neuropathy (numbness, tingling in extremities). <span class='hl-drug'>Pyridoxine (Vitamin B6)</span> supplementation prevents this complication. The nurse should also monitor liver function tests, as INH is hepatotoxic."
+  },
+  {
+    "q": "A client on <span class='hl-drug'>rifampin</span> for TB treatment calls the clinic concerned about <span class='hl-lyte'>orange-red urine</span>. The nurse should respond:",
+    "options": [
+      "\"Come to the emergency room immediately \u2014 this may indicate kidney damage.\"",
+      "\"Stop taking the medication and call your provider.\"",
+      "\"This is a normal, expected effect of rifampin. All body fluids may turn orange-red.\"",
+      "\"Increase your fluid intake to dilute the color.\""
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Rifampin</span> turns body fluids <span class='hl-lyte'>orange-red</span> \u2014 urine, tears, sweat, saliva. This is a harmless, expected effect that should be explained to the client BEFORE starting treatment. Counsel about permanent staining of contact lenses and clothing. This is NOT a reason to stop the medication."
+  },
+  {
+    "q": "Which side effect of <span class='hl-drug'>ethambutol</span> requires the nurse to instruct the client to report immediately?",
+    "options": [
+      "Orange-colored urine",
+      "Joint pain and elevated uric acid",
+      "Changes in vision \u2014 decreased acuity or difficulty distinguishing colors",
+      "Peripheral numbness and tingling"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Ethambutol</span> causes OPTIC NEURITIS \u2014 decreased visual acuity, difficulty distinguishing red from green, and blurred vision. A baseline eye exam is required before starting treatment, with monthly monitoring. Remember: \"E = Eyes.\" Report any vision changes immediately. Orange urine = rifampin; uric acid = pyrazinamide; neuropathy = INH."
+  },
+  {
+    "q": "A nurse is caring for a client with active TB. Which finding indicates the client may be removed from airborne isolation?",
+    "options": [
+      "The client's fever has resolved for 24 hours",
+      "The client has been on TB medications for 1 week",
+      "Three consecutive sputum AFB smears collected <span class='hl-lyte'>8-24 hours apart</span> are negative",
+      "The client's chest X-ray shows improvement"
+    ],
+    "correct": 2,
+    "rationale": "Airborne precautions can be discontinued when the client has THREE CONSECUTIVE NEGATIVE sputum AFB smears collected <span class='hl-lyte'>8-24 hours apart</span>. Clinical improvement alone (fever resolution, CXR improvement) is NOT sufficient. The negative smears demonstrate that the client is no longer actively shedding tubercle bacilli."
+  },
+  {
+    "q": "Directly Observed Therapy (DOT) for tuberculosis means:",
+    "options": [
+      "The client observes a video about TB treatment at each visit",
+      "A healthcare worker watches the client swallow EVERY dose of medication",
+      "The client takes medication at the clinic but self-administers at home",
+      "The pharmacist verifies refill compliance monthly"
+    ],
+    "correct": 1,
+    "rationale": "DOT means a healthcare worker physically WATCHES the client swallow every single dose of TB medication. This ensures compliance and prevents the development of multi-drug resistant TB (MDR-TB). Non-compliance with TB treatment is a public health emergency."
+  },
+  {
+    "q": "A nurse is teaching a client newly diagnosed with active TB. Which statement by the client indicates correct understanding?",
+    "options": [
+      "\"I should wear a mask when I have visitors until my sputum cultures are negative.\"",
+      "\"I can stop taking the medications once I feel better.\"",
+      "\"I only need to take one medication for TB.\"",
+      "\"TB treatment typically takes 2-3 weeks.\""
+    ],
+    "correct": 0,
+    "rationale": "Active TB treatment requires 6-9 months of MULTIPLE medications (RIPE therapy). Stopping early \u2014 even when feeling better \u2014 leads to drug resistance. The client should wear a mask around others until sputum cultures confirm they are no longer infectious. Single-drug therapy causes drug resistance."
+  },
+  {
+    "q": "The nurse receives an order for RIPE therapy. Which combination of medications does this include?",
+    "options": [
+      "<span class='hl-drug'>Rifampin</span>, <span class='hl-drug'>Isoniazid</span>, <span class='hl-drug'>Pyrazinamide</span>, <span class='hl-drug'>Ethambutol</span>",
+      "<span class='hl-drug'>Rifampin</span>, <span class='hl-drug'>Ibuprofen</span>, <span class='hl-drug'>Penicillin</span>, <span class='hl-drug'>Erythromycin</span>",
+      "<span class='hl-drug'>Remdesivir</span>, <span class='hl-drug'>Isoniazid</span>, <span class='hl-drug'>Piperacillin</span>, <span class='hl-drug'>Ethambutol</span>",
+      "<span class='hl-drug'>Rifampin</span>, <span class='hl-drug'>Isoniazid</span>, <span class='hl-drug'>Prednisone</span>, <span class='hl-drug'>Erythromycin</span>"
+    ],
+    "correct": 0,
+    "rationale": "RIPE = <span class='hl-drug'>Rifampin</span> + <span class='hl-drug'>Isoniazid (INH)</span> + <span class='hl-drug'>Pyrazinamide</span> + <span class='hl-drug'>Ethambutol</span>. All four drugs are given during the initial 2-month intensive phase. Then <span class='hl-drug'>rifampin</span> and <span class='hl-drug'>isoniazid</span> continue for an additional 4 months (continuation phase). Total treatment: 6-9 months minimum."
+  },
+  {
+    "q": "A client with a history of alcohol use disorder is starting <span class='hl-drug'>isoniazid</span> for latent TB. Which concern is MOST important for the nurse to address?",
+    "options": [
+      "INH may cause insomnia in patients with alcohol use disorder",
+      "The client will need a higher dose of INH due to alcohol use",
+      "INH interacts with alcohol to cause a disulfiram-like reaction",
+      "Both alcohol and INH are hepatotoxic \u2014 increased risk of <span class='hl-lyte'>liver damage</span>"
+    ],
+    "correct": 3,
+    "rationale": "Both alcohol and <span class='hl-drug'>isoniazid</span> are hepatotoxic. Combined use significantly increases the risk of <span class='hl-lyte'>severe liver damage</span>. The client should avoid alcohol during treatment, and <span class='hl-lyte'>liver function tests (LFTs)</span> should be monitored frequently (monthly). INH does not cause a disulfiram reaction (that's metronidazole)."
+  },
+  {
+    "q": "A nurse is reading a client's TST. The induration measures <span class='hl-lyte'>7 mm</span>. The client is HIV-positive. How should the nurse interpret this?",
+    "options": [
+      "Positive \u2014 for HIV-positive clients, <span class='hl-lyte'>\u22655 mm</span> is considered positive",
+      "Negative \u2014 the standard positive threshold is 10 mm",
+      "Borderline \u2014 repeat in 2 weeks",
+      "Equivocal \u2014 order an IGRA test to confirm"
+    ],
+    "correct": 0,
+    "rationale": "For HIV-positive and immunocompromised clients, a TST is positive at <span class='hl-lyte'>\u22655 mm</span> induration. This lower threshold accounts for the client's impaired immune response, which may not produce as robust a reaction even with TB infection. This client's <span class='hl-lyte'>7 mm</span> is clearly positive."
+  },
+  {
+    "q": "A nurse is conducting a TB screening clinic. Which client does NOT need TB testing?",
+    "options": [
+      "A homeless shelter resident",
+      "A healthcare worker starting a new job",
+      "A recent immigrant from a country with high TB prevalence",
+      "A client who had a documented positive TST 5 years ago"
+    ],
+    "correct": 3,
+    "rationale": "A client with a documented prior positive TST should NOT be retested \u2014 the TST will remain positive, potentially causing a boosted reaction. Instead, they should be monitored with annual symptom assessment and chest X-rays if symptomatic. All other groups listed are high-risk and should be screened."
+  },
+  {
+    "q": "A nurse sustains a needlestick injury from a needle used on an HIV-positive client. What is the FIRST action?",
+    "options": [
+      "Wash the site immediately with <span class='hl-drug'>soap and water</span>",
+      "Notify the charge nurse and complete an incident report",
+      "Go to the emergency department for HIV testing",
+      "Begin post-exposure prophylaxis with antiretroviral medications"
+    ],
+    "correct": 0,
+    "rationale": "The FIRST action after a needlestick is to WASH the puncture site immediately with <span class='hl-drug'>soap and water</span> for at least 15 minutes. For mucous membrane exposure, flush with water or saline. Do NOT squeeze or 'milk' the wound. After washing, report the incident and follow post-exposure protocol."
+  },
+  {
+    "q": "HIV post-exposure prophylaxis (PEP) should ideally be initiated within:",
+    "options": [
+      "24 hours of exposure",
+      "<span class='hl-lyte'>1-2 hours</span> of exposure (no later than <span class='hl-lyte'>72 hours</span>)",
+      "1 week of exposure",
+      "PEP is only given after the source patient tests positive"
+    ],
+    "correct": 1,
+    "rationale": "HIV PEP should begin as soon as possible \u2014 ideally within <span class='hl-lyte'>1-2 hours</span> of exposure. The absolute deadline is <span class='hl-lyte'>72 hours</span>; after that, PEP is generally not recommended. PEP is a 28-day course of antiretroviral therapy (typically 3 drugs). Don't wait for source patient results to start."
+  },
+  {
+    "q": "After a needlestick exposure to a source patient with unknown HIV status, the nurse should have follow-up HIV testing at which intervals?",
+    "options": [
+      "Only once, at 6 months post-exposure",
+      "At baseline, <span class='hl-lyte'>6 weeks, 12 weeks, and 6 months</span> post-exposure",
+      "Weekly for the first month",
+      "Annually for 5 years"
+    ],
+    "correct": 1,
+    "rationale": "Follow-up HIV testing after occupational exposure occurs at: baseline (immediately), <span class='hl-lyte'>6 weeks</span>, <span class='hl-lyte'>12 weeks</span>, and <span class='hl-lyte'>6 months</span> post-exposure. Some protocols include a 4th generation test at 4 weeks. If the source is confirmed HIV-negative, follow-up may be shortened."
+  },
+  {
+    "q": "A nurse who is fully vaccinated against Hepatitis B and has documented immunity (anti-HBs \u226510 mIU/mL) sustains a needlestick from an HBV-positive source. The nurse should:",
+    "options": [
+      "Receive <span class='hl-drug'>HBIG</span> and restart the vaccine series",
+      "Receive a booster dose of Hepatitis B vaccine",
+      "Begin antiviral therapy immediately",
+      "No treatment is needed \u2014 the nurse is immune"
+    ],
+    "correct": 3,
+    "rationale": "A healthcare worker who is vaccinated AND has confirmed immunity (anti-HBs \u226510 mIU/mL) needs NO post-exposure treatment for Hepatitis B. The antibodies provide protection. <span class='hl-drug'>HBIG</span> is reserved for unvaccinated or non-immune workers."
+  },
+  {
+    "q": "A nurse sustains a needlestick from an HBV-positive source. The nurse is unvaccinated against Hepatitis B. What is the correct post-exposure management?",
+    "options": [
+      "Administer <span class='hl-drug'>HBIG</span> within <span class='hl-lyte'>24 hours</span> AND begin the HBV vaccine series",
+      "Begin the Hepatitis B vaccine series only",
+      "Monitor liver function tests monthly for 6 months",
+      "No treatment available \u2014 monitor for symptoms"
+    ],
+    "correct": 0,
+    "rationale": "For an unvaccinated nurse exposed to HBV: (1) Administer <span class='hl-drug'>HBIG (Hepatitis B Immune Globulin)</span> within <span class='hl-lyte'>24 hours</span> for immediate passive immunity, AND (2) Begin the HBV vaccine series for long-term active immunity. Both are needed \u2014 HBIG alone provides only temporary protection."
+  },
+  {
+    "q": "There is currently NO post-exposure prophylaxis available for which bloodborne pathogen?",
+    "options": [
+      "HIV",
+      "Hepatitis B",
+      "All bloodborne pathogens have PEP available",
+      "Hepatitis C"
+    ],
+    "correct": 3,
+    "rationale": "There is NO post-exposure prophylaxis for Hepatitis C. Management involves baseline and follow-up testing (HCV RNA at 4-6 weeks, anti-HCV at 4-6 months) and early treatment if seroconversion occurs. HIV has antiretroviral PEP, and HBV has HBIG + vaccine."
+  },
+  {
+    "q": "The MOST common cause of needlestick injuries in healthcare is:",
+    "options": [
+      "Defective safety-engineered devices",
+      "Improper handling of IV catheter needles",
+      "Needles that slip during injection administration",
+      "Recapping needles after use"
+    ],
+    "correct": 3,
+    "rationale": "RECAPPING NEEDLES is the #1 cause of needlestick injuries. The nurse should NEVER recap a needle \u2014 instead, activate the safety device immediately and dispose of it in a puncture-resistant sharps container at the point of use. This is a fundamental standard precaution."
+  },
+  {
+    "q": "Sharps containers should be replaced when they are:",
+    "options": [
+      "Completely full",
+      "Only when the shift changes",
+      "One-half full",
+      "<span class='hl-lyte'>Three-quarters (\u00be) full</span>"
+    ],
+    "correct": 3,
+    "rationale": "Sharps containers must be replaced when they are <span class='hl-lyte'>three-quarters (\u00be) full</span>. Overfilling increases the risk of needlestick injuries when trying to force items into a full container. Never push items down into a sharps container, and never reach into one to retrieve items."
+  },
+  {
+    "q": "After a splash of blood contacts a nurse's eyes, the FIRST action is:",
+    "options": [
+      "Notify the charge nurse and document the incident",
+      "Flush the eyes immediately with water or saline for <span class='hl-lyte'>15 minutes</span>",
+      "Apply sterile eye drops and cover both eyes",
+      "Go to occupational health for blood testing"
+    ],
+    "correct": 1,
+    "rationale": "For mucous membrane exposure (eyes, nose, mouth), immediately flush with water or saline for at least <span class='hl-lyte'>15 minutes</span>. For eyes, use an eyewash station if available. This is the priority before reporting, documenting, or testing. The goal is to dilute and remove the infectious material."
+  },
+  {
+    "q": "A nurse is teaching a colleague about bloodborne pathogen exposure prevention. Which statement requires correction?",
+    "options": [
+      "\"I activate the safety device on needles immediately after use.\"",
+      "\"I recap the needle carefully using a one-handed scoop technique before disposal.\"",
+      "\"I dispose of sharps in the nearest puncture-resistant container.\"",
+      "\"I never reach into a sharps container to retrieve an item.\""
+    ],
+    "correct": 1,
+    "rationale": "Recapping needles \u2014 even with the one-handed scoop technique \u2014 should be AVOIDED whenever possible. The safest practice is to activate safety devices and dispose of needles DIRECTLY into a sharps container WITHOUT recapping. One-handed recapping is only acceptable in very limited situations where immediate disposal is not possible."
+  },
+  {
+    "q": "Which information should be included in the incident report following a needlestick injury?",
+    "options": [
+      "The type of device, circumstances of exposure, actions taken, and source patient information",
+      "Only the nurse's name and date of the incident",
+      "Only information that the nurse remembers \u2014 details can be added later",
+      "The nurse's HIV status should be included in the medical record"
+    ],
+    "correct": 0,
+    "rationale": "A comprehensive incident report includes: date, time, and location of the exposure; type of device involved; circumstances of the injury; actions taken (washing, reporting); source patient identification and test results (if available); and exposed worker's baseline labs. The nurse's HIV status is kept confidential."
+  },
+  {
+    "q": "A nurse declines HIV PEP after a needlestick from an HIV-positive source. The nurse should be informed that:",
+    "options": [
+      "The decision is irreversible \u2014 PEP cannot be started later",
+      "PEP is voluntary, but the window closes at <span class='hl-lyte'>72 hours</span> \u2014 the nurse can change their mind before then",
+      "The nurse will be placed on administrative leave until testing is complete",
+      "Declining PEP is not permitted \u2014 it is mandatory for all exposures"
+    ],
+    "correct": 1,
+    "rationale": "HIV PEP is VOLUNTARY \u2014 the nurse cannot be forced to take it. However, the nurse should be informed that the window for effective PEP closes at <span class='hl-lyte'>72 hours</span> post-exposure. The nurse can change their mind and start PEP at any point within that window. Ongoing counseling and follow-up testing should still be provided."
+  },
+  {
+    "q": "A nurse is handling an IV needle and accidentally punctures through the glove but the needle does not break the skin. This situation:",
+    "options": [
+      "Requires full post-exposure prophylaxis protocol",
+      "Should still be reported as a near-miss event and the gloves should be changed",
+      "Does not need to be reported since the skin was not broken",
+      "Requires only hand washing and no further action"
+    ],
+    "correct": 1,
+    "rationale": "Even though the skin was not broken, this near-miss event should be reported. Near-miss reporting helps identify workplace hazards and prevent future exposures. The gloves should be changed immediately. While full PEP is not needed (no skin break = no exposure), incident documentation supports quality improvement."
+  },
+  {
+    "q": "What is the standard duration of HIV post-exposure prophylaxis (PEP)?",
+    "options": [
+      "7 days",
+      "14 days",
+      "<span class='hl-lyte'>28 days</span> (4 weeks)",
+      "6 months"
+    ],
+    "correct": 2,
+    "rationale": "HIV PEP is a <span class='hl-lyte'>28-day (4-week)</span> course of antiretroviral therapy, typically a 3-drug regimen. Side effects (nausea, fatigue, headache) are common and may affect adherence. The nurse should be counseled about the importance of completing the full course and about managing side effects."
+  },
+  {
+    "q": "During the PEP period and follow-up testing, the exposed nurse should:",
+    "options": [
+      "Continue all normal activities with no restrictions",
+      "Only avoid contact with immunocompromised patients",
+      "Stay home from work until all follow-up testing is complete",
+      "Avoid donating blood, practice safe sex, and avoid pregnancy/breastfeeding until cleared"
+    ],
+    "correct": 3,
+    "rationale": "During the PEP period and until HIV testing confirms the nurse is negative, the nurse should: avoid donating blood/plasma/organs, practice safe sex (barrier methods), avoid pregnancy/breastfeeding, and report any acute illness symptoms. The nurse can continue working with standard precautions."
+  },
+  {
+    "q": "A nurse calculates a client's absolute neutrophil count (ANC) with these values: WBC <span class='hl-lyte'>2,500</span>, Neutrophils 30%, Bands 5%. The ANC is:",
+    "options": [
+      "<span class='hl-lyte'>1,250</span> \u2014 moderate neutropenia",
+      "<span class='hl-lyte'>500</span> \u2014 severe neutropenia",
+      "<span class='hl-lyte'>750</span> \u2014 moderate neutropenia",
+      "<span class='hl-lyte'>875</span> \u2014 moderate neutropenia"
+    ],
+    "correct": 3,
+    "rationale": "ANC = WBC \u00d7 (% Neutrophils + % Bands) / 100 = 2,500 \u00d7 (30 + 5) / 100 = 2,500 \u00d7 0.35 = <span class='hl-lyte'>875</span>. This falls in the moderate neutropenia range (<span class='hl-lyte'>500-1,000</span>). The client is at increased infection risk and should be placed on neutropenic precautions."
+  },
+  {
+    "q": "A client with an ANC of <span class='hl-lyte'>400</span> develops a temperature of <span class='hl-lyte'>100.6\u00b0F</span> (38.1\u00b0C). The nurse should:",
+    "options": [
+      "Administer acetaminophen and reassess in 4 hours",
+      "Apply cooling measures and encourage oral fluids",
+      "Document the temperature and continue routine monitoring",
+      "Recognize this as febrile neutropenia \u2014 obtain blood cultures and notify the provider for STAT broad-spectrum antibiotics"
+    ],
+    "correct": 3,
+    "rationale": "A temperature <span class='hl-lyte'>\u2265100.4\u00b0F (38\u00b0C)</span> in a client with an ANC <span class='hl-lyte'><500</span> = FEBRILE NEUTROPENIA, a medical emergency. The nurse should: (1) Obtain blood cultures, (2) Notify the provider immediately, (3) Administer broad-spectrum IV antibiotics within <span class='hl-lyte'>1 hour</span> of fever onset. Delays in antibiotic therapy increase mortality."
+  },
+  {
+    "q": "A client on chemotherapy has severe neutropenia. Which type of room assignment is appropriate?",
+    "options": [
+      "Negative-pressure isolation room",
+      "Positive-pressure (protective) isolation room",
+      "Standard semi-private room with another stable client",
+      "Any available private room without special ventilation"
+    ],
+    "correct": 1,
+    "rationale": "Neutropenic clients require POSITIVE-PRESSURE rooms (also called protective/reverse isolation). Air flows OUT of the room, preventing environmental pathogens from entering. This protects the immunocompromised patient FROM the environment. NEGATIVE pressure protects the environment FROM the patient (used for TB)."
+  },
+  {
+    "q": "Which dietary instruction is appropriate for a client on neutropenic precautions?",
+    "options": [
+      "\"You may eat sushi as long as it's from a reputable restaurant.\"",
+      "\"Raw fruits with thick skins can be eaten after thorough peeling.\"",
+      "\"Avoid all raw/undercooked foods, unpeeled raw fruits, unpasteurized dairy, and deli meats.\"",
+      "\"You only need to avoid raw meat \u2014 all other foods are safe.\""
+    ],
+    "correct": 2,
+    "rationale": "The neutropenic diet restricts foods that may harbor bacteria: NO raw/undercooked meat, eggs, or seafood; NO unpeeled raw fruits/vegetables; NO unpasteurized dairy or juices; NO deli meats or soft cheeses. All food should be thoroughly cooked. Some institutions allow thick-skinned fruits if peeled, but the safest answer avoids them entirely."
+  },
+  {
+    "q": "A nurse is caring for a neutropenic client. Which assessment finding warrants IMMEDIATE action?",
+    "options": [
+      "A new area of redness and tenderness at the <span class='hl-lyte'>IV site</span> without pus formation",
+      "Oral temperature of 98.8\u00b0F (37.1\u00b0C)",
+      "Mild fatigue after ambulating in the hallway",
+      "Platelet count of 180,000/mm\u00b3"
+    ],
+    "correct": 0,
+    "rationale": "In neutropenic clients, classic signs of infection (pus, swelling, fever) may be ABSENT or blunted because the client lacks sufficient white blood cells to mount a normal inflammatory response. Any subtle sign of infection \u2014 redness, warmth, tenderness \u2014 must be reported immediately. Pus may not form even with active infection."
+  },
+  {
+    "q": "Which precaution is appropriate for a client on neutropenic precautions?",
+    "options": [
+      "No fresh flowers, potted plants, or standing water in the room",
+      "Rectal temperatures should be taken for accuracy",
+      "Fresh flowers and potted plants are encouraged to improve morale",
+      "Visitors are unrestricted as long as they wear gloves"
+    ],
+    "correct": 0,
+    "rationale": "Fresh flowers, potted plants, and standing water are PROHIBITED in neutropenic rooms because they harbor Aspergillus and other fungal organisms that can cause fatal infections in immunocompromised clients. Rectal temperatures are contraindicated (risk of mucosal tears and bacteremia). Visitors must be screened for illness."
+  },
+  {
+    "q": "The primary purpose of administering <span class='hl-drug'>filgrastim (Neupogen)</span> to a client receiving chemotherapy is to:",
+    "options": [
+      "Stimulate white blood cell (neutrophil) production to reduce infection risk",
+      "Stimulate red blood cell production to prevent anemia",
+      "Prevent nausea and vomiting from chemotherapy",
+      "Enhance the effectiveness of chemotherapy agents"
+    ],
+    "correct": 0,
+    "rationale": "<span class='hl-drug'>Filgrastim (Neupogen)</span> is a granulocyte colony-stimulating factor (G-CSF) that stimulates the bone marrow to produce NEUTROPHILS, reducing the duration and severity of chemotherapy-induced neutropenia. The most common side effect is bone pain (from marrow expansion). It does NOT prevent nausea (antiemetics do that)."
+  },
+  {
+    "q": "A client receiving <span class='hl-drug'>filgrastim</span> reports severe bone pain. The nurse should:",
+    "options": [
+      "Hold the medication \u2014 this indicates an allergic reaction",
+      "Reduce the dose by half without notifying the provider",
+      "Recognize this as an expected side effect and administer analgesics as prescribed",
+      "Discontinue the medication and switch to erythropoietin"
+    ],
+    "correct": 2,
+    "rationale": "Bone pain is the MOST COMMON side effect of <span class='hl-drug'>filgrastim</span> \u2014 it occurs because the medication stimulates rapid expansion of bone marrow to produce neutrophils. Analgesics (acetaminophen, NSAIDs) should be administered as prescribed. The medication should NOT be discontinued for bone pain alone."
+  },
+  {
+    "q": "Which nursing intervention is contraindicated for a client with severe neutropenia (ANC <span class='hl-lyte'><500</span>)?",
+    "options": [
+      "Encouraging the client to use a soft-bristled toothbrush",
+      "Monitoring temperature every 4 hours",
+      "Performing meticulous hand hygiene before entering the room",
+      "Administering intramuscular injections"
+    ],
+    "correct": 3,
+    "rationale": "Intramuscular injections are AVOIDED in neutropenic clients because: (1) the injection creates a break in skin integrity (infection risk), (2) the tissue may not heal properly with low WBCs, and (3) with concurrent thrombocytopenia, IM injections can cause hematomas. Alternative routes (IV, oral, subcutaneous) are preferred."
+  },
+  {
+    "q": "A visitor arrives to see a neutropenic client. The visitor has a runny nose and mild cough. The nurse should:",
+    "options": [
+      "Allow the visit but provide the visitor with a surgical mask",
+      "Allow a 15-minute visit if the visitor stays 6 feet from the client",
+      "Allow the visit only if the visitor washes hands upon entering",
+      "Restrict the visit \u2014 no visitors with signs of infection in a neutropenic client's room"
+    ],
+    "correct": 3,
+    "rationale": "Visitors with ANY signs of respiratory illness (runny nose, cough, sore throat, fever) should NOT be allowed to visit neutropenic clients. Even a mild cold virus can cause a life-threatening infection in a severely immunocompromised client. Masks and hand hygiene alone are not sufficient protection."
+  },
+  {
+    "q": "A client receiving IV <span class='hl-drug'>vancomycin</span> develops flushing, pruritus, and a red rash on the face and upper body during the infusion. The nurse recognizes this as:",
+    "options": [
+      "Red Man Syndrome \u2014 slow the infusion rate",
+      "Anaphylaxis \u2014 stop the infusion and administer epinephrine",
+      "A normal expected reaction \u2014 no action needed",
+      "Stevens-Johnson syndrome \u2014 discontinue the medication permanently"
+    ],
+    "correct": 0,
+    "rationale": "Red Man Syndrome is a histamine-mediated reaction to rapid <span class='hl-drug'>vancomycin</span> infusion \u2014 NOT a true allergy. Symptoms include flushing, pruritus, and an erythematous rash on the face, neck, and upper body. Management: SLOW the infusion rate (infuse over \u226560 minutes), administer antihistamines (diphenhydramine). Do NOT stop the medication."
+  },
+  {
+    "q": "A nurse is administering <span class='hl-drug'>gentamicin</span> (an aminoglycoside). Which assessment is MOST important for detecting adverse effects?",
+    "options": [
+      "Monitor for skin rash and photosensitivity",
+      "Monitor hearing (ototoxicity) and renal function (<span class='hl-lyte'>BUN/creatinine</span> \u2014 nephrotoxicity)",
+      "Monitor liver function tests monthly",
+      "Monitor blood glucose levels for hyperglycemia"
+    ],
+    "correct": 1,
+    "rationale": "Aminoglycosides (<span class='hl-drug'>gentamicin</span>, <span class='hl-drug'>tobramycin</span>, amikacin) are both OTOTOXIC (hearing loss, tinnitus, vertigo) and NEPHROTOXIC (elevated <span class='hl-lyte'>BUN/creatinine</span>, decreased urine output). Monitor: peak and trough drug levels, hearing assessments, and renal function. Report tinnitus, dizziness, or decreased urine output immediately."
+  },
+  {
+    "q": "A client receiving <span class='hl-drug'>metronidazole (Flagyl)</span> asks if they can have a glass of wine with dinner. The nurse should respond:",
+    "options": [
+      "\"A small amount of alcohol is safe during treatment.\"",
+      "\"Absolutely not \u2014 alcohol combined with metronidazole causes a severe disulfiram-like reaction.\"",
+      "\"You may drink alcohol 2 hours after taking the medication.\"",
+      "\"Wine is acceptable, but avoid beer and hard liquor.\""
+    ],
+    "correct": 1,
+    "rationale": "<span class='hl-drug'>Metronidazole</span> combined with alcohol causes a severe DISULFIRAM-LIKE REACTION: severe nausea, vomiting, flushing, headache, abdominal cramps, and tachycardia. Alcohol must be avoided during treatment AND for <span class='hl-lyte'>48-72 hours</span> after completing the course. This applies to ALL forms of alcohol."
+  },
+  {
+    "q": "The nurse is administering <span class='hl-drug'>amphotericin B</span> to a client with a systemic fungal infection. Which premedication should the nurse anticipate?",
+    "options": [
+      "Prophylactic antibiotics to prevent secondary infection",
+      "<span class='hl-drug'>Acetaminophen</span>, <span class='hl-drug'>diphenhydramine</span>, and <span class='hl-drug'>meperidine</span> for infusion reactions",
+      "<span class='hl-drug'>Corticosteroids</span> to enhance the antifungal effect",
+      "No premedication is needed for amphotericin B"
+    ],
+    "correct": 1,
+    "rationale": "<span class='hl-drug'>Amphotericin B</span> (\"Ampho-terrible\") causes severe infusion reactions: fever, chills, rigors, nausea, and hypotension. Premedication includes: <span class='hl-drug'>acetaminophen</span> (fever), <span class='hl-drug'>diphenhydramine</span> (histamine reactions), and <span class='hl-drug'>meperidine</span> (rigors/shaking chills). Monitor closely for nephrotoxicity (<span class='hl-lyte'>BUN/Cr</span>) and <span class='hl-lyte'>hypokalemia</span>."
+  },
+  {
+    "q": "A nurse is counseling a client who will start <span class='hl-drug'>rifampin</span> therapy. Which instruction is MOST important regarding contraceptive use?",
+    "options": [
+      "<span class='hl-drug'>Rifampin</span> is a potent CYP450 inducer that significantly DECREASES the effectiveness of oral contraceptives \u2014 use alternative birth control",
+      "<span class='hl-drug'>Rifampin</span> enhances the effect of oral contraceptives",
+      "Oral contraceptives should be taken at the same time as rifampin for best absorption",
+      "Contraceptive use has no interaction with rifampin"
+    ],
+    "correct": 0,
+    "rationale": "<span class='hl-drug'>Rifampin</span> is one of the most potent CYP450 enzyme inducers. It significantly accelerates the metabolism of many drugs, including oral contraceptives, rendering them INEFFECTIVE. Women taking rifampin must use alternative contraception (barrier methods, IUD) throughout treatment and for at least one month after stopping."
+  },
+  {
+    "q": "<span class='hl-drug'>Oseltamivir (Tamiflu)</span> for influenza treatment is MOST effective when started within:",
+    "options": [
+      "<span class='hl-lyte'>48 hours</span> of symptom onset",
+      "24 hours of symptom resolution",
+      "1 week of diagnosis",
+      "Any time during the illness \u2014 timing does not affect efficacy"
+    ],
+    "correct": 0,
+    "rationale": "<span class='hl-drug'>Oseltamivir (Tamiflu)</span> must be started within <span class='hl-lyte'>48 hours</span> of symptom onset for maximum effectiveness. It works by inhibiting neuraminidase, preventing viral release from infected cells. After 48 hours, viral replication has progressed too far for the drug to provide significant benefit."
+  },
+  {
+    "q": "A client prescribed <span class='hl-drug'>isoniazid</span> reports numbness and tingling in the feet and hands. The nurse recognizes this as:",
+    "options": [
+      "An expected effect that does not require intervention",
+      "An allergic reaction requiring epinephrine",
+      "A sign of hepatotoxicity requiring immediate drug discontinuation",
+      "Peripheral neuropathy \u2014 a known side effect requiring <span class='hl-drug'>Vitamin B6 (pyridoxine)</span> supplementation"
+    ],
+    "correct": 3,
+    "rationale": "Numbness and tingling in the extremities is peripheral neuropathy, a known side effect of <span class='hl-drug'>isoniazid</span>. INH depletes vitamin B6, which is essential for nerve function. Treatment/prevention: <span class='hl-drug'>pyridoxine (Vitamin B6)</span> supplementation throughout INH therapy. This is not hepatotoxicity (which presents as jaundice, abdominal pain, elevated LFTs)."
+  },
+  {
+    "q": "Which statement about <span class='hl-drug'>IV vancomycin</span> trough levels is correct?",
+    "options": [
+      "Trough levels should be drawn immediately after the infusion ends",
+      "Trough levels are only needed for the first dose",
+      "Target trough for serious infections is <span class='hl-lyte'>15-20 mcg/mL</span>",
+      "Trough levels are drawn midway between doses"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Vancomycin</span> trough levels for serious infections (MRSA, endocarditis, pneumonia) should be maintained at <span class='hl-lyte'>15-20 mcg/mL</span>. Troughs are drawn 30 minutes BEFORE the next dose (not after infusion). Ongoing monitoring is needed throughout therapy, not just after the first dose. Supratherapeutic levels increase nephrotoxicity risk."
+  },
+  {
+    "q": "A client with a history of penicillin allergy needs antibiotic therapy for MRSA. The nurse should anticipate which antibiotic?",
+    "options": [
+      "<span class='hl-drug'>Amoxicillin</span> \u2014 a penicillin-class drug but safe for MRSA",
+      "<span class='hl-drug'>Cephalexin</span> \u2014 safe in all penicillin-allergic patients",
+      "<span class='hl-drug'>Vancomycin</span> \u2014 not in the penicillin family and effective against MRSA",
+      "<span class='hl-drug'>Methicillin</span> \u2014 the original anti-MRSA antibiotic"
+    ],
+    "correct": 2,
+    "rationale": "<span class='hl-drug'>Vancomycin</span> is the drug of choice for serious MRSA infections and is not related to penicillin (no cross-reactivity). <span class='hl-drug'>Amoxicillin</span> IS a penicillin (contraindicated). Cephalosporins have ~1-2% cross-reactivity with penicillin allergy (use with caution). MRSA is by definition resistant to methicillin and all beta-lactams."
+  },
+  {
+    "q": "A nurse is counseling a client taking <span class='hl-drug'>metronidazole</span>. Which expected side effect should the nurse explain?",
+    "options": [
+      "Orange discoloration of urine and tears",
+      "Photosensitivity requiring sunscreen use",
+      "A metallic taste in the mouth and dark/red-brown urine",
+      "Permanent discoloration of teeth"
+    ],
+    "correct": 2,
+    "rationale": "Common expected effects of <span class='hl-drug'>metronidazole</span>: metallic taste (very common), dark or red-brown urine (harmless), GI upset, and headache. Orange body fluids = <span class='hl-drug'>rifampin</span>. Photosensitivity = fluoroquinolones/tetracyclines. Tooth discoloration = tetracyclines. Counsel patients that the metallic taste is temporary."
+  }
+]
