@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infection Control &amp; Safety — NCLEX Crib Notes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ic-hero-from: #1a0f00;
+  --ic-hero-mid: #3d2200;
+  --ic-hero-to: #5c3a10;
+  --ic-accent: #c2870a;
+  --ic-accent-light: #e8b84c;
+  --ic-text-cream: #fdf0d5;
+  --ic-text-gold: #dbb87a;
+  --ic-dark: #2a1800;
+  --ic-border: #c2870a;
+}
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: linear-gradient(135deg, var(--ic-hero-from) 0%, var(--ic-hero-mid) 50%, var(--ic-hero-to) 100%);
+  color: var(--ic-text-cream);
+  min-height: 100vh;
+  padding: 0;
+  line-height: 1.55;
+}
+
+.guide-container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  border-bottom: 2px solid var(--ic-accent);
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ic-accent-light);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.4rem;
+}
+.hero .subtitle {
+  font-size: 1.05rem;
+  color: var(--ic-text-gold);
+  opacity: 0.85;
+}
+
+/* Section headers */
+.section-header {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  border-radius: 6px 6px 0 0;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  letter-spacing: 0.02em;
+}
+.sh-precautions { background: #7c4a00; color: #ffe0a0; }
+.sh-sterile     { background: #1a5c5c; color: #b0efef; }
+.sh-hai         { background: #6b1010; color: #f9c8c8; }
+.sh-tb          { background: #3a1a60; color: #d8c0f0; }
+.sh-bborne      { background: #005c3a; color: #a0f0d0; }
+.sh-neutro      { background: #1a3a6b; color: #b8d8f8; }
+.sh-meds        { background: #5c3a10; color: #f0d8a8; }
+.sh-anchors     { background: #4a0028; color: #f8c0d8; }
+
+/* Content wrapper below section headers */
+.section-body {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(194,135,10,0.25);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  padding: 1.2rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.05rem;
+  margin: 0.8rem 0;
+}
+th {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.55rem 0.6rem;
+  text-align: left;
+  border-bottom: 2px solid var(--ic-accent);
+}
+td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid rgba(194,135,10,0.15);
+  vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+
+/* Category labels */
+.cat-label {
+  font-weight: 700;
+  font-size: 1.02rem;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+/* Drug & lyte highlighting */
+.drug { color: #93c5fd; font-weight: 700; }
+.lyte { color: #ffa040; font-weight: 700; }
+
+/* Mnemonic boxes */
+.mnemonic-box {
+  background: rgba(194,135,10,0.12);
+  border: 1px solid var(--ic-accent);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+}
+.mnemonic-box .mn-title {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ic-accent-light);
+  margin-bottom: 0.3rem;
+}
+.mnemonic-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+.mnemonic-box li {
+  padding: 0.15rem 0;
+  line-height: 1.45;
+}
+.mnemonic-box li::before {
+  content: '▸ ';
+  color: var(--ic-accent);
+}
+
+/* Callout boxes */
+.callout {
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 0.8rem 0;
+  font-size: 0.98rem;
+}
+.callout-warn {
+  background: rgba(220,38,38,0.15);
+  border-left: 4px solid #ef4444;
+}
+.callout-info {
+  background: rgba(59,130,246,0.12);
+  border-left: 4px solid #3b82f6;
+}
+.callout-tip {
+  background: rgba(34,197,94,0.12);
+  border-left: 4px solid #22c55e;
+}
+
+/* PPE Order Visual */
+.ppe-order {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  margin: 0.6rem 0;
+}
+.ppe-step {
+  background: rgba(194,135,10,0.2);
+  border: 1px solid var(--ic-accent);
+  border-radius: 20px;
+  padding: 0.35rem 0.8rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+.ppe-arrow {
+  color: var(--ic-accent-light);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Memory anchor grid */
+.anchor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+.anchor-card {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(194,135,10,0.3);
+  border-radius: 6px;
+  padding: 0.7rem 0.8rem;
+}
+.anchor-card .ac-title {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ic-accent-light);
+  margin-bottom: 0.25rem;
+}
+.anchor-card .ac-body {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Subheading within sections */
+.sub-heading {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ic-accent-light);
+  margin: 1rem 0 0.4rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid rgba(194,135,10,0.3);
+}
+
+/* Comparison columns */
+.compare-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin: 0.6rem 0;
+}
+.compare-col {
+  background: rgba(0,0,0,0.2);
+  border-radius: 6px;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid rgba(194,135,10,0.15);
+}
+.compare-col .cc-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+ul.plain {
+  list-style: none;
+  padding-left: 0;
+}
+ul.plain li { padding: 0.15rem 0; }
+ul.plain li::before { content: '• '; color: var(--ic-accent); }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .guide-container { padding: 1rem 0.6rem 2rem; }
+  .hero h1 { font-size: 1.5rem; }
+  table { font-size: 1rem; }
+  th { font-size: 0.88rem; }
+  .cat-label { font-size: 0.92rem; }
+  .section-header { font-size: 1.15rem; }
+  .compare-cols { grid-template-columns: 1fr; }
+  .anchor-grid { grid-template-columns: 1fr; }
+  .ppe-order { justify-content: center; }
+}
+</style>
+</head>
+<body>
+<div class="guide-container">
+
+<!-- HERO -->
+<div class="hero">
+  <h1>🦠 Infection Control &amp; Safety</h1>
+  <p class="subtitle">Standard Precautions • Transmission-Based Isolation • Sterile Technique • TB • HAIs • Neutropenic Care</p>
+</div>
+
+<!-- ========================================== -->
+<!-- SECTION 1: STANDARD & TRANSMISSION-BASED -->
+<!-- ========================================== -->
+<div class="section-header sh-precautions">1 · Standard &amp; Transmission-Based Precautions</div>
+<div class="section-body">
+
+  <div class="sub-heading">Standard Precautions — Applied to ALL Patients</div>
+  <ul class="plain">
+    <li>Treat ALL blood, body fluids, secretions, excretions (except sweat), non-intact skin, and mucous membranes as potentially infectious</li>
+    <li>Hand hygiene before &amp; after EVERY patient contact</li>
+    <li>Gloves for contact with blood/body fluids; change between tasks on same patient</li>
+    <li>Gown, mask, eye protection when splash/spray risk exists</li>
+    <li>Safe injection practices — one needle, one syringe, one patient</li>
+    <li>Respiratory hygiene / cough etiquette for all persons with respiratory symptoms</li>
+  </ul>
+
+  <div class="callout callout-warn">
+    <strong>NCLEX KEY:</strong> Standard Precautions are used for EVERY patient regardless of diagnosis. They are the foundation — transmission-based precautions are ADDED on top.
+  </div>
+
+  <div class="sub-heading">Transmission-Based Precautions</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:22%">Type</th>
+        <th style="width:28%">PPE / Room</th>
+        <th>Diseases</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="cat-label" style="color:#f59e0b;">CONTACT</span></td>
+        <td>Gloves + Gown<br>Private room preferred<br>Dedicated equipment</td>
+        <td><span class="lyte">MRSA</span>, <span class="lyte">VRE</span>, <span class="lyte">C. difficile</span>, scabies, lice, RSV, wound infections with heavy drainage, herpes simplex (skin)</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label" style="color:#3b82f6;">DROPLET</span></td>
+        <td>Surgical mask within <span class="lyte">3–6 feet</span><br>Private room or cohort<br>Door may remain open</td>
+        <td>Influenza, pertussis (whooping cough), meningococcal meningitis, strep pharyngitis, mumps, rubella, COVID-19, rhinovirus</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label" style="color:#ef4444;">AIRBORNE</span></td>
+        <td><span class="drug">N95 respirator</span> (fit-tested)<br>Negative-pressure room (AIIR)<br>Door CLOSED at all times</td>
+        <td><span class="lyte">Tuberculosis (TB)</span>, measles (rubeola), varicella (chickenpox), disseminated herpes zoster, smallpox</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="mnemonic-box">
+    <div class="mn-title">🧠 "My Tiny Chicken MVPs" — Airborne Diseases</div>
+    <ul>
+      <li><strong>M</strong>easles (rubeola)</li>
+      <li><strong>T</strong>uberculosis</li>
+      <li><strong>C</strong>hickenpox (varicella) / disseminated herpes <strong>Z</strong>oster</li>
+      <li><strong>S</strong>mallpox</li>
+    </ul>
+  </div>
+
+  <div class="sub-heading">PPE Donning &amp; Doffing Order</div>
+  <p style="margin-bottom:0.3rem;"><strong>Donning (putting ON) — "Going to war":</strong></p>
+  <div class="ppe-order">
+    <span class="ppe-step">1. Gown</span>
+    <span class="ppe-arrow">→</span>
+    <span class="ppe-step">2. Mask/N95</span>
+    <span class="ppe-arrow">→</span>
+    <span class="ppe-step">3. Goggles/Shield</span>
+    <span class="ppe-arrow">→</span>
+    <span class="ppe-step">4. Gloves</span>
+  </div>
+  <p style="margin-top:0.6rem; margin-bottom:0.3rem;"><strong>Doffing (taking OFF) — "Most contaminated first":</strong></p>
+  <div class="ppe-order">
+    <span class="ppe-step">1. Gloves</span>
+    <span class="ppe-arrow">→</span>
+    <span class="ppe-step">2. Goggles/Shield</span>
+    <span class="ppe-arrow">→</span>
+    <span class="ppe-step">3. Gown</span>
+    <span class="ppe-arrow">→</span>
+    <span class="ppe-step">4. Mask/N95</span>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>Remember:</strong> Gloves go on LAST (donning) and come off FIRST (doffing). The mask is the LAST item removed. Hand hygiene is performed after removing EACH piece of PPE and again after all PPE is removed.
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- SECTION 2: STERILE TECHNIQUE -->
+<!-- ========================================== -->
+<div class="section-header sh-sterile">2 · Sterile Technique &amp; Surgical Asepsis</div>
+<div class="section-body">
+
+  <div class="sub-heading">Sterile Field Principles — The Non-Negotiables</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Rule</th>
+        <th>Rationale / NCLEX Application</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="cat-label">1-inch border rule</span></td>
+        <td>The outer <span class="lyte">1 inch</span> of a sterile drape is considered CONTAMINATED. Never place sterile items within this border zone.</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Never turn your back</span></td>
+        <td>Turning away from the sterile field = you can no longer verify it's uncontaminated. If you look away, the field is considered contaminated.</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Wet = contaminated</span></td>
+        <td>Moisture allows microorganisms to wick through fabric (strike-through contamination). A wet sterile field must be replaced.</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Below waist = contaminated</span></td>
+        <td>Anything below the waist or below the level of the sterile field is considered non-sterile. Keep hands above waist at all times.</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Sterile-to-sterile only</span></td>
+        <td>Only sterile items can touch other sterile items. A non-sterile item touching a sterile surface contaminates the entire field.</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Open packages away from you</span></td>
+        <td>Open the far flap first, then sides, then the flap nearest you. This prevents reaching over the sterile area.</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Pour without splashing</span></td>
+        <td>When pouring solutions, hold the bottle <span class="lyte">4-6 inches</span> above the receptacle. Pour away from the label. Do NOT recap or reuse opened bottles.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-heading">Sterile vs. Clean Technique</div>
+  <div class="compare-cols">
+    <div class="compare-col">
+      <div class="cc-title" style="color:#22c55e;">Sterile (Surgical Asepsis)</div>
+      <ul class="plain">
+        <li>Insertion of urinary catheters</li>
+        <li>Surgical procedures</li>
+        <li>Central line dressing changes</li>
+        <li>Tracheostomy suctioning</li>
+        <li>Wound irrigation (deep wounds)</li>
+        <li>Lumbar puncture assist</li>
+      </ul>
+    </div>
+    <div class="compare-col">
+      <div class="cc-title" style="color:#f59e0b;">Clean (Medical Asepsis)</div>
+      <ul class="plain">
+        <li>Nasopharyngeal suctioning</li>
+        <li>Vital signs / physical assessment</li>
+        <li>Enema administration</li>
+        <li>Ostomy care</li>
+        <li>Bathing / hygiene care</li>
+        <li>Oral medication administration</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout callout-warn">
+    <strong>NCLEX TIP:</strong> When in doubt, choose the MORE sterile option. Any break in sterile technique requires you to STOP and start over with new sterile supplies.
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- SECTION 3: HEALTHCARE-ASSOCIATED INFECTIONS -->
+<!-- ========================================== -->
+<div class="section-header sh-hai">3 · Healthcare-Associated Infections (HAIs)</div>
+<div class="section-body">
+
+  <div class="sub-heading">Central Line–Associated Bloodstream Infection (CLABSI) Prevention</div>
+  <div class="mnemonic-box">
+    <div class="mn-title">🩸 CLABSI Prevention Bundle</div>
+    <ul>
+      <li>Hand hygiene before insertion and during dressing changes</li>
+      <li>Full barrier precautions during insertion (cap, mask, sterile gown, sterile gloves, full-body drape)</li>
+      <li>Chlorhexidine skin antisepsis (<span class="drug">chlorhexidine 2%</span> scrub — NOT povidone-iodine for central lines)</li>
+      <li>Optimal catheter site selection — <span class="lyte">subclavian preferred</span> (lowest infection rate); avoid femoral (highest infection rate)</li>
+      <li>Daily review of line necessity — remove as soon as no longer needed</li>
+      <li>Transparent dressing changed every <span class="lyte">7 days</span> (or gauze every <span class="lyte">2 days</span>)</li>
+    </ul>
+  </div>
+
+  <div class="sub-heading">Catheter-Associated Urinary Tract Infection (CAUTI) Prevention</div>
+  <div class="mnemonic-box">
+    <div class="mn-title">🚿 CAUTI Prevention Bundle</div>
+    <ul>
+      <li>Insert ONLY when clinically indicated (not for convenience or monitoring I&amp;O)</li>
+      <li>Strict <strong>sterile technique</strong> during insertion</li>
+      <li>Maintain a <strong>closed drainage system</strong> — never disconnect the catheter from tubing</li>
+      <li>Keep bag BELOW the level of the bladder at all times — never raise above</li>
+      <li>Perform perineal hygiene with soap and water (NOT betadine)</li>
+      <li>Daily assessment for continued need — remove as early as possible</li>
+      <li>Secure the catheter to prevent tension/traction on the urethra</li>
+    </ul>
+  </div>
+
+  <div class="sub-heading">Ventilator-Associated Pneumonia (VAP) Prevention</div>
+  <div class="mnemonic-box">
+    <div class="mn-title">🫁 VAP Prevention Bundle</div>
+    <ul>
+      <li>Elevate HOB <span class="lyte">30-45 degrees</span> (reduces aspiration)</li>
+      <li>Oral care with <span class="drug">chlorhexidine</span> every <span class="lyte">12 hours</span></li>
+      <li>Daily sedation vacation (spontaneous awakening trial)</li>
+      <li>Daily spontaneous breathing trial (assess readiness to extubate)</li>
+      <li>DVT and PUD prophylaxis</li>
+      <li>Endotracheal tube cuff pressure maintained at <span class="lyte">20-30 cm H₂O</span></li>
+    </ul>
+  </div>
+
+  <div class="sub-heading">C. difficile (C. diff) — Special Considerations</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Key Point</th>
+        <th>Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="cat-label">Hand Hygiene</span></td>
+        <td><span class="drug">Soap and water ONLY</span> — alcohol-based hand sanitizer does NOT kill C. diff spores. This is an NCLEX favorite!</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Precautions</span></td>
+        <td>CONTACT precautions: gloves + gown. Private room. Dedicated equipment (stethoscope, BP cuff).</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Cleaning</span></td>
+        <td><span class="drug">Bleach-based (sodium hypochlorite)</span> disinfectant for environmental surfaces. Quaternary ammonium compounds are INEFFECTIVE against spores.</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Cause</span></td>
+        <td>Disruption of normal flora from broad-spectrum antibiotics (clindamycin, fluoroquinolones, cephalosporins)</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Treatment</span></td>
+        <td>Stop offending antibiotic. First-line: <span class="drug">oral vancomycin</span> or <span class="drug">fidaxomicin</span>. <span class="drug">Metronidazole</span> (Flagyl) for mild cases. IV vancomycin is NOT effective for C. diff (doesn't reach the gut lumen).</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Key Symptom</span></td>
+        <td>Profuse, watery, foul-smelling diarrhea (often described as "horse barn" odor)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-warn">
+    <strong>HIGH-YIELD:</strong> NCLEX frequently tests: "After caring for a patient with C. diff, the nurse should perform hand hygiene using _____." Answer: <span class="drug">Soap and water</span> — NEVER alcohol-based sanitizer for C. diff.
+  </div>
+
+  <div class="sub-heading">Surgical Site Infection (SSI) Prevention</div>
+  <ul class="plain">
+    <li>Administer prophylactic antibiotics within <span class="lyte">1 hour</span> before surgical incision (or 2 hours for vancomycin/fluoroquinolones)</li>
+    <li>Clip hair (do NOT shave) — shaving creates micro-abrasions that harbor bacteria</li>
+    <li>Maintain normothermia during surgery</li>
+    <li>Maintain blood glucose control (especially in diabetic patients)</li>
+    <li>Sterile technique for dressing changes for <span class="lyte">first 24-48 hours</span></li>
+    <li>Teach patient signs of infection: redness, warmth, swelling, purulent drainage, fever</li>
+  </ul>
+</div>
+
+<!-- ========================================== -->
+<!-- SECTION 4: TUBERCULOSIS -->
+<!-- ========================================== -->
+<div class="section-header sh-tb">4 · Tuberculosis Screening &amp; Management</div>
+<div class="section-body">
+
+  <div class="sub-heading">TB Testing Methods</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:35%">Test</th>
+        <th>Key Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="cat-label">TST (Mantoux / PPD)</span></td>
+        <td>Intradermal injection of <span class="lyte">0.1 mL</span> purified protein derivative on the <span class="lyte">inner forearm</span>. Read in <span class="lyte">48-72 hours</span>. Measure only <strong>induration</strong> (not redness). A trained reader palpates and measures the raised, hardened area in mm.</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">TST Interpretation</span></td>
+        <td>
+          <span class="lyte">≥5 mm</span> = positive for: HIV+, immunosuppressed, recent TB contacts, abnormal CXR<br>
+          <span class="lyte">≥10 mm</span> = positive for: healthcare workers, high-risk groups (homeless, IVDU, foreign-born from endemic areas)<br>
+          <span class="lyte">≥15 mm</span> = positive for: anyone (low risk, no known risk factors)
+        </td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">IGRA (Blood test)</span></td>
+        <td>QuantiFERON-TB Gold or T-SPOT. Blood draw, one visit. Preferred for BCG-vaccinated individuals (TST may cause false-positive in BCG recipients).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-info">
+    <strong>NCLEX TIP:</strong> A positive TST or IGRA means <strong>exposure/infection</strong>, NOT active disease. A <strong>chest X-ray</strong> and <strong>sputum culture</strong> are needed to differentiate latent vs active TB. Three consecutive negative sputum AFB smears = may discontinue airborne precautions.
+  </div>
+
+  <div class="sub-heading">Latent TB vs. Active TB</div>
+  <div class="compare-cols">
+    <div class="compare-col">
+      <div class="cc-title" style="color:#a78bfa;">Latent TB (LTBI)</div>
+      <ul class="plain">
+        <li>Positive TST/IGRA</li>
+        <li>Normal chest X-ray</li>
+        <li>No symptoms</li>
+        <li>NOT contagious</li>
+        <li>Negative sputum cultures</li>
+        <li>Treat: <span class="drug">isoniazid (INH)</span> × 9 months OR <span class="drug">rifampin</span> × 4 months</li>
+      </ul>
+    </div>
+    <div class="compare-col">
+      <div class="cc-title" style="color:#f87171;">Active TB</div>
+      <ul class="plain">
+        <li>Positive TST/IGRA</li>
+        <li>Abnormal chest X-ray (infiltrates, cavitation)</li>
+        <li>Symptoms: persistent cough >3 weeks, hemoptysis, night sweats, weight loss, fever</li>
+        <li>CONTAGIOUS — airborne precautions required</li>
+        <li>Positive sputum AFB cultures</li>
+        <li>Treat: <span class="drug">RIPE therapy</span> (see below)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sub-heading">RIPE Therapy — Active TB Treatment</div>
+  <div class="mnemonic-box">
+    <div class="mn-title">💊 RIPE — First-Line TB Medications</div>
+    <ul>
+      <li><strong>R</strong>ifampin — turns body fluids <span class="lyte">orange/red</span> (urine, tears, sweat). Decreases effectiveness of oral contraceptives. Potent CYP450 inducer.</li>
+      <li><strong>I</strong>soniazid (INH) — hepatotoxic (monitor <span class="lyte">LFTs</span>). Give with <span class="drug">pyridoxine (Vitamin B6)</span> to prevent peripheral neuropathy.</li>
+      <li><strong>P</strong>yrazinamide — hepatotoxic. Monitor <span class="lyte">uric acid</span> levels (can cause hyperuricemia/gout).</li>
+      <li><strong>E</strong>thambutol — causes <span class="lyte">optic neuritis</span> (visual changes: decreased acuity, color blindness). Baseline vision exam required. "E = Eyes"</li>
+    </ul>
+  </div>
+
+  <div class="callout callout-warn">
+    <strong>CRITICAL:</strong> TB treatment requires DIRECTLY OBSERVED THERAPY (DOT) — the nurse watches the patient swallow every dose. Non-compliance leads to multi-drug resistant TB (MDR-TB), a public health emergency.
+  </div>
+
+  <div class="sub-heading">Airborne Precautions for TB</div>
+  <ul class="plain">
+    <li><span class="drug">N95 respirator</span> required for all staff entering the room (must be fit-tested annually)</li>
+    <li>Negative-pressure airborne infection isolation room (AIIR) — minimum <span class="lyte">6-12 air exchanges per hour</span></li>
+    <li>Door remains CLOSED at all times</li>
+    <li>Patient wears a <strong>surgical mask</strong> (NOT N95) when transported outside the room</li>
+    <li>Discontinue airborne precautions after <span class="lyte">3 consecutive negative sputum AFB smears</span> collected 8-24 hours apart</li>
+  </ul>
+</div>
+
+<!-- ========================================== -->
+<!-- SECTION 5: BLOODBORNE PATHOGEN EXPOSURE -->
+<!-- ========================================== -->
+<div class="section-header sh-bborne">5 · Bloodborne Pathogen Exposure</div>
+<div class="section-body">
+
+  <div class="sub-heading">Needlestick Protocol — Immediate Actions</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:10%">Step</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="cat-label">1</span></td>
+        <td>Wash the site immediately with <strong>soap and water</strong> for 15 minutes. For mucous membrane exposure, flush with water or saline. Do NOT squeeze or "milk" the wound.</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">2</span></td>
+        <td>Report the incident to the supervisor/charge nurse immediately</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">3</span></td>
+        <td>Complete an incident/occurrence report</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">4</span></td>
+        <td>Test the source patient (with consent): HIV, Hepatitis B, Hepatitis C</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">5</span></td>
+        <td>Obtain baseline labs on the exposed nurse: HIV, HBV, HCV</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">6</span></td>
+        <td>Initiate post-exposure prophylaxis (PEP) if indicated</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-heading">HIV Post-Exposure Prophylaxis (PEP)</div>
+  <ul class="plain">
+    <li>Must begin within <span class="lyte">72 hours</span> of exposure (ideally within <span class="lyte">1-2 hours</span>)</li>
+    <li>28-day course of antiretroviral therapy (typically 3-drug regimen)</li>
+    <li>Follow-up HIV testing: <span class="lyte">6 weeks, 12 weeks, 6 months</span> post-exposure</li>
+    <li>If source patient is HIV-negative, PEP is generally NOT recommended</li>
+  </ul>
+
+  <div class="sub-heading">Hepatitis B Post-Exposure Management</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Exposed Nurse Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="cat-label">Vaccinated &amp; immune</span><br>(<span class="lyte">anti-HBs ≥10 mIU/mL</span>)</td>
+        <td>No treatment needed — the nurse is protected</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Vaccinated but non-immune</span><br>(<span class="lyte">anti-HBs &lt;10 mIU/mL</span>)</td>
+        <td><span class="drug">HBIG</span> (Hepatitis B Immune Globulin) + restart HBV vaccine series</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Unvaccinated</span></td>
+        <td><span class="drug">HBIG</span> within 24 hours + begin HBV vaccine series immediately</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-tip">
+    <strong>KEY POINT:</strong> There is NO post-exposure prophylaxis for Hepatitis C — only monitoring and early treatment if seroconversion occurs. HCV follow-up: test at <span class="lyte">4-6 weeks</span> post-exposure.
+  </div>
+
+  <div class="sub-heading">Sharps Safety</div>
+  <ul class="plain">
+    <li>NEVER recap needles (the #1 cause of needlestick injuries)</li>
+    <li>Activate safety devices immediately after use</li>
+    <li>Dispose in puncture-resistant sharps containers at the point of use</li>
+    <li>Sharps containers are replaced when <span class="lyte">¾ full</span> (NEVER overfilled)</li>
+    <li>Never reach into a sharps container to retrieve items</li>
+  </ul>
+</div>
+
+<!-- ========================================== -->
+<!-- SECTION 6: NEUTROPENIC PRECAUTIONS -->
+<!-- ========================================== -->
+<div class="section-header sh-neutro">6 · Neutropenic &amp; Immunocompromised Precautions</div>
+<div class="section-body">
+
+  <div class="sub-heading">Absolute Neutrophil Count (ANC) Calculation</div>
+  <div class="mnemonic-box">
+    <div class="mn-title">🧮 ANC Formula</div>
+    <ul>
+      <li><strong>ANC = WBC × (% Neutrophils + % Bands) / 100</strong></li>
+      <li>Normal ANC: <span class="lyte">&gt;1,500 cells/mm³</span></li>
+      <li>Mild neutropenia: <span class="lyte">1,000–1,500</span></li>
+      <li>Moderate neutropenia: <span class="lyte">500–1,000</span></li>
+      <li>Severe neutropenia: <span class="lyte">&lt;500</span> — HIGH risk for life-threatening infection</li>
+    </ul>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>Example:</strong> WBC = 3,000, Neutrophils = 40%, Bands = 5%<br>
+    ANC = 3,000 × (40 + 5) / 100 = 3,000 × 0.45 = <span class="lyte">1,350</span> → Mild neutropenia
+  </div>
+
+  <div class="sub-heading">Neutropenic Precautions</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Nursing Interventions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="cat-label">Room</span></td>
+        <td>Private room with <strong>positive pressure</strong> (air flows OUT of the room to protect the patient). HEPA filtration. Limit visitors. No flowers or standing water (harbor Aspergillus).</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Monitoring</span></td>
+        <td>Monitor temperature every <span class="lyte">4 hours</span>. A temp <span class="lyte">≥100.4°F (38°C)</span> in a neutropenic patient is a MEDICAL EMERGENCY — obtain blood cultures and start broad-spectrum antibiotics within 1 hour (febrile neutropenia protocol).</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Diet</span></td>
+        <td><strong>Neutropenic (low-microbial) diet:</strong> No raw fruits/vegetables (unless thick-skinned and peeled), no raw/undercooked meat, no unpasteurized dairy, no deli meats, no sushi. All food must be thoroughly cooked.</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Hygiene</span></td>
+        <td>Strict hand hygiene by ALL persons entering the room. Soft toothbrush to prevent gum bleeding/breaks. No rectal temperatures, suppositories, or enemas. No IM injections if avoidable.</td>
+      </tr>
+      <tr>
+        <td><span class="cat-label">Visitors</span></td>
+        <td>Screen visitors for illness. No visitors with respiratory infections, recent vaccinations with live viruses, or active herpes simplex.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-warn">
+    <strong>NCLEX CRITICAL:</strong> TB = <strong>Negative</strong> pressure (protect others FROM the patient). Neutropenia = <strong>Positive</strong> pressure (protect the patient FROM others). This is a top-tested comparison!
+  </div>
+
+  <div class="sub-heading">Key Medications for Neutropenia</div>
+  <ul class="plain">
+    <li><span class="drug">Filgrastim (Neupogen)</span> / <span class="drug">Pegfilgrastim (Neulasta)</span> — Colony-stimulating factors (G-CSF) that stimulate bone marrow to produce neutrophils. Monitor for bone pain (most common side effect).</li>
+    <li>Prophylactic antibiotics/antifungals may be ordered for severe neutropenia (<span class="lyte">ANC &lt;500</span>)</li>
+  </ul>
+</div>
+
+<!-- ========================================== -->
+<!-- SECTION 7: HIGH-ALERT IC MEDICATIONS -->
+<!-- ========================================== -->
+<div class="section-header sh-meds">7 · High-Alert Infection Control Medications</div>
+<div class="section-body">
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:22%">Medication</th>
+        <th style="width:40%">Key Points</th>
+        <th>Nursing Considerations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="drug">Vancomycin (IV)</span></td>
+        <td>Glycopeptide antibiotic for MRSA, serious gram-positive infections</td>
+        <td>Monitor <span class="lyte">trough levels (15-20 mcg/mL)</span> for serious infections. <strong>Red Man Syndrome</strong> from rapid infusion → slow the rate (infuse over ≥60 min). Monitor renal function &amp; hearing (ototoxic + nephrotoxic).</td>
+      </tr>
+      <tr>
+        <td><span class="drug">Gentamicin / Tobramycin</span> (aminoglycosides)</td>
+        <td>Gram-negative coverage, often combined with other antibiotics</td>
+        <td>Monitor <span class="lyte">peak &amp; trough levels</span>. <strong>Nephrotoxic</strong> (monitor BUN/creatinine) and <strong>Ototoxic</strong> (monitor hearing, tinnitus, balance). Never mix with penicillins in same IV line.</td>
+      </tr>
+      <tr>
+        <td><span class="drug">Isoniazid (INH)</span></td>
+        <td>First-line TB treatment &amp; prophylaxis</td>
+        <td><strong>Hepatotoxic</strong> — monitor <span class="lyte">LFTs</span> monthly. ALWAYS give with <span class="drug">Vitamin B6 (pyridoxine)</span> to prevent peripheral neuropathy. Avoid alcohol, tyramine-rich foods (MAO inhibitor properties).</td>
+      </tr>
+      <tr>
+        <td><span class="drug">Rifampin</span></td>
+        <td>TB treatment, also used for latent TB and meningococcal prophylaxis</td>
+        <td>Turns body fluids <span class="lyte">orange/red</span> (counsel patient). Potent CYP450 inducer — reduces effectiveness of warfarin, oral contraceptives, HIV medications. Monitor <span class="lyte">LFTs</span>.</td>
+      </tr>
+      <tr>
+        <td><span class="drug">Acyclovir / Valacyclovir</span></td>
+        <td>Antiviral for herpes simplex, varicella-zoster</td>
+        <td>Ensure adequate hydration (<span class="lyte">2-3 L/day</span>) to prevent crystalluria and renal damage. Most effective when started within <span class="lyte">72 hours</span> of symptom onset.</td>
+      </tr>
+      <tr>
+        <td><span class="drug">Metronidazole (Flagyl)</span></td>
+        <td>Anaerobic bacteria, C. diff (mild cases), protozoal infections</td>
+        <td><strong>No alcohol</strong> — severe disulfiram-like reaction (nausea, vomiting, flushing, headache). Metallic taste is common. Dark/red-brown urine is expected.</td>
+      </tr>
+      <tr>
+        <td><span class="drug">Amphotericin B</span></td>
+        <td>Systemic antifungal for serious fungal infections</td>
+        <td>Known as "Ampho-terrible" for severe side effects: infusion reactions (fever, chills, rigors), <strong>nephrotoxicity</strong> (monitor <span class="lyte">BUN/creatinine, potassium, magnesium</span>), hypokalemia. Premedicate with acetaminophen, diphenhydramine, and meperidine for rigors.</td>
+      </tr>
+      <tr>
+        <td><span class="drug">Tamiflu (Oseltamivir)</span></td>
+        <td>Antiviral for influenza A and B</td>
+        <td>Must start within <span class="lyte">48 hours</span> of symptom onset for effectiveness. Can be used for treatment AND prophylaxis. GI side effects common.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ========================================== -->
+<!-- SECTION 8: MEMORY ANCHORS -->
+<!-- ========================================== -->
+<div class="section-header sh-anchors">8 · Memory Anchors — Quick Reference</div>
+<div class="section-body">
+
+  <div class="anchor-grid">
+    <div class="anchor-card">
+      <div class="ac-title">🧤 PPE Order</div>
+      <div class="ac-body">
+        <strong>ON:</strong> Gown → Mask → Goggles → Gloves<br>
+        <strong>OFF:</strong> Gloves → Goggles → Gown → Mask<br>
+        <em>"Gloves last on, first off"</em>
+      </div>
+    </div>
+
+    <div class="anchor-card">
+      <div class="ac-title">🌬️ Airborne vs Droplet</div>
+      <div class="ac-body">
+        <strong>Airborne:</strong> N95 + AIIR + Door closed<br>
+        <em>TB, Measles, Varicella, Smallpox</em><br>
+        <strong>Droplet:</strong> Surgical mask within 3-6 ft<br>
+        <em>Flu, Pertussis, Meningococcal, Mumps</em>
+      </div>
+    </div>
+
+    <div class="anchor-card">
+      <div class="ac-title">🧪 C. diff Rules</div>
+      <div class="ac-body">
+        <span class="drug">Soap &amp; water</span> (NOT alcohol gel)<br>
+        <span class="drug">Bleach</span> for surfaces<br>
+        Contact precautions<br>
+        <span class="drug">Oral vancomycin</span> for treatment
+      </div>
+    </div>
+
+    <div class="anchor-card">
+      <div class="ac-title">💊 RIPE Side Effects</div>
+      <div class="ac-body">
+        <strong>R</strong>ifampin = <span class="lyte">Orange</span> fluids<br>
+        <strong>I</strong>NH = Hepatotoxic + give <span class="drug">B6</span><br>
+        <strong>P</strong>yrazinamide = <span class="lyte">Uric acid</span> ↑<br>
+        <strong>E</strong>thambutol = <span class="lyte">Eyes</span> (optic neuritis)
+      </div>
+    </div>
+
+    <div class="anchor-card">
+      <div class="ac-title">🔬 TST Reading</div>
+      <div class="ac-body">
+        Read at <span class="lyte">48-72 hours</span><br>
+        Measure <strong>induration</strong> only (not redness)<br>
+        ≥5mm: HIV/immunocompromised<br>
+        ≥10mm: Healthcare workers<br>
+        ≥15mm: Anyone (no risk factors)
+      </div>
+    </div>
+
+    <div class="anchor-card">
+      <div class="ac-title">🏥 Pressure Rooms</div>
+      <div class="ac-body">
+        <strong>Negative pressure:</strong> TB, airborne diseases<br>
+        <em>(Protect others FROM patient)</em><br>
+        <strong>Positive pressure:</strong> Neutropenia, transplant<br>
+        <em>(Protect patient FROM environment)</em>
+      </div>
+    </div>
+
+    <div class="anchor-card">
+      <div class="ac-title">💉 Needlestick Protocol</div>
+      <div class="ac-body">
+        1. Wash with <span class="drug">soap &amp; water</span> × 15 min<br>
+        2. Report → 3. Incident report<br>
+        4. Test source → 5. Test nurse<br>
+        HIV PEP within <span class="lyte">72 hours</span>
+      </div>
+    </div>
+
+    <div class="anchor-card">
+      <div class="ac-title">🧮 ANC Threshold</div>
+      <div class="ac-body">
+        ANC = WBC × (Neut% + Band%) / 100<br>
+        <span class="lyte">&lt;500</span> = SEVERE → high infection risk<br>
+        <span class="lyte">&lt;1000</span> = Moderate<br>
+        Temp <span class="lyte">≥100.4°F</span> = EMERGENCY
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div><!-- end guide-container -->
+</body>
+</html>
