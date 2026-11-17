@@ -37,6 +37,7 @@ infctrl: {bg:'#f5f3ff',accent:'#7c3aed',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede9fe',h
 priority: {bg:'#eef2ff',accent:'#4338ca',dk:'#312e81',lt:'#e0e7ff',hf:'#e0e7ff',ht:'#c7d2fe'},
 fluids: {bg:'#ecfeff',accent:'#0891b2',dk:'#164e63',lt:'#a5f3fc',hf:'#cffafe',ht:'#67e8f9'},
 cardiac: {bg:'#f0f9ff',accent:'#0369a1',dk:'#0c4a6e',lt:'#e0f2fe',hf:'#e0f2fe',ht:'#bae6fd'},
+highalert: {bg:'#fff1f2',accent:'#dc2626',dk:'#991b1b',lt:'#ffe4e6',hf:'#ffe4e6',ht:'#fecdd3'},
 yellowfever: {bg:'#fefce8',accent:'#ca8a04',dk:'#713f12',lt:'#fef9c3',hf:'#fef9c3',ht:'#fde047'},
 pinkguide: {bg:'#fdf2f8',accent:'#db2777',dk:'#831843',lt:'#fce7f3',hf:'#fce7f3',ht:'#fbcfe8'},
 comprehensive2:{bg:'#faf5ff',accent:'#7e22ce',dk:'#581c87',lt:'#f3e8ff',hf:'#f3e8ff',ht:'#e9d5ff'},
@@ -231,7 +232,7 @@ loadingEl.innerHTML =
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
 var APP_VERSION = '27.0';
-var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:530, pinkguide:180, bbguide:180, endoguide_thyroid:25, endoguide_adrenal:25, endoguide_adh:25, endoguide_parathyroid:25, endoguide_pheo:25, endoguide_quickref:25, endoguide_memory:25, qbank:5571, mentalhealth:100, finalreview:100, blackguide:200, blackguide_acid:20, blackguide_alc:20, blackguide_card:20, blackguide_mob:20, blackguide_dm:20, blackguide_tox:20, blackguide_endo:20, blackguide_lab:20, blackguide_psy:20, blackguide_mat:20, blackguide_pri:20, pinkguide_acid:15, pinkguide_alc:15, pinkguide_amino:15, pinkguide_chd:15, pinkguide_dm:15, pinkguide_tox:15, pinkguide_lyte:15, pinkguide_lab:15, pinkguide_psy:15, pinkguide_ob:15, pinkguide_pri:15, pinkguide_test:15, yfguide_acid:15, yfguide_grief:15, yfguide_amino:15, yfguide_card:15, yfguide_chd:15, yfguide_psy:15, yfguide_dm:15, yfguide_tox:15, yfguide_lab:15, yfguide_fluid:15, yfguide_mat:15, yfguide_pri:15, bbguide_bp:15, bbguide_mi:15, bbguide_chf:15, bbguide_shock:15, bbguide_aneurysm:15, bbguide_copd:15, bbguide_pneumo:15, bbguide_tb:15, bbguide_icp:15, bbguide_cva:15, bbguide_neuro:15, bbguide_renal:15 };
+var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, highalert:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:530, pinkguide:180, bbguide:180, endoguide_thyroid:25, endoguide_adrenal:25, endoguide_adh:25, endoguide_parathyroid:25, endoguide_pheo:25, endoguide_quickref:25, endoguide_memory:25, qbank:5571, mentalhealth:100, finalreview:100, blackguide:200, blackguide_acid:20, blackguide_alc:20, blackguide_card:20, blackguide_mob:20, blackguide_dm:20, blackguide_tox:20, blackguide_endo:20, blackguide_lab:20, blackguide_psy:20, blackguide_mat:20, blackguide_pri:20, pinkguide_acid:15, pinkguide_alc:15, pinkguide_amino:15, pinkguide_chd:15, pinkguide_dm:15, pinkguide_tox:15, pinkguide_lyte:15, pinkguide_lab:15, pinkguide_psy:15, pinkguide_ob:15, pinkguide_pri:15, pinkguide_test:15, yfguide_acid:15, yfguide_grief:15, yfguide_amino:15, yfguide_card:15, yfguide_chd:15, yfguide_psy:15, yfguide_dm:15, yfguide_tox:15, yfguide_lab:15, yfguide_fluid:15, yfguide_mat:15, yfguide_pri:15, bbguide_bp:15, bbguide_mi:15, bbguide_chf:15, bbguide_shock:15, bbguide_aneurysm:15, bbguide_copd:15, bbguide_pneumo:15, bbguide_tb:15, bbguide_icp:15, bbguide_cva:15, bbguide_neuro:15, bbguide_renal:15 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1, pinkguide: 1, bbguide: 1, endoguide_thyroid: 1, endoguide_adrenal: 1, endoguide_adh: 1, endoguide_parathyroid: 1, endoguide_pheo: 1, endoguide_quickref: 1, endoguide_memory: 1, qbank: 1, mentalhealth: 1, finalreview: 1, blackguide: 1, blackguide_acid: 1, blackguide_alc: 1, blackguide_card: 1, blackguide_mob: 1, blackguide_dm: 1, blackguide_tox: 1, blackguide_endo: 1, blackguide_lab: 1, blackguide_psy: 1, blackguide_mat: 1, blackguide_pri: 1, pinkguide_acid: 1, pinkguide_alc: 1, pinkguide_amino: 1, pinkguide_chd: 1, pinkguide_dm: 1, pinkguide_tox: 1, pinkguide_lyte: 1, pinkguide_lab: 1, pinkguide_psy: 1, pinkguide_ob: 1, pinkguide_pri: 1, pinkguide_test: 1, yfguide_acid: 1, yfguide_grief: 1, yfguide_amino: 1, yfguide_card: 1, yfguide_chd: 1, yfguide_psy: 1, yfguide_dm: 1, yfguide_tox: 1, yfguide_lab: 1, yfguide_fluid: 1, yfguide_mat: 1, yfguide_pri: 1, bbguide_bp: 1, bbguide_mi: 1, bbguide_chf: 1, bbguide_shock: 1, bbguide_aneurysm: 1, bbguide_copd: 1, bbguide_pneumo: 1, bbguide_tb: 1, bbguide_icp: 1, bbguide_cva: 1, bbguide_neuro: 1, bbguide_renal: 1 };
 /* Paged quiz configuration — incremental sets of N questions from large banks */
 var PAGED_QUIZZES = { qbank: { pageSize: 100, totalQ: QUIZ_COUNTS.qbank || 5571 } };
@@ -2900,7 +2901,7 @@ fullexam:'Comprehensive III Quiz',endocompare:'Endo Comparisons Quiz',
 infctrl:'Infection Control Quiz',priority:'Prioritization Quiz',
 fluids:'Fluid & Electrolytes Quiz',cardiac:'Cardiac Quiz',
 obhtn:'OB Hypertension Quiz',obmatnb:'OB - Newborn Quiz',
-pharmguide:'Pharmacology Guide Quiz',fundguide:'Fundamentals Guide Quiz',
+pharmguide:'Pharmacology Guide Quiz',highalert:'High-Alert Medications Quiz',fundguide:'Fundamentals Guide Quiz',
 geroguide:'Gerontology Guide Quiz',nutrguide:'Nutrition Guide Quiz',
 yfguide:'Yellow Guide Quiz',
 pinkguide:'Pink Guide Quiz',
@@ -2938,6 +2939,7 @@ initQuizUI(title, key);
 ['launchFluidsQuiz','Fluid & Electrolytes Quiz','fluids'],
 ['launchCardiacQuiz','Cardiac Quiz','cardiac'],
 ['launchPharmGuideQuiz','Pharmacology Guide Quiz','pharmguide'],
+['launchHighAlertQuiz','High-Alert Medications Quiz','highalert'],
 ['launchFundGuideQuiz','Fundamentals Guide Quiz','fundguide'],
 ['launchGeroGuideQuiz','Gerontology Guide Quiz','geroguide'],
 ['launchNutrGuideQuiz','Nutrition Guide Quiz','nutrguide'],
@@ -2988,6 +2990,7 @@ if (nextBtn) nextBtn.style.opacity = getPagedSet('qbank') >= getPagedTotalSets('
 ['openFluidsGuide','Guides/Fluid-Electrolytes.html'],
 ['openCardiacGuide','Guides/Cardiac-Hemodynamics.html'],
 ['openPharmGuide','Guides/Pharmacology.html'],
+['openHighAlertGuide','Guides/Pharmacology-High-Alert.html'],
 ['openFundGuide','Guides/Fundamentals.html'],
 ['openGeroGuide','Guides/Gerontology.html'],
 ['openNutrGuide','Guides/Nutrition.html'],
@@ -3392,6 +3395,7 @@ categories: [
 { title: 'Fluid & Electrolytes', file: 'Guides/Fluid-Electrolytes.html', emoji: '\uD83D\uDCA7', isHtml: true, quizKey: 'fluids' },
 { title: 'Cardiac', file: 'Guides/Cardiac-Hemodynamics.html', emoji: '\u2764\uFE0F', isHtml: true, quizKey: 'cardiac' },
 { title: 'Pharmacology', file: 'Guides/Pharmacology.html', emoji: '\uD83D\uDC8A', isHtml: true, quizKey: 'pharmguide' },
+{ title: 'High-Alert Medications', file: 'Guides/Pharmacology-High-Alert.html', emoji: '\u26A0\uFE0F', isHtml: true, quizKey: 'highalert' },
 { title: 'Fundamentals', file: 'Guides/Fundamentals.html', emoji: '\uD83D\uDCCB', isHtml: true, quizKey: 'fundguide' },
 { title: 'Gerontology', file: 'Guides/Gerontology.html', emoji: '\uD83E\uDDD3', isHtml: true, quizKey: 'geroguide' },
 { title: 'Nutrition', file: 'Guides/Nutrition.html', emoji: '\uD83E\uDD57', isHtml: true, quizKey: 'nutrguide' },
@@ -3678,7 +3682,7 @@ currentTab = savedTab;
 var GUIDE_QUIZ_MAP = {
 'Endocrine-Comparisons':'endocompare','OB-Hypertensive-Disorders':'obhtn','OB-Maternal-Newborn':'obmatnb',
 'Infection-Control-Safety':'infctrl','Prioritization':'priority','Fluid-Electrolytes':'fluids',
-'Cardiac-Hemodynamics':'cardiac','Pharmacology':'pharmguide','Fundamentals':'fundguide',
+'Cardiac-Hemodynamics':'cardiac','Pharmacology':'pharmguide','Pharmacology-High-Alert':'highalert','Fundamentals':'fundguide',
 'Gerontology':'geroguide','Nutrition':'nutrguide','Yellow-Fever':'yfguide','Pink':'pinkguide','Blue-Book':'bbguide','Mental-Health':'mentalhealth',
 'Final-Review':'finalreview','Black-Book':'blackguide'
 };
